@@ -45,7 +45,15 @@ special_warp_spec: MACRO
 ENDM
 
 FirstMapSpec:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Alternatives Starting Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_RED)
 	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+	ELSE
+	special_warp_spec BLUES_HOUSE, 5, 3, BLUES_HOUSE
+ENDC
+
 TradeCenterSpec1:
 	special_warp_spec TRADE_CENTER,  3, 4, CLUB
 TradeCenterSpec2:

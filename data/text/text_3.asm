@@ -3,10 +3,13 @@ _FileDataDestroyedText::
 	line "destroyed!"
 	prompt
 
-_WouldYouLikeToSaveText::
-	text "Would you like to"
-	line "SAVE the game?"
-	done
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Removing Artificial Save Delay	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;_WouldYouLikeToSaveText::
+;	text "Would you like to"
+;	line "SAVE the game?"
+;	done
 
 _GameSavedText::
 	text "<PLAYER> saved"

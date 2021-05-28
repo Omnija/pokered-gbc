@@ -2249,8 +2249,12 @@ ItemUseTMHM:
 	ret z
 	ld a, [wcf91]
 	call IsItemHM
-	ret c
-	jp RemoveUsedItem
+	ret
+;;;;;;;;;;;;;;;;;;;;;;;;
+; Removing TM Being Used
+;;;;;;;;;;;;;;;;;;;;;;;;
+;	ret c
+;	jp RemoveUsedItem
 
 BootedUpTMText:
 	text_far _BootedUpTMText

@@ -1,0 +1,17 @@
+;;;;;;;;;;;;;;;;;;;;;
+; Added To Game
+;;;;;;;;;;;;;;;;;;;;;	
+Skip if move accuracy is 100%
+Alternative Version Differences
+	-Start as Red or Blue
+	-Starting locations
+
+GFX/Pallete Changed/Updated
+Overworld Face the Trainers
+
+;;;;;;;;;;;;;;;;;;;;;
+; Removed From Game
+;;;;;;;;;;;;;;;;;;;;;
+Save Delay
+Poke Center Healing Delay
+Overworld Poison Effects

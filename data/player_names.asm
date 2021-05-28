@@ -3,29 +3,29 @@ DefaultNamesPlayer:
 	db   "NEW NAME"
 	next "RED"
 	next "ASH"
-	next "JACK"
+	next "RYU"
 	db   "@"
 
 DefaultNamesRival:
-	db   "NEW NAME"
+    db   "NEW NAME"
 	next "BLUE"
 	next "GARY"
-	next "JOHN"
-	db   "@"
-ENDC
+	next "KEN"
+    db   "@"
 
-IF DEF(_BLUE)
+ELSE
+
 DefaultNamesPlayer:
 	db   "NEW NAME"
 	next "BLUE"
 	next "GARY"
-	next "JOHN"
+	next "KEN"
 	db   "@"
 
 DefaultNamesRival:
 	db   "NEW NAME"
 	next "RED"
 	next "ASH"
-	next "JACK"
+	next "RYU"
 	db   "@"
 ENDC

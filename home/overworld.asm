@@ -314,9 +314,14 @@ OverworldLoopLessDelay::
 	ld a, [wIsInBattle]
 	and a
 	jp nz, CheckWarpsNoCollision
-	predef ApplyOutOfBattlePoisonDamage ; also increment daycare mon exp
-	ld a, [wOutOfBattleBlackout]
-	and a
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Removed overworld poison effects
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	predef ApplyOutOfBattlePoisonDamage ; also increment daycare mon exp
+;	ld a, [wOutOfBattleBlackout]
+;	and a
+
 	jp nz, HandleBlackOut ; if all pokemon fainted
 .newBattle
 	call NewBattle

@@ -139,10 +139,15 @@ LoadSAVIgnoreBadCheckSum:
 
 SaveSAV:
 	farcall PrintSaveScreenText
-	ld hl, WouldYouLikeToSaveText
-	call SaveSAVConfirm
-	and a   ;|0 = Yes|1 = No|
-	ret nz
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Removing Artificial Save Delay	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	ld hl, WouldYouLikeToSaveText
+;	call SaveSAVConfirm
+;	and a   ;|0 = Yes|1 = No|
+;	ret nz
+
 	ld a, [wSaveFileStatus]
 	dec a
 	jr z, .save
@@ -158,34 +163,46 @@ SaveSAV:
 	lb bc, 4, 18
 	call ClearScreenArea
 	hlcoord 1, 14
-	ld de, NowSavingString
-	call PlaceString
-	ld c, 120
-	call DelayFrames
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Removing Artificial Save Delay	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	ld de, NowSavingString
+;	call PlaceString
+;	ld c, 120
+;	call DelayFrames
+
 	ld hl, GameSavedText
 	call PrintText
 	ld a, SFX_SAVE
 	call PlaySoundWaitForCurrent
 	call WaitForSoundToFinish
-	ld c, 30
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Removing Artificial Save Delay	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	ld c, 30
+	ld c, 10 ; Shorter time than before
 	jp DelayFrames
 
-NowSavingString:
-	db "Now saving...@"
+;NowSavingString:
+;	db "Now saving...@"
 
 SaveSAVConfirm:
 	call PrintText
-	hlcoord 0, 7
-	lb bc, 8, 1
-	ld a, TWO_OPTION_MENU
-	ld [wTextBoxID], a
-	call DisplayTextBoxID ; yes/no menu
-	ld a, [wCurrentMenuItem]
-	ret
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Removing Artificial Save Delay	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	hlcoord 0, 7
+;	lb bc, 8, 1
+;	ld a, TWO_OPTION_MENU
+;	ld [wTextBoxID], a
+;	call DisplayTextBoxID ; yes/no menu
+;	ld a, [wCurrentMenuItem]
+;	ret
 
-WouldYouLikeToSaveText:
-	text_far _WouldYouLikeToSaveText
-	text_end
+;WouldYouLikeToSaveText:
+;	text_far _WouldYouLikeToSaveText
+;	text_end
 
 GameSavedText:
 	text_far _GameSavedText

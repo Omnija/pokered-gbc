@@ -31,9 +31,19 @@ GamblerAsleepSprite::    INCBIN "gfx/sprites/gambler_asleep.2bpp"
 
 SECTION "NPC Sprites 2", ROMX
 
+; Adding Version Alternatives
+IF DEF(_RED)
 RedBikeSprite::          INCBIN "gfx/sprites/red_bike.2bpp"
 RedSprite::              INCBIN "gfx/sprites/red.2bpp"
+ELSE
+RedBikeSprite::          INCBIN "gfx/sprites/blue_bike.2bpp"
+RedSprite::              INCBIN "gfx/sprites/blue.2bpp"
+ENDC
+IF DEF(_RED)
 BlueSprite::             INCBIN "gfx/sprites/blue.2bpp"
+ELSE
+BlueSprite::             INCBIN "gfx/sprites/red.2bpp"
+ENDC
 OakSprite::              INCBIN "gfx/sprites/oak.2bpp"
 YoungsterSprite::        INCBIN "gfx/sprites/youngster.2bpp"
 MonsterSprite::          INCBIN "gfx/sprites/monster.2bpp"
@@ -70,4 +80,8 @@ FairySprite::            INCBIN "gfx/sprites/fairy.2bpp"
 AgathaSprite::           INCBIN "gfx/sprites/agatha.2bpp"
 BrunoSprite::            INCBIN "gfx/sprites/bruno.2bpp"
 LoreleiSprite::          INCBIN "gfx/sprites/lorelei.2bpp"
-SeelSprite::             INCBIN "gfx/sprites/seel.2bpp"
+;;;;;;;;;;;;;;;;;;;;;;
+; Replaced with Lapras
+;;;;;;;;;;;;;;;;;;;;;;
+;SeelSprite::             INCBIN "gfx/sprites/seel.2bpp"
+SeelSprite::             INCBIN "gfx/sprites/lapras.2bpp"

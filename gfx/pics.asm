@@ -100,7 +100,12 @@ PidgeotPicFront::    INCBIN "gfx/pokemon/gsfront/pidgeot.pic"
 PidgeotPicBack::     INCBIN "gfx/pokemon/gsback/pidgeotb.pic"
 StarmiePicFront::    INCBIN "gfx/pokemon/gsfront/starmie.pic"
 StarmiePicBack::     INCBIN "gfx/pokemon/gsback/starmieb.pic"
+; Adding Alternative Versions
+IF DEF(_RED)
 RedPicBack::         INCBIN "gfx/gstrainers/redb.pic"
+ELSE
+RedPicBack::         INCBIN "gfx/gstrainers/blueb.pic"
+ENDC
 OldManPicBack::      INCBIN "gfx/gstrainers/oldmanb.pic"
 
 GastlyPicFront::     INCBIN "gfx/pokemon/gsfront/gastly.pic"
@@ -174,7 +179,13 @@ JugglerPic::       INCBIN "gfx/gstrainers/juggler.pic"
 TamerPic::         INCBIN "gfx/gstrainers/tamer.pic"
 BirdKeeperPic::    INCBIN "gfx/gstrainers/birdkeeper.pic"
 BlackbeltPic::     INCBIN "gfx/gstrainers/blackbelt.pic"
-Rival1Pic::        INCBIN "gfx/gstrainers/rival1.pic"
+
+; Adding Rival Alternative Versions
+IF DEF(_RED)
+Rival1Pic::        INCBIN "gfx/gstrainers/rival1r.pic"
+ELSE
+Rival1Pic::        INCBIN "gfx/gstrainers/rival1b.pic"
+ENDC
 ProfOakPic::       INCBIN "gfx/gstrainers/prof.oak.pic"
 ChiefPic::
 ScientistPic::     INCBIN "gfx/gstrainers/scientist.pic"
@@ -191,8 +202,14 @@ KogaPic::          INCBIN "gfx/gstrainers/koga.pic"
 BlainePic::        INCBIN "gfx/gstrainers/blaine.pic"
 SabrinaPic::       INCBIN "gfx/gstrainers/sabrina.pic"
 GentlemanPic::     INCBIN "gfx/gstrainers/gentleman.pic"
-Rival2Pic::        INCBIN "gfx/gstrainers/rival2.pic"
-Rival3Pic::        INCBIN "gfx/gstrainers/rival3.pic"
+; Adding Rival Alterantive Versions
+IF DEF(_RED)
+Rival2Pic::        INCBIN "gfx/gstrainers/rival2r.pic"
+Rival3Pic::        INCBIN "gfx/gstrainers/rival3r.pic"
+ELSE
+Rival2Pic::        INCBIN "gfx/gstrainers/rival2b.pic"
+Rival3Pic::        INCBIN "gfx/gstrainers/rival3b.pic"
+ENDC
 LoreleiPic::       INCBIN "gfx/gstrainers/lorelei.pic"
 ChannelerPic::     INCBIN "gfx/gstrainers/channeler.pic"
 AgathaPic::        INCBIN "gfx/gstrainers/agatha.pic"
