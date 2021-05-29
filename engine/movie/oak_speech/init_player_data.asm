@@ -32,11 +32,13 @@ START_MONEY EQU $3000
 
 	ld [wMonDataLocation], a
 
+; Initialize player badges
 	ld hl, wObtainedBadges
 	ld [hli], a
 
 	ld [hl], a
-
+	
+; Initialize player coins
 	ld hl, wPlayerCoins
 	ld [hli], a
 	ld [hl], a

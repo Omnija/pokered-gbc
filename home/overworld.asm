@@ -1,3 +1,4 @@
+
 HandleMidJump::
 ; Handle the player jumping down
 ; a ledge in the overworld.
@@ -273,16 +274,29 @@ OverworldLoopLessDelay::
 .noSpinning
 	call UpdateSprites
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Running Shoe Effect - Joenote
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 .moveAhead2
 	ld hl, wFlags_0xcd60
 	res 2, [hl]
-	ld a, [wWalkBikeSurfState]
-	dec a ; riding a bike?
-	jr nz, .normalPlayerSpriteAdvancement
+;	ld a, [wWalkBikeSurfState]
+;	dec a ; riding a bike?
+;	jr nz, .normalPlayerSpriteAdvancement
 	ld a, [wd736]
 	bit 6, a ; jumping a ledge?
 	jr nz, .normalPlayerSpriteAdvancement
+;	call DoBikeSpeedup
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	call TrackRunBikeSpeed
+.speedloop
+	ld a, [wUnusedD119]
+	dec a
+	ld [wUnusedD119], a
+	jr z, .normalPlayerSpriteAdvancement
 	call DoBikeSpeedup
+	jr .speedloop
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 .normalPlayerSpriteAdvancement
 	call AdvancePlayerSprite
 	ld a, [wWalkCounter]
@@ -314,7 +328,7 @@ OverworldLoopLessDelay::
 	ld a, [wIsInBattle]
 	and a
 	jp nz, CheckWarpsNoCollision
-	
+		
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Removed overworld poison effects
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -361,6 +375,39 @@ OverworldLoopLessDelay::
 	ld [wIsInBattle], a
 	call RunMapScript
 	jp HandleBlackOut
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Running Shoe - Joenote
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;this function handles tracking of how fast to go on or off a bike
+;biking ORs with $2
+;running by holding B ORs with $1
+TrackRunBikeSpeed:
+	xor a
+	ld[wUnusedD119], a
+	ld a, [wWalkBikeSurfState]
+	dec a ; riding a bike? (0 value = TRUE)
+	call z, IsRidingBike
+	ld a, [hJoyHeld]
+	and B_BUTTON	;holding B to speed up? (non-zero value = TRUE)
+	call nz, IsRunning
+	ld a, [wUnusedD119]
+	cp 2	;is biking without speedup being done?
+	jr z, .skip	;if not make the states a value from 1 to 4 (excluding biking without speedup, which needs to be 2)
+	inc a	
+.skip
+	ld[wUnusedD119], a
+	ret
+IsRidingBike:
+	ld a, [wUnusedD119]
+	or $2
+	ld[wUnusedD119], a
+	ret
+IsRunning:
+	ld a, [wUnusedD119]
+	or $1
+	ld[wUnusedD119], a
+	ret
 
 ; function to determine if there will be a battle and execute it (either a trainer battle or wild battle)
 ; sets carry if a battle occurred and unsets carry if not
@@ -2464,3 +2511,4 @@ LoadDestinationWarpPosition::
 	ldh [hLoadedROMBank], a
 	ld [MBC1RomBank], a
 	ret
+

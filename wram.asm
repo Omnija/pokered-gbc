@@ -1986,7 +1986,11 @@ wMoveNum::
 
 wMovesString::
 	ds 56
-
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;joenote - use this to backup which turn it is
+;out of battle for tracking speed of walking & bike
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 wUnusedD119::
 	ds 1
 
