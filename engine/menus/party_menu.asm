@@ -80,10 +80,23 @@ RedrawPartyMenu_::
 	call SetPartyMenuHPBarColor ; color the HP bar (on SGB)
 	pop hl
 	jr .printLevel
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Relearner/Tutor/Deleter - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+.moveTutorMenu
+	push hl
+	call CanLearnTutor
+	pop hl
+	jr .showAbleNotAble
+	
 .teachMoveMenu
 	push hl
 	predef CanLearnTM ; check if the pokemon can learn the move
 	pop hl
+
+.showAbleNotAble
+
 	ld de, .ableToLearnMoveText
 	ld a, c
 	and a

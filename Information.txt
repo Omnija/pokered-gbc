@@ -10,6 +10,7 @@ GFX/Pallete Changed/Updated
 Overworld Face the Trainers
 Running Shoes/Bike/Surf
 Field Moves with Select
+Move Deleter/Relearner - psychics house (benched Tutor)
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; Removed From Game

@@ -269,6 +269,13 @@ SECTION "Text 11", ROMX
 
 INCLUDE "data/text/text_7.asm"
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Relearner/Tutor/Deleter - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "text/Move_Relearner.asm"
+INCLUDE "text/Move_Tutor.asm"
+INCLUDE "text/Move_Deleter.asm"
+
 
 SECTION "Pokédex Text", ROMX
 

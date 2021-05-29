@@ -234,6 +234,11 @@ wTempPic::
 	ds 7 * 7 tiles
 ENDU
 
+;;;;;;;;;;;;;;;;;;;;;;
+; Tutor - Mateo Code
+;;;;;;;;;;;;;;;;;;;;;;
+wTempMoveID::
+
 wRedrawRowOrColumnSrcTiles::
 ; the tiles of the row or column to be redrawn by RedrawRowOrColumn
 	ds SCREEN_WIDTH * 2
@@ -485,6 +490,19 @@ NEXTU
 wSwitchPartyMonTempBuffer::
 ; temporary buffer when swapping party mon data
 	ds 49
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Relearner/Tutor/Deleter - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+wRelearnableMoves::
+; List of move ids that can be re-learend (Move Relearner)
+; First byte is the number of moves in this list.
+; List is terminated with $ff
+wDeletableMoves::
+; List of move ids that can be deleted (Move Deleter)
+; First byte is the number of moves in this list.
+; List is terminated with $ff
+	ds 1
 
 NEXTU
 	ds 10

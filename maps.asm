@@ -1222,3 +1222,10 @@ INCLUDE "data/maps/headers/AgathasRoom.asm"
 INCLUDE "scripts/AgathasRoom.asm"
 INCLUDE "data/maps/objects/AgathasRoom.asm"
 AgathasRoom_Blocks: INCBIN "maps/AgathasRoom.blk"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Relearner/Tutor/Deleter - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "scripts/Move_Relearner.asm"
+INCLUDE "scripts/Move_Tutor.asm"
+INCLUDE "scripts/Move_Deleter.asm"
