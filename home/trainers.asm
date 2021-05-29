@@ -100,6 +100,14 @@ TalkToTrainer::
 	ld a, c
 	and a
 	jr z, .trainerNotYetFought     ; test trainer's flag
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Trainer Rematch - Joenote
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	call TrainerRematch
+	jr nz, .trainerNotYetFought
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	
 	ld a, $6
 	call ReadTrainerHeaderInfo     ; print after battle text
 	jp PrintText
@@ -449,5 +457,23 @@ PlayTrainerMusic::
 .PlaySound
 ;	ld [wNewSoundID], a
 	jp PlayMusic
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Trainer Rematch - Joenote
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrainerRematch:
+	xor a
+;	CheckEvent EVENT_909
+	jr nz, .skip_rematch_choice
+	ld hl, RematchTrainerText
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	dec a
+	ret nz
+.skip_rematch_choice
+;	ResetEvent EVENT_909
+	xor a
+	ret
 
 INCLUDE "data/trainers/encounter_types.asm"
