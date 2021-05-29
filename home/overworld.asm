@@ -81,13 +81,33 @@ OverworldLoopLessDelay::
 	jp .displayDialogue
 .startButtonNotPressed
 	bit 0, a ; A button
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Field Moves - Joenote
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jr nz, .AorSelectPressed
+	bit 2, a	;Select button
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 	jp z, .checkIfDownButtonIsPressed
-; if A is pressed
+; if A or SELECT is pressed
+.AorSelectPressed
 	ld a, [wd730]
 	bit 2, a
 	jp nz, .noDirectionButtonsPressed
 	call IsPlayerCharacterBeingControlledByGame
 	jr nz, .checkForOpponent
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Field Moves - Joenote
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, [hJoyPressed]
+	bit 2, a	;is Select being pressed?
+	jr z, .notselect
+	farcall CheckForSmartHMuse	;this function jumps back to OverworldLoop on completion
+.notselect
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	
 	call CheckForHiddenObjectOrBookshelfOrCardKeyDoor
 	ldh a, [hItemAlreadyFound]
 	and a
@@ -96,6 +116,7 @@ OverworldLoopLessDelay::
 	ldh a, [hSpriteIndexOrTextID]
 	and a
 	jp z, OverworldLoop
+
 .displayDialogue
 	predef GetTileAndCoordsInFrontOfPlayer
 	call UpdateSprites
@@ -2511,4 +2532,3 @@ LoadDestinationWarpPosition::
 	ldh [hLoadedROMBank], a
 	ld [MBC1RomBank], a
 	ret
-

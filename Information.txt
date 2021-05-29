@@ -9,6 +9,7 @@ Alternative Version Differences
 GFX/Pallete Changed/Updated
 Overworld Face the Trainers
 Running Shoes/Bike/Surf
+Field Moves with Select
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; Removed From Game

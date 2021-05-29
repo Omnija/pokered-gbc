@@ -215,6 +215,8 @@ ROMX $36
 	"bank36"
 ROMX $37
 	"bank37"
+ROMX $38
+	"bank38"
 
 WRAM0
 	"WRAM"
