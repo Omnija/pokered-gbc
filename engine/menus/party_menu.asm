@@ -112,7 +112,7 @@ RedrawPartyMenu_::
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 .moveTutorMenu
 	push hl
-	farcall CanLearnTutor
+	call CanLearnTutor
 	pop hl
 	jr .showAbleNotAble
 	
