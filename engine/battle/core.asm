@@ -2313,8 +2313,58 @@ UseBagItem:
 	ld [wCapturedMonSpecies], a
 	ld a, $2
 	ld [wBattleResult], a
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Capture Experience
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld b, EXP_ALL
+	call IsItemInBag
+	push af
+	jr z, .giveExpToMonsThatFought0 ; if no exp all, then jump
+
+; the player has exp all
+; first, we halve the values that determine exp gain
+; the enemy mon base stats are added to stat exp, so they are halved
+; the base exp (which determines normal exp) is also halved
+	ld hl, wEnemyMonBaseStats
+	ld b, $7
+.halveExpDataLoop0
+	srl [hl]
+	inc hl
+	dec b
+	jr nz, .halveExpDataLoop0
+
+; give exp (divided evenly) to the mons that actually fought in battle against the enemy mon that has fainted
+; if exp all is in the bag, this will be only be half of the stat exp and normal exp, due to the above loop
+.giveExpToMonsThatFought0
+	xor a
+	ld [wBoostExpByExpAll], a
+	callfar GainExperience
+	pop af
+	scf ; set carry
+	ret z
+
+; the player has exp all
+; now, set the gain exp flag for every party member
+; half of the total stat exp and normal exp will divided evenly amongst every party member
+	ld a, $1
+	ld [wBoostExpByExpAll], a
+	ld a, [wPartyCount]
+	ld b, 0
+.gainExpFlagsLoop0
+	scf
+	rl b
+	dec a
+	jr nz, .gainExpFlagsLoop0
+	ld a, b
+	ld [wPartyGainExpFlags], a
+	callfar GainExperience
 	scf ; set carry
 	ret
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;	scf ; set carry
+;	ret
 
 ItemsCantBeUsedHereText:
 	text_far _ItemsCantBeUsedHereText

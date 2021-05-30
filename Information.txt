@@ -13,6 +13,7 @@ Field Moves with Select
 Deleter/Relearner/Tutor - psychics house
 Info Menu
 Automatic Repel
+Experience on Capture + EXP_ALL
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; Removed From Game
