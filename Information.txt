@@ -12,6 +12,7 @@ Running Shoes/Bike/Surf
 Field Moves with Select
 Deleter/Relearner/Tutor - psychics house
 Info Menu
+Automatic Repel
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; Removed From Game

@@ -309,6 +309,10 @@ INCLUDE "engine/events/move_deleter.asm"
 ; Adding Item Descriptions (Info) - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 INCLUDE "engine/menus/item_descriptions.asm"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Automatic Repel System - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "engine/overworld/automatic_repel.asm"
 
 
 SECTION "Saffron Guards", ROMX

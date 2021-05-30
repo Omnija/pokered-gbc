@@ -205,14 +205,21 @@ PlayerBlackedOutText::
 	text_far _PlayerBlackedOutText
 	text_end
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Automatic Repel System - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 DisplayRepelWoreOffText::
-	ld hl, RepelWoreOffText
-	call PrintText
-	jp AfterDisplayingTextID
+	farcall _DisplayRepelWoreOffText
+	jp HoldTextDisplayOpen
 
-RepelWoreOffText::
-	text_far _RepelWoreOffText
-	text_end
+;DisplayRepelWoreOffText::
+;	ld hl, RepelWoreOffText
+;	call PrintText
+;	jp AfterDisplayingTextID
+
+;RepelWoreOffText::
+;	text_far _RepelWoreOffText
+;	text_end
 	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Trainer Rematch - Joenote
