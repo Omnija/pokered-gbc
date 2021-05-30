@@ -299,6 +299,17 @@ INCLUDE "engine/battle/common_text.asm"
 INCLUDE "engine/pokemon/experience.asm"
 INCLUDE "engine/events/oaks_aide.asm"
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Relearner/Tutor/Deleter - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "engine/events/move_relearner.asm"
+INCLUDE "engine/events/move_tutor.asm"
+INCLUDE "engine/events/move_deleter.asm"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Item Descriptions (Info) - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "engine/menus/item_descriptions.asm"
+
 
 SECTION "Saffron Guards", ROMX
 

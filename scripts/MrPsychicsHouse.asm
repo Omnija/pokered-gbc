@@ -5,7 +5,7 @@ MrPsychicsHouse_TextPointers:
 	dw SaffronHouse2Text1
 	dw SaffronHouse2Text2
 	dw SaffronHouse2Text3
-;	dw SaffronHouse2Text4
+	dw SaffronHouse2Text4
 
 SaffronHouse2Text1:
 	text_asm
@@ -55,7 +55,9 @@ SaffronHouse2Text3:
 	text_far MoveRelearnerText1
 	text_end 
 	
-;SaffronHouse2Text4:
-;	text_asm 
-;	farcall MoveTutorScriptSpecial
-;	jp TextScriptEnd
+SaffronHouse2Text4:
+	db 8 ; text_asm
+	ld a, 9
+	ld [wWhichTrade], a
+	farcall MoveTutorScript
+	jp TextScriptEnd

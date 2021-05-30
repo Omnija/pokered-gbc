@@ -352,6 +352,12 @@ StartMenu_Item::
 	xor a
 	ld [hli], a ; current menu item ID
 	inc hl
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Item Descrption (Info) - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	inc a ; add 3rd option to (use/info/toss)
+
 	inc a ; a = 1
 	ld [hli], a ; max menu item ID
 	ld a, A_BUTTON | B_BUTTON
@@ -379,8 +385,18 @@ StartMenu_Item::
 	jp ItemMenuLoop
 .notBicycle2
 	ld a, [wCurrentMenuItem]
-	and a
-	jr nz, .tossItem
+;	and a
+;	jr nz, .tossItem
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Item Descriptions (Info) - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	cp a, 2
+	jr z, .tossItem
+	cp a, 1
+	jr z, .infoItem
+.useItem
+
 ; use item
 	ld [wPseudoItemID], a ; a must be 0 due to above conditional jump
 	ld a, [wcf91]
@@ -436,6 +452,16 @@ StartMenu_Item::
 	ld hl, wNumBagItems
 	call TossItem
 .tossZeroItems
+	jp ItemMenuLoop
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Item Descriptions (Info) - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+.infoItem
+	ld a,[wcf91]
+	ld hl, DisplayItemDescription
+	ld b, Bank(DisplayItemDescription)
+	call Bankswitch
 	jp ItemMenuLoop
 
 CannotUseItemsHereText:

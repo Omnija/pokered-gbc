@@ -1,4 +1,8 @@
-MoveRelearnerText1:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Relearner - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+MoveRelearnerText1::
 	text_asm
 ; Display the list of moves to the player.
 	ld hl, MoveRelearnerGreetingText

@@ -75,4 +75,4 @@ TutorToMove::
 	ld [wd11e], a
 	ret
 
-INCLUDE "data/moves/move_tutors.asm"
+INCLUDE "data/moves/move_tutor.asm"

@@ -1,4 +1,8 @@
-MoveDeleterText1:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Deleter - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+MoveDeleterText1::
 	text_asm
 	ld hl, MoveDeleterGreetingText
 	call PrintText

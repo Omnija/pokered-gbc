@@ -1,8 +1,9 @@
-PokemonLogoGraphics: INCBIN "gfx/gs/new_pokemon_logo.2bpp"
 IF GEN_2_GRAPHICS
+PokemonLogoGraphics: INCBIN "gfx/gs/new_pokemon_logo.2bpp"
 FontGraphics:: INCBIN "gfx/gs/font.1bpp"
 FontGraphicsEnd::
 ELSE
+PokemonLogoGraphics: INCBIN "gfx/title/pokemon_logo.2bpp"
 FontGraphics:: INCBIN "gfx/font/font.1bpp"
 FontGraphicsEnd::
 ENDC

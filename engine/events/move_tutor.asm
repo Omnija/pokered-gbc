@@ -1,3 +1,6 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Tutor - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Handles Move Tutor functionality
 ; Costs ¥500, the same as the Move Relearner
 ; To make a person a tutor, have their Text Pointer point to a structure like this example
@@ -8,6 +11,7 @@
 ;	ld [wWhichTrade], a
 ;	farcall MoveTutorScript
 ;	jp TextScriptEnd
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 MoveTutorScriptSpecial::
 ; This code is for the NPC who teaches Signature Moves to fully evolved starters 

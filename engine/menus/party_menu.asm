@@ -1,3 +1,22 @@
+; [wPartyMenuTypeOrMessageID] = menu type / message ID
+; if less than $F0, it is a menu type
+; menu types:
+; 00: normal pokemon menu (e.g. Start menu)
+; 01: use healing item on pokemon menu
+; 02: in-battle switch pokemon menu
+; 03: learn TM/HM menu
+; 04: swap pokemon positions menu
+; 05: use evolution stone on pokemon menu
+; otherwise, it is a message ID
+; f0: poison healed
+; f1: burn healed
+; f2: freeze healed
+; f3: sleep healed
+; f4: paralysis healed
+; f5: HP healed
+; f6: health returned
+; f7: revitalized
+; f8: leveled up
 DrawPartyMenu_::
 	xor a
 	ldh [hAutoBGTransferEnabled], a
@@ -61,6 +80,13 @@ RedrawPartyMenu_::
 	jr z, .teachMoveMenu
 	cp EVO_STONE_PARTY_MENU
 	jr z, .evolutionStoneMenu
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Relearner/Tutor/Deleter - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+	cp a,$06
+	jr z,.moveTutorMenu
+	
 	push hl
 	ld bc, 14 ; 14 columns to the right
 	add hl, bc
@@ -86,7 +112,7 @@ RedrawPartyMenu_::
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 .moveTutorMenu
 	push hl
-	call CanLearnTutor
+	farcall CanLearnTutor
 	pop hl
 	jr .showAbleNotAble
 	
@@ -96,7 +122,6 @@ RedrawPartyMenu_::
 	pop hl
 
 .showAbleNotAble
-
 	ld de, .ableToLearnMoveText
 	ld a, c
 	and a
