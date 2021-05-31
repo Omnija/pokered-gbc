@@ -7,6 +7,7 @@
 ; 03: learn TM/HM menu
 ; 04: swap pokemon positions menu
 ; 05: use evolution stone on pokemon menu
+; 06: tutor teach tm menu
 ; otherwise, it is a message ID
 ; f0: poison healed
 ; f1: burn healed
@@ -271,6 +272,10 @@ PartyMenuMessagePointers:
 	dw PartyMenuUseTMText
 	dw PartyMenuSwapMonText
 	dw PartyMenuItemUseText
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Tutor Menu - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	dw PartyMenuUseTMText
 
 PartyMenuNormalText:
 	text_far _PartyMenuNormalText

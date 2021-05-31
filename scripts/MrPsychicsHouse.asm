@@ -56,8 +56,7 @@ SaffronHouse2Text3:
 	text_end 
 	
 SaffronHouse2Text4:
-	db 8 ; text_asm
-	ld a, 9
-	ld [wWhichTrade], a
-	farcall MoveTutorScript
+	text_asm
+	callfar MoveTutorScriptSpecial
 	jp TextScriptEnd
+
