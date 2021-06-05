@@ -55,31 +55,53 @@ GetAnimationSpeed:
 	ld bc, $10
 	ld a, [wCurrentMenuItem]
 	call AddNTimes
-	ld c, ICONOFFSET
-	ld a, [hl]
-	cp ICON_BALL << 2
-	jr z, .editCoords
-	cp ICON_HELIX << 2
-	jr nz, .editTileIDS
-; ICON_BALL and ICON_HELIX only shake up and down
-.editCoords
-	dec hl
-	dec hl ; dec hl to the OAM y coord
-	ld c, $1 ; amount to increase the y coord by
-; otherwise, load a second sprite frame
-.editTileIDS
-	ld b, $4
-	ld de, $4
-.loop
-	ld a, [hl]
-	add c
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Party Menu ICONS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	ld a, [hl] ; contains tile number
+	bit 2, a
+	jr z, .firstFrame
+	sub 8
+.firstFrame
+	add 4
+	ld bc, 4
+rept 3
 	ld [hl], a
-	add hl, de
-	dec b
-	jr nz, .loop
+	add hl, bc
+	inc a
+endr
+	ld [hl], a
+.done
 	pop bc
 	ld a, c
 	jr .incTimer
+	
+;	ld c, ICONOFFSET
+;	ld a, [hl]
+;	cp ICON_BALL << 2
+;	jr z, .editCoords
+;	cp ICON_HELIX << 2
+;	jr nz, .editTileIDS
+; ICON_BALL and ICON_HELIX only shake up and down
+.editCoords
+;	dec hl
+;	dec hl ; dec hl to the OAM y coord
+;	ld c, $1 ; amount to increase the y coord by
+; otherwise, load a second sprite frame
+;.editTileIDS
+;	ld b, $4
+;	ld de, $4
+;.loop
+;	ld a, [hl]
+;	add c
+;	ld [hl], a
+;	add hl, de
+;	dec b
+;	jr nz, .loop
+;	pop bc
+;	ld a, c
+;	jr .incTimer
 
 ; Party mon animations cycle between 2 frames.
 ; The members of the PartyMonSpeeds array specify the number of V-blanks
@@ -88,10 +110,43 @@ GetAnimationSpeed:
 PartyMonSpeeds:
 	db 5, 16, 32
 
-LoadMonPartySpriteGfx:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Party Menu ICONS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+LoadMonPartySpriteGfx: ; nickname screen, etc
+	call DisableLCD
+	ld a, [wcf91] ; contains mon id
+	ld [wd11e], a
+	push de
+	predef IndexToPokedex
+	pop de
+	ld a, [wd11e]
+	dec a
+	ld hl, MonPartyData
+	ld e, a
+	ld d, 0
+	add hl, de
+	ld a, [hl] ; read the icon id
+	ld hl, MonIcons
+	ld bc, $80
+	call AddNTimes ; hl now contains pointer to mon icon
+	ld a, BANK(MonIcons)
+	ld de, vSprites
+	call FarCopyData2
+	ld de, vSprites + $38 * $10
+	ld hl, TradeBubbleIconGFX
+	ld bc, $40
+	call CopyData
+	ld de, vSprites + $78 * $10
+	ld hl, TradeBubbleIconGFX + $40
+	ld bc, $40
+	call CopyData
+	jp EnableLCD
+	
+;LoadMonPartySpriteGfx:
 ; Load mon party sprite tile patterns into VRAM during V-blank.
-	ld hl, MonPartySpritePointers
-	ld a, $1c
+;	ld hl, MonPartySpritePointers
+;	ld a, $1c
 
 LoadAnimSpriteGfx:
 ; Load animated sprite tile patterns into VRAM during V-blank. hl is the address
@@ -124,45 +179,104 @@ LoadAnimSpriteGfx:
 	dec a
 	jr nz, .loop
 	ret
-
-LoadMonPartySpriteGfxWithLCDDisabled:
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Party Menu ICONS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+LoadMonPartySpriteGfxWithLCDDisabled: ; party menu
 ; Load mon party sprite tile patterns into VRAM immediately by disabling the
 ; LCD.
 	call DisableLCD
-	ld hl, MonPartySpritePointers
-	ld a, $1c
-	ld bc, $0
-.loop
+	xor a
 	push af
-	push bc
+	ld hl, wPartySpecies
+.loop
+	; load the correct mon icon into each subsequent OAM slot
+	ld a, [hli] ; contains mon id
 	push hl
-	add hl, bc
-	ld a, [hli]
-	ld e, a
-	ld a, [hli]
-	ld d, a
+	ld [wd11e], a
 	push de
-	ld a, [hli]
-	ld c, a
-	swap c
-	ld b, $0
-	ld a, [hli]
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
+	predef IndexToPokedex
+	pop de
+	ld a, [wd11e]
+	dec a
+	ld hl, MonPartyData
+	ld e, a
+	ld d, 0
+	add hl, de
+	ld a, [hl] ; read the icon id
+	ld hl, MonIcons
+	ld bc, $80
+	call AddNTimes
+	ld d, h
+	ld e, l
+	pop hl
+	pop af
+	push af
+	push hl
+	ld h, d
+	ld l, e
+	push hl
+	ld hl, vSprites
+	ld bc, $80
+	call AddNTimes
+	ld d, h
+	ld e, l
+	ld a, BANK(MonIcons)
+	ld bc, $80
 	pop hl
 	call FarCopyData2
 	pop hl
-	pop bc
-	ld a, $6
-	add c
-	ld c, a
+	ld a, [wPartyCount]
+	ld b, a
 	pop af
-	dec a
-	jr nz, .loop
+	inc a
+	cp b
+	jr z, .done
+	push af
+	jr .loop
+.done
 	jp EnableLCD
 
-INCLUDE "data/icon_pointers.asm"
+
+;LoadMonPartySpriteGfxWithLCDDisabled:
+; Load mon party sprite tile patterns into VRAM immediately by disabling the
+; LCD.
+;	call DisableLCD
+;	ld hl, MonPartySpritePointers
+;	ld a, $1c
+;	ld bc, $0
+;.loop
+;	push af
+;	push bc
+;	push hl
+;	add hl, bc
+;	ld a, [hli]
+;	ld e, a
+;	ld a, [hli]
+;	ld d, a
+;	push de
+;	ld a, [hli]
+;	ld c, a
+;	swap c
+;	ld b, $0
+;	ld a, [hli]
+;	ld e, [hl]
+;	inc hl
+;	ld d, [hl]
+;	pop hl
+;	call FarCopyData2
+;	pop hl
+;	pop bc
+;	ld a, $6
+;	add c
+;	ld c, a
+;	pop af
+;	dec a
+;	jr nz, .loop
+;	jp EnableLCD
+
+;INCLUDE "data/icon_pointers.asm"
 
 WriteMonPartySpriteOAMByPartyIndex:
 ; Write OAM blocks for the party mon in [hPartyMonIndex].
@@ -193,61 +307,64 @@ WriteMonPartySpriteOAMBySpecies:
 	ld [wOAMBaseTile], a
 	jr WriteMonPartySpriteOAM
 
-UnusedPartyMonSpriteFunction:
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Disabled Unused Function
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;UnusedPartyMonSpriteFunction:
 ; This function is unused and doesn't appear to do anything useful. It looks
 ; like it may have been intended to load the tile patterns and OAM data for
 ; the mon party sprite associated with the species in [wcf91].
 ; However, its calculations are off and it loads garbage data.
-	ld a, [wcf91]
-	call GetPartyMonSpriteID
-	push af
-	ld hl, vSprites tile $00
-	call .LoadTilePatterns
-	pop af
-	add $54
-	ld hl, vSprites tile $04
-	call .LoadTilePatterns
-	xor a
-	ld [wMonPartySpriteSpecies], a
-	jr WriteMonPartySpriteOAMBySpecies
+;	ld a, [wcf91]
+;	call GetPartyMonSpriteID
+;	push af
+;	ld hl, vSprites tile $00
+;	call .LoadTilePatterns
+;	pop af
+;	add $54
+;	ld hl, vSprites tile $04
+;	call .LoadTilePatterns
+;	xor a
+;	ld [wMonPartySpriteSpecies], a
+;	jr WriteMonPartySpriteOAMBySpecies
 
-.LoadTilePatterns
-	push hl
-	add a
-	ld c, a
-	ld b, 0
-	ld hl, MonPartySpritePointers
-	add hl, bc
-	add hl, bc
-	add hl, bc
-	ld a, [hli]
-	ld e, a
-	ld a, [hli]
-	ld d, a
-	ld a, [hli]
-	ld c, a
-	ld a, [hli]
-	ld b, a
-	pop hl
-	jp CopyVideoData
+;.LoadTilePatterns
+;	push hl
+;	add a
+;	ld c, a
+;	ld b, 0
+;	ld hl, MonPartySpritePointers
+;	add hl, bc
+;	add hl, bc
+;	add hl, bc
+;	ld a, [hli]
+;	ld e, a
+;	ld a, [hli]
+;	ld d, a
+;	ld a, [hli]
+;	ld c, a
+;	ld a, [hli]
+;	ld b, a
+;	pop hl
+;	jp CopyVideoData
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Party Menu ICONS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 WriteMonPartySpriteOAM:
 ; Write the OAM blocks for the first animation frame into the OAM buffer and
 ; make a copy at wMonPartySpritesSavedOAM.
 	push af
 	ld c, $10
-	ld h, HIGH(wOAMBuffer)
-	ldh a, [hPartyMonIndex]
+	ld h, wOAMBuffer / $100
+	ld a, [hPartyMonIndex]
 	swap a
 	ld l, a
 	add $10
 	ld b, a
 	pop af
-	cp ICON_HELIX << 2
-	jr z, .helix
-	call WriteSymmetricMonPartySpriteOAM
-	jr .makeCopy
-.helix
 	call WriteAsymmetricMonPartySpriteOAM
 ; Make a copy of the OAM buffer with the first animation frame written so that
 ; we can flip back to it from the second frame by copying it back.
@@ -255,41 +372,84 @@ WriteMonPartySpriteOAM:
 	ld hl, wOAMBuffer
 	ld de, wMonPartySpritesSavedOAM
 	ld bc, $60
-	jp CopyData
+	jp CopyData	
 
+;WriteMonPartySpriteOAM:
+; Write the OAM blocks for the first animation frame into the OAM buffer and
+; make a copy at wMonPartySpritesSavedOAM.
+;	push af
+;	ld c, $10
+;	ld h, HIGH(wOAMBuffer)
+;	ldh a, [hPartyMonIndex]
+;	swap a
+;	ld l, a
+;	add $10
+;	ld b, a
+;	pop af
+;	cp ICON_HELIX << 2
+;	jr z, .helix
+;	call WriteSymmetricMonPartySpriteOAM
+;	jr .makeCopy
+;.helix
+;	call WriteAsymmetricMonPartySpriteOAM
+; Make a copy of the OAM buffer with the first animation frame written so that
+; we can flip back to it from the second frame by copying it back.
+;.makeCopy
+;	ld hl, wOAMBuffer
+;	ld de, wMonPartySpritesSavedOAM
+;	ld bc, $60
+;	jp CopyData
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Party Menu ICONS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 GetPartyMonSpriteID:
-	ld [wd11e], a
-	predef IndexToPokedex
-	ld a, [wd11e]
-	ld c, a
-	dec a
-	srl a
-	ld hl, MonPartyData
-	ld e, a
-	ld d, 0
-	add hl, de
-	ld a, [hl]
-	bit 0, c
-	jr nz, .skipSwap
-	swap a ; use lower nybble if pokedex num is even
-.skipSwap
-	and $f0
-	srl a ; value == ICON constant << 2
-	srl a
+	ld a, [hPartyMonIndex]
+	add a
+	add a
+	add a
+	ld [wOAMBaseTile], a
 	ret
 
-INCLUDE "data/pokemon/menu_icons.asm"
 
-INC_FRAME_1 EQUS "0, $20"
-INC_FRAME_2 EQUS "$20, $20"
+;GetPartyMonSpriteID:
+;	ld [wd11e], a
+;	predef IndexToPokedex
+;	ld a, [wd11e]
+;	ld c, a
+;	dec a
+;	srl a
+;	ld hl, MonPartyData
+;	ld e, a
+;	ld d, 0
+;	add hl, de
+;	ld a, [hl]
+;	bit 0, c
+;	jr nz, .skipSwap
+;	swap a ; use lower nybble if pokedex num is even
+;.skipSwap
+;	and $f0
+;	srl a ; value == ICON constant << 2
+;	srl a
+;	ret
 
-BugIconFrame1:       INCBIN "gfx/icons/bug.2bpp", INC_FRAME_1
-PlantIconFrame1:     INCBIN "gfx/icons/plant.2bpp", INC_FRAME_1
-BugIconFrame2:       INCBIN "gfx/icons/bug.2bpp", INC_FRAME_2
-PlantIconFrame2:     INCBIN "gfx/icons/plant.2bpp", INC_FRAME_2
-SnakeIconFrame1:     INCBIN "gfx/icons/snake.2bpp", INC_FRAME_1
-QuadrupedIconFrame1: INCBIN "gfx/icons/quadruped.2bpp", INC_FRAME_1
-SnakeIconFrame2:     INCBIN "gfx/icons/snake.2bpp", INC_FRAME_2
-QuadrupedIconFrame2: INCBIN "gfx/icons/quadruped.2bpp", INC_FRAME_2
+;INCLUDE "data/pokemon/menu_icons.asm"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Party Menu ICONS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "data/pokemon/menu_party_icons.asm"
+
+;INC_FRAME_1 EQUS "0, $20"
+;INC_FRAME_2 EQUS "$20, $20"
+
+;BugIconFrame1:       INCBIN "gfx/icons/bug.2bpp", INC_FRAME_1
+;PlantIconFrame1:     INCBIN "gfx/icons/plant.2bpp", INC_FRAME_1
+;BugIconFrame2:       INCBIN "gfx/icons/bug.2bpp", INC_FRAME_2
+;PlantIconFrame2:     INCBIN "gfx/icons/plant.2bpp", INC_FRAME_2
+;SnakeIconFrame1:     INCBIN "gfx/icons/snake.2bpp", INC_FRAME_1
+;QuadrupedIconFrame1: INCBIN "gfx/icons/quadruped.2bpp", INC_FRAME_1
+;SnakeIconFrame2:     INCBIN "gfx/icons/snake.2bpp", INC_FRAME_2
+;QuadrupedIconFrame2: INCBIN "gfx/icons/quadruped.2bpp", INC_FRAME_2
 
 TradeBubbleIconGFX:  INCBIN "gfx/trade/bubble.2bpp"

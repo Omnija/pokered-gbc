@@ -580,7 +580,16 @@ SetPal_Generic:
 	ld a, 2
 	ldh [rSVBK], a
 
-	ld d, PAL_REDBAR ; Red lifebar color (for pokeballs)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Changed Pokedex Page Colour
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_RED)
+	ld d, PAL_REDMON
+ELSE
+	ld d, PAL_BLUEMON
+ENDC
+
+;	ld d, PAL_REDBAR ; Red lifebar color (for pokeballs)
 	ld e, 0
 	push de
 	farcall LoadSGBPalette

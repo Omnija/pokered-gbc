@@ -989,3 +989,4 @@ MarowakPicBack::      INCBIN "gfx/pokemon/back/marowakb.pic"
 ENDC
 
 SECTION "bank38", ROMX
+INCLUDE "gfx/icons.asm"

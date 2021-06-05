@@ -2068,7 +2068,11 @@ LoadWalkingPlayerSpriteGraphics::
 	jr LoadPlayerSpriteGraphicsCommon
 
 LoadSurfingPlayerSpriteGraphics::
-	ld de, SeelSprite
+;	ld de, SeelSprite
+;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Surfing Sprite
+;;;;;;;;;;;;;;;;;;;;;;;;
+	ld de, SurfingSprite
 	ld hl, vNPCSprites
 	jr LoadPlayerSpriteGraphicsCommon
 

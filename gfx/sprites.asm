@@ -80,8 +80,16 @@ FairySprite::            INCBIN "gfx/sprites/fairy.2bpp"
 AgathaSprite::           INCBIN "gfx/sprites/agatha.2bpp"
 BrunoSprite::            INCBIN "gfx/sprites/bruno.2bpp"
 LoreleiSprite::          INCBIN "gfx/sprites/lorelei.2bpp"
-;;;;;;;;;;;;;;;;;;;;;;
-; Replaced with Lapras
-;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;
+; Moved to trade.asm
+;;;;;;;;;;;;;;;;;;;;;
 ;SeelSprite::             INCBIN "gfx/sprites/seel.2bpp"
-SeelSprite::             INCBIN "gfx/sprites/lapras.2bpp"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Surfing Sprite
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_RED)
+SurfingSprite::          INCBIN "gfx/sprites/red_surf.2bpp"
+ELSE
+SurfingSprite::          INCBIN "gfx/sprites/blue_surf.2bpp"
+ENDC

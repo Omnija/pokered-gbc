@@ -6,14 +6,15 @@ Alternative Version Differences
 	-Start as Red or Blue
 	-Starting locations
 
-GFX/Pallete Changed/Updated
+Changes/Updates to the GFX
 Overworld Face the Trainers
 Running Shoes/Bike/Surf
 Field Moves with Select
 Deleter/Relearner/Tutor - psychics house
 Info Menu
 Automatic Repel
-Experience on Capture + EXP_ALL
+Experience on Capture + EXP_ALL Check
+Independent Party Menu Icons (not all due to limitations)
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; Removed From Game
@@ -21,3 +22,4 @@ Experience on Capture + EXP_ALL
 Save Delay
 Poke Center Healing Delay
 Overworld Poison Effects
+Unused Codes/Triggers

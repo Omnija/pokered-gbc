@@ -66,6 +66,12 @@ SpriteSheetPointerTable:
 	overworld_sprite BrunoSprite, 12            ; SPRITE_BRUNO
 	overworld_sprite LoreleiSprite, 12          ; SPRITE_LORELEI
 	overworld_sprite SeelSprite, 12             ; SPRITE_SEEL
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Surfing Sprite
+;;;;;;;;;;;;;;;;;;;;;;;;
+	overworld_sprite SurfingSprite, 12          ; SPRITE_SPRITE
+	
 	overworld_sprite PokeBallSprite, 4          ; SPRITE_POKE_BALL
 	overworld_sprite FossilSprite, 4            ; SPRITE_FOSSIL
 	overworld_sprite BoulderSprite, 4           ; SPRITE_BOULDER
