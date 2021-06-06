@@ -101,6 +101,20 @@ SlidePlayerAndEnemySilhouettesOnScreen:
 	inc a
 	ldh [hAutoBGTransferEnabled], a
 	call Delay3
+
+;;;;;;;;;;;;;;;;
+; Adding Shiny
+;;;;;;;;;;;;;;;;	
+	ld de, wEnemyMonDVs
+	callfar IsMonShiny
+	ld hl, wShinyMonFlag
+	jr nz, .shiny
+	res 0, [hl]
+	jr .setPal
+.shiny
+	set 0, [hl]
+.setPal
+	
 	call HideSprites
 	ld b, SET_PAL_BATTLE_AFTER_BLACK
 	call RunPaletteCommand
@@ -1445,6 +1459,18 @@ EnemySendOutFirstMon:
 	ldh [hStartTileID], a
 	hlcoord 15, 6
 	predef AnimateSendingOutMon
+
+;;;;;;;;;;;;;;;;
+; Adding Shiny
+;;;;;;;;;;;;;;;;	
+	ld de, wEnemyMonDVs
+	callfar IsMonShiny
+	jr z, .noFlash
+	ld hl, wShinyMonFlag
+	set 1, [hl]
+	callfar PlayShinySparkleAnimation
+.noFlash
+	
 	ld a, [wEnemyMonSpecies2]
 	call PlayCry
 	call DrawEnemyHUDAndHPBar
@@ -1775,6 +1801,18 @@ SendOutMon:
 	call PlayMoveAnimation
 	hlcoord 4, 11
 	predef AnimateSendingOutMon
+
+;;;;;;;;;;;;;;;;
+; Adding Shiny
+;;;;;;;;;;;;;;;;	
+	ld de, wBattleMonDVs
+	callfar IsMonShiny
+	jr z, .noFlash
+	ld hl, wShinyMonFlag
+	res 1, [hl]
+	callfar PlayShinySparkleAnimation
+.noFlash
+	
 	ld a, [wcf91]
 	call PlayCry
 	call PrintEmptyString
@@ -1844,6 +1882,19 @@ ELSE
 	call CenterMonName
 	call PlaceString
 ENDC
+
+;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Shiny/Gender
+;;;;;;;;;;;;;;;;;;;;;;;
+	coord hl, 17, 8
+	ld a, [wBattleMonSpecies]
+	ld de, wBattleMonDVs
+	call PrintMonGender
+	coord hl, 18, 8
+	ld de, wBattleMonDVs
+	call PrintMonShiny
+	coord de, 17, 11 ; right end
+
 	ld hl, wBattleMonSpecies
 	ld de, wLoadedMon
 	ld bc, wBattleMonDVs - wBattleMonSpecies
@@ -1904,10 +1955,22 @@ DrawEnemyHUDAndHPBar:
 	call CenterMonName
 	call PlaceString
 IF GEN_2_GRAPHICS
-	hlcoord 6, 1
+	hlcoord 8, 1 ; was 6
 ELSE
-	hlcoord 4, 1
+	hlcoord 6, 1 ; was 4
 ENDC
+
+;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Shiny/Gender
+;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, [wEnemyMonSpecies]
+	ld de, wEnemyMonDVs
+	call PrintMonGender
+	coord hl, 9, 1
+	ld de, wEnemyMonDVs
+	call PrintMonShiny
+	coord hl, 4, 1
+
 	push hl
 	inc hl
 	ld de, wEnemyMonStatus
@@ -2020,6 +2083,45 @@ CenterMonName:
 .done
 	pop de
 	ret
+
+;;;;;;;;;;;;;;;;
+; Adding Gender
+;;;;;;;;;;;;;;;;;	
+PrintMonGender:
+	ld [wGenderTemp], a
+	push hl
+	callfar GetMonGender
+	ld a, [wGenderTemp]
+	and a
+	jr z, .genderless
+	dec a
+	ld a, "♂"
+	jr z, .ok
+	ld a, "♀"
+	jr .ok
+.genderless
+	ld a, " "
+.ok
+	pop hl
+	ld [hl], a
+	ret
+
+;;;;;;;;;;;;;;;;
+; Adding Shiny
+;;;;;;;;;;;;;;;;	
+PrintMonShiny:
+	push hl
+	callfar IsMonShiny
+	jr z, .notShiny
+	ld a, "<SHINY>"
+	jr .ok
+.notShiny
+	ld a, " "
+.ok
+	pop hl
+	ld [hl], a
+	ret	
+	
 
 DisplayBattleMenu::
 	call LoadScreenTilesFromBuffer1 ; restore saved screen

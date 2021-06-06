@@ -157,6 +157,11 @@
 	charmap "'t",        $be
 	charmap "'v",        $bf
 
+;;;;;;;;;;;;;;;;
+; Adding Shiny
+;;;;;;;;;;;;;;;;
+	charmap "<SHINY>",	 $DF
+	
 	charmap "'",         $e0
 	charmap "<PK>",      $e1
 	charmap "<MN>",      $e2

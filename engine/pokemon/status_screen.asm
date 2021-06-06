@@ -128,6 +128,20 @@ ENDC
 	predef DrawHP
 	ld hl, wStatusScreenHPBarColor
 	call GetHealthBarColor
+	
+;;;;;;;;;;;;;;;;
+; Adding Shiny
+;;;;;;;;;;;;;;;;
+	ld de, wLoadedMonDVs
+	callfar IsMonShiny
+	ld hl, wShinyMonFlag
+	jr nz, .shiny
+	res 0, [hl]
+	jr .setPal
+.shiny
+	set 0, [hl]
+.setPal
+	
 	ld b, SET_PAL_STATUS_SCREEN
 	call StatusScreenHook ; HAX: Draws EXP bar if GEN_2_GRAPHICS is set
 	hlcoord 16, 6
@@ -171,6 +185,13 @@ ENDC
 	call PrintNumber ; ID Number
 	ld d, $0
 	call PrintStatsBox
+
+;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Shiny/Gender
+;;;;;;;;;;;;;;;;;;;;;;;	
+	call PrintMonGender_StatusScreen
+	call PrintMonShiny_StatusScreen
+
 	call Delay3
 	call GBPalNormal
 	hlcoord 1, 0
@@ -230,6 +251,37 @@ StatusText:
 
 OKText:
 	db "OK@"
+
+;;;;;;;;;;;;;;;;;
+; Adding Gender
+;;;;;;;;;;;;;;;;;
+PrintMonGender_StatusScreen:
+	ld a, [wLoadedMonSpecies]
+	ld [wGenderTemp], a
+	ld de, wLoadedMonDVs
+	callfar GetMonGender
+	ld a, [wGenderTemp]
+	and a
+	ret z
+	dec a
+	ld a, "♂"
+	jr z, .ok
+	ld a, "♀"
+.ok
+	coord hl, 17, 2
+	ld [hl], a
+	ret
+
+;;;;;;;;;;;;;;;;
+; Adding Shiny
+;;;;;;;;;;;;;;;;	
+PrintMonShiny_StatusScreen:
+	ld de, wLoadedMonDVs
+	callfar IsMonShiny
+	ret z
+	coord hl, 18, 2
+	ld [hl], "<SHINY>"
+	ret
 
 ; Draws a line starting from hl high b and wide c
 DrawLineBox:

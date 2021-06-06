@@ -234,6 +234,18 @@ wTempPic::
 	ds 7 * 7 tiles
 ENDU
 
+;;;;;;;;;;;;;;;;;
+; Adding Gender
+;;;;;;;;;;;;;;;;;
+wGenderTemp::
+
+;;;;;;;;;;;;;;;;;
+; Adding Shiny
+;;;;;;;;;;;;;;;;;
+wShinyMonFlag:: ; cc97
+; Bit 0 is set if the mon should be shiny
+; Bit 1 is set for enemy mon animation, reset for player mon animation
+
 ;;;;;;;;;;;;;;;;;;;;;;
 ; Tutor - Mateo Code
 ;;;;;;;;;;;;;;;;;;;;;;

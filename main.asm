@@ -425,4 +425,15 @@ INCLUDE "color/animations.asm"
 ;;;;;;;;;;;;;;;;;;;;;;;
 
 SECTION "bank38", ROMX
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Party Menu Icons
+;;;;;;;;;;;;;;;;;;;;;;;	;;;
 INCLUDE "gfx/icons.asm"
+
+;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Shiny/Gender
+;;;;;;;;;;;;;;;;;;;;;;;	
+INCLUDE "engine/pokemon/mon_gender.asm"
+INCLUDE "engine/pokemon/mon_shiny.asm"
+ShinySparkleGraphics:           INCBIN "gfx/battle/shiny_sparkle.2bpp"
+EXPBarShinySparkleGraphicsEnd:

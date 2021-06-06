@@ -16,6 +16,8 @@
 	- Automatic Repel
 	- Experience on Capture + EXP_ALL Check
 	- Independent Party Menu Icons (only pre evo)
+	- Pokemon Genders
+	- Pokemon Shiny (No color palettes)
 
 [Removed From Game]
 

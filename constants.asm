@@ -39,5 +39,10 @@ INCLUDE "constants/event_constants.asm"
 INCLUDE "constants/text_constants.asm"
 INCLUDE "constants/menu_constants.asm"
 
+;;;;;;;;;;;;;;;;;;
+; Adding Gender
+;;;;;;;;;;;;;;;;;;
+INCLUDE "constants/gender_constants.asm"
+
 INCLUDE "color/wram.asm"
 INCLUDE "color/data/map_palette_constants.asm"
