@@ -1256,4 +1256,11 @@ MissingNoDexEntry:
 	db "???@"
 	db 10 ; 1.0 m
 	dw 100 ; 10.0 kg
-	db "コメント　さくせいちゅう@" ; コメント作成中 (Comment to be written)
+	
+;;;;;;;;;;;;;;;;;;;;;
+; Adding MissingNo
+;;;;;;;;;;;;;;;;;;;;;
+	text_far _MissingnoDexEntry
+	text_end
+	
+;	db "コメント　さくせいちゅう@" ; コメント作成中 (Comment to be written)

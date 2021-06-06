@@ -2,8 +2,6 @@
 ; Adding Party Menu ICONS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-SECTION "Menu Party Icons", ROMX
-
 MonIcons::
 ;INCBIN "gfx/pokemon/icons/null.2bpp"		; null
 INCBIN "gfx/pokemon/icons/bulbasaur.2bpp"   ; bulbasaur

@@ -361,11 +361,18 @@ SetPal_Pokedex:
 
 	farcall LoadSGBPalette
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Changing Pokedex Colours
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 IF DEF(_BLUE)
 	ld d, PAL_BLUEMON
 ELSE
 	ld d, PAL_REDMON
 ENDC
+
+;	ld d, PAL_REDBAR ; Red lifebar color (for pokeballs)
+
 	ld e, 1
 	farcall LoadSGBPalette
 

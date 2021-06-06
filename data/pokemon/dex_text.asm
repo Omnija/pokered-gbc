@@ -1507,3 +1507,16 @@ _VictreebelDexEntry::
 	next "has ever returned"
 	next "from there"
 	dex
+
+;;;;;;;;;;;;;;;;;;;;;
+; Adding MissingNo
+;;;;;;;;;;;;;;;;;;;;;
+_MissingnoDexEntry::
+	text "This #MON has"
+	next "just been dis-"
+	next "covered."
+
+	page "It is currently"
+	next "under investi-"
+	next "gation"
+	dex
