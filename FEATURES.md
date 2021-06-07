@@ -18,6 +18,8 @@
 	- Independent Party Menu Icons (only pre evo)
 	- Pokemon Genders
 	- Pokemon Shiny (No color palettes)
+	- Individual Trainer DV's
+	- Don't skip Move when over leveling
 
 [Removed From Game]
 

@@ -33,7 +33,7 @@ ENDC
 	ld [wHUDPokeballGfxOffsetX], a
 	ld hl, wOAMBuffer
 	jp WritePokeballOAMData
-
+	
 SetupEnemyPartyPokeballs:
 	call PlaceEnemyHUDTiles
 	ld hl, wEnemyMons
@@ -198,5 +198,5 @@ SetupPlayerAndEnemyPokeballs:
 
 ; four tiles: pokeball, black pokeball (status ailment), crossed out pokeball (fainted) and pokeball slot (no mon)
 PokeballTileGraphics::
-	INCBIN "gfx/battle/balls.2bpp"
+	INCBIN "gfx/battle/pokeballs.2bpp"
 PokeballTileGraphicsEnd:

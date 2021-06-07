@@ -6291,10 +6291,24 @@ LoadEnemyMonData:
 	jr nz, .storeDVs
 	ld a, [wIsInBattle]
 	cp $2 ; is it a trainer battle?
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer DV's
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jr nz, .notTrainer
+; get DVs for trainer mon
+	callfar GetTrainerMonDVs
+	ld hl, wTempDVs
+	ld a, [hli]
+	ld b, [hl]
+	jr .storeDVs
+.notTrainer
+
 ; fixed DVs for trainer mon
-	ld a, ATKDEFDV_TRAINER
-	ld b, SPDSPCDV_TRAINER
-	jr z, .storeDVs
+;	ld a, ATKDEFDV_TRAINER
+;	ld b, SPDSPCDV_TRAINER
+;	jr z, .storeDVs
+
 ; random DVs for wild mon
 	call BattleRandom
 	ld b, a

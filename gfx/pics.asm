@@ -836,9 +836,3 @@ JynxPicBack::         INCBIN "gfx/pokemon/back/jynxb.pic"
 MarowakPicFront::     INCBIN "gfx/pokemon/front/marowak.pic"
 MarowakPicBack::      INCBIN "gfx/pokemon/back/marowakb.pic"
 ENDC
-
-;;;;;;;;;;;;;;;;;;;;
-; Adding MissingNo
-;;;;;;;;;;;;;;;;;;;;
-MissingNoPicFront::     INCBIN "gfx/pokemon/front/missingno.pic"
-MissingNoPicBack::      INCBIN "gfx/pokemon/back/missingnob.pic"

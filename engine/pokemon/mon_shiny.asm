@@ -17,28 +17,30 @@
 ;	and a
 ;	ret
 
+
+;Now any Pokémon with all four DVs at 10 or above (out of 15) will be shiny.
 IsMonShiny:
 	ld h, d
 	ld l, e
 	; attack DV >= 10?
 	ld a, [hl]
 	and $f0
-	cp 8 << 4 ; Default 10
+	cp 10 << 4 ; Default 10
 	jr c, .notShiny
 	; defense DV >= 10?
 	ld a, [hli]
 	and $f
-	cp 8 ; Default 10
+	cp 10 ; Default 10
 	jr c, .notShiny
 	; speed DV >= 10?
 	ld a, [hl]
 	and $f0
-	cp 8 << 4 ; Default 10
+	cp 10 << 4 ; Default 10
 	jr c, .notShiny
 	; special DV >= 10?
 	ld a, [hl]
 	and $f
-	cp 8 ; Default 10
+	cp 10 ; Default 10
 	jr c, .notShiny
 	and a
 	ret
