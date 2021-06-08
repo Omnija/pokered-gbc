@@ -82,5 +82,10 @@ SpriteSheetPointerTable:
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Surfing Sprite
 ;;;;;;;;;;;;;;;;;;;;;;;;
-	overworld_sprite SurfingSprite, 12          ; SPRITE_SPRITE
+	overworld_sprite SurfingSprite, 12          ; SPRITE_SURFING
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Daycare Ditto
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	overworld_sprite DittoSprite, 4          	; SPRITE_DITTO
 	

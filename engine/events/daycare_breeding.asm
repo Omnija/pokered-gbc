@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Breeding System - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;wExtraflag was replaced with wTempBreeding
+;wExtraflag was replaced with wExtraFlags
 
 DayCareManScript::
 ; Handles breeding the DayCareMon with the Day Care Man's Ditto
@@ -14,7 +14,7 @@ DayCareManScript::
 	jp c, .isBaby
 	call CanBreed ; Check if it is in the No Breed List (legendaries and Ditto)
 	jp c, .cannotBreed
-	ld hl, wTempBreeding ; Extra Flags
+	ld hl, wExtraFlags ; Extra Flags
 	bit 1, [hl] ; Check to see if there is a baby
 	jp z, .noEggs
 	ld a, [wPartyCount]
@@ -30,7 +30,7 @@ DayCareManScript::
 	ld c, $5	   ; Babies are at lv 5, like Gen 2
 	call GivePokemon
 	call SetupBabymonStats
-	ld hl, wTempBreeding ; Extra flags
+	ld hl, wExtraFlags ; Extra flags
 	res 1, [hl] ; Mark there not being a babymon at Day Care
 	ret
 	
@@ -60,7 +60,7 @@ DayCareManScript::
 	ret
 
 .nevermind
-	ld hl, wTempBreeding ; Extra Flags
+	ld hl, wExtraFlags ; Extra Flags
 	res 1, [hl] ; Mark there not being a babymon at Day Care
 	ld hl, DayCareManText8 ; Ok, I'll give this to someone else, then
 	call PrintText
@@ -199,7 +199,7 @@ INCLUDE "data/pokemon/breeding/babymon_list.asm"
 DayCareManText1:
 	text "Your @"
 	text_ram wDayCareMonName
-	text_end
+	db $0
 	line "has been playing"
 	cont "with my Ditto."
 	prompt
@@ -253,3 +253,29 @@ DayCareManText8:
 	text "Ok, I'll give this"
 	line "to someone else,"
 	cont "then.@@"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Movement Counter- Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MovementReset::
+; Called to reset movement counter
+; Happens when the movement step counter hits 1024
+	ld a, [wMovementCounter + 1]
+	cp a, $4
+	ret nz
+;	xor a
+;	ld hl, wBerryTreeFlags
+;	; assumption: only 2 bytes used for flags
+;	ld [hli],a
+;	ld [hli],a
+	; assumption: Step Counter immediately follows Breeding Flags
+ 	ld [hli],a               
+	ld [hl],a
+	; Added part to mark there being a baby at the Day Care
+	ld a, [wDayCareInUse]
+	and a ; does the Day Care Lady have someone?
+	ret z
+	ld hl, wExtraFlags
+	set 1, [hl] ; Mark there being a babymon at Day Care
+	ret
+	

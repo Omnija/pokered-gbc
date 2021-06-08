@@ -264,7 +264,18 @@ wShinyMonFlag:: ; cc97
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Breeding System - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-wTempBreeding::
+wExtraFlags::
+; bit 0 = 
+; bit 1 = Set means there is a baby at the Daycare
+; bit 2 = 
+	ds 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Movement Counter - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+wMovementCounter:: ; d13b
+; counts down once every step
+	ds 1
 
 wRedrawRowOrColumnSrcTiles::
 ; the tiles of the row or column to be redrawn by RedrawRowOrColumn
@@ -3136,8 +3147,9 @@ wNumSafariBalls::
 
 
 wDayCareInUse::
-; 0 if no pokemon is in the daycare
-; 1 if pokemon is in the daycare
+; bit 0 - if no pokemon is in the daycare
+; bit 1 - if pokemon is in the daycare
+; bit 2 - Egg waiting at Day Care
 	ds 1
 
 wDayCareMonName:: ds NAME_LENGTH

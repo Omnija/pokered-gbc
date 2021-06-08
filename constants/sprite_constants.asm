@@ -237,8 +237,12 @@ FIRST_STILL_SPRITE EQU const_value
 	const SPRITE_UNUSED_GAMBLER_ASLEEP_2 ; $47
 	const SPRITE_GAMBLER_ASLEEP          ; $48
 
-;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Surfing Sprite
 ;;;;;;;;;;;;;;;;;;;;;;;;
 	const SPRITE_SURFING                 ; $49
+;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Daycare Ditto
+;;;;;;;;;;;;;;;;;;;;;;;;
+	const SPRITE_DITTO                 	 ; $50
 	

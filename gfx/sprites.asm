@@ -93,3 +93,10 @@ SurfingSprite::          INCBIN "gfx/sprites/red_surf.2bpp"
 ELSE
 SurfingSprite::          INCBIN "gfx/sprites/blue_surf.2bpp"
 ENDC
+
+
+SECTION "NPC Sprites 3", ROMX
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Daycare Ditto
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DittoSprite::          INCBIN "gfx/pokemon/icons/ditto.2bpp"

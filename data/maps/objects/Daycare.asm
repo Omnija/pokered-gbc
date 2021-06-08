@@ -15,6 +15,6 @@ Daycare_Object:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	object SPRITE_GRANNY, 2, 3, STAY, RIGHT, 1 ; person
     object SPRITE_GRAMPS, 5, 3, STAY, LEFT, 2 ; person
-    object SPRITE_MONSTER, 6, 1, STAY, DOWN, 3 ; person
+    object SPRITE_DITTO, 6, 1, STAY, NONE, 3 ; person
 
 	def_warps_to DAYCARE

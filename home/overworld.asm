@@ -330,6 +330,19 @@ OverworldLoopLessDelay::
 ; step counting
 	ld hl, wStepCounter
 	dec [hl]
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Movement Counter- Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld hl,wMovementCounter
+	inc [hl]
+	ld a,[hli]
+	and a
+	jp nz, .originalRoutine
+	inc [hl]
+	callfar MovementReset
+.originalRoutine
+	
 	ld a, [wd72c]
 	bit 0, a
 	jr z, .doneStepCounting
