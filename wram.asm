@@ -249,6 +249,11 @@ wTempDVs::
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 wTempLevel::
 
+;;;;;;;;;;;;;;;;;;;;;;
+; Tutor - Mateo Code
+;;;;;;;;;;;;;;;;;;;;;;
+wTempMoveID::
+
 ;;;;;;;;;;;;;;;;;
 ; Adding Shiny
 ;;;;;;;;;;;;;;;;;
@@ -256,10 +261,10 @@ wShinyMonFlag:: ; cc97
 ; Bit 0 is set if the mon should be shiny
 ; Bit 1 is set for enemy mon animation, reset for player mon animation
 
-;;;;;;;;;;;;;;;;;;;;;;
-; Tutor - Mateo Code
-;;;;;;;;;;;;;;;;;;;;;;
-wTempMoveID::
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Breeding System - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+wTempBreeding::
 
 wRedrawRowOrColumnSrcTiles::
 ; the tiles of the row or column to be redrawn by RedrawRowOrColumn

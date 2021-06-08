@@ -140,4 +140,22 @@ _MoveTutorNotEnoughMoneyText::
 	line "don't have enough"
 	cont "money."
 	done
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Breeding System - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_DayCareMText2::
+    text "Hello there! I'm"
+    line "the Day Care Man!"
+    
+    para "Come back and see"
+    line "me another time."
+    done
+    
+_DayCareMText3::
+    text "It's a Ditto that"
+    line "belongs to the"
+    cont "Day Care Man."
+    done
 	

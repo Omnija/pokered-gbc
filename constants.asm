@@ -40,7 +40,7 @@ INCLUDE "constants/text_constants.asm"
 INCLUDE "constants/menu_constants.asm"
 
 ;;;;;;;;;;;;;;;;;;
-; Adding Gender
+; Adding Genders
 ;;;;;;;;;;;;;;;;;;
 INCLUDE "constants/gender_constants.asm"
 

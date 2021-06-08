@@ -20,6 +20,7 @@
 	- Pokemon Shiny (No color palettes)
 	- Individual Trainer DV's
 	- Don't skip Move when over leveling
+	- Daycare Breeding System
 
 [Removed From Game]
 

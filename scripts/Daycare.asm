@@ -2,7 +2,14 @@ Daycare_Script:
 	jp EnableAutoTextBoxDrawing
 
 Daycare_TextPointers:
-	dw DayCareMText1
+;	dw DayCareMText1 ; Gentleman
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Breeding - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	dw DayCareMText1 ; Day Care Lady
+	dw DayCareMText2 ; Day Care Man
+	dw DayCareMText3 ; Ditto
 
 DayCareMText1:
 	text_asm
@@ -35,9 +42,14 @@ DayCareMText1:
 	pop af
 	ld hl, DayCareAllRightThenText
 	jp c, .done
-	callfar KnowsHMMove
-	ld hl, DayCareCantAcceptMonWithHMText
-	jp c, .done
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Removed HM Deny
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	callfar KnowsHMMove
+;	ld hl, DayCareCantAcceptMonWithHMText
+;	jp c, .done
+
 	xor a
 	ld [wPartyAndBillsPCSavedMenuItem], a
 	ld a, [wWhichPokemon]
@@ -266,4 +278,16 @@ DayCareHeresYourMonText:
 
 DayCareNotEnoughMoneyText:
 	text_far _DayCareNotEnoughMoneyText
+	text_end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Breeding System - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DayCareMText2: ; Day Care Man
+	text_asm
+	callfar DayCareManScript
+	jp TextScriptEnd
+	
+DayCareMText3: ; Ditto
+	text_far _DayCareMText3
 	text_end

@@ -39,9 +39,14 @@ SLP EQU %111 ; sleep counter
 
 MAX_STAT_VALUE EQU 999
 
-; trainer dvs
+; Trainer DVs
 ATKDEFDV_TRAINER EQU $98
 SPDSPCDV_TRAINER EQU $88
+
+; Shiny DVs
+ATKDEFDV_SHINY EQU $FB
+SPDSPCDV_SHINY EQU $DF
+ATKDEFDV_SHINY_FEMALE EQU $7B
 
 ; wPlayerBattleStatus1 or wEnemyBattleStatus1 bit flags
 	const_def

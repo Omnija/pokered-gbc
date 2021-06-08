@@ -1,3 +1,7 @@
+;;;;;;;;;;;;;;;;;;
+; Adding Genders
+;;;;;;;;;;;;;;;;;;
+
 ; See data/gender_ratios.asm
 
 ; Used to define gender ratios

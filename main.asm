@@ -318,6 +318,10 @@ INCLUDE "engine/menus/item_descriptions.asm"
 ; Adding Automatic Repel System - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 INCLUDE "engine/overworld/automatic_repel.asm"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Breeding System - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "engine/events/daycare_breeding.asm"
 
 
 SECTION "Saffron Guards", ROMX
