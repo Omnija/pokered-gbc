@@ -216,6 +216,8 @@ ROMX $37
 	"Pics 12"
 ROMX $38
 	"bank38"
+ROMX $39
+	"bank39"
 
 WRAM0
 	"WRAM"

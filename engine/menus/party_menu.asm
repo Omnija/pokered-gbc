@@ -18,11 +18,18 @@
 ; f6: health returned
 ; f7: revitalized
 ; f8: leveled up
+
 DrawPartyMenu_::
 	xor a
 	ldh [hAutoBGTransferEnabled], a
 	call ClearScreen
 	call UpdateSprites
+;	farcall LoadMonPartySpriteGfxWithLCDDisabled ; load pokemon icon graphics
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Party Menu Icons
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RedrawPartyMenu_ReloadSprites:
 	farcall LoadMonPartySpriteGfxWithLCDDisabled ; load pokemon icon graphics
 
 RedrawPartyMenu_::

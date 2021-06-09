@@ -84,7 +84,7 @@ endr
 ;	cp ICON_HELIX << 2
 ;	jr nz, .editTileIDS
 ; ICON_BALL and ICON_HELIX only shake up and down
-.editCoords
+;.editCoords
 ;	dec hl
 ;	dec hl ; dec hl to the OAM y coord
 ;	ld c, $1 ; amount to increase the y coord by
@@ -354,51 +354,32 @@ WriteMonPartySpriteOAMBySpecies:
 ; Adding Party Menu ICONS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 WriteMonPartySpriteOAM:
-; Write the OAM blocks for the first animation frame into the OAM buffer and
-; make a copy at wMonPartySpritesSavedOAM.
 	push af
 	ld c, $10
-	ld h, wOAMBuffer / $100
-	ld a, [hPartyMonIndex]
+	ld h, HIGH(wOAMBuffer)
+	ldh a, [hPartyMonIndex]
 	swap a
 	ld l, a
 	add $10
 	ld b, a
 	pop af
-	call WriteAsymmetricMonPartySpriteOAM
-; Make a copy of the OAM buffer with the first animation frame written so that
-; we can flip back to it from the second frame by copying it back.
-.makeCopy
-	ld hl, wOAMBuffer
-	ld de, wMonPartySpritesSavedOAM
-	ld bc, $60
-	jp CopyData	
-
-;WriteMonPartySpriteOAM:
-; Write the OAM blocks for the first animation frame into the OAM buffer and
-; make a copy at wMonPartySpritesSavedOAM.
-;	push af
-;	ld c, $10
-;	ld h, HIGH(wOAMBuffer)
-;	ldh a, [hPartyMonIndex]
-;	swap a
-;	ld l, a
-;	add $10
-;	ld b, a
-;	pop af
+	
 ;	cp ICON_HELIX << 2
 ;	jr z, .helix
 ;	call WriteSymmetricMonPartySpriteOAM
 ;	jr .makeCopy
 ;.helix
-;	call WriteAsymmetricMonPartySpriteOAM
+
+	call WriteAsymmetricMonPartySpriteOAM
 ; Make a copy of the OAM buffer with the first animation frame written so that
 ; we can flip back to it from the second frame by copying it back.
+
 ;.makeCopy
-;	ld hl, wOAMBuffer
-;	ld de, wMonPartySpritesSavedOAM
-;	ld bc, $60
-;	jp CopyData
+	ld hl, wOAMBuffer
+	ld de, wMonPartySpritesSavedOAM
+	ld bc, $60
+	jp CopyData
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Party Menu ICONS

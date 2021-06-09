@@ -434,6 +434,7 @@ SECTION "bank38", ROMX
 ;;;;;;;;;;;;;;;;;;;;;;;	;;;
 INCLUDE "gfx/icons.asm"
 
+SECTION "bank39", ROMX
 ;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Shiny/Gender
 ;;;;;;;;;;;;;;;;;;;;;;;	
