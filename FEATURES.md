@@ -21,6 +21,7 @@
 	- Individual Trainer DV's
 	- Don't skip Move when over leveling
 	- Daycare Breeding System + Step Counter
+	- Bicycle Shortcut A + Select
 
 [Removed From Game]
 
