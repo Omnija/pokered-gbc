@@ -275,7 +275,7 @@ TryRideBike:
 	ret
 
 TextNoBike:
-	text_far _NoBicycleText1
+;	text_far _NoBicycleText1
 	text_end
 
 EnableBikeShortcutText: ; Gets everything setup to let you display text properly
