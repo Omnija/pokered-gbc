@@ -244,6 +244,16 @@ wGenderTemp::
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 wTempDVs::
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Status Screen DVs - Joenote
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; bit 0 - Attack DVs
+; bit 1 - Defense DVs
+; bit 2 - Speed DVs
+; bit 3 - Special DVs
+wTempMonDVs:: 
+	ds 4
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Don't Skip Overlevel Moves
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

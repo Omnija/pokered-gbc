@@ -22,6 +22,9 @@
 	- Don't skip Move when over leveling
 	- Daycare Breeding System + Step Counter
 	- Bicycle Shortcut A + Select
+	- Extra Stats Menus
+		- Hold Start + stats = Pokemon DVs
+		- Hold Select + Stats = Move Exp
 
 [Removed From Game]
 

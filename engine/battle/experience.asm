@@ -162,6 +162,12 @@ ENDC
 	farcall CalcLevelFromExperience
 	pop hl
 	ld a, [hl] ; current level
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Don't Skip Overlevel Moves
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	ld [wTempLevel], a ; hold onto current level
+	
 	cp d
 	jp z, .nextMon ; if level didn't change, go to next mon
 IF GEN_2_GRAPHICS
