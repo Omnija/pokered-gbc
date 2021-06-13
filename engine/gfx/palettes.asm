@@ -101,8 +101,28 @@ ENDC
 	ld d, $00
 	add hl, de
 	ld a, [hl]
+;	ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Shiny Palettes
+;;;;;;;;;;;;;;;;;;;;;;;;;
+	ret z
+	push bc
+	ld d, a
+	ld a, e
+	and a
+	ld a, d
+	jr z, .done
+	ld b, a
+	ld a, [wShinyMonFlag]
+	bit 0, a
+	ld a, b
+	jr z, .done
+	add PAL_SHINY_BULBASAUR - PAL_BULBASAUR	
+.done
+	pop bc
 	ret
-	
+
 
 DetermineBackSpritePaletteID:
 	ld [wd11e], a
@@ -123,11 +143,32 @@ ELSE
 	ld a, PAL_REDMON
 ENDC
 	ret
+
 .getPaletteID
 	ld e, a
 	ld d, $00
 	add hl, de
 	ld a, [hl]
+;	ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Shiny Palettes
+;;;;;;;;;;;;;;;;;;;;;;;;;
+	ret z
+	push bc
+	ld d, a
+	ld a, e
+	and a
+	ld a, d
+	jr z, .done
+	ld b, a
+	ld a, [wShinyMonFlag]
+	bit 0, a
+	ld a, b
+	jr z, .done
+	add PAL_SHINY_BULBASAUR - PAL_BULBASAUR	
+.done
+	pop bc
 	ret
 
 

@@ -254,11 +254,6 @@ wTempDVs::
 wTempMonDVs:: 
 	ds 4
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Don't Skip Overlevel Moves
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-wTempLevel::
-
 ;;;;;;;;;;;;;;;;;;;;;;
 ; Tutor - Mateo Code
 ;;;;;;;;;;;;;;;;;;;;;;

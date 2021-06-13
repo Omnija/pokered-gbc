@@ -120,8 +120,16 @@ INCLUDE "color/status_screen.asm"
 
 IF GEN_2_GRAPHICS
 EXPBarGraphics:  INCBIN "gfx/gs/exp_bar.2bpp"
+
+;;;;;;;;;;;;;;;;
+; Adding Shiny
+;;;;;;;;;;;;;;;;
+ShinySparkleGraphics:           INCBIN "gfx/battle/shiny_sparkle.2bpp"
+;EXPBarShinySparkleGraphicsEnd:
+
 EXPBarGraphicsEnd:
 ENDC
+
 
 
 SECTION "Battle Engine 2", ROMX
@@ -440,5 +448,3 @@ SECTION "bank39", ROMX
 ;;;;;;;;;;;;;;;;;;;;;;;	
 INCLUDE "engine/pokemon/mon_gender.asm"
 INCLUDE "engine/pokemon/mon_shiny.asm"
-ShinySparkleGraphics:           INCBIN "gfx/battle/shiny_sparkle.2bpp"
-EXPBarShinySparkleGraphicsEnd:

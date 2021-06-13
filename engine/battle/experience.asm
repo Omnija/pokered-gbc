@@ -162,12 +162,6 @@ ENDC
 	farcall CalcLevelFromExperience
 	pop hl
 	ld a, [hl] ; current level
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Don't Skip Overlevel Moves
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
-	ld [wTempLevel], a ; hold onto current level
-	
 	cp d
 	jp z, .nextMon ; if level didn't change, go to next mon
 IF GEN_2_GRAPHICS
@@ -271,24 +265,7 @@ ENDC
 	ld [wMonDataLocation], a
 	ld a, [wd0b5]
 	ld [wd11e], a
-	
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Don't Skip Overlevel Moves
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	ld a, [wCurEnemyLVL]
-	ld c, a
-	ld a, [wTempLevel]
-	ld b, a
-.levelLoop
-	inc b
-	ld a, b
-	ld [wCurEnemyLVL], a
-	push bc
 	predef LearnMoveFromLevelUp
-	pop bc
-	ld a, b
-	cp c
-	jr nz, .levelLoop
 	ld hl, wCanEvolveFlags
 	ld a, [wWhichPokemon]
 	ld c, a
@@ -297,16 +274,6 @@ ENDC
 	pop hl
 	pop af
 	ld [wCurEnemyLVL], a
-	
-;	predef LearnMoveFromLevelUp
-;	ld hl, wCanEvolveFlags
-;	ld a, [wWhichPokemon]
-;	ld c, a
-;	ld b, FLAG_SET
-;	predef FlagActionPredef
-;	pop hl
-;	pop af
-;	ld [wCurEnemyLVL], a
 
 .nextMon
 	ld a, [wPartyCount]

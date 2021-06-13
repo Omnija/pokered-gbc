@@ -78,6 +78,22 @@ SetPal_Battle:
 	ret
 
 SetPal_Battle_Common:
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Shiny Palettes
+;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld hl, wShinyMonFlag
+	res 0, [hl]
+	ld a, [wBattleMonSpecies]
+	and a
+	jr z, .getPalID
+	ld de, wBattleMonDVs
+	callfar IsMonShiny
+	jr z, .getPalID
+	ld hl, wShinyMonFlag
+	set 0, [hl]
+.getPalID
+
 	ld a, [wPlayerBattleStatus3]
 	bit TRANSFORMED, a
 	jr z, .getBattleMonPal
@@ -97,8 +113,29 @@ SetPal_Battle_Common:
 	ld b, a
 
 .getEnemyMonPal
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Shiny Palettes
+;;;;;;;;;;;;;;;;;;;;;;;;;
+	push bc
+	ld hl, wShinyMonFlag
+	res 0, [hl]
+	ld a, [wEnemyMonSpecies2]
+	and a
+	jr z, .getPalID2
+	ld de, wEnemyMonDVs
+	callfar IsMonShiny
+	jr z, .getPalID2
+	ld hl, wShinyMonFlag
+	set 0, [hl]
+.getPalID2
+	ld a, [wEnemyBattleStatus3]
+
 	ld a, [wEnemyMonSpecies2]         ; enemy Pokemon ID (without transform effect?)
 	call DeterminePaletteID
+	
+	pop bc
+	
 	ld c, a
 
 	ld a, $02
