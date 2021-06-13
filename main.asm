@@ -448,3 +448,7 @@ SECTION "bank39", ROMX
 ;;;;;;;;;;;;;;;;;;;;;;;	
 INCLUDE "engine/pokemon/mon_gender.asm"
 INCLUDE "engine/pokemon/mon_shiny.asm"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Physical/Special Split - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "engine/battle/physical_special_split.asm"

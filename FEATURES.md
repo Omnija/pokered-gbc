@@ -25,6 +25,7 @@
 	- Extra Stats Menu
 		- Hold (Start + Stats)  = Pokemon DVs
 		- Hold (Select + Stats) = Move Exp
+	- Physical/Special Split
 
 [Removed From Game]
 

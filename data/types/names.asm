@@ -9,8 +9,10 @@ TypeNames:
 	dw .Bird
 	dw .Bug
 	dw .Ghost
+    dw .Steel
 
-REPT FIRE - GHOST - 1
+;	dw .Unknown
+REPT FIRE - STEEL - 1
 	dw .Normal
 ENDR
 
@@ -23,7 +25,6 @@ ENDR
 	dw .Dragon
     dw .Dark
     dw .Fairy
-    dw .Steel
 
 .Normal:   db "NORMAL@"
 .Fighting: db "FIGHTING@"
@@ -44,3 +45,4 @@ ENDR
 .Dark:     db "DARK@"
 .Fairy:    db "FAIRY@"
 .Steel:    db "STEEL@"
+;.Unknown   db "???@"

@@ -1903,7 +1903,7 @@ ENDC
 	ld de, wLoadedMonLevel
 	ld bc, wBattleMonPP - wBattleMonLevel
 	call CopyData
-	hlcoord 14, 8
+	hlcoord 13, 8
 	push hl
 	inc hl
 	ld de, wLoadedMonStatus
@@ -3022,7 +3022,13 @@ PrintMenuItem:
 	hlcoord 1, 10
 	ld de, DisabledText
 	call PlaceString
-	jr .moveDisabled
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Physical/Special Split - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	jp .moveDisabled
+;	jr .moveDisabled
+
 .notDisabled
 	ld hl, wCurrentMenuItem
 	dec [hl]
@@ -3050,14 +3056,43 @@ PrintMenuItem:
 	ld a, [hl]
 	and $3f
 	ld [wcd6d], a
-; print TYPE/<type> and <curPP>/<maxPP>
-	hlcoord 1, 9
-	ld de, TypeText
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Physical/Special Split - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	ld a, [wPlayerSelectedMove]
+	call PhysicalSpecialSplit
+	cp a,$02
+	jp z, .SupportTextShow
+	cp a,$01
+	jp nz, .PhysicalTextShow
+	coord hl, 1, 9
+	ld de,SpecialText
 	call PlaceString
+	jp .RestOfTheRoutineThing
+.PhysicalTextShow
+	coord hl, 1,9
+	ld de,PhysicalText
+	call PlaceString
+	jr .RestOfTheRoutineThing
+.SupportTextShow
+	coord hl, 1,9
+	ld de,SupportText
+	
+; print TYPE/<type> and <curPP>/<maxPP>
+;	hlcoord 1, 9	
+;	ld de, TypeText
+	call PlaceString
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Physical/Special Split - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+.RestOfTheRoutineThing
+	
 	hlcoord 7, 11
 	ld [hl], "/"
-	hlcoord 5, 9
-	ld [hl], "/"
+;	hlcoord 5, 9
+;	ld [hl], "/"
 	hlcoord 5, 11
 	ld de, wcd6d
 	lb bc, 1, 2
@@ -3077,8 +3112,20 @@ PrintMenuItem:
 DisabledText:
 	db "disabled!@"
 
-TypeText:
-	db "TYPE@"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Physical/Special Split - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+SupportText:
+	db "STATUS@"
+
+PhysicalText: ; Added for PS Split
+	db "PHYSICAL@"
+
+SpecialText: ; added for PS Split
+	db "SPECIAL@"
+
+;TypeText:
+;	db "TYPE@"
 
 SelectEnemyMove:
 	ld a, [wLinkState]
@@ -4319,6 +4366,12 @@ GetDamageVarsForPlayerAttack:
 	ld d, a ; d = move power
 	ret z ; return if move power is zero
 	ld a, [hl] ; a = [wPlayerMoveType]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Physical/Special Split - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	call PhysicalSpecialSplit
+	
 	cp SPECIAL ; types >= SPECIAL are all special
 	jr nc, .specialAttack
 .physicalAttack
@@ -4432,6 +4485,12 @@ GetDamageVarsForEnemyAttack:
 	and a
 	ret z ; return if move power is zero
 	ld a, [hl] ; a = [wEnemyMoveType]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Physical/Special Split - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+	call PhysicalSpecialSplit
+	
 	cp SPECIAL ; types >= SPECIAL are all special
 	jr nc, .specialAttack
 .physicalAttack
@@ -4857,9 +4916,17 @@ HandleCounterMove:
 ; check if the move the target last selected was Normal or Fighting type
 	inc de
 	ld a, [de]
-	and a ; normal type
-	jr z, .counterableType
-	cp FIGHTING
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Physical/Special Split - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	call PhysicalSpecialSplit
+	cp a, PHYSICAL
+	
+;	and a ; normal type
+;	jr z, .counterableType
+;	cp FIGHTING
+
 	jr z, .counterableType
 ; if the move wasn't Normal or Fighting type, miss
 	xor a
@@ -7451,3 +7518,16 @@ BattleMonPartyAttr:
 	ld bc, wPartyMon2 - wPartyMon1
 	jp AddNTimes
 ENDC
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Physical/Special Split - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+; Determine if a move is Physical, Special, or Status
+; INPUT: Move ID in register a
+; OUTPUT: Move Physical/Special/Status type in register a
+PhysicalSpecialSplit:
+	ld [wTempMoveID], a
+	callfar _PhysicalSpecialSplit
+	ld a, [wTempMoveID]
+	ret

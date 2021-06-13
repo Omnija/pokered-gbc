@@ -1,7 +1,7 @@
 ; TypeNames indexes (see data/types/names.asm)
 	const_def
 
-PHYSICAL EQU const_value
+;PHYSICAL EQU const_value
 	const NORMAL       ; $00
 	const FIGHTING     ; $01
 	const FLYING       ; $02
@@ -11,10 +11,12 @@ PHYSICAL EQU const_value
 	const BIRD         ; $06
 	const BUG          ; $07
 	const GHOST        ; $08
+	const STEEL		   ; $09
 
+;	const UNKNOWN	   ; $0A
 	const_next 20
 
-SPECIAL EQU const_value
+;SPECIAL EQU const_value
 	const FIRE         ; $14
 	const WATER        ; $15
 	const GRASS        ; $16
@@ -24,5 +26,10 @@ SPECIAL EQU const_value
 	const DRAGON       ; $1A
 	const DARK		   ; $1B
 	const FAIRY		   ; $1C
-	const STEEL		   ; $1D
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Physical/Special Split - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+PHYSICAL EQU $00
+SPECIAL  EQU $01
+SUPPORT  EQU $02
