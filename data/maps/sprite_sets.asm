@@ -70,6 +70,11 @@ SpriteSets:
 	db SPRITE_SEEL
 	db SPRITE_OAK
 	db SPRITE_SWIMMER
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	db SPRITE_SWIMMER_F
+	
 	db SPRITE_POKE_BALL
 	db SPRITE_GAMBLER_ASLEEP
 
@@ -84,7 +89,10 @@ SpriteSets:
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_POKE_BALL
-	db SPRITE_UNUSED_GAMBLER_ASLEEP_2
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;	db SPRITE_UNUSED_GAMBLER_ASLEEP_2
 
 ; sprite set $03
 	db SPRITE_LITTLE_GIRL
@@ -97,7 +105,10 @@ SpriteSets:
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_GUARD
 	db SPRITE_POKE_BALL
-	db SPRITE_UNUSED_GAMBLER_ASLEEP_2
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;	db SPRITE_UNUSED_GAMBLER_ASLEEP_2
 
 ; sprite set $04
 	db SPRITE_BEAUTY
@@ -189,3 +200,8 @@ SpriteSets:
 	db SPRITE_YOUNGSTER
 	db SPRITE_POKE_BALL
 	db SPRITE_FOSSIL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	db SPRITE_SWIMMER_F
+	

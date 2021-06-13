@@ -175,7 +175,12 @@ GamblerPic::       INCBIN "gfx/gstrainers/gambler.pic"
 BeautyPic::        INCBIN "gfx/gstrainers/beauty.pic"
 PsychicPic::       INCBIN "gfx/gstrainers/psychic.pic"
 RockerPic::        INCBIN "gfx/gstrainers/rocker.pic"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SwimmerFPic::      INCBIN "gfx/gstrainers/swimmerf.pic"
 JugglerPic::       INCBIN "gfx/gstrainers/juggler.pic"
+
 TamerPic::         INCBIN "gfx/gstrainers/tamer.pic"
 BirdKeeperPic::    INCBIN "gfx/gstrainers/birdkeeper.pic"
 BlackbeltPic::     INCBIN "gfx/gstrainers/blackbelt.pic"
@@ -236,6 +241,12 @@ GamblerPic::       INCBIN "gfx/trainers/gambler.pic"
 BeautyPic::        INCBIN "gfx/trainers/beauty.pic"
 PsychicPic::       INCBIN "gfx/trainers/psychic.pic"
 RockerPic::        INCBIN "gfx/trainers/rocker.pic"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SwimmerFPic::      INCBIN "gfx/trainers/swimmerf.pic"
+
 JugglerPic::       INCBIN "gfx/trainers/juggler.pic"
 TamerPic::         INCBIN "gfx/trainers/tamer.pic"
 BirdKeeperPic::    INCBIN "gfx/trainers/birdkeeper.pic"

@@ -80,10 +80,6 @@ FairySprite::            INCBIN "gfx/sprites/fairy.2bpp"
 AgathaSprite::           INCBIN "gfx/sprites/agatha.2bpp"
 BrunoSprite::            INCBIN "gfx/sprites/bruno.2bpp"
 LoreleiSprite::          INCBIN "gfx/sprites/lorelei.2bpp"
-;;;;;;;;;;;;;;;;;;;;;
-; Moved to trade.asm
-;;;;;;;;;;;;;;;;;;;;;
-;SeelSprite::             INCBIN "gfx/sprites/seel.2bpp"
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Surfing Sprite
@@ -96,7 +92,12 @@ ENDC
 
 
 SECTION "NPC Sprites 3", ROMX
+SeelSprite::             INCBIN "gfx/sprites/seel.2bpp"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Daycare Ditto
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-DittoSprite::          INCBIN "gfx/pokemon/icons/ditto.2bpp"
+DittoSprite::            INCBIN "gfx/pokemon/icons/ditto.2bpp"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SwimmerFSprite::         INCBIN "gfx/sprites/swimmer_f.2bpp"

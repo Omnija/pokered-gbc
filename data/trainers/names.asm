@@ -11,9 +11,15 @@ TrainerNames::
 	db "BIKER@"
 	db "BURGLAR@"
 	db "ENGINEER@"
-	db "JUGGLER@"
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	db "SWIMMER♀@"
+;	db "JUGGLER@"
+
 	db "FISHERMAN@"
-	db "SWIMMER@"
+	db "SWIMMER♂@"
 	db "CUE BALL@"
 	db "GAMBLER@"
 	db "BEAUTY@"

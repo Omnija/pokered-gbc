@@ -166,7 +166,13 @@ TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 	db PAL_BIKER
 	db PAL_BURGLAR
 	db PAL_ENGINEER
-	db PAL_JUGGLER
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+	db PAL_SWIMMER_F
+;	db PAL_JUGGLER
+
 	db PAL_FISHERMAN
 	db PAL_SWIMMER
 	db PAL_CUEBALL
@@ -174,7 +180,7 @@ TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 	db PAL_BEAUTY
 	db PAL_PSYCHIC
 	db PAL_ROCKER
-	db PAL_JUGGLER2
+	db PAL_JUGGLER
 	db PAL_TAMER
 	db PAL_BIRDKEEPER
 	db PAL_BLACKBELT

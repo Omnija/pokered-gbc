@@ -3,10 +3,11 @@ FemaleTrainerList::
 	db OPP_JR_TRAINER_F
 	db OPP_BEAUTY
 	db OPP_COOLTRAINER_F
+	db OPP_SWIMMER_F
 	db -1 ; end
 
 EvilTrainerList::
-	db OPP_UNUSED_JUGGLER
+;	db OPP_UNUSED_JUGGLER
 	db OPP_GAMBLER
 	db OPP_ROCKER
 	db OPP_JUGGLER

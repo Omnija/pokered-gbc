@@ -244,5 +244,9 @@ FIRST_STILL_SPRITE EQU const_value
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Daycare Ditto
 ;;;;;;;;;;;;;;;;;;;;;;;;
-	const SPRITE_DITTO                 	 ; $50
+	const SPRITE_DITTO    				 ; $50
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const SPRITE_SWIMMER_F               ; $51
 	

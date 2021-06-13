@@ -26,6 +26,7 @@
 		- Hold (Start + Stats)  = Pokemon DVs
 		- Hold (Select + Stats) = Move Exp
 	- Physical/Special Split
+	- Swimmer ♀ Trainer replaced (Unused Juggler)
 
 [Removed From Game]
 

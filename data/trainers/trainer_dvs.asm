@@ -21,7 +21,13 @@ TrainerClassDVs:
 	dvs  9,  8,  8,  8 ; BIKER
 	dvs  9,  8,  8,  8 ; BURGLAR
 	dvs  9,  8,  8,  8 ; ENGINEER
-	dvs  7,  8,  8,  8 ; SWIMMER_F
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	dvs  7,  8,  8,  9 ; SWIMMER_F
+;	dvs  7,  8,  8,  8 ; UNUSED_JUGGLER
+
 	dvs  9,  8,  8,  8 ; FISHER
 	dvs  9,  8,  8,  8 ; SWIMMER
 	dvs  9,  8,  8,  8 ; CUE_BALL

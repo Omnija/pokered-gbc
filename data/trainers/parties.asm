@@ -11,7 +11,13 @@ TrainerDataPointers:
 	dw BikerData
 	dw BurglarData
 	dw EngineerData
-	dw UnusedJugglerData
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	dw SwimmerFData
+;	dw UnusedJugglerData
+
 	dw FisherData
 	dw SwimmerData
 	dw CueBallData
@@ -377,6 +383,10 @@ GamblerData:
 ; Route 8
 	db 24, GROWLITHE, VULPIX, 0
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SwimmerFData:
 BeautyData:
 ; Celadon Gym
 	db 21, ODDISH, BELLSPROUT, ODDISH, BELLSPROUT, 0
