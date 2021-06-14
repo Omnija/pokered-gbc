@@ -66,6 +66,11 @@ SpriteSheetPointerTable:
 	overworld_sprite BrunoSprite, 12            ; SPRITE_BRUNO
 	overworld_sprite LoreleiSprite, 12          ; SPRITE_LORELEI
 	overworld_sprite SeelSprite, 12             ; SPRITE_SEEL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	overworld_sprite SwimmerFSprite, 12         ; SPRITE_SWIMMER_F
+	
 	overworld_sprite PokeBallSprite, 4          ; SPRITE_POKE_BALL
 	overworld_sprite FossilSprite, 4            ; SPRITE_FOSSIL
 	overworld_sprite BoulderSprite, 4           ; SPRITE_BOULDER
@@ -78,16 +83,7 @@ SpriteSheetPointerTable:
 	overworld_sprite GamblerAsleepSprite, 4     ; SPRITE_UNUSED_GAMBLER_ASLEEP_1
 	overworld_sprite GamblerAsleepSprite, 4     ; SPRITE_UNUSED_GAMBLER_ASLEEP_2
 	overworld_sprite GamblerAsleepSprite, 4     ; SPRITE_GAMBLER_ASLEEP
-
-;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Surfing Sprite
-;;;;;;;;;;;;;;;;;;;;;;;;
-	overworld_sprite SurfingSprite, 12          ; SPRITE_SURFING
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Daycare Ditto
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	overworld_sprite DittoSprite, 4          	; SPRITE_DITTO
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Swimmer ♀ Trainer
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	overworld_sprite SwimmerFSprite, 12         ; SPRITE_SWIMMER_F

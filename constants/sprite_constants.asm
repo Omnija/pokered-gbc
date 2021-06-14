@@ -222,6 +222,11 @@ const_value = 1
 	const SPRITE_BRUNO                   ; $3a
 	const SPRITE_LORELEI                 ; $3b
 	const SPRITE_SEEL                    ; $3c
+; New walking sprites added here
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	const SPRITE_SWIMMER_F               ; $3d
 	
 FIRST_STILL_SPRITE EQU const_value
 	const SPRITE_POKE_BALL               ; $3d
@@ -236,17 +241,9 @@ FIRST_STILL_SPRITE EQU const_value
 	const SPRITE_UNUSED_GAMBLER_ASLEEP_1 ; $46
 	const SPRITE_UNUSED_GAMBLER_ASLEEP_2 ; $47
 	const SPRITE_GAMBLER_ASLEEP          ; $48
-
-;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Surfing Sprite
-;;;;;;;;;;;;;;;;;;;;;;;;
-	const SPRITE_SURFING                 ; $49
+	
+; New still sprites added here
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Daycare Ditto
 ;;;;;;;;;;;;;;;;;;;;;;;;
-	const SPRITE_DITTO    				 ; $50
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Swimmer ♀ Trainer
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	const SPRITE_SWIMMER_F               ; $51
-	
+	const SPRITE_DITTO    				 ; $49
