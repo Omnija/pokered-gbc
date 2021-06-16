@@ -118,7 +118,7 @@ ENDC
 	bit 0, a
 	ld a, b
 	jr z, .done
-	add PAL_SHINY_BULBASAUR - PAL_BULBASAUR	
+	add PAL_MEWMON
 .done
 	pop bc
 	ret
@@ -166,7 +166,7 @@ ENDC
 	bit 0, a
 	ld a, b
 	jr z, .done
-	add PAL_SHINY_BULBASAUR - PAL_BULBASAUR	
+	add PAL_MEWMON
 .done
 	pop bc
 	ret

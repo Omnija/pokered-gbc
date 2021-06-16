@@ -15,9 +15,9 @@
 	- Info Menu
 	- Automatic Repel
 	- Experience on Capture + EXP_ALL Check
-	- Independent Party Menu Icons (only pre evo)
+	- Independent Party Menu Icons [Pre-Evolutions]
 	- Pokemon Genders
-	- Pokemon Shiny
+	- Pokemon Shiny [Palettes Needs Work or better code]
 	- Individual Trainer DV's
 	- Don't skip Move when over leveling [Removed]
 	- Daycare Breeding System + Step Counter
@@ -26,7 +26,10 @@
 		- Hold (Start + Stats)  = Pokemon DVs
 		- Hold (Select + Stats) = Move Exp
 	- Physical/Special Split
-	- Swimmer ♀ Trainer replaced (Unused Juggler)
+	- Swimmer ♀ Trainer replaced [Unused Juggler]
+	- Shiny pokdex status screen [Sort of glitchy]
+		- Hold (Select + data) to enable
+		- Hold (Start + data) to disable
 
 [Removed From Game]
 

@@ -396,6 +396,24 @@ SetPal_Pokedex:
 	ld a, 2
 	ldh [rSVBK], a
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Dex Shiny Colours - Joenote
+; SELECT button is being held ENABLE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ldh a, [hJoyHeld]
+	bit 2, a ; Select button
+	jp z, .SelectNotHeld
+	callfar ShinyDisplayScreen
+.SelectNotHeld
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; START button is being held DISABLE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ldh a, [hJoyHeld]
+	bit 3, a ; Start button
+	jp z, .SelectNotHeld2
+	callfar ShinyDisableScreen
+.SelectNotHeld2
+
 	farcall LoadSGBPalette
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;

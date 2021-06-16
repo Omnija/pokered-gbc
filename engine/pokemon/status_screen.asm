@@ -683,3 +683,19 @@ DVParse:
 	pop bc
 	pop hl
 	ret
+	
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Dex Shiny Colours - Joenote
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ShinyDisplayScreen:
+	ld hl, wShinyMonFlag
+	res 1, [hl]
+	set 0, [hl]
+	ret
+	
+ShinyDisableScreen:
+	ld hl, wShinyMonFlag
+	res 0, [hl]
+	set 1, [hl]
+	ret
