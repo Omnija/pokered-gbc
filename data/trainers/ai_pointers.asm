@@ -50,3 +50,8 @@ TrainerAIPointers:
 	dbw 3, GenericAI
 	dbw 2, AgathaAI ; agatha
 	dbw 1, LanceAI ; lance
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	dbw 3, GenericAI ; soldier

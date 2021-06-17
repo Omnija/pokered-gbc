@@ -1,5 +1,6 @@
 TrainerNamePointers:
 ; what is the point of these?
+; End battle name pointers!
 	dw .YoungsterName
 	dw .BugCatcherName
 	dw .LassName
@@ -38,6 +39,10 @@ TrainerNamePointers:
 	dw .RocketName
 	dw .CooltrainerMName
 	dw .CooltrainerFName
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	dw .SoldierName
 	dw wTrainerName
 	dw wTrainerName
 	dw wTrainerName
@@ -81,3 +86,7 @@ TrainerNamePointers:
 .RocketName:        db "ROCKET@"
 .CooltrainerMName:  db "COOLTRAINER♂@"
 .CooltrainerFName:  db "COOLTRAINER♀@"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+.SoldierName:	    db "SOLDIER@"

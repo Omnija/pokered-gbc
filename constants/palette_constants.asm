@@ -278,5 +278,10 @@ IF GEN_2_GRAPHICS
 	const PAL_CHANNELER     ; $E8
 	const PAL_AGATHA        ; $E9
 	const PAL_LANCE         ; $EA
-	const PAL_HERO          ; $EB
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const PAL_SOLDIER       ; $EB
+	
+	const PAL_HERO          ; $EC
 ENDC

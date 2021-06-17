@@ -207,6 +207,10 @@ TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 	db PAL_CHANNELER
 	db PAL_AGATHA
 	db PAL_LANCE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	db PAL_SOLDIER
 ELSE
 	db PAL_MEWMON    ; MISSINGNO
 	db PAL_GREENMON  ; BULBASAUR

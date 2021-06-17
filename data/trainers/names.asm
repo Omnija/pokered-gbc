@@ -52,3 +52,7 @@ TrainerNames::
 	db "CHANNELER@"
 	db "AGATHA@"
 	db "LANCE@"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	db "SOLDIER@"

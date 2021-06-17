@@ -53,6 +53,11 @@ TrainerDataPointers:
 	dw AgathaData
 	dw LanceData
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	dw SoldierData
+
 ; if first byte != $FF, then
 	; first byte is level (of all pokemon on this team)
 	; all the next bytes are pokemon species
@@ -669,6 +674,10 @@ BlaineData:
 SabrinaData:
 	db $FF, 38, KADABRA, 37, MR_MIME, 38, VENOMOTH, 43, ALAKAZAM, 0
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SoldierData:
 GentlemanData:
 ; SS Anne 1F Rooms
 	db 18, GROWLITHE, GROWLITHE, 0

@@ -26,7 +26,9 @@
 		- Hold (Start + Stats)  = Pokemon DVs
 		- Hold (Select + Stats) = Move Exp
 	- Physical/Special Split
-	- Swimmer ♀ Trainer replaced [Unused Juggler]
+	- Swimmer ♀ Trainer [Unused Juggler]
+		- Missing Overworld Sprite
+	- Soldier Trainer [Vermillion Gym]
 	- Shiny pokdex status screen [Sort of glitchy]
 		- Hold (Select + data) to enable
 		- Hold (Start + data) to disable
