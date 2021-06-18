@@ -59,12 +59,19 @@ PlaceNextChar::
 	ret
 
 .NotTerminator
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	cp "<LF>"
+	jr z, .line_feed
+
 	cp "<NEXT>"
 	jr nz, .NotNext
 	ld bc, 2 * SCREEN_WIDTH
 	ldh a, [hUILayoutFlags]
 	bit 2, a
 	jr z, .ok
+.line_feed ; Added with <LF>
 	ld bc, SCREEN_WIDTH
 .ok
 	pop hl

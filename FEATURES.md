@@ -32,6 +32,7 @@
 	- Shiny pokdex status screen [Sort of glitchy]
 		- Hold (Select + data) to enable
 		- Hold (Start + data) to disable
+	- Restored Japanese Town Map
 
 [Removed From Game]
 

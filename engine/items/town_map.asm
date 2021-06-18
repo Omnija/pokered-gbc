@@ -31,7 +31,10 @@ DisplayTownMap:
 
 .townMapLoop
 	hlcoord 0, 0
-	lb bc, 1, 20
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	lb bc, 2, 9 ; 1, 20
 	call ClearScreenArea
 	ld hl, TownMapOrder
 	ld a, [wWhichTownMapLocation]
@@ -57,7 +60,7 @@ DisplayTownMap:
 	inc de
 	cp $50
 	jr nz, .copyMapName
-	hlcoord 1, 0
+	hlcoord 0, 0
 	ld de, wcd6d
 	call PlaceString
 	ld hl, wOAMBuffer + $10
@@ -120,10 +123,15 @@ LoadTownMap_Nest:
 	push hl
 	call DisplayWildLocations
 	call GetMonName
-	hlcoord 1, 0
+	hlcoord 0, 0
 	call PlaceString
-	ld h, b
-	ld l, c
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	coord hl, 0, 1
+;	ld h, b
+;	ld l, c
 	ld de, MonsNestText
 	call PlaceString
 	call WaitForTextScrollButtonPress
@@ -134,7 +142,12 @@ LoadTownMap_Nest:
 	ret
 
 MonsNestText:
-	db "'s NEST@"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	db "NESTS@"
+;	db "'s NEST@"
 
 LoadTownMap_Fly::
 	call ClearSprites
@@ -155,34 +168,53 @@ LoadTownMap_Fly::
 	push af
 	ld [hl], $ff
 	push hl
-	hlcoord 0, 0
-	ld de, ToText
-	call PlaceString
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	hlcoord 0, 0
+;	ld de, ToText
+;	call PlaceString
+
 	ld a, [wCurMap]
 	ld b, $0
 	call DrawPlayerOrBirdSprite
 	ld hl, wFlyLocationsList
-	decoord 18, 0
+;	decoord 18, 0
 .townMapFlyLoop
 	ld a, " "
 	ld [de], a
 	push hl
 	push hl
-	hlcoord 3, 0
-	lb bc, 1, 15
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	hlcoord 1, 0 ; 3, 0
+	lb bc, 2, 8 ; 1, 15
+	
 	call ClearScreenArea
 	pop hl
 	ld a, [hl]
 	ld b, $4
 	call DrawPlayerOrBirdSprite ; draw bird sprite
-	hlcoord 3, 0
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	hlcoord 0, 0 ; 3, 0
+
 	ld de, wcd6d
 	call PlaceString
 	ld c, 15
 	call DelayFrames
-	hlcoord 18, 0
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	hlcoord 9, 0 ; 18, 0
 	ld [hl], "▲"
-	hlcoord 19, 0
+	hlcoord 9, 1 ; 19, 0
 	ld [hl], "▼"
 	pop hl
 .inputLoop
@@ -221,7 +253,10 @@ LoadTownMap_Fly::
 	ld [hl], a
 	ret
 .pressedUp
-	decoord 18, 0
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	decoord 9, 0 ; 18, 0
 	inc hl
 	ld a, [hl]
 	cp $ff
@@ -233,7 +268,10 @@ LoadTownMap_Fly::
 	ld hl, wFlyLocationsList
 	jp .townMapFlyLoop
 .pressedDown
-	decoord 19, 0
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	decoord 9, 1 ; 19, 0
 	dec hl
 	ld a, [hl]
 	cp $ff
@@ -245,8 +283,11 @@ LoadTownMap_Fly::
 	ld hl, wFlyLocationsList + NUM_CITY_MAPS
 	jr .pressedDown
 
-ToText:
-	db "To@"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;ToText:
+;	db "To@"
 
 BuildFlyLocationsList:
 	ld hl, wFlyLocationsList - 1
@@ -382,7 +423,11 @@ DisplayWildLocations:
 	call LoadTownMapEntry
 	pop hl
 	ld a, [de]
-	cp $19 ; Cerulean Cave's coordinates
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	cp $19 ; Cerulean Cave's coordinates ; $19
+
 	jr z, .nextEntry ; skip Cerulean Cave
 	call TownMapCoordsToOAMCoords
 	ld a, $4 ; nest icon tile no.
@@ -401,7 +446,7 @@ DisplayWildLocations:
 	ld b, 2
 	ld c, 15
 	call TextBoxBorder
-	hlcoord 2, 9
+	hlcoord 2, 8
 	ld de, AreaUnknownText
 	call PlaceString
 	jr .done

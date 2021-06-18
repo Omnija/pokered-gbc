@@ -157,6 +157,10 @@
 	charmap "'t",        $be
 	charmap "'v",        $bf
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	charmap "<LF>", 	 $DE
 ;;;;;;;;;;;;;;;;
 ; Adding Shiny
 ;;;;;;;;;;;;;;;;
