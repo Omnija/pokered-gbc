@@ -14,7 +14,11 @@ PrintMonType:
 	cp b
 	pop hl
 	jr z, EraseType2Text
-	ld bc, SCREEN_WIDTH * 2
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Changing Status Screen Design
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld bc, SCREEN_WIDTH ; * 2 - Disables Second TYPE2 Space
 	add hl, bc
 
 ; a = type

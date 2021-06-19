@@ -8,9 +8,15 @@
 
 	- Skip if move accuracy is 100%
 	- Changes/Updates to the GFX
+		- Sprites
+		- Pokedex Menu
+		- Status Screen
+		- Restored Japanese Town Map
+		
 	- Overworld Face the Trainers
 	- Running Shoes/Bike/Surf by Holding (B)
 	- Field Moves with (Select)
+	- Trainer Rematches
 	- Deleter/Relearner/Tutor - psychics house
 	- Info Menu
 	- Automatic Repel
@@ -32,7 +38,6 @@
 	- Shiny pokdex status screen [Sort of glitchy]
 		- Hold (Select + data) to enable
 		- Hold (Start + data) to disable
-	- Restored Japanese Town Map
 
 [Removed From Game]
 
