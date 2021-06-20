@@ -31,7 +31,10 @@ FuchsiaCity_Object:
 	def_objects
 	object SPRITE_YOUNGSTER, 10, 12, WALK, LEFT_RIGHT, 1 ; person
 	object SPRITE_GAMBLER, 28, 17, WALK, LEFT_RIGHT, 2 ; person
-	object SPRITE_FISHER, 30, 14, STAY, DOWN, 3 ; person
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	object SPRITE_YOUNGSTER, 30, 14, STAY, UP, 3 ; person ;object SPRITE_FISHER, 30, 14, STAY, DOWN
 	object SPRITE_YOUNGSTER, 24, 8, STAY, UP, 4 ; person
 	object SPRITE_FAIRY, 31, 5, WALK, ANY_DIR, 5 ; person
 	object SPRITE_POKE_BALL, 25, 6, STAY, NONE, 6 ; person

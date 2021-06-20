@@ -50,22 +50,25 @@
 	const SPRITE_FISHER                  ; $2f
 	const SPRITE_KOGA                    ; $30
 	const SPRITE_GUARD                   ; $31
-	const SPRITE_UNUSED_GUARD            ; $32
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const SPRITE_SOLDIER   				 ; $32
+;	const SPRITE_UNUSED_GUARD            ; $32
 	const SPRITE_MOM                     ; $33
 	const SPRITE_BALDING_GUY             ; $34
 	const SPRITE_LITTLE_BOY              ; $35
-	const SPRITE_UNUSED_GAMEBOY_KID      ; $36
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const SPRITE_SWIMMER_F               ; $36
+;	const SPRITE_UNUSED_GAMEBOY_KID      ; $36
 	const SPRITE_GAMEBOY_KID             ; $37
 	const SPRITE_FAIRY                   ; $38
 	const SPRITE_AGATHA                  ; $39
 	const SPRITE_BRUNO                   ; $3a
 	const SPRITE_LORELEI                 ; $3b
 	const SPRITE_SEEL                    ; $3c
-; New walking sprites added here
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Swimmer ♀ Trainer
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;	const SPRITE_SWIMMER_F               ; $3d
 
 ; overworld still sprites	
 FIRST_STILL_SPRITE EQU const_value

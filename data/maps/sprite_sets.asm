@@ -67,13 +67,13 @@ SpriteSets:
 	db SPRITE_FISHER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_GAMBLER
-	db SPRITE_SEEL
-	db SPRITE_OAK
-	db SPRITE_SWIMMER
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Swimmer ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;	db SPRITE_SWIMMER_F
+	db SPRITE_SWIMMER_F
+;	db SPRITE_SEEL
+	db SPRITE_OAK
+	db SPRITE_SWIMMER
 	db SPRITE_POKE_BALL
 	db SPRITE_GAMBLER_ASLEEP
 
@@ -185,7 +185,11 @@ SpriteSets:
 	db SPRITE_BIRD
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_FAIRY
-	db SPRITE_FISHER
+;	db SPRITE_FISHER
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	db SPRITE_SWIMMER_F
 	db SPRITE_GAMBLER
 	db SPRITE_MONSTER
 	db SPRITE_SEEL

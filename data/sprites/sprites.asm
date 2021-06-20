@@ -55,21 +55,25 @@ SpriteSheetPointerTable:
 	overworld_sprite FisherSprite, 12           ; SPRITE_FISHER
 	overworld_sprite KogaSprite, 12             ; SPRITE_KOGA
 	overworld_sprite GuardSprite, 12            ; SPRITE_GUARD
-	overworld_sprite GuardSprite, 12            ; SPRITE_UNUSED_GUARD
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+	overworld_sprite SoldierSprite, 12          ; SPRITE_SOLDIER
+;	overworld_sprite GuardSprite, 12            ; SPRITE_UNUSED_GUARD
 	overworld_sprite MomSprite, 12              ; SPRITE_MOM
 	overworld_sprite BaldingGuySprite, 12       ; SPRITE_BALDING_GUY
 	overworld_sprite LittleBoySprite, 12        ; SPRITE_LITTLE_BOY
-	overworld_sprite GameboyKidSprite, 12       ; SPRITE_UNUSED_GAMEBOY_KID
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	overworld_sprite SwimmerFSprite, 12         ; SPRITE_SWIMMER_F
+;	overworld_sprite GameboyKidSprite, 12       ; SPRITE_UNUSED_GAMEBOY_KID
 	overworld_sprite GameboyKidSprite, 12       ; SPRITE_GAMEBOY_KID
 	overworld_sprite FairySprite, 12            ; SPRITE_FAIRY
 	overworld_sprite AgathaSprite, 12           ; SPRITE_AGATHA
 	overworld_sprite BrunoSprite, 12            ; SPRITE_BRUNO
 	overworld_sprite LoreleiSprite, 12          ; SPRITE_LORELEI
 	overworld_sprite SeelSprite, 12             ; SPRITE_SEEL
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Swimmer ♀ Trainer
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;	overworld_sprite SwimmerFSprite, 12         ; SPRITE_SWIMMER_F
 	
 	overworld_sprite PokeBallSprite, 4          ; SPRITE_POKE_BALL
 	overworld_sprite FossilSprite, 4            ; SPRITE_FOSSIL
