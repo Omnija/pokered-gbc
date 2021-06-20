@@ -177,7 +177,7 @@ ENDC
 
 	coord hl, 1, 8 ; Exp bar Position
 	
-	predef DrawHP2	
+	predef DrawHP2
 ;	predef DrawHP
 	
 	ld hl, wStatusScreenHPBarColor
@@ -435,11 +435,11 @@ PrintStatsBox:
 	ld bc, $19 ; Number offset
 	jr .PrintStats
 .DifferentBox
-	hlcoord 9, 2
+	hlcoord 9, 2 ; Level up box position
 	ld b, 8
 	ld c, 9
 	call TextBoxBorder
-	hlcoord 2, 3 ; 11, 3
+	hlcoord 11, 3 ; Level up stats position
 	ld bc, $18
 .PrintStats
 	push bc

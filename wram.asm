@@ -1582,6 +1582,12 @@ wTrainerName::
 ; the name is terminated with $50 with possible
 ; unused trailing letters
 	ds 13
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+wCurTrainerName::
+	ds 13
 
 wIsInBattle::
 ; lost battle, this is -1

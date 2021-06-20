@@ -46,6 +46,12 @@ ReadTrainer:
 ; - if [wLoneAttackNo] != 0, one pokemon on the team has a special move
 ; else the first byte is the level of every pokemon on the team
 .IterateTrainer
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	call SetCustomName
+
 	ld a, [hli]
 	cp $FF ; is the trainer special?
 	jr z, .SpecialTrainer ; if so, check for special moves
@@ -183,5 +189,18 @@ GetTrainerMonDVs:: ; called from engine/battle/core.asm
 	ld a, [hl]
 	ld [de], a
 	ret
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SetCustomName::
+	ld de, wCurTrainerName
+.loop
+	ld a, [hli]
+	ld [de],a
+	inc de
+	cp "@"
+	ret z
+	jr .loop
 
 INCLUDE "data/trainers/trainer_dvs.asm"

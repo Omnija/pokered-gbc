@@ -1,13 +1,28 @@
 _AIBattleWithdrawText::
 	text_ram wTrainerName
-	text " with-"
-	line "drew @"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	text "@"
+	text_ram wCurTrainerName
+	text_start
+	line "withdrew"
+	cont "@"
+;	text " with-"
+;	line "drew @"
 	text_ram wEnemyMonNick
 	text "!"
 	prompt
 
 _AIBattleUseItemText::
 	text_ram wTrainerName
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	text " @"
+	text_ram wCurTrainerName
+	
 	text_start
 	line "used @"
 	text_ram wcd6d
@@ -872,10 +887,19 @@ _MoneyForWinningText::
 	prompt
 
 _TrainerDefeatedText::
-	text "<PLAYER> defeated"
-	line "@"
 	text_ram wTrainerName
-	text "!"
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	text " @"
+	text_ram wCurTrainerName
+	text_start
+	line "was defeated!"
+;	text "<PLAYER> defeated"
+;	line "@"
+;	text_ram wTrainerName
+;	text "!"
 	prompt
 
 _PlayerMonFaintedText::
@@ -910,9 +934,17 @@ _LinkBattleLostText::
 
 _TrainerAboutToUseText::
 	text_ram wTrainerName
-	text " is"
-	line "about to use"
-	cont"@"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	text " @"
+	text_ram wCurTrainerName
+	text_start
+	line "is about to use"
+	cont "@"
+;	text " is"
+;	line "about to use"
+;	cont"@"
 	text_ram wEnemyMonNick
 	text "!"
 
@@ -922,8 +954,16 @@ _TrainerAboutToUseText::
 
 _TrainerSentOutText::
 	text_ram wTrainerName
-	text " sent"
-	line "out @"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	text " @"
+	text_ram wCurTrainerName
+	text_start
+	line "sent out"
+	cont "@"
+;	text " sent"
+;	line "out @"
 	text_ram wEnemyMonNick
 	text "!"
 	done
@@ -1256,8 +1296,15 @@ _EnemyAppearedText::
 
 _TrainerWantsToFightText::
 	text_ram wTrainerName
-	text " wants"
-	line "to fight!"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	text " @"
+	text_ram wCurTrainerName
+	text_start
+	line "wants to fight!"
+;	text " wants"
+;	line "to fight!"
 	prompt
 
 _UnveiledGhostText::

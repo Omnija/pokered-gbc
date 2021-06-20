@@ -14,9 +14,14 @@ _CardKeyFailText::
 	done
 
 _TrainerNameText::
-	text_ram wcd6d
-	text ": @"
-	text_end
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	text_ram wCurTrainerName
+	text ": @@"
+;	text_ram wcd6d
+;	text ": @"
+;	text_end
 
 _NoNibbleText::
 	text "Not even a nibble!"

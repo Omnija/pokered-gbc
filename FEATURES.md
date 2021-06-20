@@ -26,6 +26,7 @@
 	- Pokemon Genders
 	- Pokemon Shiny [Palettes Needs Work or better code]
 	- Individual Trainer DV's
+	- Individual Trainer Names
 	- Don't skip Move when over leveling [Removed]
 	- Daycare Breeding System + Step Counter
 	- Bicycle Shortcut (A + Select)
@@ -37,7 +38,7 @@
 		- Trainer [UNUSED_JUGGLER]
 		- Overworld Sprite [UNUSED_GAMEBOY_KID]
 	- Soldier Trainer [Vermillion Gym]
-		- New Trainer
+		- Trainer [New not using UNUSED]
 		- Overworld [SPRITE_UNUSED_GUARD]
 	- Shiny pokdex status screen [Sort of glitchy]
 		- Hold (Select + data) to enable

@@ -225,5 +225,5 @@ DisplayRepelWoreOffText::
 ; Trainer Rematch - Joenote
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 RematchTrainerText::
-	text_far _OneMoreGoSlotMachineText
+	text_far _RematchTrainerText
 	text_end

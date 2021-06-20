@@ -223,7 +223,7 @@ INCLUDE "data/pokemon/base_stats.asm"
 INCLUDE "data/pokemon/cries.asm"
 INCLUDE "engine/battle/unused_stats_functions.asm"
 INCLUDE "engine/battle/scroll_draw_trainer_pic.asm"
-INCLUDE "engine/battle/trainer_ai.asm"
+;INCLUDE "engine/battle/trainer_ai.asm"
 INCLUDE "engine/battle/draw_hud_pokeball_gfx.asm"
 INCLUDE "gfx/trade.asm"
 INCLUDE "engine/pokemon/evos_moves.asm"
@@ -355,6 +355,9 @@ INCLUDE "engine/events/hidden_objects/vermilion_gym_trash.asm"
 SECTION "Cinnabar Lab Fossils", ROMX
 
 INCLUDE "engine/events/cinnabar_lab.asm"
+
+; Moved from "Battle Engine 7" Bank
+INCLUDE "engine/battle/trainer_ai.asm"
 
 
 SECTION "Hidden Objects 4", ROMX

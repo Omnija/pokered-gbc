@@ -158,4 +158,11 @@ _DayCareMText3::
     line "belongs to the"
     cont "Day Care Man."
     done
-	
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Trainer Rematch - Joenote
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_RematchTrainerText::
+	text "<PLAYER> is it time"
+	line "for a rematch?"
+	done
