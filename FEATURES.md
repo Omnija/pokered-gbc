@@ -11,6 +11,7 @@
 		- Sprites
 		- Pokedex Menu
 		- Status Screen
+		- Trainer Card
 		- Restored Japanese Town Map
 		
 	- Overworld Face the Trainers

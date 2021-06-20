@@ -176,7 +176,10 @@ ENDC
 	jr nz, .dashes
 
 	coord hl, 1, 8 ; Exp bar Position
-	predef DrawHP
+	
+	predef DrawHP2	
+;	predef DrawHP
+	
 	ld hl, wStatusScreenHPBarColor
 	call GetHealthBarColor
 	
@@ -416,7 +419,7 @@ PrintEXPBar_StatusScreen:
 	coord hl, 0, 17
 	ld [hl], $6F ; exp bar left end tile
 	coord hl, 9, 17
-	ld [hl], $77 ; exp bar right end tile
+	ld [hl], $6c     ; exp bar right end tile
 
 	ret
 
@@ -790,12 +793,12 @@ DVParse:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ShinyDisplayScreen:
 	ld hl, wShinyMonFlag
-	res 1, [hl]
+;	res 1, [hl]
 	set 0, [hl]
 	ret
 	
 ShinyDisableScreen:
 	ld hl, wShinyMonFlag
 	res 0, [hl]
-	set 1, [hl]
+;	set 1, [hl]
 	ret

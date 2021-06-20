@@ -5,3 +5,9 @@ TradingAnimationGraphicsEnd:
 
 TradingAnimationGraphics2: INCBIN "gfx/trade/cable_ball.2bpp"
 TradingAnimationGraphics2End:
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Changing Status Screen Design
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrainerCardGraphics:             INCBIN "gfx/trainer_card/trainer_card.2bpp"
+TrainerCardGraphicsEnd:
