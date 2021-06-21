@@ -506,20 +506,98 @@ DrawTrainerInfo:
 	lb bc, BANK(RedPicFront), $01
 	predef DisplayPicCenteredOrUpperRight
 	call DisableLCD
+	coord hl, 0, 2
+	ld a, " "
+	call TrainerInfo_DrawVerticalLine
+	coord hl, 1, 2
+	call TrainerInfo_DrawVerticalLine
+	ld hl, vChars2 + $70
+	ld de, vChars2
+	ld bc, $70 * 4
+	call CopyData
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Changing Status Screen Design
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-	hlcoord 0, 2
-	ld a, " "
-	call TrainerInfo_DrawVerticalLine
-	hlcoord 1, 2
-	call TrainerInfo_DrawVerticalLine
-	ld hl, vChars2 tile $07
-	ld de, vChars2 tile $00
-	ld bc, $1c tiles
-	call CopyData
+	; Display top name and bottom badge image
+	coord hl, 1, 0
+	ld de, TrainerInfo_NameHeadingText
+	call PlaceString
+	coord hl, 1, 10
+	ld de, TrainerInfo_BadgeHeadingText
+	call PlaceString
 	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Changing Status Screen Design
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld hl, TrainerCardGraphics + $0010 ; trainer card tile patterns
+	ld de, vChars2 + $700
+	ld bc, $00F0
+	
+;	ld hl, TrainerInfoTextBoxTileGraphics ; trainer info text box tile patterns
+;	ld de, vChars2 + $770
+;	ld bc, $0080
+
+	; Blank out gym and badge names
+	push bc
+	call TrainerInfo_FarCopyData2
+	ld hl, BlankLeaderNames
+	ld de, vChars2 + $600
+	ld bc, $0170
+	call TrainerInfo_FarCopyData
+	pop bc
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Changing Status Screen Design
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	; Adds additional chars and tiles
+	push bc
+	ld hl, TrainerCardGraphics + $0010 ; trainer card tile patterns
+	ld de, vChars2 + $700
+	ld bc, $00F0
+	call TrainerInfo_FarCopyData2
+	pop bc
+	
+	
+	ld hl, BadgeNumbersTileGraphics  ; badge number tile patterns
+	ld de, vChars1 + $580
+	call TrainerInfo_FarCopyData
+	
+	ld hl, GymLeaderFaceAndBadgeTileGraphics  ; gym leader face and badge tile patterns
+	ld de, vChars2 + $200
+	ld bc, $0400
+	ld a, $03
+	call FarCopyData2
+
+	ld hl, TextBoxGraphics
+	ld de, $00d0
+	add hl, de ; hl = colon tile pattern
+	ld de, vChars1 + $560
+	ld bc, $0010
+	ld a, $04
+
+	push bc
+	call FarCopyData2
+	pop bc
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Changing Status Screen Design
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	; Display Outter box tile pattern
+	ld hl, TrainerCardGraphics ; background tile pattern
+	ld de, vChars1 + $570
+	ld bc, $0010
+	ld a, $04
+	
+;	ld hl, TrainerInfoTextBoxTileGraphics + $80  ; background tile pattern
+;	ld de, vChars1 + $570
+
+	call TrainerInfo_FarCopyData2
+	call EnableLCD
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Changing Status Screen Design
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	; Setup outter box border and tiles
 	ld a, $d7 ; border tile
 	coord hl, 0, 0
 	ld [hl], a
@@ -543,87 +621,28 @@ DrawTrainerInfo:
 	coord hl, 1, 17
 	ld c, 18
 	call TrainerInfo_DrawHorizontalLine
-	ld a, $72
+	ld a, $72 ; Line under name
 	coord hl, 1, 3
 	ld c, 13
 	call TrainerInfo_DrawHorizontalLine
-;	ld [hl], $73 ; stripe right end tile
+	ld [hl], $73 ; stripe right end tile
 ;	coord hl, 18, 1
-	ld [hl], $73 ; top right corner tile - 70 restore corner piece
+;	ld [hl], $71 ; top right corner tile
 	coord hl, 1, 9
 	ld [hl], $70 ; bottom left corner tile
 	coord hl, 18, 11
 	ld [hl], $71 ; top right corner tile
 	coord hl, 1, 16
 	ld [hl], $70 ; bottom left corner tile
-	coord hl, 1, 0
 	
-	; displaying text and badges text
-	coord hl, 1, 0
-	ld de, TrainerInfo_NameHeadingText
-	call PlaceString
-	coord hl, 1, 10
-	ld de, TrainerInfo_BadgeHeadingText
-	call PlaceString
-	
-	; displaying tile patterns
-	ld hl, TrainerCardGraphics + $0010 ; trainer card tile patterns	
-	ld de, vChars2 + $700
-	ld bc, $00F0
-	
-	call TrainerInfo_FarCopyData2
-	ld hl, BadgeNumbersTileGraphics  ; badge number tile patterns
-	ld de, vChars1 + $580
-	ld bc, $0080
-;	ld hl, TrainerInfoTextBoxTileGraphics ; trainer info text box tile patterns
-;	ld de, vChars2 tile $77
-;	ld bc, 8 tiles
-	
-	push bc
-	call TrainerInfo_FarCopyData
-	ld hl, BlankLeaderNames
-	ld de, vChars2 tile $60
-	ld bc, $04 tiles ; Square symbol
-;	ld bc, $17 tiles ; Circle symbol
-	call TrainerInfo_FarCopyData2
-	pop bc
-	ld hl, BadgeNumbersTileGraphics  ; badge number tile patterns
-	ld de, vChars1 tile $58
-	call TrainerInfo_FarCopyData
-	ld hl, GymLeaderFaceAndBadgeTileGraphics  ; gym leader face and badge tile patterns
-	ld de, vChars2 tile $20
-	ld bc, 8 * 8 tiles
-	ld a, BANK(GymLeaderFaceAndBadgeTileGraphics)
-	call FarCopyData2
-	
-;	ld hl, TextBoxGraphics
-;	ld de, 13 tiles
-;	add hl, de ; hl = colon tile pattern
-;	ld de, vChars1 tile $56
-;	ld bc, 1 tiles
-;	ld a, BANK(TextBoxGraphics)
-;	push bc
-;	call FarCopyData2
-;	pop bc
-	
-	ld hl, TrainerCardGraphics ; background tile pattern
-	ld de, vChars1 + $570
-	ld bc, $0010
-	ld a, $04
-	call TrainerInfo_FarCopyData2
-;	ld hl, TrainerInfoTextBoxTileGraphics tile 8  ; background tile pattern
-;	ld de, vChars1 tile $57
-;	call TrainerInfo_FarCopyData
-	call EnableLCD
-
-	
+	; Setup outter box border and tiles
 ;	ld hl, wTrainerInfoTextBoxWidthPlus1
 ;	ld a, 18 + 1
 ;	ld [hli], a
 ;	dec a
 ;	ld [hli], a
 ;	ld [hl], 1
-;	hlcoord 0, 0
+;	coord hl, 0, 0
 ;	call TrainerInfo_DrawTextBox
 ;	ld hl, wTrainerInfoTextBoxWidthPlus1
 ;	ld a, 16 + 1
@@ -631,23 +650,29 @@ DrawTrainerInfo:
 ;	dec a
 ;	ld [hli], a
 ;	ld [hl], 3
-;	hlcoord 1, 10
+;	coord hl, 1, 10
 ;	call TrainerInfo_DrawTextBox
-;	hlcoord 0, 10
+;	coord hl, 0, 10
 ;	ld a, $d7
 ;	call TrainerInfo_DrawVerticalLine
-;	hlcoord 19, 10
+;	coord hl, 19, 10
 ;	call TrainerInfo_DrawVerticalLine
-;	hlcoord 6, 9
+	
+	; Displaying badges text image
+;	coord hl, 6, 9
 ;	ld de, TrainerInfo_BadgesText
 ;	call PlaceString
 
-	hlcoord 2, 2
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Changing Status Screen Design
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	; Displaying text for each
+	coord hl, 2, 2
 	ld de, TrainerInfo_NameMoneyTimeText
 	call PlaceString
 	
 	; Displaying Player Name
-	hlcoord 7, 2
+	coord hl, 7, 2
 	ld de, wPlayerName
 	call PlaceString
 	
@@ -656,6 +681,7 @@ DrawTrainerInfo:
 	ld de, wPlayerID
 	lb bc, LEADING_ZEROES | 2, 5
 	call PrintNumber ; ID number
+	
 	
 	; Displaying Player Money
 	hlcoord 8, 6 ; 8, 4
@@ -668,8 +694,7 @@ DrawTrainerInfo:
 	ld de, wPlayTimeHours ; hours
 	lb bc, LEFT_ALIGN | 1, 3
 	call PrintNumber
-	ld [hl], ":"
-;	ld [hl], $d6 ; colon tile ID
+	ld [hl], $d6 ; colon tile ID
 	inc hl
 	ld de, wPlayTimeMinutes ; minutes
 	lb bc, LEADING_ZEROES | 1, 2
@@ -691,7 +716,8 @@ TrainerInfo_NameMoneyTimeText:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Changing Status Screen Design
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	next "ID/"
+	next $74,$75,"/" ; ID No
+;	next "ID/"
 	
 	next "MONEY/"
 	next "TIME/@"
