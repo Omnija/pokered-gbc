@@ -43,6 +43,7 @@
 	- Shiny pokdex status screen [Sort of glitchy]
 		- Hold (Select + data) to enable
 		- Hold (Start + data) to disable
+	- RNG state on boot is initialized to a random number
 
 [Removed From Game]
 

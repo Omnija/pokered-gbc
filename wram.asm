@@ -1373,6 +1373,13 @@ wStatusScreenHPBarColor::
 
 	ds 7
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding RNG from Prism/PC - Joenote
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+wRNGState:: ds 4
+wRNGCumulativeDividerPlus:: ds 2
+wRNGCumulativeDividerMinus:: ds 1
+
 wCopyingSGBTileData::
 
 wWhichPartyMenuHPBar::

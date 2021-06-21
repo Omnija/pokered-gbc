@@ -28,27 +28,37 @@ VBlank::
 	;call UpdateMovingBgTiles
 	call hDMARoutine
 	rst $10 ; HAX: VBlank hook (loads palettes)
-	nop
-	nop
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding RNG from Prism/PC - Joenote
+; Removed for RNG space
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	nop
+;	nop
 	; HAX: don't update sprites here. They're updated elsewhere to prevent wobbliness.
 	;ld a, BANK(PrepareOAMData)
-	nop
-	nop
+;	nop
+;	nop
 	;ldh [hLoadedROMBank], a
-	nop
-	nop
+;	nop
+;	nop
 	;ld [MBC1RomBank], a
-	nop
-	nop
-	nop
+;	nop
+;	nop
+;	nop
 	;call PrepareOAMData
-	nop
-	nop
-	nop
+;	nop
+;	nop
+;	nop
 
 	; VBlank-sensitive operations end.
 
-	call Random
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding RNG from Prism/PC - Joenote
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	call Random
+	callfar Random_
+	callfar AdvanceRNGState
 
 	ldh a, [hVBlankOccurred]
 	and a
@@ -111,7 +121,7 @@ DelayFrame::
 NOT_VBLANKED EQU 1
 
 	call DelayFrameHook ; HAX
-	nop
+;	nop ; Removed for RNG space
 	;ld a, NOT_VBLANKED
 	;ldh [hVBlankOccurred], a
 .halt

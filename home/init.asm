@@ -50,6 +50,13 @@ rLCDC_DEFAULT EQU %11100011
 	ld a, b
 	or c
 	jr nz, .loop
+	
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding RNG from Prism/PC - Joenote
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	callfar Random2Zero
+
 
 	call ClearVram
 
