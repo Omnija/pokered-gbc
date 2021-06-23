@@ -53,8 +53,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
-	const SPRITE_SOLDIER   				 ; $32
-;	const SPRITE_UNUSED_GUARD            ; $32
+;	const SPRITE_SOLDIER   				 ; $32
+	const SPRITE_UNUSED_GUARD            ; $32
 	const SPRITE_MOM                     ; $33
 	const SPRITE_BALDING_GUY             ; $34
 	const SPRITE_LITTLE_BOY              ; $35

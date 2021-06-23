@@ -42,7 +42,7 @@ TrainerNamePointers:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	dw .SoldierName
+;	dw .SoldierName
 	dw wTrainerName
 	dw wTrainerName
 	dw wTrainerName
@@ -89,4 +89,4 @@ TrainerNamePointers:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-.SoldierName:	    db "SOLDIER@"
+;.SoldierName:	    db "SOLDIER@"

@@ -2,9 +2,9 @@ IF GEN_2_GRAPHICS
 
 ; Adding Alternative Versions
 IF DEF(_RED)
-RedPicFront:: INCBIN "gfx/gstrainers/red.pic"
+RedPicFront:: INCBIN "gfx/trainers/gstrainers/red.pic"
 ELSE
-RedPicFront:: INCBIN "gfx/gstrainers/blue.pic"
+RedPicFront:: INCBIN "gfx/trainers/gstrainers/blue.pic"
 ENDC
 rept 11 ; Padding
 	db 0

@@ -37,13 +37,15 @@
 	- Swimmer ♀ Trainer 
 		- Trainer [UNUSED_JUGGLER]
 		- Overworld Sprite [UNUSED_GAMEBOY_KID]
-	- Soldier Trainer [Vermillion Gym]
-		- Trainer [New not using UNUSED]
-		- Overworld [SPRITE_UNUSED_GUARD]
 	- Shiny pokdex status screen [Sort of glitchy]
 		- Hold (Select + data) to enable
 		- Hold (Start + data) to disable
 	- RNG state on boot is initialized to a random number
+	
+[Added but Disabled]
+	- Soldier Trainer [Vermillion Gym]
+		- Trainer [New]
+		- Overworld [SPRITE_UNUSED_GUARD]
 
 [Removed From Game]
 

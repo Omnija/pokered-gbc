@@ -104,4 +104,4 @@ SwimmerFSprite::         INCBIN "gfx/sprites/swimmer_f.2bpp"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding sOLDIER Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-SoldierSprite::         INCBIN "gfx/sprites/soldier.2bpp"
+;SoldierSprite::         INCBIN "gfx/sprites/soldier.2bpp"

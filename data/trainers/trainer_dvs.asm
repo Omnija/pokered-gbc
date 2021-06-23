@@ -65,4 +65,4 @@ TrainerClassDVs:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	dvs  9,  8,  8,  9 ; SOLDIER
+;	dvs  9,  8,  8,  9 ; SOLDIER

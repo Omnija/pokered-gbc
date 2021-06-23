@@ -12,7 +12,8 @@ VermilionGym_Object:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	object SPRITE_SOLDIER, 9, 6, STAY, LEFT, 2, OPP_SOLDIER, 3 ; SPRITE_GENTLEMAN/OPP_GENTLEMAN
+;	object SPRITE_SOLDIER, 9, 6, STAY, LEFT, 2, OPP_SOLDIER, 3 ; SPRITE_GENTLEMAN/OPP_GENTLEMAN
+	object SPRITE_GENTLEMAN, 9, 6, STAY, LEFT, 2, OPP_GENTLEMAN, 3 ;
 	object SPRITE_SUPER_NERD, 3, 8, STAY, LEFT, 3, OPP_ROCKER, 1
 	object SPRITE_SAILOR, 0, 10, STAY, RIGHT, 4, OPP_SAILOR, 8
 	object SPRITE_GYM_GUIDE, 4, 14, STAY, DOWN, 5 ; person

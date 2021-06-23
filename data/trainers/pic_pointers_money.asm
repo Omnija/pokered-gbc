@@ -63,4 +63,4 @@ TrainerPicAndMoneyPointers::
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	pic_money SoldierPic,      7000
+;	pic_money SoldierPic,      7000

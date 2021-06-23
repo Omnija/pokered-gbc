@@ -335,8 +335,8 @@ TypesText:
 ;	next ""
 	; fallthrough
 IDNoText:
-	db   "ID/"
-;	db   "<ID>№/"
+;	db   "ID/"
+	db   "<ID>№/"
 	next "OT/@"
 ;	next ""
 	; fallthrough

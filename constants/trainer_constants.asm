@@ -71,5 +71,5 @@ ENDM
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	trainer_const SOLDIER        ; $30
+;	trainer_const SOLDIER        ; $30
 	

@@ -56,9 +56,12 @@ VBlank::
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding RNG from Prism/PC - Joenote
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;	call Random
+IF DEF(_DEBUG)
+	call Random
+ELSE
 	callfar Random_
 	callfar AdvanceRNGState
+ENDC
 
 	ldh a, [hVBlankOccurred]
 	and a

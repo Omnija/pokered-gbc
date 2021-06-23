@@ -55,4 +55,4 @@ TrainerNames::
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	db "SOLDIER@"
+;	db "SOLDIER@"

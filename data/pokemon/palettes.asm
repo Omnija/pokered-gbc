@@ -180,7 +180,7 @@ TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 	db PAL_BEAUTY
 	db PAL_PSYCHIC
 	db PAL_ROCKER
-	db PAL_JUGGLER
+	db PAL_JUGGLER ; was juggler2
 	db PAL_TAMER
 	db PAL_BIRDKEEPER
 	db PAL_BLACKBELT
@@ -210,7 +210,7 @@ TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	db PAL_SOLDIER
+;	db PAL_SOLDIER
 ELSE
 	db PAL_MEWMON    ; MISSINGNO
 	db PAL_GREENMON  ; BULBASAUR

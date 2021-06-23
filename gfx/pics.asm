@@ -102,11 +102,11 @@ StarmiePicFront::    INCBIN "gfx/pokemon/gsfront/starmie.pic"
 StarmiePicBack::     INCBIN "gfx/pokemon/gsback/starmieb.pic"
 ; Adding Alternative Versions
 IF DEF(_RED)
-RedPicBack::         INCBIN "gfx/gstrainers/redb.pic"
+RedPicBack::         INCBIN "gfx/trainers/gstrainers/redb.pic"
 ELSE
-RedPicBack::         INCBIN "gfx/gstrainers/blueb.pic"
+RedPicBack::         INCBIN "gfx/trainers/gstrainers/blueb.pic"
 ENDC
-OldManPicBack::      INCBIN "gfx/gstrainers/oldmanb.pic"
+OldManPicBack::      INCBIN "gfx/trainers/gstrainers/oldmanb.pic"
 
 GastlyPicFront::     INCBIN "gfx/pokemon/gsfront/gastly.pic"
 GastlyPicBack::      INCBIN "gfx/pokemon/gsback/gastlyb.pic"
@@ -156,132 +156,12 @@ SECTION "Pics 6", ROMX
 
 TrainerPics::
 IF GEN_2_GRAPHICS
-YoungsterPic::     INCBIN "gfx/gstrainers/youngster.pic"
-BugCatcherPic::    INCBIN "gfx/gstrainers/bugcatcher.pic"
-LassPic::          INCBIN "gfx/gstrainers/lass.pic"
-SailorPic::        INCBIN "gfx/gstrainers/sailor.pic"
-JrTrainerMPic::    INCBIN "gfx/gstrainers/jr.trainerm.pic"
-JrTrainerFPic::    INCBIN "gfx/gstrainers/jr.trainerf.pic"
-PokemaniacPic::    INCBIN "gfx/gstrainers/pokemaniac.pic"
-SuperNerdPic::     INCBIN "gfx/gstrainers/supernerd.pic"
-HikerPic::         INCBIN "gfx/gstrainers/hiker.pic"
-BikerPic::         INCBIN "gfx/gstrainers/biker.pic"
-BurglarPic::       INCBIN "gfx/gstrainers/burglar.pic"
-EngineerPic::      INCBIN "gfx/gstrainers/engineer.pic"
-FisherPic::        INCBIN "gfx/gstrainers/fisher.pic"
-SwimmerPic::       INCBIN "gfx/gstrainers/swimmer.pic"
-CueBallPic::       INCBIN "gfx/gstrainers/cueball.pic"
-GamblerPic::       INCBIN "gfx/gstrainers/gambler.pic"
-BeautyPic::        INCBIN "gfx/gstrainers/beauty.pic"
-PsychicPic::       INCBIN "gfx/gstrainers/psychic.pic"
-RockerPic::        INCBIN "gfx/gstrainers/rocker.pic"
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Swimmer ♀ Trainer
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-SwimmerFPic::      INCBIN "gfx/gstrainers/swimmerf.pic"
-JugglerPic::       INCBIN "gfx/gstrainers/juggler.pic"
-
-TamerPic::         INCBIN "gfx/gstrainers/tamer.pic"
-BirdKeeperPic::    INCBIN "gfx/gstrainers/birdkeeper.pic"
-BlackbeltPic::     INCBIN "gfx/gstrainers/blackbelt.pic"
-
-; Adding Rival Alternative Versions
-IF DEF(_RED)
-Rival1Pic::        INCBIN "gfx/gstrainers/rival1r.pic"
-ELSE
-Rival1Pic::        INCBIN "gfx/gstrainers/rival1b.pic"
-ENDC
-ProfOakPic::       INCBIN "gfx/gstrainers/prof.oak.pic"
-ChiefPic::
-ScientistPic::     INCBIN "gfx/gstrainers/scientist.pic"
-GiovanniPic::      INCBIN "gfx/gstrainers/giovanni.pic"
-RocketPic::        INCBIN "gfx/gstrainers/rocket.pic"
-CooltrainerMPic::  INCBIN "gfx/gstrainers/cooltrainerm.pic"
-CooltrainerFPic::  INCBIN "gfx/gstrainers/cooltrainerf.pic"
-BrunoPic::         INCBIN "gfx/gstrainers/bruno.pic"
-BrockPic::         INCBIN "gfx/gstrainers/brock.pic"
-MistyPic::         INCBIN "gfx/gstrainers/misty.pic"
-LtSurgePic::       INCBIN "gfx/gstrainers/lt.surge.pic"
-ErikaPic::         INCBIN "gfx/gstrainers/erika.pic"
-KogaPic::          INCBIN "gfx/gstrainers/koga.pic"
-BlainePic::        INCBIN "gfx/gstrainers/blaine.pic"
-SabrinaPic::       INCBIN "gfx/gstrainers/sabrina.pic"
-GentlemanPic::     INCBIN "gfx/gstrainers/gentleman.pic"
-; Adding Rival Alterantive Versions
-IF DEF(_RED)
-Rival2Pic::        INCBIN "gfx/gstrainers/rival2r.pic"
-Rival3Pic::        INCBIN "gfx/gstrainers/rival3r.pic"
-ELSE
-Rival2Pic::        INCBIN "gfx/gstrainers/rival2b.pic"
-Rival3Pic::        INCBIN "gfx/gstrainers/rival3b.pic"
-ENDC
-LoreleiPic::       INCBIN "gfx/gstrainers/lorelei.pic"
-ChannelerPic::     INCBIN "gfx/gstrainers/channeler.pic"
-AgathaPic::        INCBIN "gfx/gstrainers/agatha.pic"
-LancePic::         INCBIN "gfx/gstrainers/lance.pic"
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Soldier Trainer
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-SoldierPic::       INCBIN "gfx/gstrainers/soldier.pic"
+INCLUDE "gfx/trainers/gstrainers.asm"
+;INCLUDE "gfx/trainers/rstrainers.asm"
 ENDC
 
 IF !GEN_2_GRAPHICS
-YoungsterPic::     INCBIN "gfx/trainers/youngster.pic"
-BugCatcherPic::    INCBIN "gfx/trainers/bugcatcher.pic"
-LassPic::          INCBIN "gfx/trainers/lass.pic"
-SailorPic::        INCBIN "gfx/trainers/sailor.pic"
-JrTrainerMPic::    INCBIN "gfx/trainers/jr.trainerm.pic"
-JrTrainerFPic::    INCBIN "gfx/trainers/jr.trainerf.pic"
-PokemaniacPic::    INCBIN "gfx/trainers/pokemaniac.pic"
-SuperNerdPic::     INCBIN "gfx/trainers/supernerd.pic"
-HikerPic::         INCBIN "gfx/trainers/hiker.pic"
-BikerPic::         INCBIN "gfx/trainers/biker.pic"
-BurglarPic::       INCBIN "gfx/trainers/burglar.pic"
-EngineerPic::      INCBIN "gfx/trainers/engineer.pic"
-FisherPic::        INCBIN "gfx/trainers/fisher.pic"
-SwimmerPic::       INCBIN "gfx/trainers/swimmer.pic"
-CueBallPic::       INCBIN "gfx/trainers/cueball.pic"
-GamblerPic::       INCBIN "gfx/trainers/gambler.pic"
-BeautyPic::        INCBIN "gfx/trainers/beauty.pic"
-PsychicPic::       INCBIN "gfx/trainers/psychic.pic"
-RockerPic::        INCBIN "gfx/trainers/rocker.pic"
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Swimmer ♀ Trainer
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-SwimmerFPic::      INCBIN "gfx/trainers/swimmerf.pic"
-
-JugglerPic::       INCBIN "gfx/trainers/juggler.pic"
-TamerPic::         INCBIN "gfx/trainers/tamer.pic"
-BirdKeeperPic::    INCBIN "gfx/trainers/birdkeeper.pic"
-BlackbeltPic::     INCBIN "gfx/trainers/blackbelt.pic"
-Rival1Pic::        INCBIN "gfx/trainers/rival1.pic"
-ProfOakPic::       INCBIN "gfx/trainers/prof.oak.pic"
-ChiefPic::
-ScientistPic::     INCBIN "gfx/trainers/scientist.pic"
-GiovanniPic::      INCBIN "gfx/trainers/giovanni.pic"
-RocketPic::        INCBIN "gfx/trainers/rocket.pic"
-CooltrainerMPic::  INCBIN "gfx/trainers/cooltrainerm.pic"
-CooltrainerFPic::  INCBIN "gfx/trainers/cooltrainerf.pic"
-BrunoPic::         INCBIN "gfx/trainers/bruno.pic"
-BrockPic::         INCBIN "gfx/trainers/brock.pic"
-MistyPic::         INCBIN "gfx/trainers/misty.pic"
-LtSurgePic::       INCBIN "gfx/trainers/lt.surge.pic"
-ErikaPic::         INCBIN "gfx/trainers/erika.pic"
-KogaPic::          INCBIN "gfx/trainers/koga.pic"
-BlainePic::        INCBIN "gfx/trainers/blaine.pic"
-SabrinaPic::       INCBIN "gfx/trainers/sabrina.pic"
-GentlemanPic::     INCBIN "gfx/trainers/gentleman.pic"
-Rival2Pic::        INCBIN "gfx/trainers/rival2.pic"
-Rival3Pic::        INCBIN "gfx/trainers/rival3.pic"
-LoreleiPic::       INCBIN "gfx/trainers/lorelei.pic"
-ChannelerPic::     INCBIN "gfx/trainers/channeler.pic"
-AgathaPic::        INCBIN "gfx/trainers/agatha.pic"
-LancePic::         INCBIN "gfx/trainers/lance.pic"
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Soldier Trainer
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-SoldierPic::       INCBIN "gfx/trainers/soldier.pic"
+INCLUDE "gfx/trainers/trainers.asm"
 ENDC
 
 IF GEN_2_GRAPHICS

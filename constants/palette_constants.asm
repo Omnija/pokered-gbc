@@ -281,7 +281,7 @@ IF GEN_2_GRAPHICS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	const PAL_SOLDIER       ; $EB
+;	const PAL_SOLDIER       ; $EB
 	
 	const PAL_HERO          ; $EC
 ENDC

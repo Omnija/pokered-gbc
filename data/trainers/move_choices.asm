@@ -65,4 +65,4 @@ TrainerClassMoveChoiceModifications:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	move_choices 1, 2    ; SOLDIER
+;	move_choices 1, 2    ; SOLDIER

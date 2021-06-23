@@ -56,7 +56,7 @@ TrainerDataPointers:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	dw SoldierData
+;	dw SoldierData
 
 ; if first byte != $FF, then
 	; first byte is level (of all pokemon on this team)
@@ -680,7 +680,7 @@ SabrinaData:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-SoldierData:
+;SoldierData:
 GentlemanData:
 ; SS Anne 1F Rooms
 	db "THOMAS@", 18, GROWLITHE, GROWLITHE, 0

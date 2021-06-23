@@ -1,21 +1,22 @@
+Random_::
+
+IF Def(_DEBUG)
+; Generate a random 16-bit value.
+	ldh a, [rDIV]
+	ld b, a
+	ldh a, [hRandomAdd]
+	adc b
+	ldh [hRandomAdd], a
+	ldh a, [rDIV]
+	ld b, a
+	ldh a, [hRandomSub]
+	sbc b
+	ldh [hRandomSub], a
+	ret
+ELSE
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding RNG from Prism/PC - Joenote
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-Random_::
-; Generate a random 16-bit value.
-;	ldh a, [rDIV]
-;	ld b, a
-;	ldh a, [hRandomAdd]
-;	adc b
-;	ldh [hRandomAdd], a
-;	ldh a, [rDIV]
-;	ld b, a
-;	ldh a, [hRandomSub]
-;	sbc b
-;	ldh [hRandomSub], a
-;	ret
-
 	; just like the stock RNG, this exits with the value in [hRandomSub]
 	; it also stores a random value in [hRandomAdd]
 	push hl
@@ -156,6 +157,8 @@ AdvanceRNGState::
 	ld [hli], a
 	ld [hl], e
 	ret
+
+ENDC
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding RNG from Prism/PC - Joenote

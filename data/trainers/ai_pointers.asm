@@ -54,4 +54,4 @@ TrainerAIPointers:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	dbw 3, GenericAI ; soldier
+;	dbw 3, GenericAI ; soldier

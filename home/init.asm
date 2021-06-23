@@ -51,12 +51,14 @@ rLCDC_DEFAULT EQU %11100011
 	or c
 	jr nz, .loop
 	
-	
+IF DEF(_DEBUG)
+; nothing
+ELSE
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding RNG from Prism/PC - Joenote
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	callfar Random2Zero
-
+ENDC
 
 	call ClearVram
 
