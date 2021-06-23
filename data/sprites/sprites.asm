@@ -58,8 +58,8 @@ SpriteSheetPointerTable:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
-	overworld_sprite SoldierSprite, 12          ; SPRITE_SOLDIER
-;	overworld_sprite GuardSprite, 12            ; SPRITE_UNUSED_GUARD
+;	overworld_sprite SoldierSprite, 12          ; SPRITE_SOLDIER
+	overworld_sprite GuardSprite, 12            ; SPRITE_UNUSED_GUARD
 	overworld_sprite MomSprite, 12              ; SPRITE_MOM
 	overworld_sprite BaldingGuySprite, 12       ; SPRITE_BALDING_GUY
 	overworld_sprite LittleBoySprite, 12        ; SPRITE_LITTLE_BOY
