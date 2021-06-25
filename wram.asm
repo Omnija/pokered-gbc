@@ -1048,6 +1048,7 @@ wSlotMachineWheel2MiddleTile::
 wTempCoins1::
 ; 2 bytes
 ; temporary variable used to add payout amount to the player's coins
+; also used for skipping move-learn on level-up
 
 wSlotMachineWheel2TopTile::
 	ds 1

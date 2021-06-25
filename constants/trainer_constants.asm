@@ -72,4 +72,10 @@ ENDM
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	trainer_const SOLDIER        ; $30
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Level and Moves
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+LEVELS EQU 0
+MOVES  EQU 1
 	

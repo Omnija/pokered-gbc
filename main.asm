@@ -223,7 +223,7 @@ INCLUDE "data/pokemon/base_stats.asm"
 INCLUDE "data/pokemon/cries.asm"
 INCLUDE "engine/battle/unused_stats_functions.asm"
 INCLUDE "engine/battle/scroll_draw_trainer_pic.asm"
-;INCLUDE "engine/battle/trainer_ai.asm"
+INCLUDE "engine/battle/trainer_ai.asm"
 INCLUDE "engine/battle/draw_hud_pokeball_gfx.asm"
 INCLUDE "gfx/trade.asm"
 INCLUDE "engine/pokemon/evos_moves.asm"
@@ -356,9 +356,6 @@ SECTION "Cinnabar Lab Fossils", ROMX
 
 INCLUDE "engine/events/cinnabar_lab.asm"
 
-; Moved from "Battle Engine 7" Bank
-INCLUDE "engine/battle/trainer_ai.asm"
-
 
 SECTION "Hidden Objects 4", ROMX
 
@@ -439,13 +436,13 @@ INCLUDE "color/animations.asm"
 ; Relocated to Pics
 ;;;;;;;;;;;;;;;;;;;;;;;
 
-SECTION "bank38", ROMX
+SECTION "Party Menu Icons", ROMX
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Party Menu Icons
 ;;;;;;;;;;;;;;;;;;;;;;;	;;;
 INCLUDE "gfx/icons.asm"
 
-SECTION "bank39", ROMX
+SECTION "Pokemon Features", ROMX
 ;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Shiny/Gender
 ;;;;;;;;;;;;;;;;;;;;;;;	
@@ -455,3 +452,11 @@ INCLUDE "engine/pokemon/mon_shiny.asm"
 ; Adding Physical/Special Split - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 INCLUDE "engine/battle/physical_special_split.asm"
+
+SECTION "Trainer Parties", ROMX
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Trainer Names/Levels/Moves
+; Relocated from trainer_ai.asm
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "engine/battle/read_trainer_party.asm"
+INCLUDE "data/trainers/parties.asm"

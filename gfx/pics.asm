@@ -157,7 +157,7 @@ SECTION "Pics 6", ROMX
 TrainerPics::
 IF GEN_2_GRAPHICS
 INCLUDE "gfx/trainers/gstrainers.asm"
-;INCLUDE "gfx/trainers/rstrainers.asm"
+;INCLUDE "gfx/trainers/other_trainers.asm"
 ENDC
 
 IF !GEN_2_GRAPHICS

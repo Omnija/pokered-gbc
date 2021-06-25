@@ -29,29 +29,29 @@ TrainerNames::
 	db "TAMER@"
 	db "BIRD KEEPER@"
 	db "BLACKBELT@"
-	db "RIVAL1@"
+	db "RIVAL@"		 ; RIVAL1@
 	db "PROF.OAK@"
 	db "CHIEF@"
 	db "SCIENTIST@"
-	db "GIOVANNI@"
+	db "GYM LEADER@" ; GIOVANNI@
 	db "ROCKET@"
 	db "COOLTRAINER♂@"
 	db "COOLTRAINER♀@"
-	db "BRUNO@"
-	db "BROCK@"
-	db "MISTY@"
-	db "LT.SURGE@"
-	db "ERIKA@"
-	db "KOGA@"
-	db "BLAINE@"
-	db "SABRINA@"
+	db "ELITE 2@"    ; BRUNO@
+	db "GYM LEADER@" ; BROCK@
+	db "GYM LEADER@" ; MISTY@
+	db "GYM LEADER@" ; LT.SURGE@
+	db "GYM LEADER@" ; ERIKA@
+	db "GYM LEADER@" ; KOGA@
+	db "GYM LEADER@" ; BLAINE@
+	db "GYM LEADER@" ; SABRINA@
 	db "GENTLEMAN@"
-	db "RIVAL2@"
-	db "RIVAL3@"
-	db "LORELEI@"
+	db "RIVAL@"		 ; RIVAL2@
+	db "RIVAL@" 	 ; RIVAL3@
+	db "ELITE 1@"	 ; LORELEI@
 	db "CHANNELER@"
-	db "AGATHA@"
-	db "LANCE@"
+	db "ELITE 3@"	 ; AGATHA@
+	db "ELITE 4@"	 ; LANCE@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;

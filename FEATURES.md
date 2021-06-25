@@ -13,7 +13,9 @@
 		- Status Screen
 		- Trainer Card
 		- Restored Japanese Town Map
-		
+	
+	- Crystal Audio Engine
+	- Infinite TM uses
 	- Overworld Face the Trainers
 	- Running Shoes/Bike/Surf by Holding (B)
 	- Field Moves with (Select)
@@ -27,7 +29,8 @@
 	- Pokemon Shiny [Palettes Needs Work or better code]
 	- Individual Trainer DV's
 	- Individual Trainer Names
-	- Don't skip Move when over leveling [Removed]
+	- Individual Trainer Pokemon Level & Movesets
+	- Skipping move-learn on level-up
 	- Daycare Breeding System + Step Counter
 	- Bicycle Shortcut (A + Select)
 	- Extra Stats Menu
@@ -41,8 +44,10 @@
 		- Hold (Select + data) to enable
 		- Hold (Start + data) to disable
 	- RNG state on boot is initialized to a random number
+	- Allow renaming traded pokemon [Disabled 1OTID Check]
 	
 [Added but Disabled]
+
 	- Soldier Trainer [Vermillion Gym]
 		- Trainer [New]
 		- Overworld [SPRITE_UNUSED_GUARD]

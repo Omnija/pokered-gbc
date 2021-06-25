@@ -162,6 +162,13 @@ ENDC
 	farcall CalcLevelFromExperience
 	pop hl
 	ld a, [hl] ; current level
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Skipping move-learn on level-up - Joenote
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; wTempCoins1 was chosen because it's used only for slot machine and gets defaulted to 1 during the mini-game
+	ld [wTempCoins1], a ; joenote - fixing skip move-learn glitch: need to store the current level in wram
+	
 	cp d
 	jp z, .nextMon ; if level didn't change, go to next mon
 IF GEN_2_GRAPHICS
@@ -265,7 +272,27 @@ ENDC
 	ld [wMonDataLocation], a
 	ld a, [wd0b5]
 	ld [wd11e], a
+;	predef LearnMoveFromLevelUp
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Skipping move-learn on level-up - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, [wCurEnemyLVL]
+	ld c, a
+	ld a, [wTempCoins1]
+	ld b, a
+.level_loop
+	inc b
+	ld a, b
+	ld [wCurEnemyLVL], a
+	push bc
 	predef LearnMoveFromLevelUp
+	pop bc
+	ld a, b
+	cp c
+	jr nz, .level_loop
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	
 	ld hl, wCanEvolveFlags
 	ld a, [wWhichPokemon]
 	ld c, a

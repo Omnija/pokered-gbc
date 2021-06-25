@@ -60,8 +60,12 @@ NameRaterText1:
 	pop af
 	jr c, .asm_1daae
 	call GetPartyMonName2
-	call NameRaterScript_1da20
-	ld hl, NameRaterText_1dad1
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Removed to allow renaming traded pokemon
+; Skips 1OTID check
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	call NameRaterScript_1da20
+;	ld hl, NameRaterText_1dad1
 	jr c, .asm_1daa8
 	ld hl, NameRaterText_1dabd
 	call NameRaterScript_1da15

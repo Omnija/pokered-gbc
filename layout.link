@@ -215,9 +215,10 @@ ROMX $36
 ROMX $37
 	"Pics 12"
 ROMX $38
-	"bank38"
+	"Party Menu Icons"
 ROMX $39
-	"bank39"
+	"Pokemon Features"
+	"Trainer Parties"
 
 WRAM0
 	"WRAM"

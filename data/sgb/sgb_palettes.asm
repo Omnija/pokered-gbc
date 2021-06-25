@@ -49,6 +49,7 @@ ENDC
 ; pokemon, trainers, etc.
 
 IF GEN_2_GRAPHICS
+; Pokemon begins
 	RGB 31,31,31, 12,31,11, 31,10,06, 00,00,00 ; PAL_BULBASAUR
 	RGB 31,31,31, 12,31,11, 31,12,17, 00,00,00 ; PAL_IVYSAUR
 	RGB 31,31,31, 12,31,19, 31,09,19, 00,00,00 ; PAL_VENUSAUR
@@ -217,7 +218,7 @@ IF GEN_2_GRAPHICS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Swimmer ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	RGB 31,31,31, 30,22,17, 06,12,26, 00,00,00 ; PAL_SWIMMER_F
+	RGB 31,31,31, 25,16,05, 06,14,04, 00,00,00 ; PAL_SWIMMER_F
 ;	RGB 31,31,31, 26,15,10, 09,06,31, 00,00,00 ; PAL_JUGGLER
 
 	RGB 31,31,31, 30,17,13, 07,12,15, 00,00,00 ; PAL_FISHERMAN

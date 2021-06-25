@@ -2250,9 +2250,9 @@ ItemUseTMHM:
 	ld a, [wcf91]
 	call IsItemHM
 	ret
-;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Removing TM Being Used
-;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	ret c
 ;	jp RemoveUsedItem
 
