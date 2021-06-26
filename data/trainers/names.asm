@@ -53,6 +53,11 @@ TrainerNames::
 	db "ELITE 3@"	 ; AGATHA@
 	db "ELITE 4@"	 ; LANCE@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Rocket ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	db "ROCKET♀@"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	db "SOLDIER@"

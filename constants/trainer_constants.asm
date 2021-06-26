@@ -69,9 +69,14 @@ ENDM
 	trainer_const AGATHA         ; $2E
 	trainer_const LANCE          ; $2F
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding ROCKET ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	trainer_const ROCKET_F       ; $30
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;	trainer_const SOLDIER        ; $30
+;	trainer_const SOLDIER        ; $32
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Individual Trainer Level and Moves

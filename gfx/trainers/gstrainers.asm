@@ -65,3 +65,7 @@ LancePic::         INCBIN "gfx/trainers/gstrainers/lance.pic"
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;SoldierPic::       INCBIN "gfx/trainers/gstrainers/soldier.pic"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Rocket ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RocketFPic::      INCBIN "gfx/trainers/gstrainers/rocketf.pic"

@@ -40,6 +40,9 @@
 	- Swimmer ♀ Trainer 
 		- Trainer [UNUSED_JUGGLER]
 		- Overworld Sprite [UNUSED_GAMEBOY_KID]
+	- Rocket ♀ Trainer 
+		- Trainer [NEW]
+		- Overworld Sprite [UNUSED_GUARD]
 	- Shiny pokdex status screen [Sort of glitchy]
 		- Hold (Select + data) to enable
 		- Hold (Start + data) to disable
@@ -53,7 +56,7 @@
 
 	- Soldier Trainer [Vermillion Gym]
 		- Trainer [New]
-		- Overworld [SPRITE_UNUSED_GUARD]
+		- Overworld [Replace any UNUSED]
 
 [Removed From Game]
 

@@ -15,7 +15,10 @@ TrainerAIPointers:
 	dbw 3, GenericAI
 	dbw 3, GenericAI
 	dbw 3, GenericAI
-	dbw 3, JugglerAI ; unused_juggler
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Swimmer ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	dbw 3, JugglerAI ; unused_juggler (Swimmer ♀ Trainer)
 	dbw 3, GenericAI
 	dbw 3, GenericAI
 	dbw 3, GenericAI
@@ -50,8 +53,12 @@ TrainerAIPointers:
 	dbw 3, GenericAI
 	dbw 2, AgathaAI ; agatha
 	dbw 1, LanceAI ; lance
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Rocket ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	dbw 3, GenericAI ;  Rocket_F ♀ Trainer
+	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;	dbw 3, GenericAI ; soldier
+;	dbw 3, GenericAI ; Soldier

@@ -476,4 +476,7 @@ TrainerRematch:
 	xor a
 	ret
 
-INCLUDE "data/trainers/encounter_types.asm"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Relocated to main.asm
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;INCLUDE "data/trainers/encounter_types.asm"

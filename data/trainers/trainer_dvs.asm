@@ -63,6 +63,11 @@ TrainerClassDVs:
 	dvs  7, 15, 13, 15 ; AGATHA
 	dvs 13, 12, 13, 13 ; LANCE
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Rocket ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	dvs 12,  8, 11,  8 ; ROCKET_F
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	dvs  9,  8,  8,  9 ; SOLDIER

@@ -453,9 +453,10 @@ SpritePaletteAssignments: ; Characters on the overworld
 
 	; 0x31: SPRITE_GUARD ($30)
 	db SPR_PAL_BLUE
-
+	
+	; 0x36: SPRITE_ROCKET_F
 	; 0x32: $32
-	db SPR_PAL_RANDOM
+	db SPR_PAL_BROWN ; RANDOM
 
 	; 0x33: SPRITE_MOM
 	db SPR_PAL_ORANGE
@@ -466,6 +467,7 @@ SpritePaletteAssignments: ; Characters on the overworld
 	; 0x35: SPRITE_YOUNG_BOY
 	db SPR_PAL_RANDOM
 
+	; 0x36: SPRITE_SWIMMER_F
 	; 0x36: SPRITE_GAMEBOY_KID
 	db SPR_PAL_RANDOM
 

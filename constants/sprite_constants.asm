@@ -50,11 +50,11 @@
 	const SPRITE_FISHER                  ; $2f
 	const SPRITE_KOGA                    ; $30
 	const SPRITE_GUARD                   ; $31
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Soldier Trainer
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;	const SPRITE_SOLDIER   				 ; $32
-	const SPRITE_UNUSED_GUARD            ; $32
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding ROCKET ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const SPRITE_ROCKET_F                ; $32
+;	const SPRITE_UNUSED_GUARD            ; $32
 	const SPRITE_MOM                     ; $33
 	const SPRITE_BALDING_GUY             ; $34
 	const SPRITE_LITTLE_BOY              ; $35
@@ -90,3 +90,9 @@ FIRST_STILL_SPRITE EQU const_value
 ; Adding Daycare Ditto
 ;;;;;;;;;;;;;;;;;;;;;;;;
 	const SPRITE_DITTO    				 ; $49
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+; Place over Unused
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	const SPRITE_SOLDIER   				 ; $32

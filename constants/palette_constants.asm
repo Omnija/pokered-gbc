@@ -279,9 +279,14 @@ IF GEN_2_GRAPHICS
 	const PAL_AGATHA        ; $E9
 	const PAL_LANCE         ; $EA
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Rocket ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	const PAL_ROCKET_F      ; $EB
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;	const PAL_SOLDIER       ; $EB
+;	const PAL_SOLDIER       ; $ED
 	
 	const PAL_HERO          ; $EC
 ENDC

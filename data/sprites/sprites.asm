@@ -6,6 +6,7 @@ ENDM
 
 SpriteSheetPointerTable:
 	; graphics, tile count
+; Animated sprites begins	
 	overworld_sprite RedSprite, 12              ; SPRITE_RED
 	overworld_sprite BlueSprite, 12             ; SPRITE_BLUE
 	overworld_sprite OakSprite, 12              ; SPRITE_OAK
@@ -55,11 +56,11 @@ SpriteSheetPointerTable:
 	overworld_sprite FisherSprite, 12           ; SPRITE_FISHER
 	overworld_sprite KogaSprite, 12             ; SPRITE_KOGA
 	overworld_sprite GuardSprite, 12            ; SPRITE_GUARD
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Soldier Trainer
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;	overworld_sprite SoldierSprite, 12          ; SPRITE_SOLDIER
-	overworld_sprite GuardSprite, 12            ; SPRITE_UNUSED_GUARD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Rocket ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	overworld_sprite RocketFSprite, 12          ; SPRITE_ROCKET_F
+;	overworld_sprite GuardSprite, 12            ; SPRITE_UNUSED_GUARD
 	overworld_sprite MomSprite, 12              ; SPRITE_MOM
 	overworld_sprite BaldingGuySprite, 12       ; SPRITE_BALDING_GUY
 	overworld_sprite LittleBoySprite, 12        ; SPRITE_LITTLE_BOY
@@ -74,7 +75,8 @@ SpriteSheetPointerTable:
 	overworld_sprite BrunoSprite, 12            ; SPRITE_BRUNO
 	overworld_sprite LoreleiSprite, 12          ; SPRITE_LORELEI
 	overworld_sprite SeelSprite, 12             ; SPRITE_SEEL
-	
+
+; Still sprites begins	
 	overworld_sprite PokeBallSprite, 4          ; SPRITE_POKE_BALL
 	overworld_sprite FossilSprite, 4            ; SPRITE_FOSSIL
 	overworld_sprite BoulderSprite, 4           ; SPRITE_BOULDER
@@ -91,3 +93,9 @@ SpriteSheetPointerTable:
 ; Adding Daycare Ditto
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	overworld_sprite DittoSprite, 4          	; SPRITE_DITTO
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+; Place over Unused
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	overworld_sprite SoldierSprite, 12          ; SPRITE_SOLDIER

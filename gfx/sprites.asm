@@ -104,6 +104,10 @@ DittoSprite::            INCBIN "gfx/pokemon/icons/ditto.2bpp"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 SwimmerFSprite::         INCBIN "gfx/sprites/swimmer_f.2bpp"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding sOLDIER Trainer
+; Adding Rocket ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RocketFSprite::         INCBIN "gfx/sprites/rocket_f.2bpp"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;SoldierSprite::         INCBIN "gfx/sprites/soldier.2bpp"

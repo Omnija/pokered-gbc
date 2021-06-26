@@ -52,7 +52,11 @@ TrainerDataPointers:
 	dw ChannelerData
 	dw AgathaData
 	dw LanceData
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Rocket ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	dw 	RocketFData
+	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -564,6 +568,7 @@ GiovanniData:
 		db 50,RHYDON,FURY_ATTACK,HORN_DRILL,EARTHQUAKE,ROCK_SLIDE
 	db -1
 
+RocketFData:
 RocketData:
 ; Mt. Moon B2F
 	db "GRUNT@", 13, RATTATA, ZUBAT, 0

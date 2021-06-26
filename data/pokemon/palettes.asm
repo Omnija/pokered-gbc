@@ -208,6 +208,11 @@ TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 	db PAL_AGATHA
 	db PAL_LANCE
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Rocket ♀ Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+	db PAL_ROCKET_F
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	db PAL_SOLDIER
