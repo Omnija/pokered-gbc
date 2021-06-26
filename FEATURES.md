@@ -45,6 +45,9 @@
 		- Hold (Start + data) to disable
 	- RNG state on boot is initialized to a random number
 	- Allow renaming traded pokemon [Disabled 1OTID Check]
+	- Struggle is now using (Unused Neutral) type (BIRD)
+		- Transform copying move now becomes Struggle
+	- Types - Fairy/Steel/Dark for future uses
 	
 [Added but Disabled]
 

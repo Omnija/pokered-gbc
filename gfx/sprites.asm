@@ -86,8 +86,10 @@ LoreleiSprite::          INCBIN "gfx/sprites/lorelei.2bpp"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 IF DEF(_RED)
 SurfingSprite::          INCBIN "gfx/sprites/red_surf.2bpp"
+;SurfingSprite::          INCBIN "gfx/sprites/red_swim.2bpp"
 ELSE
 SurfingSprite::          INCBIN "gfx/sprites/blue_surf.2bpp"
+;SurfingSprite::          INCBIN "gfx/sprites/blue_swim.2bpp"
 ENDC
 
 

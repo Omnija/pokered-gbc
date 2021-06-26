@@ -3,7 +3,7 @@ _AIBattleWithdrawText::
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Individual Trainer Names
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
-	text "@"
+	text " @"
 	text_ram wCurTrainerName
 	text_start
 	line "withdrew"

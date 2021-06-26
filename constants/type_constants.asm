@@ -8,7 +8,7 @@
 	const POISON       ; $03
 	const GROUND       ; $04
 	const ROCK         ; $05
-	const BIRD         ; $06
+	const BIRD         ; $06	; (Unused - Neutral)
 	const BUG          ; $07
 	const GHOST        ; $08
 	const STEEL		   ; $09
