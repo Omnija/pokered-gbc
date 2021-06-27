@@ -51,6 +51,7 @@
 	- Struggle is now using (Unused Neutral) type (BIRD)
 		- Transform copying move now becomes Struggle
 	- Types - Fairy/Steel/Dark for future uses
+	- Trade evolution can also evolve at 42
 	
 [Added but Disabled]
 
@@ -64,6 +65,11 @@
 	- Poke Center Healing Delay
 	- Overworld Poison Effects
 	- Unused Codes/Triggers
+	
+[Authors]
+
+	- Omnija
+	- Sotaeko
 
 [Credits]
 

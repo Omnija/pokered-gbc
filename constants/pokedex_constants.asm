@@ -1,7 +1,8 @@
 ; pokedex ids
 ; indexes for:
 ; - BaseStats (see data/pokemon/base_stats.asm)
-; - MonPartyData (see data/pokemon/menu_icons.asm)
+; - MonPartyData (OLD) (see data/pokemon/menu_icons.asm)
+; - MonPartyData (NEW) (see data/pokemon/menu_party_icons.asm)
 ; - MonsterPalettes (see data/pokemon/palettes.asm)
 	const_def 1
 	const DEX_BULBASAUR  ; 1

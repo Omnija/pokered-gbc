@@ -11,13 +11,11 @@ TrainerDataPointers:
 	dw BikerData
 	dw BurglarData
 	dw EngineerData
-	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Swimmer ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	dw SwimmerFData
+	dw SwimmerFData ; Shared with beauty
 ;	dw UnusedJugglerData
-
 	dw FisherData
 	dw SwimmerData
 	dw CueBallData
@@ -52,11 +50,12 @@ TrainerDataPointers:
 	dw ChannelerData
 	dw AgathaData
 	dw LanceData
+
+; New Trainers begin
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Rocket ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	dw 	RocketFData
-	
+	dw 	RocketFData ; Shared with rocket
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;

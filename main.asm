@@ -460,7 +460,6 @@ SECTION "Trainer Parties", ROMX
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 INCLUDE "engine/battle/read_trainer_party.asm"
 INCLUDE "data/trainers/parties.asm"
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Relocated from trainers.asm
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
