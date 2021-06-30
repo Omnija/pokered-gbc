@@ -166,3 +166,198 @@ _RematchTrainerText::
 	text "<PLAYER> is it time"
 	line "for a rematch?"
 	done
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Bulbasaur Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MelanieText1::
+	text "I take care of"
+	line "injured #MON."
+
+	para "I nursed this"
+	line "BULBASAUR back to"
+	cont "health."
+
+	para "It needs a good"
+	line "trainer to take"
+	cont "care of it now.@"
+	text_end
+
+MelanieText2::
+	text "I know! Would you"
+	line "take care of this"
+	cont "BULBASAUR?"
+	done
+
+MelanieText3::
+	text "Please take care"
+	line "of BULBASAUR!@"
+	text_end
+
+MelanieText4::
+	text "Is BULBASAUR"
+	line "doing well?@"
+	text_end
+
+MelanieText5::
+	text "Oh..."
+	line "That's too bad...@"
+	text_end
+
+MelanieBulbasaurText::
+	text "BULBASAUR: Bubba!"
+	line "Zoar!@"
+	text_end
+
+;MelanieOddishText::
+;	text "ODDISH: Orddissh!@"
+;	text_end
+
+;MelanieSandshrewText::
+;	text "SANDSHREW: Pikii!@"
+;	text_end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Charmander Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_Route24DamianText1::
+	text "I'm not good at"
+	line "raising #MON."
+
+	para "I should release"
+	line "my CHARMANDER"
+	cont "because I haven't"
+	cont "raised it well..."
+
+	para "If you promise me"
+	line "you'll care for"
+	cont "it, it's yours."
+	done
+
+_Route24DamianText2::
+	text "Take good care of"
+	line "my CHARMANDER!@@"
+
+_Route24DamianText3::
+	text "Oh... I'd better"
+	line "release it then."
+	done
+
+_Route24DamianText4::
+	text "How's CHARMANDER"
+	line "doing?"
+	done
+
+_Route24DamianText5::
+	text "I'm not good at"
+	line "raising #MON."
+
+	para "I can't use this"
+	line "item on my"
+	cont "CHARMANDER..."
+
+	para "It would just"
+	line "be a waste."
+
+	para "You have a"
+	line "CHARMANDER too?"
+
+	para "If you promise me"
+	line "you'll care for"
+	cont "it, this item is"
+	cont "yours."
+	prompt
+
+_Route24DamianText6::
+	text "<PLAYER> got"
+	line "@"
+	text_ram wcf4b
+	text "!@@"
+
+_Route24DamianText7::
+	text "Oh... You can't"
+	line "carry this."
+	done
+
+_Route24DamianText8::
+	text "How's your CHAR-"
+	line "MANDER doing?"
+	done
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Squirtle Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_OfficerJennyText1::
+	text "I just caught a"
+	line "SQUIRTLE that was"
+	cont "always getting"
+	cont "into mischief."
+
+	para "I think it needs a"
+	line "good trainer to"
+	cont "set it straight."
+	done
+
+_OfficerJennyText2::
+	text "You have the"
+	line "THUNDERBADGE!?"
+
+	para "You must be a"
+	line "good trainer!"
+
+	para "I just caught a"
+	line "SQUIRTLE that was"
+	cont "always getting"
+	cont "into mischief."
+
+	para "Would you take"
+	line "good care of it?"
+	done
+
+_OfficerJennyText3::
+	text "OK! Please treat"
+	line "SQUIRTLE right!@@"
+
+_OfficerJennyText4::
+	text "Oh... What am I"
+	line "to do now?"
+	done
+
+_OfficerJennyText5::
+	text "How is SQUIRTLE"
+	line "doing?"
+	done
+
+_OfficerJennyText6::
+	text "Some SQUIRTLE"
+	line "around here is"
+	cont "always getting"
+	cont "into mischief."
+
+	para "PROF.OAK gave you"
+	line "a SQUIRTLE?"
+	cont "And it behaves?"
+
+	para "You must be a"
+	line "good trainer!"
+
+	para "Take this and"
+	line "raise your"
+	cont "SQUIRTLE right!"
+	prompt
+
+_OfficerJennyText7::
+	text "<PLAYER> got"
+	line "@"
+	text_ram wcf4b
+	text "!@@"
+
+_OfficerJennyText8::
+	text "Oh... You can't"
+	line "carry this."
+	done
+
+_OfficerJennyText9::
+	text "How is your"
+	line "SQUIRTLE doing?"
+	done

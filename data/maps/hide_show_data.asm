@@ -65,7 +65,11 @@ MapHSPointers:
 	dw NoHS
 	dw MtMoonB2FHS
 	dw NoHS
-	dw NoHS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Bulbasaur Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	dw CeruleanTradeHouseHS
+;	dw NoHS
 	dw NoHS
 	dw NoHS
 	dw NoHS
@@ -330,6 +334,11 @@ ViridianGymHS:
 	db VIRIDIAN_GYM, $0B, SHOW
 Museum1FHS:
 	db MUSEUM_1F, $05, SHOW
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Bulbasaur Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+CeruleanTradeHouseHS:
+	db CERULEAN_TRADE_HOUSE, $04, SHOW
 CeruleanCaveHS:
 	db CERULEAN_CAVE_1F, $01, SHOW
 	db CERULEAN_CAVE_1F, $02, SHOW

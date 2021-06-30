@@ -107,6 +107,10 @@ SwimmerFSprite::         INCBIN "gfx/sprites/swimmer_f.2bpp"
 ; Adding Rocket ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 RocketFSprite::         INCBIN "gfx/sprites/rocket_f.2bpp"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Bulbasaur Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+BulbasaurSprite::        INCBIN "gfx/pokemon/icons/bulbasaur.2bpp"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;

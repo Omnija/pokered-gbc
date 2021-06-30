@@ -93,7 +93,10 @@ SpriteSheetPointerTable:
 ; Adding Daycare Ditto
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	overworld_sprite DittoSprite, 4          	; SPRITE_DITTO
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Bulbasaur Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	overworld_sprite BulbasaurSprite, 4        ; SPRITE_BULBASAUR
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ; Place over Unused

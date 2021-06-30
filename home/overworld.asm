@@ -332,9 +332,9 @@ OverworldLoopLessDelay::
 	ld hl, wStepCounter
 	dec [hl]
 	
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Movement Counter- Mateo
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Movement Counter - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	ld hl,wMovementCounter
 	inc [hl]
 	ld a,[hli]

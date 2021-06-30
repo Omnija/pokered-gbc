@@ -14,5 +14,9 @@ Route24_Object:
 	object SPRITE_COOLTRAINER_F, 10, 28, STAY, RIGHT, 6, OPP_LASS, 8
 	object SPRITE_YOUNGSTER, 11, 31, STAY, LEFT, 7, OPP_BUG_CATCHER, 9
 	object SPRITE_POKE_BALL, 10, 5, STAY, NONE, 8, TM_THUNDER_WAVE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Charmander Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	object SPRITE_YOUNGSTER, 6, 5, STAY, DOWN, 9 ; charmander gifter
 
 	def_warps_to ROUTE_24

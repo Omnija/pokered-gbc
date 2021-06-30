@@ -62,6 +62,10 @@
 	const EVENT_GOT_TM11
 	const EVENT_BEAT_MISTY
 	const EVENT_GOT_BICYCLE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Bulbasaur Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const EVENT_GOT_BULBASAUR_IN_CERULEAN
 
 ; Lavender Town events
 	const_next $F0 - 2
@@ -113,6 +117,10 @@
 	const_skip
 	const EVENT_GOT_TM24
 	const EVENT_BEAT_LT_SURGE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Squirtle Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const EVENT_GOT_SQUIRTLE_FROM_OFFICER_JENNY
 
 ; Celadon City events
 	const_next $180
@@ -503,6 +511,10 @@
 	const EVENT_BEAT_ROUTE_24_TRAINER_5
 	const_skip
 	const EVENT_NUGGET_REWARD_AVAILABLE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Charmander Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const EVENT_GOT_CHARMANDER_FROM_DAMIAN
 
 ; Route 25 events
 	const_next $550

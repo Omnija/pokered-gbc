@@ -52,6 +52,7 @@
 		- Transform copying move now becomes Struggle
 	- Types - Fairy/Steel/Dark for future uses
 	- Trade evolution can also evolve at 42
+	- NPC starter gifters
 	
 [Added but Disabled]
 

@@ -90,6 +90,10 @@ FIRST_STILL_SPRITE EQU const_value
 ; Adding Daycare Ditto
 ;;;;;;;;;;;;;;;;;;;;;;;;
 	const SPRITE_DITTO    				 ; $49
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Bulbasaur Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const SPRITE_BULBASAUR   			 ; $50
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer

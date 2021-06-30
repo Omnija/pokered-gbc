@@ -606,8 +606,29 @@ Trade_AnimCircledMon:
 	xor $3c ; make link cable flash
 	ldh [rBGP], a
 	ld hl, wOAMBuffer + $02
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Party Menu ICONS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, [hl]
+	bit 2, a
+	jr z, .firstFrame
+	sub 8
+.firstFrame
+	add 4
+	ld bc, 4
+rept 3
+	ld [hl], a
+	add hl, bc
+	inc a
+endr
+	ld [hl], a
+	add hl, bc
 	ld de, $4
-	ld c, $14
+	ld c, $10
+	
+;	ld de, $4
+;	ld c, $14
 .loop
 	ld a, [hl]
 	xor ICONOFFSET

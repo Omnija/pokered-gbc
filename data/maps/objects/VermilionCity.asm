@@ -28,5 +28,9 @@ VermilionCity_Object:
 	object SPRITE_GAMBLER, 30, 7, STAY, NONE, 4 ; person
 	object SPRITE_MONSTER, 29, 9, WALK, UP_DOWN, 5 ; person
 	object SPRITE_SAILOR, 25, 27, WALK, LEFT_RIGHT, 6 ; person
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Squirtle Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	object SPRITE_BEAUTY, 19, 15, STAY, NONE, 7 ; squirtle gifter
 
 	def_warps_to VERMILION_CITY

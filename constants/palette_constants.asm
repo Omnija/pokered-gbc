@@ -282,7 +282,6 @@ IF GEN_2_GRAPHICS
 ; Adding Rocket ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 	const PAL_ROCKET_F      ; $EB
-	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
