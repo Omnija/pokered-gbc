@@ -5,6 +5,9 @@
     - Alternative Version Differences
 	    - Start/Surf as Red or Blue
 	    - Starting locations
+		- Added trade only pokemon to the wild
+			- Red - Lickitung &  Mr.Mime [Route 12/13]
+			- Blue - Farfetch'd & Jynx [Route 12/13]
 
 	- Skip if move accuracy is 100%
 	- Changes/Updates to the GFX
@@ -52,7 +55,10 @@
 		- Transform copying move now becomes Struggle
 	- Types - Fairy/Steel/Dark for future uses
 	- Trade evolution can also evolve at 42
-	- NPC starter gifters
+	- Bulbasaur, Charmander, and Squirtle: NPC gifts (like Yellow)
+	
+	- Mart changes
+		- Moon stone [Celedon Mart f4]
 	
 [Added but Disabled]
 
@@ -74,8 +80,8 @@
 
 [Credits]
 
+	- Dannye + FroggestSpirit + Drenn
 	- Rangi42
 	- TheFakeMateo
 	- Jojobear13
-	- Dannye + Team
 	- Pret Community

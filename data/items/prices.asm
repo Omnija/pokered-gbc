@@ -8,7 +8,7 @@ ItemPrices::
 	money 0     ; SURFBOARD
 	money 1000  ; SAFARI_BALL
 	money 0     ; POKEDEX
-	money 0     ; MOON_STONE
+	money 2100  ; MOON_STONE - Added to store
 	money 100   ; ANTIDOTE
 	money 250   ; BURN_HEAL
 	money 250   ; ICE_HEAL

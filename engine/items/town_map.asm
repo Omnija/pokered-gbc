@@ -13,9 +13,11 @@ DisplayTownMap:
 	push af
 	ld b, $0
 	call DrawPlayerOrBirdSprite ; player sprite
-	hlcoord 1, 0
-	ld de, wcd6d
-	call PlaceString
+	
+;	hlcoord 1, 0	; Disable MAP name location
+;	ld de, wcd6d
+;	call PlaceString	; Disable duplicate MAP name
+
 	ld hl, wOAMBuffer
 	ld de, wTileMapBackup
 	ld bc, $10
