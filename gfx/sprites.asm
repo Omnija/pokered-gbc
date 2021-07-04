@@ -39,6 +39,18 @@ ELSE
 RedBikeSprite::          INCBIN "gfx/sprites/blue_bike.2bpp"
 RedSprite::              INCBIN "gfx/sprites/blue.2bpp"
 ENDC
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_RED)
+GreenBikeSprite::        INCBIN "gfx/sprites/green_bike.2bpp"
+GreenSprite::            INCBIN "gfx/sprites/green.2bpp"
+ELSE
+GreenBikeSprite::        INCBIN "gfx/sprites/yellow_bike.2bpp"
+GreenSprite::            INCBIN "gfx/sprites/yellow.2bpp"
+ENDC
+
 IF DEF(_RED)
 BlueSprite::             INCBIN "gfx/sprites/blue.2bpp"
 ELSE
@@ -77,23 +89,33 @@ BaldingGuySprite::       INCBIN "gfx/sprites/balding_guy.2bpp"
 LittleBoySprite::        INCBIN "gfx/sprites/little_boy.2bpp"
 GameboyKidSprite::       INCBIN "gfx/sprites/gameboy_kid.2bpp"
 FairySprite::            INCBIN "gfx/sprites/fairy.2bpp"
-AgathaSprite::           INCBIN "gfx/sprites/agatha.2bpp"
-BrunoSprite::            INCBIN "gfx/sprites/bruno.2bpp"
-LoreleiSprite::          INCBIN "gfx/sprites/lorelei.2bpp"
+; Relocated to "NPC Sprites 3"
+;AgathaSprite::           INCBIN "gfx/sprites/agatha.2bpp"
+;BrunoSprite::            INCBIN "gfx/sprites/bruno.2bpp"
+;LoreleiSprite::          INCBIN "gfx/sprites/lorelei.2bpp"
+;SeelSprite::             INCBIN "gfx/sprites/seel.2bpp"
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Surfing Sprite
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 IF DEF(_RED)
-SurfingSprite::          INCBIN "gfx/sprites/red_surf.2bpp"
-;SurfingSprite::          INCBIN "gfx/sprites/red_swim.2bpp"
+;SurfingSprite::          INCBIN "gfx/sprites/red_surf.2bpp"
+SurfingMSprite::          INCBIN "gfx/sprites/red_swim.2bpp"
 ELSE
-SurfingSprite::          INCBIN "gfx/sprites/blue_surf.2bpp"
-;SurfingSprite::          INCBIN "gfx/sprites/blue_swim.2bpp"
+;SurfingSprite::          INCBIN "gfx/sprites/blue_surf.2bpp"
+SurfingMSprite::          INCBIN "gfx/sprites/blue_swim.2bpp"
+ENDC
+IF DEF(_RED)
+SurfingFSprite::          INCBIN "gfx/sprites/green_swim.2bpp"
+ELSE
+SurfingFSprite::          INCBIN "gfx/sprites/yellow_swim.2bpp"
 ENDC
 
 
 SECTION "NPC Sprites 3", ROMX
+AgathaSprite::           INCBIN "gfx/sprites/agatha.2bpp"
+BrunoSprite::            INCBIN "gfx/sprites/bruno.2bpp"
+LoreleiSprite::          INCBIN "gfx/sprites/lorelei.2bpp"
 SeelSprite::             INCBIN "gfx/sprites/seel.2bpp"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Daycare Ditto

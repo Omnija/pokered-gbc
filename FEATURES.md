@@ -30,9 +30,7 @@
 	- Independent Party Menu Icons [Pre-Evolutions]
 	- Pokemon Genders
 	- Pokemon Shiny [Palettes Needs Work or better code]
-	- Individual Trainer DV's
-	- Individual Trainer Names
-	- Individual Trainer Pokemon Level & Movesets
+	- Individual Trainer DV's/ Names/ Levels/ Movesets
 	- Skipping move-learn on level-up
 	- Daycare Breeding System + Step Counter
 	- Bicycle Shortcut (A + Select)
@@ -59,6 +57,8 @@
 	
 	- Mart changes
 		- Moon stone [Celedon Mart f4]
+		
+	- Female playable character [no palettes]
 	
 [Added but Disabled]
 

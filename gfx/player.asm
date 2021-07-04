@@ -6,6 +6,16 @@ RedPicFront:: INCBIN "gfx/trainers/gstrainers/red.pic"
 ELSE
 RedPicFront:: INCBIN "gfx/trainers/gstrainers/blue.pic"
 ENDC
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_RED)
+GreenPicFront:: INCBIN "gfx/trainers/gstrainers/green.pic"
+ELSE
+GreenPicFront:: INCBIN "gfx/trainers/gstrainers/yellow.pic"
+ENDC
+
 rept 11 ; Padding
 	db 0
 endr

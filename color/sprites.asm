@@ -490,7 +490,14 @@ SpritePaletteAssignments: ; Characters on the overworld
 	db SPR_PAL_BLUE
 
 	; 0x3d: SPRITE_BALL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fixing Pokeball ow Colour
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_RED)
 	db SPR_PAL_ORANGE
+ELSE
+	db SPR_PAL_BLUE
+ENDC
 
 	; 0x3e: SPRITE_OMANYTE
 	db SPR_PAL_ROCK

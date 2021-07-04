@@ -504,6 +504,17 @@ StartMenu_TrainerInfo::
 DrawTrainerInfo:
 	ld de, RedPicFront
 	lb bc, BANK(RedPicFront), $01
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	ld a, [wPlayerGender] ; Added gender check
+	and a      ; Added gender check
+ 	jr z, .AreBoy
+   	ld de, GreenPicFront
+    ld b, BANK(GreenPicFront)
+.AreBoy
+	
 	predef DisplayPicCenteredOrUpperRight
 	call DisableLCD
 	coord hl, 0, 2

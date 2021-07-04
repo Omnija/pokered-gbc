@@ -183,8 +183,25 @@ HoFMonInfoText:
 	next "TYPE2/@"
 
 HoFLoadPlayerPics:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, [wPlayerGender] ; Added gender check
+	and a      ; Added gender check
+ 	jr z, .AreGirl1
+
 	ld de, RedPicFront
 	ld a, BANK(RedPicFront)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	jr .Routine ; skip the girl stuff and go to main routine
+.AreGirl1
+ld de, GreenPicFront
+	ld a, BANK(GreenPicFront)
+.Routine ; resume original routine
+	
 	call UncompressSpriteFromDE
 	ld hl, sSpriteBuffer1
 	ld de, sSpriteBuffer0
@@ -192,8 +209,26 @@ HoFLoadPlayerPics:
 	call CopyData
 	ld de, vFrontPic
 	call InterlaceMergeSpriteBuffers
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	ld a, [wPlayerGender] ; Added gender check
+	and a      ; Added gender check
+ 	jr z, .AreGirl2
+	
 	ld de, RedPicBack
 	ld a, BANK(RedPicBack)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+	jr .routine2 ; skip the girl stuff and continue original routine if guy
+.AreGirl2
+    ld de, GreenPicBack
+   	ld a, BANK(GreenPicBack)
+.routine2 ; original routine
+	
 	call UncompressSpriteFromDE
 
 IF GEN_2_GRAPHICS ; Use uncompressed red sprite
@@ -201,10 +236,10 @@ IF GEN_2_GRAPHICS ; Use uncompressed red sprite
 	ld c, a
 	ld de, vBackPic
 	call LoadUncompressedSpriteData
-	nop
-	nop
-	nop
-	nop
+;	nop
+;	nop
+;	nop
+;	nop
 ELSE
 	predef ScaleSpriteByTwo
 	ld de, vBackPic

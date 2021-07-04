@@ -312,25 +312,6 @@ INCLUDE "engine/battle/common_text.asm"
 INCLUDE "engine/pokemon/experience.asm"
 INCLUDE "engine/events/oaks_aide.asm"
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Relearner/Tutor/Deleter - Mateo
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-INCLUDE "engine/events/move_relearner.asm"
-INCLUDE "engine/events/move_tutor.asm"
-INCLUDE "engine/events/move_deleter.asm"
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Item Descriptions (Info) - Mateo
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-INCLUDE "engine/menus/item_descriptions.asm"
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Automatic Repel System - Mateo
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-INCLUDE "engine/overworld/automatic_repel.asm"
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Breeding System - Mateo
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-INCLUDE "engine/events/daycare_breeding.asm"
-
 
 SECTION "Saffron Guards", ROMX
 
@@ -376,7 +357,12 @@ SECTION "bank1C", ROMX
 INCLUDE "engine/movie/splash.asm"
 INCLUDE "engine/movie/hall_of_fame.asm"
 INCLUDE "engine/overworld/healing_machine.asm"
-INCLUDE "engine/overworld/player_animations.asm"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Relocated to "Player Overflowing"
+; Shrunk player_animation to fishing
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "engine/overworld/player_fishing_animations.asm" ; player_animations.asm
+;INCLUDE "engine/overworld/player_animations.asm"
 INCLUDE "engine/battle/ghost_marowak_anim.asm"
 INCLUDE "engine/battle/battle_transitions.asm"
 INCLUDE "engine/items/town_map.asm"
@@ -421,7 +407,10 @@ SECTION "bank1E", ROMX
 INCLUDE "engine/battle/animations.asm"
 INCLUDE "engine/overworld/cut2.asm"
 INCLUDE "engine/overworld/dust_smoke.asm"
-INCLUDE "gfx/fishing.asm"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Relocated to "Player Overflowing"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;INCLUDE "gfx/fishing.asm"
 INCLUDE "data/moves/animations.asm"
 INCLUDE "data/battle_anims/subanimations.asm"
 INCLUDE "data/battle_anims/frame_blocks.asm"
@@ -453,7 +442,7 @@ INCLUDE "engine/pokemon/mon_shiny.asm"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 INCLUDE "engine/battle/physical_special_split.asm"
 
-SECTION "Trainer Parties", ROMX
+SECTION "Trainer Features", ROMX
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Trainer Names/Levels/Moves
 ; Relocated from trainer_ai.asm
@@ -464,3 +453,39 @@ INCLUDE "data/trainers/parties.asm"
 ; Relocated from trainers.asm
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 INCLUDE "data/trainers/encounter_types.asm"
+
+SECTION "NPC Features", ROMX
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Relearner/Tutor/Deleter - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "engine/events/move_relearner.asm"
+INCLUDE "engine/events/move_tutor.asm"
+INCLUDE "engine/events/move_deleter.asm"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Breeding System - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "engine/events/daycare_breeding.asm"
+
+SECTION "Item Features", ROMX
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Item Descriptions (Info) - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "engine/menus/item_descriptions.asm"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Automatic Repel System - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "engine/overworld/automatic_repel.asm"
+
+SECTION "Player Overflowing", ROMX
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "gfx/fishing.asm" ; Bank1E
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Relocating from player animations
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "engine/overworld/player_flying_animations.asm" ; engine/overworld/player_animations.asm
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Relocating from "HOME" overworld
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "home/overflow.asm" ; home/overworld.asm

@@ -361,3 +361,11 @@ _OfficerJennyText9::
 	text "How is your"
 	line "SQUIRTLE doing?"
 	done
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_BoyGirlText::
+    text "Play as a boy, or"
+    line "as a girl?"
+    done

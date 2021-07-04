@@ -6569,9 +6569,23 @@ SwapPlayerAndEnemyLevels:
 LoadPlayerBackPic:
 	ld a, [wBattleType]
 	dec a ; is it the old man tutorial?
-	ld de, RedPicBack
-	jr nz, .next
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 	ld de, OldManPicBack
+    jr z, .next
+    ld a, [wPlayerGender]
+    and a
+    jr z, .RedBack
+    ld de, GreenPicBack
+    jr .next
+.RedBack
+    ld de, RedPicBack
+	
+;	ld de, RedPicBack
+;	jr nz, .next
+;	ld de, OldManPicBack
 .next
 	ld a, BANK(RedPicBack)
 	call UncompressSpriteFromDE

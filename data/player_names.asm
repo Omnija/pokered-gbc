@@ -6,6 +6,16 @@ DefaultNamesPlayer:
 	next "RYU"
 	db   "@"
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DefaultNamesGirl:
+	db   "NEW NAME"
+	next "GREEN"
+	next "LEAF"
+	next "LILY"
+	db   "@"
+
 DefaultNamesRival:
     db   "NEW NAME"
 	next "BLUE"
@@ -20,6 +30,16 @@ DefaultNamesPlayer:
 	next "BLUE"
 	next "GARY"
 	next "KEN"
+	db   "@"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DefaultNamesGirl:
+	db   "NEW NAME"
+	next "GREEN"
+	next "LEAF"
+	next "LILY"
 	db   "@"
 
 DefaultNamesRival:

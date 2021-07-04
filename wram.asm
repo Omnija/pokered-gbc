@@ -234,9 +234,9 @@ wTempPic::
 	ds 7 * 7 tiles
 ENDU
 
-;;;;;;;;;;;;;;;;;
-; Adding Gender
-;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Pokemon Genders
+;;;;;;;;;;;;;;;;;;;;;;;;;
 wGenderTemp::
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -2865,6 +2865,7 @@ wRoute18Gate1FCurScript::
 	ds 1
 
 	ds 6
+
 wGameProgressFlagsEnd::
 
 UNION
@@ -2873,6 +2874,14 @@ NEXTU
 wChannel7:: channel_struct wChannel7
 wChannel8:: channel_struct wChannel8
 ENDU
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+wPlayerGender::
+	; $00 = male
+	; $01 = female
+	ds 1
 
 wObtainedHiddenItemsFlags::
 	ds 14
