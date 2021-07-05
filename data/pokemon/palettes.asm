@@ -1,4 +1,5 @@
 MonsterPalettes:
+; Pokemon begin
 IF GEN_2_GRAPHICS
 	db PAL_MEWMON    ; MISSINGNO
 	db PAL_BULBASAUR
@@ -152,7 +153,10 @@ IF GEN_2_GRAPHICS
 	db PAL_DRAGONITE
 	db PAL_MEWTWO
 	db PAL_MEW
+; New pokemon begin
+
 TrainerPalettes: ; Gen II trainer sprites are given their own palettes
+; Trainers begin
 	db PAL_HERO
 	db PAL_YOUNGSTER
 	db PAL_BUGCATCHER
@@ -166,13 +170,11 @@ TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 	db PAL_BIKER
 	db PAL_BURGLAR
 	db PAL_ENGINEER
-	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Swimmer ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-	db PAL_SWIMMER_F
-;	db PAL_JUGGLER
-
+	db PAL_SWIMMER_F	; Replaced Juggler
+;	db PAL_JUGGLER	; Unused
 	db PAL_FISHERMAN
 	db PAL_SWIMMER
 	db PAL_CUEBALL
@@ -207,7 +209,7 @@ TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 	db PAL_CHANNELER
 	db PAL_AGATHA
 	db PAL_LANCE
-	
+
 ; New Trainers begin
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Rocket ♀ Trainer

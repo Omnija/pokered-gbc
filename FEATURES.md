@@ -3,20 +3,20 @@
 [Added to Game]
 
     - Alternative Version Differences
-	    - Start/Surf as Red or Blue
+	    - Start/Swim as Red/Blue or Green
 	    - Starting locations
 		- Added trade only pokemon to the wild
 			- Red - Lickitung &  Mr.Mime [Route 12/13]
 			- Blue - Farfetch'd & Jynx [Route 12/13]
-
-	- Skip if move accuracy is 100%
+			
 	- Changes/Updates to the GFX
 		- Sprites
 		- Pokedex Menu
 		- Status Screen
 		- Trainer Card
 		- Restored Japanese Town Map
-	
+
+	- Skip if move accuracy is 100%	
 	- Crystal Audio Engine
 	- Infinite TM uses
 	- Overworld Face the Trainers
