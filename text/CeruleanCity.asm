@@ -53,9 +53,15 @@ _CeruleanCityText_19677::
 	line "his system, go"
 	cont "thank him!"
 
+IF DEF(_RED)	; blue says
 	para "Well, I better"
 	line "get rolling!"
 	cont "Smell ya later!"
+ELSE	; red says
+	para "I better get"
+	line "going now!"
+	cont "See you later!"
+ENDC
 	done
 
 _CeruleanCityText_196d9::

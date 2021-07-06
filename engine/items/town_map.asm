@@ -518,7 +518,18 @@ WriteAsymmetricMonPartySpriteOAM:
 	ld [hli], a
 	inc a
 	ld [wOAMBaseTile], a
-	xor a
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player Palette - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	ld a, [wPlayerGender]
+	and a ; Are you a boy? Or a girl?
+	ld a, SPR_PAL_GREEN
+	jr nz, .gotPal
+	xor a ; ld a, PAL_OW_RED
+.gotPal
+	
+;	xor a
 	ld [hli], a
 	inc d
 	ld a, 8

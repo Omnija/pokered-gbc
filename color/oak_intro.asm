@@ -12,7 +12,19 @@ ENDC
 GetRedPalID:
 	call ClearScreen
 IF GEN_2_GRAPHICS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player Palette - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, [wPlayerGender]
+	and a
+	jr z, .male
+	ld a, PAL_HEROF
+	jr .female
+.male
 	ld a, PAL_HERO
+.female
+
 ELSE
 	ld a, PAL_REDMON
 ENDC

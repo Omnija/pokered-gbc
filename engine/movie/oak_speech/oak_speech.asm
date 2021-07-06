@@ -182,6 +182,13 @@ ENDC
 	ld de, ShrinkPic2
 	lb bc, BANK(ShrinkPic2), $00
 	call IntroDisplayPicCenteredOrUpperRight
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player Palette - Mateo
+; Load ow sprite palettes Green fix
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	callfar LoadOverworldSpritePalettes
+	
 	call ResetPlayerSpriteData
 	ldh a, [hLoadedROMBank]
 	push af

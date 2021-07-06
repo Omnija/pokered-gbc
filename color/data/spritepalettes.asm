@@ -23,7 +23,8 @@ ENDC
 ; PAL_OW_GREEN
 	RGB 27,31,27
 	RGB 31,19,10
-	RGB 7,23,3
+	RGB 10,22,12	; Better Green Colour
+;	RGB 7,23,3
 	RGB 0,0,0
 
 ; PAL_OW_BROWN
@@ -81,7 +82,8 @@ ENDC
 ; PAL_OW_GREEN
 	RGB 27,31,27
 	RGB 31,19,10
-	RGB 7,23,3
+	RGB 4,14,6	; Better Green Colour
+;	RGB 7,23,3
 	RGB 0,0,0
 
 ; PAL_OW_BROWN
@@ -139,7 +141,8 @@ ENDC
 ; PAL_OW_GREEN
 	RGB 27,31,27
 	RGB 31,19,10
-	RGB 7,23,3
+	RGB 7,20,8	; Better Green Colour
+;	RGB 7,23,3
 	RGB 0,0,0
 
 ; PAL_OW_BROWN

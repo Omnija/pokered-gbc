@@ -902,8 +902,17 @@ SetPal_GameFreakIntro:
 
 ; Trainer card
 SetPal_TrainerCard:
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player Palette - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, [wPlayerGender]
+	ld b, a
+
 	ld a, 2
 	ldh [rSVBK], a
+
+	push bc	; Adding Female Palette
 
 	ld d, PAL_MEWMON
 	ld e, 0
@@ -920,7 +929,20 @@ SetPal_TrainerCard:
 
 	; Red's palette
 IF GEN_2_GRAPHICS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player Palette - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	pop bc
+	ld a, b
+	and a
+	jr z, .male
+	ld d, PAL_HEROF
+	jr .female
+.male
 	ld d, PAL_HERO
+.female
+
 ELSE
 	ld d, PAL_REDMON
 ENDC

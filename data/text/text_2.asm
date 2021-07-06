@@ -913,8 +913,13 @@ _UseNextMonText::
 	done
 
 _Rival1WinText::
+IF DEF(_RED) ; blue says
 	text "<RIVAL>: Yeah! Am"
 	line "I great or what?"
+ELSE	; red says
+	text "<RIVAL>: I knew it,"
+	line "I'm just better!"
+ENDC
 	prompt
 
 _PlayerBlackedOutText2::

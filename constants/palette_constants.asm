@@ -288,4 +288,8 @@ IF GEN_2_GRAPHICS
 ;	const PAL_SOLDIER       ; $ED
 	
 	const PAL_HERO          ; $EC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player Palette - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const PAL_HEROF         ; $EC
 ENDC

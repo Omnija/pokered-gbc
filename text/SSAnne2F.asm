@@ -42,9 +42,15 @@ _SSAnneRivalDefeatedText::
 _SSAnneRivalWonText::
 	text "<PLAYER>! What are"
 	line "you, seasick?"
-
+	
+IF DEF(_RED)	; blue says
 	para "You should shape"
 	line "up, pal!"
+ELSE	; red says
+	para "You should listen"
+	line "to your"
+	cont "#MON more!"
+ENDC
 	prompt
 
 _SSAnneRivalCaptainText::
@@ -52,12 +58,21 @@ _SSAnneRivalCaptainText::
 	line "there was a CUT"
 	cont "master on board."
 
+IF DEF(_RED)	; blue says
 	para "But, he was just a"
 	line "seasick, old man!"
+ELSE	; red says
+	para "He was feeling"
+	line "quite sea sick!"
+ENDC
 
 	para "But, CUT itself is"
 	line "really useful!"
-
+	
 	para "You should go see"
+IF DEF(_RED)	; blue says
 	line "him! Smell ya!"
+ELSE	; red says
+	line "him! Later!"
+ENDC
 	done

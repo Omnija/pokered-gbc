@@ -138,6 +138,16 @@ DetermineBackSpritePaletteID:
 	jr nz, .getPaletteID ; Check if trainer?
 
 IF GEN_2_GRAPHICS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player Palette - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, [wPlayerGender]
+	and a
+	jr z, .male
+	ld a, PAL_HEROF
+	ret
+.male
+
 	ld a, PAL_HERO
 ELSE
 	ld a, PAL_REDMON

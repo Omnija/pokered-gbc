@@ -43,7 +43,11 @@ _PokemonTower2Text_6063c::
 	cont "I've got a lot to"
 	cont "accomplish, pal!"
 
+IF DEF(_RED)	; blue says
 	para "Smell ya later!"
+ELSE	; red says
+	para "See you later!"
+ENDC
 	done
 
 _PokemonTower2Text2::

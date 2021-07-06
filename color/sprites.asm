@@ -87,6 +87,12 @@ ColorOverworldSprite::
 	ld a, [de] ; Load A with picture ID
 	dec a
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player Palette - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	and a
+	jr z, .playerSprite
+
 	ld de, SpritePaletteAssignments
 	add e
 	ld e, a
@@ -94,6 +100,20 @@ ColorOverworldSprite::
 	inc d
 .noCarry
 	ld a, [de] ; Get the picture ID's palette
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Female Player Palette - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jr .continue
+
+.playerSprite
+	ld a, [wPlayerGender]
+	and a
+	ld a, SPR_PAL_ORANGE
+	jr z, .continue
+	ld a, SPR_PAL_GREEN
+
+.continue
 
 	; If it's 8, that means no particular palette is assigned
 	cp SPR_PAL_RANDOM
@@ -320,7 +340,14 @@ SpritePaletteAssignments: ; Characters on the overworld
 	db SPR_PAL_RANDOM
 
 	; 0x05: SPRITE_SLOWBRO
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fixing SLOWBRO ow Colour
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_RED)
 	db SPR_PAL_ORANGE
+ELSE
+	db SPR_PAL_BLUE
+ENDC
 
 	; 0x06: SPRITE_LASS
 	db SPR_PAL_RANDOM
@@ -332,7 +359,11 @@ SpritePaletteAssignments: ; Characters on the overworld
 	db SPR_PAL_RANDOM
 
 	; 0x09: SPRITE_BIRD
-	db SPR_PAL_ORANGE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fixing BIRD ow Colour
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	db SPR_PAL_ORANGE
+	db SPR_PAL_BROWN
 
 	; 0x0a: SPRITE_FAT_BALD_GUY
 	db SPR_PAL_RANDOM
@@ -428,7 +459,14 @@ SpritePaletteAssignments: ; Characters on the overworld
 	db SPR_PAL_RANDOM
 
 	; 0x29: SPRITE_NURSE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fixing NURSE ow Colour
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_RED)
 	db SPR_PAL_ORANGE
+ELSE
+	db SPR_PAL_BLUE
+ENDC
 
 	; 0x2a: SPRITE_CABLE_CLUB_WOMAN
 	db SPR_PAL_GREEN
@@ -452,14 +490,28 @@ SpritePaletteAssignments: ; Characters on the overworld
 	db SPR_PAL_RANDOM
 
 	; 0x31: SPRITE_GUARD ($30)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fixing GUARD ow Colour
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_RED)
 	db SPR_PAL_BLUE
+ELSE
+	db SPR_PAL_ORANGE
+ENDC
 	
 	; 0x36: SPRITE_ROCKET_F
 	; 0x32: $32
 	db SPR_PAL_BROWN ; RANDOM
 
 	; 0x33: SPRITE_MOM
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fixing Mom ow Colour
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_RED)
 	db SPR_PAL_ORANGE
+ELSE
+	db SPR_PAL_BLUE
+ENDC
 
 	; 0x34: SPRITE_BALDING_GUY
 	db SPR_PAL_RANDOM
@@ -487,7 +539,14 @@ SpritePaletteAssignments: ; Characters on the overworld
 	db SPR_PAL_ORANGE
 
 	; 0x3c: SPRITE_SEEL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fixing Seel ow Colour
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_RED)
 	db SPR_PAL_BLUE
+ELSE
+	db SPR_PAL_ORANGE
+ENDC
 
 	; 0x3d: SPRITE_BALL
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

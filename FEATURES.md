@@ -5,6 +5,7 @@
     - Alternative Version Differences
 	    - Start/Swim as Red/Blue or Green
 	    - Starting locations
+		- Rival Text
 		- Added trade only pokemon to the wild
 			- Red - Lickitung &  Mr.Mime [Route 12/13]
 			- Blue - Farfetch'd & Jynx [Route 12/13]
@@ -58,7 +59,7 @@
 	- Mart changes
 		- Moon stone [Celedon Mart f4]
 		
-	- Female playable character [no palettes]
+	- Female playable character [FR/LF & Green JP]
 	
 [Added but Disabled]
 

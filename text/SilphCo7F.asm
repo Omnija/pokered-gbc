@@ -195,8 +195,14 @@ _SilphCo7Text_51ed2::
 
 	para "I'm going to the"
 	line "#MON LEAGUE"
+IF DEF(_RED)	; blue says
 	cont "to boot out the"
 	cont "ELITE FOUR!"
+ELSE	; red says
+	cont "to show the"
+	cont "ELITE FOUR I'm"
+	cont "a #MON MASTER"
+endc
 
 	para "I'll become the"
 	line "world's most"
@@ -205,5 +211,9 @@ _SilphCo7Text_51ed2::
 	para "<PLAYER>, well"
 	line "good luck to you!"
 	cont "Don't sweat it!"
+IF DEF(_RED)	; blue says
 	cont "Smell ya!"
+ELSE	; red says
+	cont "See you later!"
+ENDC
 	done

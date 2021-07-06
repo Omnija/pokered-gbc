@@ -1,15 +1,27 @@
 _OaksLabGaryText1::
+IF DEF(_RED)	; blue says
 	text "<RIVAL>: Yo"
 	line "<PLAYER>! Gramps"
 	cont "isn't around!"
+ELSE	; red says
+	text "<RIVAL>: Hey"
+	line "<PLAYER>! OAK"
+	cont "isn't around!"
+ENDC
 	done
 
 _OaksLabText40::
+IF DEF(_RED)	; blue says
 	text "<RIVAL>: Heh, I"
 	line "don't need to be"
 	cont "greedy like you!"
+ELSE	; red says
+	text "<RIVAL>: Go on!"
+	line "Ill wait for you"
+	cont "to choose first."
+ENDC
 
-	para "Go ahead and"
+	para "OAK: Go ahead and"
 	line "choose, <PLAYER>!"
 	done
 
@@ -185,9 +197,15 @@ _OaksLabText_1d340::
 	done
 
 _OaksLabRivalWaitingText::
+IF DEF(_RED)	; blue says
 	text "<RIVAL>: Gramps!"
 	line "I'm fed up with"
 	cont "waiting!"
+ELSE	; red says
+	text "<RIVAL>: OAK!"
+	line "Is it about"
+	cont "time yet!"
+ENDC
 	done
 
 _OaksLabChooseMonText::
@@ -219,9 +237,15 @@ _OaksLabChooseMonText::
 	done
 
 _OaksLabRivalInterjectionText::
+IF DEF(_RED)	; blue says
 	text "<RIVAL>: Hey!"
 	line "Gramps! What"
 	cont "about me?"
+ELSE
+	text "<RIVAL>: Hey!"
+	line "OAK! What"
+	cont "about me?"
+ENDC
 	done
 
 _OaksLabBePatientText::
@@ -275,17 +299,32 @@ _OaksLabRivalToughenUpText::
 	cont "#MON fight to"
 	cont "toughen it up!"
 
+IF DEF(_RED)	; blue says
 	para "<PLAYER>! Gramps!"
 	line "Smell you later!"
+ELSE	; red says
+	para "<PLAYER>! OAK!"
+	line "See you later!"
+ENDC
 	done
 
 _OaksLabText21::
+IF DEF(_RED)	; blue says
 	text "<RIVAL>: Gramps!"
+ELSE	; red says
+	text "<RIVAL>: OAK!"
+ENDC
 	done
 
 _OaksLabText22::
+IF DEF(_RED)	; blue says
 	text "<RIVAL>: What did"
 	line "you call me for?"
+ELSE	; red says
+	text "<RIVAL>: You called"
+	line "me back for some-"
+	cont "thing important"
+ENDC
 	done
 
 _OaksLabText23::
@@ -342,7 +381,11 @@ _OaksLabText26::
 
 _OaksLabText27::
 	text "<RIVAL>: Alright"
+IF DEF(_RED)	; blue says
 	line "Gramps! Leave it"
+ELSE	; red says
+	line "OAK! Leave it"
+ENDC
 	cont "all to me!"
 
 	para "<PLAYER>, I hate to"

@@ -48,9 +48,17 @@ _PalletTownText5::
 	done
 
 _PalletTownText6::
+IF DEF(_RED)	; red's house
 	text "<PLAYER>'s house "
+ELSE	; blue's house
+	text "<RIVAL>'s house "
+ENDC
 	done
 
 _PalletTownText7::
+IF DEF(_RED) ; blue's house
 	text "<RIVAL>'s house "
+ELSE	; red's house
+	text "<PLAYER>'s house "
+ENDC
 	done
