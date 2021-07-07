@@ -174,7 +174,13 @@ InGameTrade_PrepareTradeData:
 	ld de, wTradedPlayerMonOT
 	ld bc, NAME_LENGTH
 	call InGameTrade_CopyData
-	ld hl, InGameTrade_TrainerString
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Trading OT Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	ld hl, wCurTrainerName
+;	ld hl, InGameTrade_TrainerString
+
 	ld de, wTradedEnemyMonOT
 	call InGameTrade_CopyData
 	ld de, wLinkEnemyTrainerName
@@ -209,7 +215,13 @@ InGameTrade_CopyDataToReceivedMon:
 	ld hl, wPartyMonOT
 	ld bc, NAME_LENGTH
 	call InGameTrade_GetReceivedMonPointer
-	ld hl, InGameTrade_TrainerString
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Trading OT Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+	ld hl, wCurTrainerName
+;	ld hl, InGameTrade_TrainerString
+
 	ld bc, NAME_LENGTH
 	call CopyData
 	ld hl, wPartyMon1OTID
@@ -229,8 +241,11 @@ InGameTrade_GetReceivedMonPointer:
 	ld d, h
 	ret
 
-InGameTrade_TrainerString:
-	db "<TRAINER>@@@@@@@@@@"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Trading OT Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;InGameTrade_TrainerString:
+;	db "<TRAINER>@@@@@@@@@@"
 
 InGameTradeTextPointers:
 ; entries correspond to TRADE_DIALOGSET_* constants

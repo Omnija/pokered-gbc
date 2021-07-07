@@ -6,7 +6,17 @@ VermilionTradeHouse_TextPointers:
 
 VermilionHouse3Text1:
 	text_asm
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Trading OT Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	ld hl, Trader4Name
+	call SetCustomName
+	
 	ld a, TRADE_FOR_DUX
 	ld [wWhichTrade], a
 	predef DoInGameTradeDialogue
 	jp TextScriptEnd
+
+Trader4Name:
+	db "ELYSSA@"

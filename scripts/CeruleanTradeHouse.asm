@@ -16,10 +16,20 @@ CeruleanHouse1Text1:
 
 CeruleanHouse1Text2:
 	text_asm
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Trading OT Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	ld hl, Trader6Name
+	call SetCustomName
+	
 	ld a, TRADE_FOR_LOLA
 	ld [wWhichTrade], a
 	predef DoInGameTradeDialogue
 	jp TextScriptEnd
+
+Trader6Name:
+	db "DONTAE@"
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Bulbasaur Gift - Yellow

@@ -253,18 +253,5 @@ GetTrainerMonDVs:: ; called from engine/battle/core.asm
 	ld a, [hl]
 	ld [de], a
 	ret
-	
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Individual Trainer Names
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-SetCustomName::
-	ld de, wCurTrainerName
-.loop
-	ld a, [hli]
-	ld [de],a
-	inc de
-	cp "@"
-	ret z
-	jr .loop
 
 INCLUDE "data/trainers/trainer_dvs.asm"

@@ -139,3 +139,16 @@ GetMoveName::
 	ld de, wcd6d ; pointer to where move name is stored in RAM
 	pop hl
 	ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SetCustomName::
+	ld de, wCurTrainerName
+.loop
+	ld a, [hli]
+	ld [de],a
+	inc de
+	cp "@"
+	ret z
+	jr .loop

@@ -60,6 +60,7 @@
 		- Moon stone [Celedon Mart f4]
 		
 	- Female playable character [FR/LF & Green JP]
+	- Traders have individual name [OT Labels]
 	
 [Added but Disabled]
 
