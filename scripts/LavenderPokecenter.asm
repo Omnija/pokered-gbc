@@ -7,6 +7,7 @@ LavenderPokecenter_TextPointers:
 	dw LavenderPokecenterText2
 	dw LavenderPokecenterText3
 	dw LavenderTradeNurseText
+	dw LavenderPokecenterText5 ; Adding Chansey - Yellow
 
 LavenderTradeNurseText:
 	script_cable_club_receptionist
@@ -21,3 +22,11 @@ LavenderPokecenterText2:
 LavenderPokecenterText3:
 	text_far _LavenderPokecenterText3
 	text_end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Chansey - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+LavenderPokecenterText5:
+	text_asm
+	callfar PokecenterChanseyText
+	jp TextScriptEnd

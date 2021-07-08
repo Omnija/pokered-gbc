@@ -14,5 +14,6 @@ IndigoPlateauLobby_Object:
 	object SPRITE_COOLTRAINER_F, 5, 1, STAY, DOWN, 3 ; person
 	object SPRITE_CLERK, 0, 5, STAY, RIGHT, 4 ; person
 	object SPRITE_LINK_RECEPTIONIST, 13, 6, STAY, DOWN, 5 ; person
+	object SPRITE_CHANSEY, 8, 5, STAY, DOWN, 6 ; Adding Chansey - Yellow
 
 	def_warps_to INDIGO_PLATEAU_LOBBY

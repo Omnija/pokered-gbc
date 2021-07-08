@@ -12,5 +12,6 @@ CeladonPokecenter_Object:
 	object SPRITE_GENTLEMAN, 7, 3, WALK, LEFT_RIGHT, 2 ; person
 	object SPRITE_BEAUTY, 10, 5, WALK, ANY_DIR, 3 ; person
 	object SPRITE_LINK_RECEPTIONIST, 11, 2, STAY, DOWN, 4 ; person
+	object SPRITE_CHANSEY, 4, 1, STAY, DOWN, 5 ; Adding Chansey - Yellow
 
 	def_warps_to CELADON_POKECENTER

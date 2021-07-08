@@ -52,10 +52,14 @@ TrainerDataPointers:
 	dw LanceData
 
 ; New Trainers begin
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Rocket ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	dw 	RocketFData ; Shared with rocket
+	
+; Unused
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;

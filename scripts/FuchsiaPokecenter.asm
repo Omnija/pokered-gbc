@@ -7,6 +7,7 @@ FuchsiaPokecenter_TextPointers:
 	dw FuchsiaPokecenterText2
 	dw FuchsiaPokecenterText3
 	dw FuchsiaTradeNurseText
+	dw FuchsiaPokecenterText5 ; Adding Chansey - Yellow
 
 FuchsiaHealNurseText:
 	script_pokecenter_nurse
@@ -21,3 +22,11 @@ FuchsiaPokecenterText3:
 
 FuchsiaTradeNurseText:
 	script_cable_club_receptionist
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Chansey - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+FuchsiaPokecenterText5:
+	text_asm
+	callfar PokecenterChanseyText
+	jp TextScriptEnd

@@ -7,6 +7,7 @@ ViridianPokecenter_TextPointers:
 	dw ViridianPokeCenterText2
 	dw ViridianPokeCenterText3
 	dw ViridianTradeNurseText
+	dw ViridianPokecenterText5 ; Adding Chansey - Yellow
 
 ViridianHealNurseText:
 	script_pokecenter_nurse
@@ -21,3 +22,11 @@ ViridianPokeCenterText3:
 
 ViridianTradeNurseText:
 	script_cable_club_receptionist
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Chansey - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ViridianPokecenterText5:
+	text_asm
+	callfar PokecenterChanseyText
+	jp TextScriptEnd

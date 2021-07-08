@@ -72,7 +72,9 @@ ENDM
 ; Adding ROCKET ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	trainer_const ROCKET_F       ; $30
-	
+
+; Unused
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;

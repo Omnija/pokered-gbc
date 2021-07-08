@@ -327,6 +327,9 @@ ClearSpritePaletteMap:
 
 
 SpritePaletteAssignments: ; Characters on the overworld
+
+; Animated sprites begin
+
 	; 0x01: SPRITE_RED
 	db SPR_PAL_ORANGE
 
@@ -548,6 +551,25 @@ ELSE
 	db SPR_PAL_ORANGE
 ENDC
 
+; NEW! animated sprites added here
+
+	; 0x06: SPRITE_LAPRAS
+IF DEF(_RED)
+	db SPR_PAL_BLUE
+ELSE
+	db SPR_PAL_ORANGE
+ENDC
+
+	; 0x06: SPRITE_OFFICER_JENNY
+IF DEF(_RED)
+	db SPR_PAL_BLUE
+ELSE
+	db SPR_PAL_ORANGE
+ENDC
+
+
+; Still sprites begin
+
 	; 0x3d: SPRITE_BALL
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Fixing Pokeball ow Colour
@@ -590,6 +612,21 @@ ENDC
 
 	; 0x48: SPRITE_LYING_OLD_MAN
 	db SPR_PAL_BROWN
+
+; NEW! still sprites added here	
+
+	; 0x06: SPRITE_DITTO
+	db SPR_PAL_PURPLE
+	
+	; 0x06: SPRITE_BULBASAUR
+	db SPR_PAL_GREEN
+	
+	; 0x06: SPRITE_CHANSEY
+IF DEF(_RED)
+	db SPR_PAL_ORANGE
+ELSE
+	db SPR_PAL_BLUE
+ENDC
 
 
 AnimationTileset1Palettes:

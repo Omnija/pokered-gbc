@@ -84,7 +84,11 @@ SpriteSets:
 	db SPRITE_HIKER
 	db SPRITE_MONSTER
 	db SPRITE_BLUE
-	db SPRITE_GUARD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Squirtle Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	db SPRITE_OFFICER_JENNY ; Officer_jenny like in yellow
+;	db SPRITE_GUARD
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_POKE_BALL
@@ -109,7 +113,11 @@ SpriteSets:
 	db SPRITE_YOUNGSTER
 	db SPRITE_GAMBLER
 	db SPRITE_MONSTER
-	db SPRITE_GUARD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Squirtle Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	db SPRITE_OFFICER_JENNY
+;	db SPRITE_GUARD
 	db SPRITE_SAILOR
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_COOLTRAINER_M
@@ -192,7 +200,11 @@ SpriteSets:
 	db SPRITE_SWIMMER_F
 	db SPRITE_GAMBLER
 	db SPRITE_MONSTER
-	db SPRITE_SEEL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Fushsia City Lapras
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	db SPRITE_LAPRAS
+;	db SPRITE_SEEL
 	db SPRITE_SWIMMER
 	db SPRITE_YOUNGSTER
 	db SPRITE_POKE_BALL

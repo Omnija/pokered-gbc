@@ -356,9 +356,10 @@ StartMenu_Item::
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Item Descrption (Info) - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	inc a ; add 3rd option to (use/info/toss)
+	ld a, 2 ; Merged inc a 2x [(USE/INFO/TOSS)]
+;	inc a ; add 3rd option to (use/info/toss)
+;	inc a ; a = 1
 
-	inc a ; a = 1
 	ld [hli], a ; max menu item ID
 	ld a, A_BUTTON | B_BUTTON
 	ld [hli], a ; menu watched keys

@@ -67,6 +67,8 @@ TrainerClassDVs:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	dvs 12,  8, 11,  8 ; ROCKET_F
 
+; Unsued
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;

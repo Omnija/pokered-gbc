@@ -69,6 +69,16 @@
 	const SPRITE_BRUNO                   ; $3a
 	const SPRITE_LORELEI                 ; $3b
 	const SPRITE_SEEL                    ; $3c
+	
+; NEW! animated sprites added here
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Fushsia City Lapras
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const SPRITE_LAPRAS                  ; $3c
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Squirtle Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const SPRITE_OFFICER_JENNY           ; $3c
 
 ; overworld still sprites	
 FIRST_STILL_SPRITE EQU const_value
@@ -85,7 +95,7 @@ FIRST_STILL_SPRITE EQU const_value
 	const SPRITE_UNUSED_GAMBLER_ASLEEP_2 ; $47
 	const SPRITE_GAMBLER_ASLEEP          ; $48
 	
-; New still sprites added here
+; NEW! still sprites added here
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Daycare Ditto
 ;;;;;;;;;;;;;;;;;;;;;;;;
@@ -94,9 +104,14 @@ FIRST_STILL_SPRITE EQU const_value
 ; Adding Bulbasaur Gift - Yellow
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	const SPRITE_BULBASAUR   			 ; $50
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Chansey Pokecenters - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const SPRITE_CHANSEY  				 ; $50
+
+; Unused
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
-; Place over Unused
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	const SPRITE_SOLDIER   				 ; $32

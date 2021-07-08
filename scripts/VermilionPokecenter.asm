@@ -7,6 +7,7 @@ VermilionPokecenter_TextPointers:
 	dw VermilionPokecenterText2
 	dw VermilionPokecenterText3
 	dw VermilionTradeNurseText
+	dw VermilionPokecenterText5 ; Adding Chansey - Yellow
 
 VermilionHealNurseText:
 	script_pokecenter_nurse
@@ -21,3 +22,11 @@ VermilionPokecenterText3:
 
 VermilionTradeNurseText:
 	script_cable_club_receptionist
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Chansey - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+VermilionPokecenterText5:
+	text_asm
+	callfar PokecenterChanseyText
+	jp TextScriptEnd

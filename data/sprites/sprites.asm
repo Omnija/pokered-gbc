@@ -75,6 +75,17 @@ SpriteSheetPointerTable:
 	overworld_sprite BrunoSprite, 12            ; SPRITE_BRUNO
 	overworld_sprite LoreleiSprite, 12          ; SPRITE_LORELEI
 	overworld_sprite SeelSprite, 12             ; SPRITE_SEEL
+	
+; NEW! animated sprites added here
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Fushsia City Lapras
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	overworld_sprite LaprasSprite, 12           ; SPRITE_LAPRAS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Squirtle Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	overworld_sprite Officer_JennySprite, 12    ; SPRITE_OFFICER_JENNY
 
 ; Still sprites begins	
 	overworld_sprite PokeBallSprite, 4          ; SPRITE_POKE_BALL
@@ -89,6 +100,9 @@ SpriteSheetPointerTable:
 	overworld_sprite GamblerAsleepSprite, 4     ; SPRITE_UNUSED_GAMBLER_ASLEEP_1
 	overworld_sprite GamblerAsleepSprite, 4     ; SPRITE_UNUSED_GAMBLER_ASLEEP_2
 	overworld_sprite GamblerAsleepSprite, 4     ; SPRITE_GAMBLER_ASLEEP
+	
+; NEW! still sprites added here	
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Daycare Ditto
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -96,9 +110,15 @@ SpriteSheetPointerTable:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Bulbasaur Gift - Yellow
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	overworld_sprite BulbasaurSprite, 4        ; SPRITE_BULBASAUR
+	overworld_sprite BulbasaurSprite, 4         ; SPRITE_BULBASAUR
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Chansey Pokecenters - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	overworld_sprite ChanseySprite, 4    		; SPRITE_CHANSEY
+
+; Unused
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
-; Place over Unused
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	overworld_sprite SoldierSprite, 12          ; SPRITE_SOLDIER

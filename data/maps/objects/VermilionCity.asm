@@ -31,6 +31,6 @@ VermilionCity_Object:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Squirtle Gift - Yellow
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
-	object SPRITE_BEAUTY, 19, 15, STAY, NONE, 7 ; squirtle gifter
+	object SPRITE_OFFICER_JENNY, 19, 15, WALK, LEFT_RIGHT, 7 ; squirtle gifter - Officer_jenny
 
 	def_warps_to VERMILION_CITY

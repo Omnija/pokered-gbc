@@ -369,3 +369,11 @@ _BoyGirlText::
     text "Play as a boy, or"
     line "as a girl?"
     done
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Chansey - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_NurseChanseyText::
+	text "CHANSEY: Chaaan"
+	line "sey!"
+	done

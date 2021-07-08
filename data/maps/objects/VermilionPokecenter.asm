@@ -12,5 +12,6 @@ VermilionPokecenter_Object:
 	object SPRITE_FISHING_GURU, 10, 5, STAY, NONE, 2 ; person
 	object SPRITE_SAILOR, 5, 4, STAY, NONE, 3 ; person
 	object SPRITE_LINK_RECEPTIONIST, 11, 2, STAY, DOWN, 4 ; person
+	object SPRITE_CHANSEY, 4, 1, STAY, DOWN, 5 ; Adding Chansey - Yellow
 
 	def_warps_to VERMILION_POKECENTER

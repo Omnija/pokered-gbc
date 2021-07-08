@@ -7,6 +7,7 @@ PewterPokecenter_TextPointers:
 	dw PewterPokecenterText2
 	dw PewterJigglypuffText
 	dw PewterTradeNurseText
+	dw PewterPokecenterText5 ; Adding Chansey - Yellow
 
 PewterHealNurseText:
 	script_pokecenter_nurse
@@ -89,3 +90,11 @@ JigglypuffFacingDirectionsEnd:
 
 PewterTradeNurseText:
 	script_cable_club_receptionist
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Chansey - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+PewterPokecenterText5:
+	text_asm
+	callfar PokecenterChanseyText
+	jp TextScriptEnd

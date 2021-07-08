@@ -54,13 +54,16 @@
 		- Transform copying move now becomes Struggle
 	- Types - Fairy/Steel/Dark for future uses
 	- Trade evolution can also evolve at 42
-	- Bulbasaur, Charmander, and Squirtle: NPC gifts (like Yellow)
 	
 	- Mart changes
 		- Moon stone [Celedon Mart f4]
 		
 	- Female playable character [FR/LF & Green JP]
 	- Traders have individual name [OT Labels]
+	
+[Yellow Features]
+		- Bulbasaur, Charmander, and Squirtle: NPC gifts (like Yellow)
+		- Sprites [Yellow & Crystal]
 	
 [Added but Disabled]
 

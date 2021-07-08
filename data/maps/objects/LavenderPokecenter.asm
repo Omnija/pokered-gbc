@@ -12,5 +12,6 @@ LavenderPokecenter_Object:
 	object SPRITE_GENTLEMAN, 5, 3, STAY, NONE, 2 ; person
 	object SPRITE_LITTLE_GIRL, 2, 6, WALK, UP_DOWN, 3 ; person
 	object SPRITE_LINK_RECEPTIONIST, 11, 2, STAY, DOWN, 4 ; person
+	object SPRITE_CHANSEY, 4, 1, STAY, DOWN, 5 ; Adding Chansey - Yellow
 
 	def_warps_to LAVENDER_POKECENTER

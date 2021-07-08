@@ -283,7 +283,7 @@ ENDC
 
 	call Delay3
 	call GBPalNormal
-	hlcoord 0, 0 ; 1, 0 
+	hlcoord 0, 0 ; 1, 0  [Pokemon Pic Location]
 	call LoadFlippedFrontSpriteByMonIndex ; draw Pokémon picture
 	ld a, [wcf91]
 	call PlayCry ; play Pokémon cry

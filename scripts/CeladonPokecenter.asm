@@ -7,6 +7,7 @@ CeladonPokecenter_TextPointers:
 	dw CeladonPokecenterText2
 	dw CeladonPokecenterText3
 	dw CeladonTradeNurseText
+	dw CeladonPokecenterText5 ; Adding Chansey - Yellow
 
 CeladonTradeNurseText:
 	script_cable_club_receptionist
@@ -21,3 +22,11 @@ CeladonPokecenterText2:
 CeladonPokecenterText3:
 	text_far _CeladonPokecenterText3
 	text_end
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Chansey - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+CeladonPokecenterText5:
+	text_asm
+	callfar PokecenterChanseyText
+	jp TextScriptEnd

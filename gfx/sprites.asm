@@ -117,10 +117,9 @@ AgathaSprite::           INCBIN "gfx/sprites/agatha.2bpp"
 BrunoSprite::            INCBIN "gfx/sprites/bruno.2bpp"
 LoreleiSprite::          INCBIN "gfx/sprites/lorelei.2bpp"
 SeelSprite::             INCBIN "gfx/sprites/seel.2bpp"
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Daycare Ditto
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-DittoSprite::            INCBIN "gfx/pokemon/icons/ditto.2bpp"
+
+; NEW! animated sprites added here
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Swimmer ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -128,12 +127,35 @@ SwimmerFSprite::         INCBIN "gfx/sprites/swimmer_f.2bpp"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Rocket ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-RocketFSprite::         INCBIN "gfx/sprites/rocket_f.2bpp"
+RocketFSprite::          INCBIN "gfx/sprites/rocket_f.2bpp"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Fushsia City Lapras
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+LaprasSprite::           INCBIN "gfx/sprites/lapras_surf.2bpp"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Officer Jenny Gift - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Officer_JennySprite::    INCBIN "gfx/sprites/officer_jenny.2bpp"
+
+; NEW! still sprites added here
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Daycare Ditto
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DittoSprite::            INCBIN "gfx/pokemon/icons/ditto.2bpp"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Bulbasaur Gift - Yellow
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 BulbasaurSprite::        INCBIN "gfx/pokemon/icons/bulbasaur.2bpp"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Chansey - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ChanseySprite::          INCBIN "gfx/pokemon/icons/chansey.2bpp"
+
+; Unused
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;SoldierSprite::         INCBIN "gfx/sprites/soldier.2bpp"
+

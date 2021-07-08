@@ -40,7 +40,7 @@ FuchsiaCity_Object:
 	object SPRITE_POKE_BALL, 25, 6, STAY, NONE, 6 ; person
 	object SPRITE_MONSTER, 12, 6, WALK, LEFT_RIGHT, 7 ; person
 	object SPRITE_MONSTER, 30, 12, WALK, LEFT_RIGHT, 8 ; person
-	object SPRITE_SEEL, 8, 17, WALK, ANY_DIR, 9 ; person
+	object SPRITE_LAPRAS, 8, 17, WALK, ANY_DIR, 9 ; Was SEEL
 	object SPRITE_FOSSIL, 6, 5, STAY, NONE, 10 ; person
 
 	def_warps_to FUCHSIA_CITY

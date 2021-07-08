@@ -228,13 +228,16 @@ ChannelerPic::     INCBIN "gfx/trainers/gstrainers/channeler.pic"
 AgathaPic::        INCBIN "gfx/trainers/gstrainers/agatha.pic"
 LancePic::         INCBIN "gfx/trainers/gstrainers/lance.pic"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Soldier Trainer
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;SoldierPic::       INCBIN "gfx/trainers/gstrainers/soldier.pic"
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Rocket ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 RocketFPic::      INCBIN "gfx/trainers/gstrainers/rocketf.pic"
+
+; Unused
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;SoldierPic::       INCBIN "gfx/trainers/gstrainers/soldier.pic"
 
 ENDC
 
@@ -292,14 +295,18 @@ ChannelerPic::     INCBIN "gfx/trainers/trainers/channeler.pic"
 AgathaPic::        INCBIN "gfx/trainers/trainers/agatha.pic"
 LancePic::         INCBIN "gfx/trainers/trainers/lance.pic"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Soldier Trainer
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;SoldierPic::       INCBIN "gfx/trainers/trainers/soldier.pic"
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Rocket ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 RocketFPic::      INCBIN "gfx/trainers/trainers/rocketf.pic"
 ; Trainers end
+
+; Unused
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Soldier Trainer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;SoldierPic::       INCBIN "gfx/trainers/trainers/soldier.pic"
+
 ENDC
 
 IF GEN_2_GRAPHICS

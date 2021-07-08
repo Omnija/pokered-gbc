@@ -61,10 +61,14 @@ TrainerPicAndMoneyPointers::
 	pic_money LancePic,        9900
 	
 ; New Trainers begin
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Rocket ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	pic_money RocketFPic,      3000
+	
+; Unused
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;

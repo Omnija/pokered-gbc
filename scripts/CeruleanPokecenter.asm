@@ -7,6 +7,7 @@ CeruleanPokecenter_TextPointers:
 	dw CeruleanPokecenterText2
 	dw CeruleanPokecenterText3
 	dw CeruleanTradeNurseText
+	dw CeruleanPokecenterText5 ; Adding Chansey - Yellow
 
 CeruleanTradeNurseText:
 	script_cable_club_receptionist
@@ -21,3 +22,11 @@ CeruleanPokecenterText2:
 CeruleanPokecenterText3:
 	text_far _CeruleanPokecenterText3
 	text_end
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Chansey - Yellow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+CeruleanPokecenterText5:
+	text_asm
+	callfar PokecenterChanseyText
+	jp TextScriptEnd

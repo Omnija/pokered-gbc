@@ -97,6 +97,8 @@ TrainerNamePointers:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 .RocketFName:       db "ROCKET♀@"
 
+; Unused
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -57,7 +57,9 @@ TrainerAIPointers:
 ; Adding Rocket ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	dbw 3, GenericAI ;  Rocket_F ♀ Trainer
-	
+
+; Unused
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
