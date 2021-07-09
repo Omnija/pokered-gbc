@@ -1628,7 +1628,7 @@ wDamageMultipliers::
 ; bit 7: STAB
 	ds 1
 
-wLoneAttackNo::
+;wLoneAttackNo::	; Unused
 ; which entry in LoneAttacks to use
 wGymLeaderNo::
 ; it's actually the same thing as ^

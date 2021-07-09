@@ -36,7 +36,13 @@ ReadTrainer:
 	jr z, .IterateTrainer
 .inner
 	ld a, [hli]
-	and a
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Level and Moves
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+	cp -1 ; have we reached the end of the trainer data?
+;	and a
+
 	jr nz, .inner
 	jr .outer
 
@@ -70,8 +76,15 @@ ReadTrainer:
 	ld [wCurEnemyLVL], a
 .LoopTrainerData
 	ld a, [hli]
-	and a ; have we reached the end of the trainer data?
-	jr z, .FinishUp
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Individual Trainer Level and Moves
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	cp -1 ; have we reached the end of the trainer data?
+	jp z, .FinishUp
+;	and a ; have we reached the end of the trainer data?
+;	jr z, .FinishUp
+
 	ld [wcf91], a ; write species somewhere (XXX why?)
 	ld a, ENEMY_PARTY_DATA
 	ld [wMonDataLocation], a

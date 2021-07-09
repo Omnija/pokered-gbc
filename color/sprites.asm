@@ -533,13 +533,27 @@ ENDC
 	db SPR_PAL_ORANGE
 
 	; 0x39: SPRITE_AGATHA
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fixing Agatha ow Colour
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_RED)
 	db SPR_PAL_BLUE
+ELSE
+	db SPR_PAL_ORANGE
+ENDC
 
 	; 0x3a: SPRITE_BRUNO
 	db SPR_PAL_BROWN
 
 	; 0x3b: SPRITE_LORELEI
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fixing Lorelei ow Colour
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_RED)
 	db SPR_PAL_ORANGE
+ELSE
+	db SPR_PAL_BLUE
+ENDC
 
 	; 0x3c: SPRITE_SEEL
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

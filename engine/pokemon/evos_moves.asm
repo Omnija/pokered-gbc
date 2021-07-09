@@ -318,15 +318,20 @@ Evolution_ReloadTilesetTilePatterns:
 	jp ReloadTilesetTilePatterns
 
 LearnMoveFromLevelUp:
-	ld hl, EvosMovesPointerTable
+;	ld hl, EvosMovesPointerTable
 	ld a, [wd11e] ; species
 	ld [wcf91], a
 	dec a
-	ld bc, 0
-	ld hl, EvosMovesPointerTable
+;	ld bc, 0
+;	ld hl, EvosMovesPointerTable
 	add a
-	rl b
+;	rl b
+	ld b, 0 ; Adding Skipping move-learn on level-up - Mateo
+	
 	ld c, a
+	
+	ld hl, EvosMovesPointerTable	; Adding Skipping move-learn on level-up - Mateo
+	
 	add hl, bc
 	ld a, [hli]
 	ld h, [hl]
@@ -344,10 +349,13 @@ LearnMoveFromLevelUp:
 	cp b ; is the move learnt at the mon's current level?
 	ld a, [hli] ; move ID
 	jr nz, .learnSetLoop
+	
+	push hl	; Adding Skipping move-learn on level-up - Mateo
+	
 	ld d, a ; ID of move to learn
-	ld a, [wMonDataLocation]
-	and a
-	jr nz, .next
+;	ld a, [wMonDataLocation]
+;	and a
+;	jr nz, .next
 ; If [wMonDataLocation] is 0 (PLAYER_PARTY_DATA), get the address of the mon's
 ; current moves in party data. Every call to this function sets
 ; [wMonDataLocation] to 0 because other data locations are not supported.
@@ -356,12 +364,18 @@ LearnMoveFromLevelUp:
 	ld a, [wWhichPokemon]
 	ld bc, wPartyMon2 - wPartyMon1
 	call AddNTimes
-.next
+;.next ; Adding Skipping move-learn on level-up - Mateo
 	ld b, NUM_MOVES
 .checkCurrentMovesLoop ; check if the move to learn is already known
 	ld a, [hli]
 	cp d
-	jr z, .done ; if already known, jump
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Skipping move-learn on level-up - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jr z, .hasMove ; if already known, jump
+;	jr z, .done ; if already known, jump
+
 	dec b
 	jr nz, .checkCurrentMovesLoop
 	ld a, d
@@ -370,6 +384,15 @@ LearnMoveFromLevelUp:
 	call GetMoveName
 	call CopyStringToCF4B
 	predef LearnMove
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Skipping move-learn on level-up - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+.hasMove
+	pop hl
+	jr .learnSetLoop
+
+	
 .done
 	ld a, [wcf91]
 	ld [wd11e], a

@@ -64,6 +64,8 @@
 [Yellow Features]
 		- Bulbasaur, Charmander, and Squirtle: NPC gifts (like Yellow)
 		- Sprites [Yellow & Crystal]
+			- Chansey in Pokecenters
+			- Officer Jenny
 	
 [Added but Disabled]
 
