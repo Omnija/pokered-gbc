@@ -60,7 +60,7 @@ SpriteSheetPointerTable:
 ; Adding Rocket ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	overworld_sprite RocketFSprite, 12          ; SPRITE_ROCKET_F
-;	overworld_sprite GuardSprite, 12            ; SPRITE_UNUSED_GUARD
+;	overworld_sprite GuardSprite, 12            ; SPRITE_UNUSED_GUARD ^^
 	overworld_sprite MomSprite, 12              ; SPRITE_MOM
 	overworld_sprite BaldingGuySprite, 12       ; SPRITE_BALDING_GUY
 	overworld_sprite LittleBoySprite, 12        ; SPRITE_LITTLE_BOY
@@ -68,7 +68,7 @@ SpriteSheetPointerTable:
 ; Adding Swimmer ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	overworld_sprite SwimmerFSprite, 12         ; SPRITE_SWIMMER_F
-;	overworld_sprite GameboyKidSprite, 12       ; SPRITE_UNUSED_GAMEBOY_KID
+;	overworld_sprite GameboyKidSprite, 12       ; SPRITE_UNUSED_GAMEBOY_KID ^^
 	overworld_sprite GameboyKidSprite, 12       ; SPRITE_GAMEBOY_KID
 	overworld_sprite FairySprite, 12            ; SPRITE_FAIRY
 	overworld_sprite AgathaSprite, 12           ; SPRITE_AGATHA
