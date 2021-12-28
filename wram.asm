@@ -1563,7 +1563,7 @@ wBattleMon:: battle_struct wBattleMon
 wTrainerClass::
 	ds 1
 
-	ds 1
+	ds 1 ; unused?
 
 wTrainerPicPointer::
 	ds 2

@@ -110,7 +110,6 @@ FIRST_STILL_SPRITE EQU const_value
 	const SPRITE_CHANSEY  				 ; $50
 
 ; Unused
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;

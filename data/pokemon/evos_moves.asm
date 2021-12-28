@@ -32,7 +32,7 @@ EvosMovesPointerTable:
 	dw BlastoiseEvosMoves
 	dw PinsirEvosMoves
 	dw TangelaEvosMoves
-	dw MissingNo1FEvosMoves
+	dw LickilongEvosMoves	; dw MissingNo1FEvosMoves
 	dw MissingNo20EvosMoves
 	dw GrowlitheEvosMoves
 	dw OnixEvosMoves
@@ -311,6 +311,7 @@ ExeggutorEvosMoves:
 
 LickitungEvosMoves:
 ; Evolutions
+	db EV_LEVEL, 35, LICKILONG
 	db 0
 ; Learnset
 	db 7, STOMP
@@ -538,10 +539,21 @@ TangelaEvosMoves:
 	db 49, GROWTH
 	db 0
 
-MissingNo1FEvosMoves:
+;MissingNo1FEvosMoves:
+; Evolutions
+;	db 0
+; Learnset
+;	db 0
+
+LickilongEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 36, RAGE
+	db 39, TAKE_DOWN
+	db 43, HARDEN
+	db 45, DISABLE
+	db 49, GROWTH
 	db 0
 
 MissingNo20EvosMoves:

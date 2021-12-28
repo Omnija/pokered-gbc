@@ -1051,5 +1051,5 @@ INCLUDE "color/data/badgepalettemap.asm"
 INCLUDE "color/dmg.asm"
 
 ; Copy of sound engine used by dmg-mode to play jingle
-SECTION "bank31", ROMX
+SECTION "DMG Sound Engine", ROMX
 INCBIN "color/data/bank31.bin", $0000, $c8000 - $c4000

@@ -113,6 +113,7 @@
 	const DEX_HITMONLEE  ; 106
 	const DEX_HITMONCHAN ; 107
 	const DEX_LICKITUNG  ; 108
+	const DEX_LICKILONG  ; 152	; New pokemon
 	const DEX_KOFFING    ; 109
 	const DEX_WEEZING    ; 110
 	const DEX_RHYHORN    ; 111
@@ -156,5 +157,5 @@
 	const DEX_DRAGONITE  ; 149
 	const DEX_MEWTWO     ; 150
 	const DEX_MEW        ; 151
-
+	
 NUM_POKEMON EQU const_value - 1

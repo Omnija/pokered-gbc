@@ -7,8 +7,8 @@
 	    - Starting locations
 		- Rival Text
 		- Added trade only pokemon to the wild
-			- Red - Lickitung &  Mr.Mime [Route 12/13]
-			- Blue - Farfetch'd & Jynx [Route 12/13]
+			- Red - Lickitung &  Mr.Mime [Route 12/21 & 13]
+			- Blue - Farfetch'd & Jynx [Route 12/21 & 13]
 			
 	- Changes/Updates to the GFX
 		- Sprites
@@ -60,6 +60,9 @@
 		
 	- Female playable character [FR/LF & Green JP]
 	- Traders have individual name [OT Labels]
+	
+	- New Evolutions
+		- Lickilong [Lvl 35 evolution]
 	
 [Yellow Features]
 		- Bulbasaur, Charmander, and Squirtle: NPC gifts (like Yellow)

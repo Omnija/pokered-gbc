@@ -201,7 +201,7 @@ ROMX $2C
 	"bank2C"
 	"Move Names"
 ROMX $31
-	"bank31"
+	"DMG Sound Engine"
 ROMX $32
 	"Pics 7"
 ROMX $33

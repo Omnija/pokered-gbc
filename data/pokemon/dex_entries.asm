@@ -29,7 +29,7 @@ PokedexEntryPointers:
 	dw BlastoiseDexEntry
 	dw PinsirDexEntry
 	dw TangelaDexEntry
-	dw MissingNoDexEntry
+	dw LickilongDexEntry	; dw MissingNoDexEntry
 	dw MissingNoDexEntry
 	dw GrowlitheDexEntry
 	dw OnixDexEntry
@@ -403,6 +403,13 @@ TangelaDexEntry:
 	db 3,3
 	dw 770
 	text_far _TangelaDexEntry
+	text_end
+	
+LickilongDexEntry:
+	db "LICKING@"
+	db 5,07
+	dw 1750
+	text_far _LickilongDexEntry
 	text_end
 
 GrowlitheDexEntry:

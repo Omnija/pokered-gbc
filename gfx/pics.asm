@@ -593,6 +593,9 @@ JynxPicFront::        INCBIN "gfx/pokemon/gsfront/jynx.pic"
 JynxPicBack::         INCBIN "gfx/pokemon/gsback/jynxb.pic"
 MarowakPicFront::     INCBIN "gfx/pokemon/gsfront/marowak.pic"
 MarowakPicBack::      INCBIN "gfx/pokemon/gsback/marowakb.pic"
+; New pokemon begins
+LickilongPicFront::  INCBIN "gfx/pokemon/gsfront/lickilong.pic"
+LickilongPicBack::   INCBIN "gfx/pokemon/gsback/lickilongb.pic"
 ENDC
 
 IF !GEN_2_GRAPHICS
@@ -879,4 +882,7 @@ JynxPicFront::        INCBIN "gfx/pokemon/front/jynx.pic"
 JynxPicBack::         INCBIN "gfx/pokemon/back/jynxb.pic"
 MarowakPicFront::     INCBIN "gfx/pokemon/front/marowak.pic"
 MarowakPicBack::      INCBIN "gfx/pokemon/back/marowakb.pic"
+; New pokemon begins
+LickilongPicFront::  INCBIN "gfx/pokemon/front/Lickilong.pic"
+LickilongPicBack::   INCBIN "gfx/pokemon/back/Lickilongb.pic"
 ENDC

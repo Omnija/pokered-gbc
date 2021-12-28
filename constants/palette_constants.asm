@@ -182,6 +182,7 @@ IF GEN_2_GRAPHICS
 	const PAL_HITMONLEE  ; $8E
 	const PAL_HITMONCHAN ; $8F
 	const PAL_LICKITUNG  ; $90
+	const PAL_LICKILONG  ; $BC	; New pokemon
 	const PAL_KOFFING    ; $91
 	const PAL_WEEZING    ; $92
 	const PAL_RHYHORN    ; $93

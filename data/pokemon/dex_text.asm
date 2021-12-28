@@ -297,6 +297,16 @@ _TangelaDexEntry::
 	next "weed. Its vines"
 	next "shake as it walks"
 	dex
+	
+_LickilongDexEntry::
+	text "It wraps things "
+	next "with its extens-"
+	next "ible tongue."
+
+	page "Getting too close"
+	next "will leave you so-"
+	next "aked with drool"
+	dex
 
 _GrowlitheDexEntry::
 	text "Very protective"

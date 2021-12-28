@@ -109,6 +109,7 @@ INCLUDE "data/pokemon/base_stats/marowak.asm"
 INCLUDE "data/pokemon/base_stats/hitmonlee.asm"
 INCLUDE "data/pokemon/base_stats/hitmonchan.asm"
 INCLUDE "data/pokemon/base_stats/lickitung.asm"
+INCLUDE "data/pokemon/base_stats/lickilong.asm" ; New pokemon
 INCLUDE "data/pokemon/base_stats/koffing.asm"
 INCLUDE "data/pokemon/base_stats/weezing.asm"
 INCLUDE "data/pokemon/base_stats/rhyhorn.asm"
@@ -152,4 +153,5 @@ INCLUDE "data/pokemon/base_stats/dragonair.asm"
 INCLUDE "data/pokemon/base_stats/dragonite.asm"
 INCLUDE "data/pokemon/base_stats/mewtwo.asm"
 INCLUDE "data/pokemon/base_stats/mew.asm"
+
 BaseStatsEnd::

@@ -132,6 +132,7 @@ ICONOFFSET EQU $40 ; difference between alternating icon frames' tile IDs
 	const ICON_HITMONLEE   ; HITMONLEE
 	const ICON_HITMONCHAN  ; HITMONCHAN
 	const ICON_LICKITUNG   ; LICKITUNG
+;	const ICON_LICKILONG   ; LICKILONG	; New Pokemon
 	const ICON_KOFFING     ; KOFFING
 ;	const ICON_WEEZING     ; WEEZING
 	const ICON_RHYHORN     ; RHYHORN

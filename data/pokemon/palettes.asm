@@ -110,6 +110,7 @@ IF GEN_2_GRAPHICS
 	db PAL_HITMONLEE
 	db PAL_HITMONCHAN
 	db PAL_LICKITUNG
+	db PAL_LICKILONG	; New pokemon
 	db PAL_KOFFING
 	db PAL_WEEZING
 	db PAL_RHYHORN
@@ -153,7 +154,6 @@ IF GEN_2_GRAPHICS
 	db PAL_DRAGONITE
 	db PAL_MEWTWO
 	db PAL_MEW
-; New pokemon begin
 
 TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 ; Trainers begin
@@ -330,6 +330,7 @@ ELSE
 	db PAL_BROWNMON  ; HITMONLEE
 	db PAL_BROWNMON  ; HITMONCHAN
 	db PAL_PINKMON   ; LICKITUNG
+	db PAL_PINKMON	 ; LICKILONG
 	db PAL_PURPLEMON ; KOFFING
 	db PAL_PURPLEMON ; WEEZING
 	db PAL_GREYMON   ; RHYHORN
@@ -374,4 +375,6 @@ ELSE
 	db PAL_MEWMON    ; MEWTWO
 	db PAL_MEWMON    ; MEW
 ; Trainers use index 0 of MonsterPalettes
+; New pokemon begin
+
 ENDC
