@@ -37,8 +37,8 @@
 	const BLASTOISE          ; $1C
 	const PINSIR             ; $1D
 	const TANGELA            ; $1E
-	const LICKILONG          ; $1F	; cont_skip (missingo)
-	const_skip               ; $20
+	const LICKILONG          ; $1F	; const_skip (missigno)
+	const CROBAT             ; $20	; const_skip (missigno)
 	const GROWLITHE          ; $21
 	const ONIX               ; $22
 	const FEAROW             ; $23
@@ -56,26 +56,26 @@
 	const PSYDUCK            ; $2F
 	const DROWZEE            ; $30
 	const GOLEM              ; $31
-	const_skip               ; $32
+	const SWANDOE            ; $32	; const_skip (missigno)
 	const MAGMAR             ; $33
-	const_skip               ; $34
+	const STEELIX            ; $34	; const_skip (missigno)
 	const ELECTABUZZ         ; $35
 	const MAGNETON           ; $36
 	const KOFFING            ; $37
-	const_skip               ; $38
+	const KINGDRA            ; $38	; const_skip (missigno)
 	const MANKEY             ; $39
 	const SEEL               ; $3A
 	const DIGLETT            ; $3B
 	const TAUROS             ; $3C
-	const_skip               ; $3D
-	const_skip               ; $3E
-	const_skip               ; $3F
+	const SCIZOR             ; $3D	; const_skip (missigno)
+	const TANGALINE          ; $3E	; const_skip (missigno)
+	const SLOWKING           ; $3F	; const_skip (missigno)
 	const FARFETCHD          ; $40
 	const VENONAT            ; $41
 	const DRAGONITE          ; $42
-	const_skip               ; $43
-	const_skip               ; $44
-	const_skip               ; $45
+	const MURMUDER           ; $43	; const_skip (missigno)
+	const POLITOED           ; $44	; const_skip (missigno)
+	const KISSLEY            ; $44	; const_skip (missigno)
 	const DODUO              ; $46
 	const POLIWAG            ; $47
 	const JYNX               ; $48
@@ -85,23 +85,23 @@
 	const DITTO              ; $4C
 	const MEOWTH             ; $4D
 	const KRABBY             ; $4E
-	const_skip               ; $4F
-	const_skip               ; $50
-	const_skip               ; $51
+	const LEAFEON            ; $4F	; const_skip (missigno)
+	const ESPEON             ; $50	; const_skip (missigno)
+	const UMBREON            ; $51	; const_skip (missigno)
 	const VULPIX             ; $52
 	const NINETALES          ; $53
 	const PIKACHU            ; $54
 	const RAICHU             ; $55
-	const_skip               ; $56
-	const_skip               ; $57
+	const GLACEON            ; $56	; const_skip (missigno)
+	const SYLVEON            ; $57	; const_skip (missigno)
 	const DRATINI            ; $58
 	const DRAGONAIR          ; $59
 	const KABUTO             ; $5A
 	const KABUTOPS           ; $5B
 	const HORSEA             ; $5C
 	const SEADRA             ; $5D
-	const_skip               ; $5E
-	const_skip               ; $5F
+	const HITMON             ; $56	; const_skip (missigno)
+	const HITMONTOP          ; $57	; const_skip (missigno)
 	const SANDSHREW          ; $60
 	const SANDSLASH          ; $61
 	const OMANYTE            ; $62

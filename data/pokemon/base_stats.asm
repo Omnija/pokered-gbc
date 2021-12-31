@@ -43,6 +43,7 @@ INCLUDE "data/pokemon/base_stats/jigglypuff.asm"
 INCLUDE "data/pokemon/base_stats/wigglytuff.asm"
 INCLUDE "data/pokemon/base_stats/zubat.asm"
 INCLUDE "data/pokemon/base_stats/golbat.asm"
+INCLUDE "data/pokemon/base_stats/crobat.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/oddish.asm"
 INCLUDE "data/pokemon/base_stats/gloom.asm"
 INCLUDE "data/pokemon/base_stats/vileplume.asm"
@@ -63,6 +64,7 @@ INCLUDE "data/pokemon/base_stats/arcanine.asm"
 INCLUDE "data/pokemon/base_stats/poliwag.asm"
 INCLUDE "data/pokemon/base_stats/poliwhirl.asm"
 INCLUDE "data/pokemon/base_stats/poliwrath.asm"
+INCLUDE "data/pokemon/base_stats/politoed.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/abra.asm"
 INCLUDE "data/pokemon/base_stats/kadabra.asm"
 INCLUDE "data/pokemon/base_stats/alakazam.asm"
@@ -81,9 +83,11 @@ INCLUDE "data/pokemon/base_stats/ponyta.asm"
 INCLUDE "data/pokemon/base_stats/rapidash.asm"
 INCLUDE "data/pokemon/base_stats/slowpoke.asm"
 INCLUDE "data/pokemon/base_stats/slowbro.asm"
+INCLUDE "data/pokemon/base_stats/slowking.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/magnemite.asm"
 INCLUDE "data/pokemon/base_stats/magneton.asm"
 INCLUDE "data/pokemon/base_stats/farfetchd.asm"
+INCLUDE "data/pokemon/base_stats/swandoe.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/doduo.asm"
 INCLUDE "data/pokemon/base_stats/dodrio.asm"
 INCLUDE "data/pokemon/base_stats/seel.asm"
@@ -92,10 +96,12 @@ INCLUDE "data/pokemon/base_stats/grimer.asm"
 INCLUDE "data/pokemon/base_stats/muk.asm"
 INCLUDE "data/pokemon/base_stats/shellder.asm"
 INCLUDE "data/pokemon/base_stats/cloyster.asm"
+INCLUDE "data/pokemon/base_stats/murmuder.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/gastly.asm"
 INCLUDE "data/pokemon/base_stats/haunter.asm"
 INCLUDE "data/pokemon/base_stats/gengar.asm"
 INCLUDE "data/pokemon/base_stats/onix.asm"
+INCLUDE "data/pokemon/base_stats/steelix.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/drowzee.asm"
 INCLUDE "data/pokemon/base_stats/hypno.asm"
 INCLUDE "data/pokemon/base_stats/krabby.asm"
@@ -106,25 +112,31 @@ INCLUDE "data/pokemon/base_stats/exeggcute.asm"
 INCLUDE "data/pokemon/base_stats/exeggutor.asm"
 INCLUDE "data/pokemon/base_stats/cubone.asm"
 INCLUDE "data/pokemon/base_stats/marowak.asm"
+INCLUDE "data/pokemon/base_stats/hitmon.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/hitmonlee.asm"
 INCLUDE "data/pokemon/base_stats/hitmonchan.asm"
+INCLUDE "data/pokemon/base_stats/hitmontop.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/lickitung.asm"
-INCLUDE "data/pokemon/base_stats/lickilong.asm" ; New pokemon
+INCLUDE "data/pokemon/base_stats/lickilong.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/koffing.asm"
 INCLUDE "data/pokemon/base_stats/weezing.asm"
 INCLUDE "data/pokemon/base_stats/rhyhorn.asm"
 INCLUDE "data/pokemon/base_stats/rhydon.asm"
 INCLUDE "data/pokemon/base_stats/chansey.asm"
+INCLUDE "data/pokemon/base_stats/kissley.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/tangela.asm"
+INCLUDE "data/pokemon/base_stats/tangaline.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/kangaskhan.asm"
 INCLUDE "data/pokemon/base_stats/horsea.asm"
 INCLUDE "data/pokemon/base_stats/seadra.asm"
+INCLUDE "data/pokemon/base_stats/kingdra.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/goldeen.asm"
 INCLUDE "data/pokemon/base_stats/seaking.asm"
 INCLUDE "data/pokemon/base_stats/staryu.asm"
 INCLUDE "data/pokemon/base_stats/starmie.asm"
 INCLUDE "data/pokemon/base_stats/mrmime.asm"
 INCLUDE "data/pokemon/base_stats/scyther.asm"
+INCLUDE "data/pokemon/base_stats/scizor.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/jynx.asm"
 INCLUDE "data/pokemon/base_stats/electabuzz.asm"
 INCLUDE "data/pokemon/base_stats/magmar.asm"
@@ -138,6 +150,11 @@ INCLUDE "data/pokemon/base_stats/eevee.asm"
 INCLUDE "data/pokemon/base_stats/vaporeon.asm"
 INCLUDE "data/pokemon/base_stats/jolteon.asm"
 INCLUDE "data/pokemon/base_stats/flareon.asm"
+INCLUDE "data/pokemon/base_stats/leafeon.asm"		; New pokemon
+INCLUDE "data/pokemon/base_stats/espeon.asm"		; New pokemon
+INCLUDE "data/pokemon/base_stats/umbreon.asm"		; New pokemon
+INCLUDE "data/pokemon/base_stats/glaceon.asm"		; New pokemon
+INCLUDE "data/pokemon/base_stats/sylveon.asm"		; New pokemon
 INCLUDE "data/pokemon/base_stats/porygon.asm"
 INCLUDE "data/pokemon/base_stats/omanyte.asm"
 INCLUDE "data/pokemon/base_stats/omastar.asm"
@@ -153,5 +170,4 @@ INCLUDE "data/pokemon/base_stats/dragonair.asm"
 INCLUDE "data/pokemon/base_stats/dragonite.asm"
 INCLUDE "data/pokemon/base_stats/mewtwo.asm"
 INCLUDE "data/pokemon/base_stats/mew.asm"
-
 BaseStatsEnd::

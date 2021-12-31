@@ -47,6 +47,7 @@
 	const DEX_WIGGLYTUFF ; 40
 	const DEX_ZUBAT      ; 41
 	const DEX_GOLBAT     ; 42
+	const DEX_CROBAT     ; 42	; New pokemon
 	const DEX_ODDISH     ; 43
 	const DEX_GLOOM      ; 44
 	const DEX_VILEPLUME  ; 45
@@ -67,6 +68,7 @@
 	const DEX_POLIWAG    ; 60
 	const DEX_POLIWHIRL  ; 61
 	const DEX_POLIWRATH  ; 62
+	const DEX_POLITOED   ; 62	; New pokemon
 	const DEX_ABRA       ; 63
 	const DEX_KADABRA    ; 64
 	const DEX_ALAKAZAM   ; 65
@@ -85,9 +87,11 @@
 	const DEX_RAPIDASH   ; 78
 	const DEX_SLOWPOKE   ; 79
 	const DEX_SLOWBRO    ; 80
+	const DEX_SLOWKING   ; 80	; New pokemon
 	const DEX_MAGNEMITE  ; 81
 	const DEX_MAGNETON   ; 82
 	const DEX_FARFETCHD  ; 83
+	const DEX_SWANDOE    ; 83	; New pokemon
 	const DEX_DODUO      ; 84
 	const DEX_DODRIO     ; 85
 	const DEX_SEEL       ; 86
@@ -96,10 +100,12 @@
 	const DEX_MUK        ; 89
 	const DEX_SHELLDER   ; 90
 	const DEX_CLOYSTER   ; 91
+	const DEX_MURMUDER   ; 90	; New pokemon
 	const DEX_GASTLY     ; 92
 	const DEX_HAUNTER    ; 93
 	const DEX_GENGAR     ; 94
 	const DEX_ONIX       ; 95
+	const DEX_STEELIX    ; 95	; New pokemon
 	const DEX_DROWZEE    ; 96
 	const DEX_HYPNO      ; 97
 	const DEX_KRABBY     ; 98
@@ -110,8 +116,10 @@
 	const DEX_EXEGGUTOR  ; 103
 	const DEX_CUBONE     ; 104
 	const DEX_MAROWAK    ; 105
+	const DEX_HITMON	 ; 107	; New pokemon
 	const DEX_HITMONLEE  ; 106
 	const DEX_HITMONCHAN ; 107
+	const DEX_HITMONTOP  ; 107	; New pokemon
 	const DEX_LICKITUNG  ; 108
 	const DEX_LICKILONG  ; 152	; New pokemon
 	const DEX_KOFFING    ; 109
@@ -119,16 +127,20 @@
 	const DEX_RHYHORN    ; 111
 	const DEX_RHYDON     ; 112
 	const DEX_CHANSEY    ; 113
+	const DEX_KISSLEY    ; 113	; New pokemon
 	const DEX_TANGELA    ; 114
+	const DEX_TANGALINE  ; 114	; New pokemon
 	const DEX_KANGASKHAN ; 115
 	const DEX_HORSEA     ; 116
 	const DEX_SEADRA     ; 117
+	const DEX_KINGDRA    ; 117	; New pokemon
 	const DEX_GOLDEEN    ; 118
 	const DEX_SEAKING    ; 119
 	const DEX_STARYU     ; 120
 	const DEX_STARMIE    ; 121
 	const DEX_MR_MIME    ; 122
 	const DEX_SCYTHER    ; 123
+	const DEX_SCIZOR     ; 123	; New pokemon
 	const DEX_JYNX       ; 124
 	const DEX_ELECTABUZZ ; 125
 	const DEX_MAGMAR     ; 126
@@ -142,6 +154,11 @@
 	const DEX_VAPOREON   ; 134
 	const DEX_JOLTEON    ; 135
 	const DEX_FLAREON    ; 136
+	const DEX_LEAFEON    ; 136	; New pokemon
+	const DEX_ESPEON     ; 136	; New pokemon
+	const DEX_UMBREON    ; 136	; New pokemon
+	const DEX_GLACEON    ; 136	; New pokemon
+	const DEX_SYLVEON    ; 136	; New pokemon
 	const DEX_PORYGON    ; 137
 	const DEX_OMANYTE    ; 138
 	const DEX_OMASTAR    ; 139

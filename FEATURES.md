@@ -3,11 +3,11 @@
 [Added to Game]
 
     - Alternative Version Differences
-	    - Start/Swim as Red/Blue or Green
+	    - Start/Swim as Red/Blue or Leaf/Green
 	    - Starting locations
 		- Rival Text
 		- Added trade only pokemon to the wild
-			- Red - Lickitung &  Mr.Mime [Route 12/21 & 13]
+			- Red  - Lickitung &  Mr.Mime [Route 12/21 & 13]
 			- Blue - Farfetch'd & Jynx [Route 12/21 & 13]
 			
 	- Changes/Updates to the GFX
@@ -20,18 +20,18 @@
 	- Skip if move accuracy is 100%	
 	- Crystal Audio Engine
 	- Infinite TM uses
-	- Overworld Face the Trainers
+	- Overworld Face the Trainers when seen
 	- Running Shoes/Bike/Surf by Holding (B)
 	- Field Moves with (Select)
 	- Trainer Rematches
-	- Deleter/Relearner/Tutor - psychics house
+	- Deleter/Relearner/Tutor [Psychics house]
 	- Info Menu
-	- Automatic Repel
-	- Experience on Capture + EXP_ALL Check
+	- Automatic Repel [Pop up]
+	- Experience on Capture + EXP_ALL
 	- Independent Party Menu Icons [Pre-Evolutions]
 	- Pokemon Genders
 	- Pokemon Shiny [Palettes Needs Work or better code]
-	- Individual Trainer DV's/ Names/ Levels/ Movesets
+	- Individual Trainer [DV's/ Names/ Levels/ Movesets]
 	- Skipping move-learn on level-up
 	- Daycare Breeding System + Step Counter
 	- Bicycle Shortcut (A + Select)
@@ -50,10 +50,13 @@
 		- Hold (Start + data) to disable
 	- RNG state on boot is initialized to a random number
 	- Allow renaming traded pokemon [Disabled 1OTID Check]
-	- Struggle is now using (Unused Neutral) type (BIRD)
+	- Struggle is now using [Unused Neutral] type [BIRD]
 		- Transform copying move now becomes Struggle
 	- Types - Fairy/Steel/Dark for future uses
-	- Trade evolution can also evolve at 42
+	- Trade evolution can also evolve at [Lvl 36]
+		- Machamp
+		- Golem
+		- Alakazam
 	
 	- Mart changes
 		- Moon stone [Celedon Mart f4]
@@ -62,9 +65,29 @@
 	- Traders have individual name [OT Labels]
 	
 	- New Evolutions
-		- Lickilong [Lvl 35 evolution]
+		- Lickilong [Lvl 32]
+		- Crobat    [Lvl 36]
+		- Swandoe   [Lvl 32]
+		- Steelix   [Lvl 34 / Trade]
+		- Kingdra   [Lvl 40 / Trade]
+		- Scizor    [Lvl 34 / Trade]
+		- Tangaline [Lvl 32 / Trade]
+		- Murmuder  [Lvl 32]
+		- Politoed  [Lvl 36 / Trade]
+		- Kissley 	[Lvl 32 / Trade]
+		- Eevee Evolutions
+			- Leafeon	[Leaf Stone]
+			- Espeon	[Lvl Route 16/18]
+			- Umbreon	[Moon Stone]
+			- Glaceon	[Seafoam Island B4]
+			- Sylveon	[Trade/Lvl Route 5]
+		- Hitmon
+			- Hitmonlee  [Move - MEGA KICK]
+			- Hitmonchan [Move - MEGA PUNCH]
+			- Hitmontop  [Move - COUNTER]
 	
 [Yellow Features]
+
 		- Bulbasaur, Charmander, and Squirtle: NPC gifts (like Yellow)
 		- Sprites [Yellow & Crystal]
 			- Chansey in Pokecenters

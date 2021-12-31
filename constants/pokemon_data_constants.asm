@@ -25,6 +25,12 @@ HOF_TEAM_CAPACITY EQU 50
 	const EV_LEVEL ; 1
 	const EV_ITEM  ; 2
 	const EV_TRADE ; 3
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Map/Move Evolutions - Mateo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	const EV_MAP   ; 4
+	const EV_MOVE  ; 5
 
 MAX_EVOLUTIONS EQU 3
 EVOLUTION_SIZE EQU 4

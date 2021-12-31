@@ -34,8 +34,8 @@ BreedingList::
 	db SQUIRTLE
 	db PINSIR
 	db TANGELA
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
+	db LICKITUNG	; db 0 ; MISSINGNO.
+	db ZUBAT		; db 0 ; MISSINGNO.
 	db GROWLITHE
 	db ONIX
 	db SPEAROW
@@ -53,26 +53,26 @@ BreedingList::
 	db PSYDUCK
 	db DROWZEE
 	db GEODUDE
-	db 0 ; MISSINGNO.
+	db FARFETCHD		; db 0 ; MISSINGNO.
 	db MAGMAR
-	db 0 ; MISSINGNO.
+	db ONIX				; db 0 ; MISSINGNO.
 	db ELECTABUZZ
 	db MAGNEMITE
 	db KOFFING
-	db 0 ; MISSINGNO.
+	db HORSEA			; db 0 ; MISSINGNO.
 	db MANKEY
 	db SEEL
 	db DIGLETT
 	db TAUROS
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
+	db SCYTHER			; db 0 ; MISSINGNO.
+	db TANGELA			; db 0 ; MISSINGNO.
+	db SLOWPOKE			; db 0 ; MISSINGNO.
 	db FARFETCHD
 	db VENONAT
 	db DRATINI
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
+	db SHELLDER			; db 0 ; MISSINGNO.
+	db POLIWAG			; db 0 ; MISSINGNO.
+	db CHANSEY			; db 0 ; MISSINGNO.
 	db DODUO
 	db POLIWAG
 	db JYNX
@@ -82,23 +82,23 @@ BreedingList::
 	db DITTO
 	db MEOWTH
 	db KRABBY
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
+	db EEVEE			; db 0 ; MISSINGNO.
+	db EEVEE			; db 0 ; MISSINGNO.
+	db EEVEE			; db 0 ; MISSINGNO.
 	db VULPIX
 	db VULPIX
 	db PIKACHU
 	db PIKACHU
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
+	db EEVEE			; db 0 ; MISSINGNO.
+	db EEVEE			; db 0 ; MISSINGNO.
 	db DRATINI
 	db DRATINI
 	db KABUTO
 	db KABUTO
 	db HORSEA
 	db HORSEA
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
+	db HITMON			; db 0 ; MISSINGNO.
+	db HITMON			; db 0 ; MISSINGNO.
 	db SANDSHREW
 	db SANDSHREW
 	db OMANYTE

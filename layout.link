@@ -214,6 +214,8 @@ ROMX $36
 	"Pics 11"
 ROMX $37
 	"Pics 12"
+ROMX $38
+	"Pics 13"
 
 
 WRAM0

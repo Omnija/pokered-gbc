@@ -66,6 +66,7 @@ ICONOFFSET EQU $40 ; difference between alternating icon frames' tile IDs
 ;	const ICON_WIGGLYTUFF  ; WIGGLYTUFF
 	const ICON_ZUBAT       ; ZUBAT
 ;	const ICON_GOLBAT      ; GOLBAT
+;	const ICON_CROBAT      ; CROBAT		; New pokemon
 	const ICON_ODDISH      ; ODDISH
 ;	const ICON_GLOOM       ; GLOOM
 ;	const ICON_VILEPLUME   ; VILEPLUME
@@ -86,6 +87,7 @@ ICONOFFSET EQU $40 ; difference between alternating icon frames' tile IDs
 	const ICON_POLIWAG     ; POLIWAG
 ;	const ICON_POLIWHIRL   ; POLIWHIRL
 ;	const ICON_POLIWRATH   ; POLIWRATH
+;	const ICON_POLITOED    ; POLITOED	; New pokemon
 	const ICON_ABRA        ; ABRA
 ;	const ICON_KADABRA     ; KADABRA
 ;	const ICON_ALAKAZAM    ; ALAKAZAM
@@ -104,9 +106,11 @@ ICONOFFSET EQU $40 ; difference between alternating icon frames' tile IDs
 ;	const ICON_RAPIDASH    ; RAPIDASH
 	const ICON_SLOWPOKE    ; SLOWPOKE
 ;	const ICON_SLOWBRO     ; SLOWBRO
+;	const ICON_SLOWKING    ; SLOWKING	; New pokemon
 	const ICON_MAGNEMITE   ; MAGNEMITE
 ;	const ICON_MAGNETON    ; MAGNETON
 	const ICON_FARFETCH_D  ; FARFETCH_D
+;	const ICON_SWANDOE     ; SWANDOE	; New pokemon
 	const ICON_DODUO       ; DODUO
 ;	const ICON_DODRIO      ; DODRIO
 	const ICON_SEEL        ; SEEL
@@ -115,10 +119,12 @@ ICONOFFSET EQU $40 ; difference between alternating icon frames' tile IDs
 ;	const ICON_MUK         ; MUK
 	const ICON_SHELLDER    ; SHELLDER
 ;	const ICON_CLOYSTER    ; CLOYSTER
+;	const ICON_MURMUDER    ; MURMUDER	; New pokemon
 	const ICON_GASTLY      ; GASTLY
 ;	const ICON_HAUNTER     ; HAUNTER
 ;	const ICON_GENGAR      ; GENGAR
 	const ICON_ONIX        ; ONIX
+;	const ICON_STEELIX     ; STEELIX	; New pokemon
 	const ICON_DROWZEE     ; DROWZEE
 ;	const ICON_HYPNO       ; HYPNO
 	const ICON_KRABBY      ; KRABBY
@@ -129,8 +135,10 @@ ICONOFFSET EQU $40 ; difference between alternating icon frames' tile IDs
 ;	const ICON_EXEGGUTOR   ; EXEGGUTOR
 	const ICON_CUBONE      ; CUBONE
 ;	const ICON_MAROWAK     ; MAROWAK
-	const ICON_HITMONLEE   ; HITMONLEE
-	const ICON_HITMONCHAN  ; HITMONCHAN
+	const ICON_HITMON      ; HITMON		; New pokemon
+;	const ICON_HITMONLEE   ; HITMONLEE
+;	const ICON_HITMONCHAN  ; HITMONCHAN
+;	const ICON_HITMONTOP   ; HITMONTOP  ; New pokemon
 	const ICON_LICKITUNG   ; LICKITUNG
 ;	const ICON_LICKILONG   ; LICKILONG	; New Pokemon
 	const ICON_KOFFING     ; KOFFING
@@ -138,16 +146,20 @@ ICONOFFSET EQU $40 ; difference between alternating icon frames' tile IDs
 	const ICON_RHYHORN     ; RHYHORN
 ;	const ICON_RHYDON      ; RHYDON
 	const ICON_CHANSEY     ; CHANSEY
+;	const ICON_KISSLEY     ; KISSLEY	; New pokemon
 	const ICON_TANGELA     ; TANGELA
+;	const ICON_TANGALINE   ; TANGALINE	; New pokemon
 	const ICON_KANGASKHAN  ; KANGASKHAN
 	const ICON_HORSEA      ; HORSEA
 ;	const ICON_SEADRA      ; SEADRA
+;	const ICON_KINGDRA     ; KINGDRA	; New pokemon
 	const ICON_GOLDEEN     ; GOLDEEN
 ;	const ICON_SEAKING     ; SEAKING
 	const ICON_STARYU      ; STARYU
 ;	const ICON_STARMIE     ; STARMIE
 	const ICON_MR__MIME    ; MR__MIME
 	const ICON_SCYTHER     ; SCYTHER
+;	const ICON_SCIZOR      ; SCIZOR		; New pokemon
 	const ICON_JYNX        ; JYNX
 	const ICON_ELECTABUZZ  ; ELECTABUZZ
 	const ICON_MAGMAR      ; MAGMAR
@@ -158,9 +170,14 @@ ICONOFFSET EQU $40 ; difference between alternating icon frames' tile IDs
 	const ICON_LAPRAS      ; LAPRAS
 	const ICON_DITTO       ; DITTO
 	const ICON_EEVEE       ; EEVEE
-	const ICON_VAPOREON    ; VAPOREON
-	const ICON_JOLTEON     ; JOLTEON
-	const ICON_FLAREON     ; FLAREON
+;	const ICON_VAPOREON    ; VAPOREON
+;	const ICON_JOLTEON     ; JOLTEON
+;	const ICON_FLAREON     ; FLAREON
+;	const ICON_LEAFEON     ; LEAFEON	; New pokemon
+;	const ICON_ESPEON      ; ESPEON 	; New pokemon
+;	const ICON_UMBREON     ; UMBREON	; New pokemon
+;	const ICON_GLACEON     ; GLACEON	; New pokemon
+;	const ICON_SYLVEON     ; SYLVEON	; New pokemon
 	const ICON_PORYGON     ; PORYGON
 	const ICON_OMANYTE     ; OMANYTE
 ;	const ICON_OMASTAR     ; OMASTAR

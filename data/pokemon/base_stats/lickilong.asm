@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db NORMAL, NORMAL ; type
-	db 45 ; catch rate
-	db 127 ; base exp
+	db 30 ; catch rate
+	db 180 ; base exp
 
 	INCBIN "gfx/pokemon/front/lickilong.pic", 0, 1 ; sprite dimensions
 	dw LickilongPicFront, LickilongPicBack

@@ -299,13 +299,23 @@ _TangelaDexEntry::
 	dex
 	
 _LickilongDexEntry::
-	text "It wraps things "
+	text "It wraps things"
 	next "with its extens-"
 	next "ible tongue."
 
 	page "Getting too close"
 	next "will leave you so-"
 	next "aked with drool"
+	dex
+	
+_CrobatDexEntry::
+	text "It flies so silen-"
+	next "tly through the"
+	next "dark on its four"
+
+	page "wings that it may"
+	next "not be noticed"
+	next "even when nearby"
 	dex
 
 _GrowlitheDexEntry::
@@ -477,6 +487,16 @@ _GolemDexEntry::
 	next "dynamite blasts"
 	next "without damage"
 	dex
+	
+_SwandoeDexEntry::
+	text "Only Farfetch'd"
+	next "that have survived"
+	next "can become this."
+
+	page "When their leek"
+	next "withers, it will"
+	next "retire it's mask"
+	dex
 
 _MagmarDexEntry::
 	text "Its body always"
@@ -486,6 +506,16 @@ _MagmarDexEntry::
 	page "enables it to"
 	next "hide perfectly"
 	next "among flames"
+	dex
+	
+_SteelixDexEntry::
+	text "Its body has been"
+	next "compressed deep"
+	next "under the ground."
+
+	page "As a result,"
+	next "it is even harder"
+	next "than a diamond"
 	dex
 
 _ElectabuzzDexEntry::
@@ -516,6 +546,16 @@ _KoffingDexEntry::
 	page "its body, it is"
 	next "prone to exploding"
 	next "without warning"
+	dex
+	
+_KingdraDexEntry::
+	text "It is said that"
+	next "it usually hides"
+	next "in underwater cav-"
+
+	page "es. It can cre-"
+	next "ate whirlpools"
+	next "by yawning"
 	dex
 
 _MankeyDexEntry::
@@ -557,6 +597,36 @@ _TaurosDexEntry::
 	next "body with its"
 	next "long tails"
 	dex
+	
+_ScizorDexEntry::
+	text "It swings its eye-"
+	next "patterned pincers"
+	next "up to scare it's-"
+
+	page "foes. This makes"
+	next "it look like it"
+	next "has three heads"
+	dex
+
+_TangalineDexEntry::
+	text "It ensnares prey"
+	next "extending arms"
+	next "made of vines"
+
+	page "Losing arms to"
+	next "predators does"
+	next "not trouble it"
+	dex
+	
+_SlowkingDexEntry::
+	text "It has incredible"
+	next "intellect and int-"
+	next "iuition."
+
+	page "Whatever the situ-"
+	next "ation, it remains"
+	next "calm & determined"
+	dex
 
 _FarfetchdDexEntry::
 	text "The sprig of"
@@ -586,6 +656,36 @@ _DragoniteDexEntry::
 	page "Its intelligence"
 	next "is said to match"
 	next "that of humans"
+	dex
+	
+_MurmuderDexEntry::
+	text "Thought to be in-"
+	next "possible. If She-"
+	next "llder ended up"
+
+	page "swallowing an"
+	next "entire Slowking,"
+	next "this happens"
+	dex
+	
+_PolitoedDexEntry::
+	text "Whenever three or"
+	next "more of these get"
+	next "together, they"
+
+	page "sing in a loud "
+	next "voice that sounds"
+	next "like bellowing"
+	dex
+
+_KissleyDexEntry::
+	text "Carrying two eggs"
+	next "Kissley shares"
+	next "twice as much."
+
+	page "Sharing love with"
+	next "there seductive"
+	next "lips, and songs"
 	dex
 
 _DoduoDexEntry::
@@ -677,6 +777,36 @@ _KrabbyDexEntry::
 	next "when walking"
 	next "sideways"
 	dex
+	
+_LeafeonDexEntry::
+	text "Just like a plant,"
+	next "it uses photosyn-"
+	next "esis. As a result,"
+
+	page "it is always env-"
+	next "eloped in clear"
+	next "air"
+	dex
+	
+_EspeonDexEntry::
+	text "It uses the fine"
+	next "hair that covers"
+	next "its body to sense"
+
+	page "air currents and"
+	next "predict its enem-"
+	next "y’s actions"
+	dex
+	
+_UmbreonDexEntry::
+	text "When darkness fal-"
+	next "ls, the rings on"
+	next "the body begin to"
+
+	page "glow, striking fe-"
+	next "ar in the hearts"
+	next "of anyone nearby"
+	dex
 
 _VulpixDexEntry::
 	text "At the time of"
@@ -716,6 +846,26 @@ _RaichuDexEntry::
 	page "itself from its"
 	next "own high voltage"
 	next "power"
+	dex
+	
+_GlaceonDexEntry::
+	text "As a protective"
+	next "technique, it"
+	next "can completely"
+
+	page " freeze its fur"
+	next "to make its hairs"
+	next "stand like needles"
+	dex
+	
+_SylveonDexEntry::
+	text "Its ribbonlike"
+	next "feelers give off"
+	next "an aura that wea-"
+
+	page "kens hostility in"
+	next "its prey, causing"
+	next "them to drop guard"
 	dex
 
 _DratiniDexEntry::
@@ -776,6 +926,26 @@ _SeadraDexEntry::
 	page "its wing-like"
 	next "pectoral fins and"
 	next "stout tail"
+	dex
+	
+_HitmonDexEntry::
+	text "It is always burs-"
+	next "ting with energy."
+	next "To make itself"
+
+	page "stronger, it keeps"
+	next "on fighting even"
+	next "if it loses"
+	dex
+	
+_HitmontopDexEntry::
+	text "Capable of spin-"
+	next "ning at high spe-"
+	next "eds, while rapidly"
+
+	page "waering their op-"
+	next "pponents defense"
+	next "down"
 	dex
 
 _SandshrewDexEntry::

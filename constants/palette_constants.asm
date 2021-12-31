@@ -116,6 +116,7 @@ IF GEN_2_GRAPHICS
 	const PAL_WIGGLYTUFF ; $4C
 	const PAL_ZUBAT      ; $4D
 	const PAL_GOLBAT     ; $4E
+	const PAL_CROBAT     ; $4E		; New pokemon
 	const PAL_ODDISH     ; $4F
 	const PAL_GLOOM      ; $50
 	const PAL_VILEPLUME  ; $51
@@ -136,6 +137,7 @@ IF GEN_2_GRAPHICS
 	const PAL_POLIWAG    ; $60
 	const PAL_POLIWHIRL  ; $61
 	const PAL_POLIWRATH  ; $62
+	const PAL_POLITOED   ; $62		; New pokemon
 	const PAL_ABRA       ; $63
 	const PAL_KADABRA    ; $64
 	const PAL_ALAKAZAM   ; $65
@@ -154,9 +156,11 @@ IF GEN_2_GRAPHICS
 	const PAL_RAPIDASH   ; $72
 	const PAL_SLOWPOKE   ; $73
 	const PAL_SLOWBRO    ; $74
+	const PAL_SLOWKING   ; $74		; New pokemon
 	const PAL_MAGNEMITE  ; $75
 	const PAL_MAGNETON   ; $76
 	const PAL_FARFETCH_D ; $77
+	const PAL_SWANDOE    ; $77		; New pokemon
 	const PAL_DODUO      ; $78
 	const PAL_DODRIO     ; $79
 	const PAL_SEEL       ; $7A
@@ -165,10 +169,12 @@ IF GEN_2_GRAPHICS
 	const PAL_MUK        ; $7D
 	const PAL_SHELLDER   ; $7E
 	const PAL_CLOYSTER   ; $7F
+	const PAL_MURMUDER   ; $7E		; New pokemon
 	const PAL_GASTLY     ; $80
 	const PAL_HAUNTER    ; $81
 	const PAL_GENGAR     ; $82
 	const PAL_ONIX       ; $83
+	const PAL_STEELIX    ; $83		; New pokemon
 	const PAL_DROWZEE    ; $84
 	const PAL_HYPNO      ; $85
 	const PAL_KRABBY     ; $86
@@ -179,25 +185,31 @@ IF GEN_2_GRAPHICS
 	const PAL_EXEGGUTOR  ; $8B
 	const PAL_CUBONE     ; $8C
 	const PAL_MAROWAK    ; $8D
+	const PAL_HITMON	 ; $8E		; New pokemon
 	const PAL_HITMONLEE  ; $8E
 	const PAL_HITMONCHAN ; $8F
+	const PAL_HITMONTOP  ; $8F		; New pokemon
 	const PAL_LICKITUNG  ; $90
-	const PAL_LICKILONG  ; $BC	; New pokemon
+	const PAL_LICKILONG  ; $BC		; New pokemon
 	const PAL_KOFFING    ; $91
 	const PAL_WEEZING    ; $92
 	const PAL_RHYHORN    ; $93
 	const PAL_RHYDON     ; $94
 	const PAL_CHANSEY    ; $95
+	const PAL_KISSLEY    ; $95		; New pokemon
 	const PAL_TANGELA    ; $96
+	const PAL_TANGALINE  ; $96		; New pokemon
 	const PAL_KANGASKHAN ; $97
 	const PAL_HORSEA     ; $98
 	const PAL_SEADRA     ; $99
+	const PAL_KINGDRA    ; $99		; New pokemon
 	const PAL_GOLDEEN    ; $9A
 	const PAL_SEAKING    ; $9B
 	const PAL_STARYU     ; $9C
 	const PAL_STARMIE    ; $9D
 	const PAL_MR_MIME    ; $9E
 	const PAL_SCYTHER    ; $9F
+	const PAL_SCIZOR     ; $9F		; New pokemon
 	const PAL_JYNX       ; $A0
 	const PAL_ELECTABUZZ ; $A1
 	const PAL_MAGMAR     ; $A2
@@ -211,6 +223,11 @@ IF GEN_2_GRAPHICS
 	const PAL_VAPOREON   ; $AA
 	const PAL_JOLTEON    ; $AB
 	const PAL_FLAREON    ; $AC
+	const PAL_LEAFEON    ; $AC		; New pokemon
+	const PAL_ESPEON     ; $AC		; New pokemon
+	const PAL_UMBREON    ; $AC		; New pokemon
+	const PAL_GLACEON    ; $AC		; New pokemon
+	const PAL_SYLVEON    ; $AC		; New pokemon
 	const PAL_PORYGON    ; $AD
 	const PAL_OMANYTE    ; $AE
 	const PAL_OMASTAR    ; $AF

@@ -109,8 +109,9 @@ INCBIN "gfx/pokemon/icons/exeggcute.2bpp"   ; exeggcute
 ;INCBIN "gfx/pokemon/icons/exeggutor.2bpp"   ; exeggutor
 INCBIN "gfx/pokemon/icons/cubone.2bpp"      ; cubone
 ;INCBIN "gfx/pokemon/icons/marowak.2bpp"     ; marowak
-INCBIN "gfx/pokemon/icons/hitmonlee.2bpp"   ; hitmonlee
-INCBIN "gfx/pokemon/icons/hitmonchan.2bpp"  ; hitmonchan
+INCBIN "gfx/pokemon/icons/hitmon.2bpp" 		  ; hitmon
+;INCBIN "gfx/pokemon/icons/hitmonlee.2bpp"   ; hitmonlee
+;INCBIN "gfx/pokemon/icons/hitmonchan.2bpp"  ; hitmonchan
 INCBIN "gfx/pokemon/icons/lickitung.2bpp"   ; lickitung
 INCBIN "gfx/pokemon/icons/koffing.2bpp"     ; koffing
 ;INCBIN "gfx/pokemon/icons/weezing.2bpp"     ; weezing
@@ -137,9 +138,9 @@ INCBIN "gfx/pokemon/icons/magikarp.2bpp"    ; magikarp
 INCBIN "gfx/pokemon/icons/lapras.2bpp"      ; lapras
 INCBIN "gfx/pokemon/icons/ditto.2bpp"       ; ditto
 INCBIN "gfx/pokemon/icons/eevee.2bpp"       ; eevee
-INCBIN "gfx/pokemon/icons/vaporeon.2bpp"    ; vaporeon
-INCBIN "gfx/pokemon/icons/jolteon.2bpp"     ; jolteon
-INCBIN "gfx/pokemon/icons/flareon.2bpp"     ; flareon
+;INCBIN "gfx/pokemon/icons/vaporeon.2bpp"    ; vaporeon
+;INCBIN "gfx/pokemon/icons/jolteon.2bpp"     ; jolteon
+;INCBIN "gfx/pokemon/icons/flareon.2bpp"     ; flareon
 INCBIN "gfx/pokemon/icons/porygon.2bpp"     ; porygon
 INCBIN "gfx/pokemon/icons/omanyte.2bpp"     ; omanyte
 ;INCBIN "gfx/pokemon/icons/omastar.2bpp"     ; omastar
