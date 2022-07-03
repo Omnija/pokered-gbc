@@ -1473,13 +1473,13 @@ JigglypuffEvosMoves:
 	db EV_ITEM, MOON_STONE, 1, WIGGLYTUFF
 	db 0
 ; Learnset
-	db 9, POUND
-	db 14, DISABLE
-	db 19, DEFENSE_CURL
-	db 24, DOUBLESLAP
-	db 29, REST
-	db 34, BODY_SLAM
-	db 39, DOUBLE_EDGE
+	db 1, METRONOME
+	db 16, SLAM
+	db 22, LOVELY_KISS 
+	db 32, DEFENSE_CURL
+	db 38, MOONLIGHT
+	db 40, SWIFT
+	db 50, MOONBLAST
 	db 0
 
 WigglytuffEvosMoves:
@@ -1934,6 +1934,13 @@ ClefableEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 1, METRONOME
+	db 16, SLAM
+	db 22, LOVELY_KISS 
+	db 32, DEFENSE_CURL
+	db 38, MOONLIGHT
+	db 40, SWIFT
+	db 50, MOONBLAST
 	db 0
 
 WeezingEvosMoves:
