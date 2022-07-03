@@ -39,7 +39,7 @@ DefaultNamesGirl:
 	db   "NEW NAME"
 	next "GREEN"
 	next "LEAF"
-	next "LILY"
+	next "LANEY"
 	db   "@"
 
 DefaultNamesRival:

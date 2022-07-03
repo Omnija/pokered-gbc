@@ -85,6 +85,18 @@
 			- Hitmonlee  [Move - MEGA KICK]
 			- Hitmonchan [Move - MEGA PUNCH]
 			- Hitmontop  [Move - COUNTER]
+
+[ New Moves ]
+	-Steel
+		-Flash Cannon
+		-Iron Strike
+		-Meteor Mash
+	-Dark
+		-Dark Pulse
+	-Fairy
+		-Moonblast
+		-Draining Kiss
+		-Moonlight	
 	
 [Yellow Features]
 
@@ -98,6 +110,9 @@
 	- Soldier Trainer [Vermillion Gym]
 		- Trainer [New]
 		- Overworld [Replace any UNUSED]
+		
+	- New pokemon (removed)
+		- Manboo line (No palettes due to overflow)
 
 [Removed From Game]
 

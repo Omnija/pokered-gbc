@@ -34,8 +34,8 @@ BreedingList::
 	db SQUIRTLE
 	db PINSIR
 	db TANGELA
-	db LICKITUNG	; db 0 ; MISSINGNO.
-	db ZUBAT		; db 0 ; MISSINGNO.
+	db LICKITUNG		; db 0 ; MISSINGNO.
+	db ZUBAT			; db 0 ; MISSINGNO.
 	db GROWLITHE
 	db ONIX
 	db SPEAROW
@@ -46,8 +46,8 @@ BreedingList::
 	db CHANSEY
 	db MACHOP
 	db MR_MIME
-	db HITMONLEE
-	db HITMONCHAN
+	db HITMON			; db HITMONLEE
+	db HITMON			; db HITMONCHAN
 	db EKANS
 	db PARASECT
 	db PSYDUCK
@@ -118,14 +118,14 @@ BreedingList::
 	db WEEDLE
 	db WEEDLE
 	db WEEDLE
-	db 0 ; MISSINGNO.
+	db 0 ; MISSINGNO. ; db MANBOO
 	db DODUO
 	db MANKEY
 	db DIGLETT
 	db VENONAT
 	db SEEL
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
+	db 0 ; MISSINGNO. ; db MANBOO
+	db 0 ; MISSINGNO. ; db MANBOO
 	db CATERPIE
 	db CATERPIE
 	db CATERPIE

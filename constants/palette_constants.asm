@@ -243,6 +243,10 @@ IF GEN_2_GRAPHICS
 	const PAL_DRAGONITE  ; $B9
 	const PAL_MEWTWO     ; $BA
 	const PAL_MEW        ; $BB
+; New pokemon Line	
+;	const PAL_MANBOO     ; $B7		; New pokemon
+;	const PAL_SANKOR     ; $B8		; New pokemon
+;	const PAL_GROTESQUE  ; $B9		; New pokemon
 
 ; Trainers Begin
 	const PAL_YOUNGSTER     ; $BC

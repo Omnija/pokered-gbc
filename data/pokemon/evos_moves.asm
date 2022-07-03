@@ -116,14 +116,14 @@ EvosMovesPointerTable:
 	dw WeedleEvosMoves
 	dw KakunaEvosMoves
 	dw BeedrillEvosMoves
-	dw MissingNo73EvosMoves
+	dw MissingNo73EvosMoves	; dw ManbooEvosMoves
 	dw DodrioEvosMoves
 	dw PrimeapeEvosMoves
 	dw DugtrioEvosMoves
 	dw VenomothEvosMoves
 	dw DewgongEvosMoves
-	dw MissingNo79EvosMoves
-	dw MissingNo7AEvosMoves
+	dw MissingNo79EvosMoves ; dw SankorEvosMoves
+	dw MissingNo7AEvosMoves ; dw GrotesqueEvosMoves
 	dw CaterpieEvosMoves
 	dw MetapodEvosMoves
 	dw ButterfreeEvosMoves
@@ -450,8 +450,11 @@ ShellderEvosMoves:
 	db 18, SUPERSONIC
 	db 23, CLAMP
 	db 30, AURORA_BEAM
-	db 39, LEER
+	db 36, WITHDRAW
+	db 42, FLASH_CANNON
+	DB 48, SLAM
 	db 50, ICE_BEAM
+	db 56, METEOR_MASH
 	db 0
 
 TentacoolEvosMoves:
@@ -554,11 +557,13 @@ LickilongEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 36, RAGE
-	db 39, TAKE_DOWN
-	db 43, HARDEN
-	db 45, DISABLE
-	db 49, GROWTH
+	db 1, LICK
+	db 1, SUPERSONIC
+	db 24, DISABLE
+	db 36, STOMP
+	db 42, SCREECH
+	db 48, SLAM
+	db 54, TAKE_DOWN
 	db 0
 
 ;MissingNo20EvosMoves:
@@ -571,12 +576,14 @@ CrobatEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 5, SAND_ATTACK
+	db 5, SCREECH
 	db 12, QUICK_ATTACK
 	db 21, WHIRLWIND
-	db 31, WING_ATTACK
-	db 44, AGILITY
-	db 54, MIRROR_MOVE
+	db 34, BITE
+	db 41, HAZE
+	db 48, DARK_PULSE
+	db 55, CONFUSE_RAY
+	db 69, LEECH_LIFE 
 	db 0
 
 GrowlitheEvosMoves:
@@ -804,6 +811,9 @@ SwandoeEvosMoves:
 	db 23, SWORDS_DANCE
 	db 31, AGILITY
 	db 39, SLASH
+	db 42, SWIFT
+	db 50, SLAM
+	db 54, FISSURE
 	db 0
 
 MagmarEvosMoves:
@@ -831,8 +841,9 @@ SteelixEvosMoves:
 	db 15, BIND
 	db 19, ROCK_THROW
 	db 25, RAGE
-	db 33, SLAM
-	db 43, HARDEN
+	db 33, HARDEN
+	db 43, IRON_STRIKE
+	db 54, METEOR_MASH
 	db 0
 
 ElectabuzzEvosMoves:
@@ -880,11 +891,11 @@ KingdraEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 19, SMOKESCREEN
-	db 24, LEER
-	db 30, WATER_GUN
-	db 41, AGILITY
-	db 52, HYDRO_PUMP
+	db 19, FOCUS_ENERGY
+	db 24, BUBBLEBEAM
+	db 30, AGILITY
+	db 44, DRAGON_RAGE
+	db 51, HYDRO_PUMP
 	db 0
 
 MankeyEvosMoves:
@@ -948,8 +959,10 @@ ScizorEvosMoves:
 	db 20, FOCUS_ENERGY
 	db 24, DOUBLE_TEAM
 	db 29, SLASH
+	db 31, DEFENSE_CURL
 	db 35, SWORDS_DANCE
-	db 42, AGILITY
+	db 42, IRON_STRIKE
+	db 53, METEOR_MASH
 	db 0
 
 ;MissingNo3EEvosMoves:
@@ -963,13 +976,13 @@ TangalineEvosMoves:
 	db 0
 ; Learnset
 	db 13, WRAP
-	db 15, POISONPOWDER
-	db 18, SLEEP_POWDER
-	db 23, STUN_SPORE
+	db 22, VINE_WHIP
 	db 29, ACID
 	db 38, RAZOR_LEAF
 	db 49, SLAM
+	db 52, SOLARBEAM
 	db 0
+
 
 ;MissingNo3FEvosMoves:
 ; Evolutions
@@ -1074,9 +1087,10 @@ KissleyEvosMoves:
 	db 14, DISABLE
 	db 19, DEFENSE_CURL
 	db 24, DOUBLESLAP
-	db 29, REST
+	db 29, LOVELY_KISS
 	db 34, BODY_SLAM
 	db 39, DOUBLE_EDGE
+	db 42, DRAININGKISS
 	db 0
 
 DoduoEvosMoves:
@@ -1225,9 +1239,9 @@ UmbreonEvosMoves:
 	db 25, SEISMIC_TOSS
 	db 30, GUILLOTINE
 	db 36, FOCUS_ENERGY
-	db 43, HARDEN
+	db 43, BITE
 	db 49, SLASH
-	db 54, SWORDS_DANCE
+	db 54, DARK_PULSE
 	db 0
 
 VulpixEvosMoves:
@@ -1276,11 +1290,12 @@ GlaceonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 30, GROWL
+	db 24, BUBBLEBEAM 
+	db 30, BITE
 	db 35, AURORA_BEAM
-	db 44, REST
-	db 50, TAKE_DOWN
-	db 56, ICE_BEAM
+	db 44, ICE_BEAM
+	db 50, AGILITY
+	db 56, BLIZZARD 
 	db 0
 
 ;MissingNo57EvosMoves:
@@ -1294,12 +1309,12 @@ SylveonEvosMoves:
 	db 0
 ; Learnset
 	db 9, POUND
-	db 14, DISABLE
-	db 19, DEFENSE_CURL
+	db 14, GLARE
+	db 19, AGILITY
 	db 24, DOUBLESLAP
-	db 29, REST
+	db 29, MOONLIGHT 
 	db 34, BODY_SLAM
-	db 39, DOUBLE_EDGE
+	db 39, MOONBLAST
 	db 0
 
 DratiniEvosMoves:
@@ -1479,12 +1494,12 @@ EeveeEvosMoves:
 	db EV_ITEM, THUNDER_STONE, 1, JOLTEON
 	db EV_ITEM, WATER_STONE, 1, VAPOREON
 	db EV_ITEM, LEAF_STONE, 1, LEAFEON
-	db EV_MAP, ROUTE_16, ESPEON
-	db EV_MAP, ROUTE_18, ESPEON
+	db EV_MAP, ROUTE_16, ESPEON		; Map Evolution
+	db EV_MAP, ROUTE_18, ESPEON		; Map Evolution
 	db EV_ITEM, MOON_STONE, 1, UMBREON
 	db EV_MAP,SEAFOAM_ISLANDS_B4F, GLACEON		; Map Evolution
-	db EV_MAP, ROUTE_5 ,SYLVEON					; Map Evolution
-	db EV_TRADE, 1, SYLVEON
+	db EV_MAP, ROUTE_5 ,SYLVEON					; Map Evolution/Fairy MOVE_EVO
+	db EV_TRADE, 1, SYLVEON		; Fairy MOVE_EVO
 	db 0
 ; Learnset
 	db 27, QUICK_ATTACK
@@ -1638,6 +1653,18 @@ MissingNo73EvosMoves:
 ; Learnset
 	db 0
 
+;ManbooEvosMoves:
+; Evolutions
+;	db EV_LEVEL, 19, SANKOR
+;	db 0
+; Learnset
+;	db 10, THUNDER_WAVE
+;	db 20, AGILITY
+;	db 30, SLAM
+;	db 40, DRAGON_RAGE
+;	db 50, HYPER_BEAM
+;	db 0
+
 DodrioEvosMoves:
 ; Evolutions
 	db 0
@@ -1701,11 +1728,34 @@ MissingNo79EvosMoves:
 ; Learnset
 	db 0
 
+;SankorEvosMoves:
+; Evolutions
+;	db EV_LEVEL, 38	, GROTESQUE
+;	db 0
+; Learnset
+;	db 10, THUNDER_WAVE
+;	db 20, AGILITY
+;	db 30, SLAM
+;	db 40, DRAGON_RAGE
+;	db 50, HYPER_BEAM
+;	db 0
+
 MissingNo7AEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
 	db 0
+
+;GrotesqueEvosMoves:
+; Evolutions
+;	db 0
+; Learnset
+;	db 10, THUNDER_WAVE
+;	db 20, AGILITY
+;	db 30, SLAM
+;	db 40, DRAGON_RAGE
+;	db 50, HYPER_BEAM
+;	db 0
 
 CaterpieEvosMoves:
 ; Evolutions

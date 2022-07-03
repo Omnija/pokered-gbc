@@ -19,9 +19,9 @@ DefaultNamesRivalList:
 	db "BLUE@"
 	db "GARY@"
 	db "KEN@"
-ENDC
+	
+ELSE
 
-IF DEF(_BLUE)
 DefaultNamesPlayerList:
 	db "NEW NAME@"
 	db "BLUE@"
@@ -35,7 +35,7 @@ DefaultNamesGirlList:
 	db "NEW NAME@"
 	db "GREEN@"
 	db "LEAF@"
-	db "LILY@"
+	db "LANEY@"
 
 DefaultNamesRivalList:
 	db "NEW NAME@"

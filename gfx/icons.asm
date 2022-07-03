@@ -156,3 +156,6 @@ INCBIN "gfx/pokemon/icons/dratini.2bpp"     ; dratini
 ;INCBIN "gfx/pokemon/icons/dragonite.2bpp"   ; dragonite
 INCBIN "gfx/pokemon/icons/mewtwo.2bpp"      ; mewtwo
 INCBIN "gfx/pokemon/icons/mew.2bpp"         ; mew
+;INCBIN "gfx/pokemon/icons/manboo.2bpp"     ; manboo 
+;INCBIN "gfx/pokemon/icons/sankor.2bpp"   ; sankor
+;INCBIN "gfx/pokemon/icons/grotesque.2bpp"   ; grotesque

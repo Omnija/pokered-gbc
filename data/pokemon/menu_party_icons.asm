@@ -172,3 +172,7 @@ MonPartyData:
 	db ICON_DRATINI   	; DRAGONITE
 	db ICON_MEWTWO      ; MEWTWO
 	db ICON_MEW         ; MEW
+; New pokemon lines
+;	db ICON_MANBOO      ; MANBOO		; New pokemon
+;	db ICON_MANBOO    	; SANKOR		; New pokemon
+;	db ICON_MANBOO    	; GROTESQUE		; New pokemon

@@ -113,14 +113,14 @@ PokedexEntryPointers:
 	dw WeedleDexEntry
 	dw KakunaDexEntry
 	dw BeedrillDexEntry
-	dw MissingNoDexEntry
+	dw MissingNoDexEntry	; dw ManbooDexEntry
 	dw DodrioDexEntry
 	dw PrimeapeDexEntry
 	dw DugtrioDexEntry
 	dw VenomothDexEntry
 	dw DewgongDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw MissingNoDexEntry	; dw SankorDexEntry
+	dw MissingNoDexEntry	; dw GrotesqueDexEntry
 	dw CaterpieDexEntry
 	dw MetapodDexEntry
 	dw ButterfreeDexEntry
@@ -992,6 +992,13 @@ BeedrillDexEntry:
 	dw 650
 	text_far _BeedrillDexEntry
 	text_end
+	
+;ManbooDexEntry:
+;	db "SUNFISH@"
+;	db 1,2
+;	dw 350
+;	text_far _ManbooDexEntry
+;	text_end
 
 DodrioDexEntry:
 	db "TRIPLEBIRD@"
@@ -1027,6 +1034,20 @@ DewgongDexEntry:
 	dw 2650
 	text_far _DewgongDexEntry
 	text_end
+	
+;SankorDexEntry:
+;	db "SHARK@"
+;	db 2,4
+;	dw 1650
+;	text_far _SankorDexEntry
+;	text_end
+	
+;GrotesqueDexEntry:
+;	db "SNAKE EEL@"
+;	db 2,7
+;	dw 1950
+;	text_far _GrotesqueDexEntry
+;	text_end
 
 CaterpieDexEntry:
 	db "WORM@"

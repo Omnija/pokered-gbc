@@ -76,9 +76,16 @@
 	const DEFENSE_DOWN_SIDE_EFFECT   ; $45
 	const SPEED_DOWN_SIDE_EFFECT     ; $46
 	const SPECIAL_DOWN_SIDE_EFFECT   ; $47
-	const_skip                       ; $48
-	const_skip                       ; $49
-	const_skip                       ; $4A
+;;;;;;;;;;;;;;;;;;;;;;;;;	
+; New type move effects
+;;;;;;;;;;;;;;;;;;;;;;;;;
+	const ATTACK_UP1_SIDE_EFFECT     ; $60: 10% chance to raise attack 1 stage
+	const ATTACK_UP1_SIDE_EFFECT2    ; $61: 20% chance to raise attack 1 stage
+	const DEFENSE_UP1_SIDE_EFFECT    ; $62: 10% chance to raise defense 1 stage
+;	const_skip                       ; $48
+;	const_skip                       ; $49
+;	const_skip                       ; $4A
+
 	const_skip                       ; $4B
 	const CONFUSION_SIDE_EFFECT      ; $4C
 	const TWINEEDLE_EFFECT           ; $4D
@@ -91,3 +98,4 @@
 	const LEECH_SEED_EFFECT          ; $54
 	const SPLASH_EFFECT              ; $55
 	const DISABLE_EFFECT             ; $56
+	

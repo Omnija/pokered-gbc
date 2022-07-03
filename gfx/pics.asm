@@ -135,8 +135,10 @@ PidgeotPicFront::    INCBIN "gfx/pokemon/front/pidgeot.pic"
 PidgeotPicBack::     INCBIN "gfx/pokemon/back/pidgeotb.pic"
 StarmiePicFront::    INCBIN "gfx/pokemon/front/starmie.pic"
 StarmiePicBack::     INCBIN "gfx/pokemon/back/starmieb.pic"
-RedPicBack::         INCBIN "gfx/player/redb.pic"
-OldManPicBack::      INCBIN "gfx/battle/oldmanb.pic"
+
+; Moved to trainers folder
+RedPicBack::         INCBIN "gfx/trainers/trainers/redb.pic"
+OldManPicBack::      INCBIN "gfx/trainers/trainers/oldmanb.pic"
 
 GastlyPicFront::     INCBIN "gfx/pokemon/front/gastly.pic"
 GastlyPicBack::      INCBIN "gfx/pokemon/back/gastlyb.pic"
@@ -632,6 +634,12 @@ HitmonPicFront::      INCBIN "gfx/pokemon/gsfront/hitmon.pic"
 HitmonPicBack::       INCBIN "gfx/pokemon/gsback/hitmonb.pic"
 HitmontopPicFront::   INCBIN "gfx/pokemon/gsfront/hitmontop.pic"
 HitmontopPicBack::    INCBIN "gfx/pokemon/gsback/hitmontopb.pic"
+;ManbooPicFront:: 	   INCBIN "gfx/pokemon/gsfront/manboo.pic"
+;ManbooPicBack:: 	   INCBIN "gfx/pokemon/gsback/manboob.pic"
+;SankorPicFront:: 	   INCBIN "gfx/pokemon/gsfront/sankor.pic"
+;SankorPicBack::	   INCBIN "gfx/pokemon/gsback/sankorb.pic"
+;GrotesquePicFront::   INCBIN "gfx/pokemon/gsfront/grotesque.pic"
+;GrotesquePicBack::    INCBIN "gfx/pokemon/gsback/grotesqueb.pic"
 ENDC
 
 IF !GEN_2_GRAPHICS
@@ -957,4 +965,10 @@ HitmonPicFront::      INCBIN "gfx/pokemon/front/hitmon.pic"
 HitmonPicBack::       INCBIN "gfx/pokemon/back/hitmonb.pic"
 HitmontopPicFront::   INCBIN "gfx/pokemon/front/hitmontop.pic"
 HitmontopPicBack::    INCBIN "gfx/pokemon/back/hitmontopb.pic"
+;ManbooPicFront:: 	   INCBIN "gfx/pokemon/front/manboo.pic"
+;ManbooPicBack:: 	   INCBIN "gfx/pokemon/back/manboob.pic"
+;SankorPicFront:: 	   INCBIN "gfx/pokemon/front/sankor.pic"
+;SankorPicBack::	   INCBIN "gfx/pokemon/back/sankorb.pic"
+;GrotesquePicFront::   INCBIN "gfx/pokemon/front/grotesque.pic"
+;GrotesquePicBack::    INCBIN "gfx/pokemon/back/grotesqueb.pic"
 ENDC

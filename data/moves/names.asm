@@ -164,3 +164,18 @@ MoveNames::
 	db "SLASH@"
 	db "SUBSTITUTE@"
 	db "STRUGGLE@"
+	
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+;Steel
+	db "FLASH CANNON@"
+	db "IRON STRIKE@"
+	db "METEOR MASH@"
+;Dark
+	db "DARK PULSE@"
+
+;Fairy
+	db "MOONBLAST@"
+	db "DRAININGKISS@"
+	db "MOONLIGHT@"

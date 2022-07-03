@@ -180,4 +180,18 @@ _PhysicalSpecialSplit:: ;Determines if a move is Physical or Special
 	db PHYSICAL;SLASH        EQU $A3
 	db SUPPORT ;SUBSTITUTE   EQU $A4
 	db PHYSICAL;STRUGGLE     EQU $A5
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+;Steel
+	db SPECIAL ;FLASH_CANNON EQU $A8
+	db PHYSICAL;IRON_STRIKE  EQU $A9
+	db PHYSICAL;METEOR_MASH  EQU $AA
+;Dark
+	db SPECIAL ;DARK_PULSE   EQU $AC
+
+;Fairy
+	db SPECIAL ;MOONBLAST    EQU $AF
+	db SPECIAL ;DRAININGKISS EQU $B0
+	db SUPPORT ;Moonlight
     

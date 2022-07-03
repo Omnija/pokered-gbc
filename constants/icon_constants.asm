@@ -193,3 +193,7 @@ ICONOFFSET EQU $40 ; difference between alternating icon frames' tile IDs
 ;	const ICON_DRAGONITE   ; DRAGONITE
 	const ICON_MEWTWO      ; MEWTWO
 	const ICON_MEW         ; MEW
+; New pokemon lines
+;	const ICON_MANBOO      ; MANBOO  	; New pokemon
+;	const ICON_SANKOR	   ; SANKOR		; New pokemon
+;	const ICON_GROTESQUE   ; GROTESQUE	; New pokemon

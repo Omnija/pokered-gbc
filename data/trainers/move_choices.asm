@@ -58,13 +58,13 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 3    ; RIVAL2
 	move_choices 1, 3    ; RIVAL3
 	move_choices 1, 2, 3 ; LORELEI
-	move_choices 1       ; CHANNELER
-	move_choices 1       ; AGATHA
-	move_choices 1, 3    ; LANCE
+	move_choices 1, 2, 3 ; CHANNELER
+	move_choices 1, 2, 3 ; AGATHA
+	move_choices 1, 2, 3 ; LANCE
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Rocket ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	move_choices 1       ; ROCKET_F
+	move_choices 1, 2     ; ROCKET_F
 	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer

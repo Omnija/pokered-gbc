@@ -1707,7 +1707,11 @@ AnimationMinimizeMon:
 	ld bc, 7 * 7 * $10
 	call FillMemory
 	pop hl
-	ld de, $194
+	
+; Minimize graphic not a complete 8x8 tile
+;	ld de, $194
+	ld de, 7 * 3 * $10 + 4 * $10 + 4
+	
 	add hl, de
 	ld de, MinimizedMonSprite
 	ld c, MinimizedMonSpriteEnd - MinimizedMonSprite
@@ -1723,7 +1727,17 @@ AnimationMinimizeMon:
 	jp AnimationShowMonPic
 
 MinimizedMonSprite:
-	INCBIN "gfx/battle/minimize.1bpp"
+; Minimize graphic not a complete 8x8 tile
+;	INCBIN "gfx/battle/minimize.1bpp"
+; 8x5 partial tile graphic
+pusho
+opt b.X ; . = 0, X = 1
+	db %...XX...
+	db %..XXXX..
+	db %.XXXXXX.
+	db %..XXXX..
+	db %..X..X..
+popo
 MinimizedMonSpriteEnd:
 
 AnimationSlideMonDownAndHide:

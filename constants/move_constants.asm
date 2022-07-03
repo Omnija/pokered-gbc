@@ -174,6 +174,21 @@
 NUM_ATTACKS EQU const_value - 1
 
 	const STRUGGLE     ; a5
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+;Steel
+	const FLASH_CANNON ; a8
+	const IRON_STRIKE    ; a9
+	const METEOR_MASH  ; aa
+;Dark
+	const DARK_PULSE   ; ac
+
+;Fairy
+	const MOONBLAST    ; af
+	const DRAININGKISS ; b0
+	const MOONLIGHT    ; c7
+
 
 	; Moves do double duty as animation identifiers.
 

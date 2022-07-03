@@ -1363,6 +1363,66 @@ DisableEffect:
 	pop hl
 .moveMissed
 	jp PrintButItFailedText_
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;
+; New type move effects
+;;;;;;;;;;;;;;;;;;;;;;;;;
+AttackUpSideEffect:
+; 10% chance to boost stat
+	call BattleRandom
+	cp $1a
+	ret nc
+	jr AttackUpSideEffectSuccess
+	; fallthrough
+	
+AttackUpSideEffect2:
+; 20% chance to boost stat
+	call BattleRandom
+	cp $34
+	ret nc
+	jr AttackUpSideEffectSuccess
+
+AttackUpSideEffectSuccess:
+	ld a, [hWhoseTurn]
+	and a
+	jr z, .notEnemyTurn
+; Enemy's turn
+	xor a
+	ld [wEnemyMoveNum], a
+	ld a, ATTACK_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	jp StatModifierUpEffect
+.notEnemyTurn
+	xor a
+	ld [wPlayerMoveNum], a
+	ld a, ATTACK_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	jp StatModifierUpEffect
+	
+DefenseUpSideEffect:
+; 10% chance to boost stat
+	call BattleRandom
+	cp $1a
+	ret nc
+	; fallthrough
+
+DefenseUpSideEffectSuccess:
+	ld a, [hWhoseTurn]
+	and a
+	jr z, .notEnemyTurn
+; Enemy's turn
+	xor a
+	ld [wEnemyMoveNum], a
+	ld a, DEFENSE_UP1_EFFECT
+	ld [wEnemyMoveEffect], a
+	jp StatModifierUpEffect
+.notEnemyTurn
+	xor a
+	ld [wPlayerMoveNum], a
+	ld a, DEFENSE_UP1_EFFECT
+	ld [wPlayerMoveEffect], a
+	jp StatModifierUpEffect
+; New type move effects END
 
 MoveWasDisabledText:
 	text_far _MoveWasDisabledText

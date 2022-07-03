@@ -176,3 +176,17 @@ MoveEnd:
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 20
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       100, 10
 	move STRUGGLE,     RECOIL_EFFECT,               50, BIRD, 	      100, 10	; Changed from normal to "Bird" type (Neutral)
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+;Steel
+	move AURORA_BEAM,  	  SPECIAL_DOWN_SIDE_EFFECT,    80, STEEL,    100, 10 ; Flash Cannon
+	move TACKLE,          DEFENSE_DOWN_SIDE_EFFECT,   100, STEEL,     75, 15 ; Iron STrike
+	move SWIFT,           ATTACK_UP1_SIDE_EFFECT2,     90, STEEL,     90, 10 ; Meteor Mash
+;Dark
+	move PSYCHIC_M,    FLINCH_SIDE_EFFECT1,         80, DARK,     100, 15 ; Dark Pulse
+
+;Fairy
+	move SEISMIC_TOSS, SPECIAL_DOWN_SIDE_EFFECT,    95, FAIRY,    100, 15 ; Moonblast
+	move LOVELY_KISS,  DRAIN_HP_EFFECT,             50, FAIRY,    100, 10 ; Draining Kiss
+	move FOCUS_ENERGY, HEAL_EFFECT,                  0, FAIRY,    100, 20 ; Moonlight

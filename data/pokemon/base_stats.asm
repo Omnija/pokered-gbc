@@ -170,4 +170,8 @@ INCLUDE "data/pokemon/base_stats/dragonair.asm"
 INCLUDE "data/pokemon/base_stats/dragonite.asm"
 INCLUDE "data/pokemon/base_stats/mewtwo.asm"
 INCLUDE "data/pokemon/base_stats/mew.asm"
+; New pokemon lines
+;INCLUDE "data/pokemon/base_stats/manboo.asm"		; New pokemon
+;INCLUDE "data/pokemon/base_stats/sankor.asm"		; New pokemon
+;INCLUDE "data/pokemon/base_stats/grotesque.asm" 	; New pokemon
 BaseStatsEnd::

@@ -1138,6 +1138,10 @@ _BeedrillDexEntry::
 	next "and tail"
 	dex
 
+;;;;;;;;;;;;;;;;;;
+; ManbooDexEntry
+;;;;;;;;;;;;;;;;;;
+
 _DodrioDexEntry::
 	text "Uses its three"
 	next "brains to execute"
@@ -1187,6 +1191,11 @@ _DewgongDexEntry::
 	next "even in intensely"
 	next "cold waters"
 	dex
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;
+; SankorDexEntryDexEntry
+; GrotesqueDexEntry
+;;;;;;;;;;;;;;;;;;;;;;;;;
 
 _CaterpieDexEntry::
 	text "Its short feet"

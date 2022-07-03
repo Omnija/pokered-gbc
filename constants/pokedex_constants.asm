@@ -174,5 +174,9 @@
 	const DEX_DRAGONITE  ; 149
 	const DEX_MEWTWO     ; 150
 	const DEX_MEW        ; 151
+; New pokemon lines
+;	const DEX_MANBOO     ; 151	; New pokemon
+;	const DEX_SANKOR	 ; 151	; New pokemon
+;	const DEX_GROTESQUE  ; 151	; New pokemon
 	
 NUM_POKEMON EQU const_value - 1

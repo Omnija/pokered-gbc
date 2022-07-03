@@ -46,7 +46,7 @@ CryData::
 	mon_cry SFX_CRY_1C, $A8, $C0 ; Kadabra
 	mon_cry SFX_CRY_24, $00, $80 ; Graveler
 	mon_cry SFX_CRY_14, $0A, $C0 ; Chansey
-	mon_cry SFX_CRY_14, $0B, $C5 ; Kissley
+	mon_cry SFX_CRY_14, $0B, $C5 ; Kissley/MissingNo.
 	mon_cry SFX_CRY_1F, $48, $60 ; Machoke
 	mon_cry SFX_CRY_20, $08, $40 ; Mr.Mime
 	mon_cry SFX_CRY_12, $80, $C0 ; Hitmonlee
@@ -121,14 +121,14 @@ CryData::
 	mon_cry SFX_CRY_15, $EE, $01 ; Weedle
 	mon_cry SFX_CRY_13, $FF, $01 ; Kakuna
 	mon_cry SFX_CRY_13, $60, $80 ; Beedrill
-	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
+	mon_cry SFX_CRY_0F, $60, $40 ; Manboo/MissingNo.
 	mon_cry SFX_CRY_0B, $99, $20 ; Dodrio
 	mon_cry SFX_CRY_0A, $AF, $40 ; Primeape
 	mon_cry SFX_CRY_0B, $2A, $10 ; Dugtrio
 	mon_cry SFX_CRY_1A, $29, $80 ; Venomoth
 	mon_cry SFX_CRY_0C, $23, $FF ; Dewgong
-	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
-	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
+	mon_cry SFX_CRY_1F, $60, $40 ; Sankor/MissingNo.
+	mon_cry SFX_CRY_1F, $80, $40 ; Grotesque/MissingNo.
 	mon_cry SFX_CRY_16, $80, $20 ; Caterpie
 	mon_cry SFX_CRY_1C, $CC, $01 ; Metapod
 	mon_cry SFX_CRY_16, $77, $40 ; Butterfree

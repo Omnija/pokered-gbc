@@ -171,6 +171,10 @@ IF GEN_2_GRAPHICS
 	db PAL_DRAGONITE
 	db PAL_MEWTWO
 	db PAL_MEW
+; New pokemon Lines
+;	db PAL_MANBOO		; New pokemon
+;	db PAL_SANKOR		; New pokemon
+;	db PAL_GROTESQUE	; New pokemon
 
 TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 ; Trainers begin
@@ -226,7 +230,6 @@ TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 	db PAL_CHANNELER
 	db PAL_AGATHA
 	db PAL_LANCE
-
 ; New Trainers begin
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Rocket ♀ Trainer
@@ -408,6 +411,10 @@ ELSE
 	db PAL_BROWNMON  ; DRAGONITE
 	db PAL_MEWMON    ; MEWTWO
 	db PAL_MEWMON    ; MEW
+; New pokemon lines
+;	db PAL_GREYMON   ; MANBOO		; New pokemon
+;	db PAL_BLUEMON   ; SANKOR		; New pokemon
+;	db PAL_BROWNMON  ; GROTESQUE	; New pokemon
 ; Trainers use index 0 of MonsterPalettes
 
 ENDC

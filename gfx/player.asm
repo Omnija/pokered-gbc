@@ -20,7 +20,9 @@ rept 11 ; Padding
 	db 0
 endr
 ELSE
-RedPicFront:: INCBIN "gfx/player/red.pic"
+
+; Moved to trainers folder
+RedPicFront:: INCBIN "gfx/trainers/trainers/red.pic"
 ENDC
 
 ShrinkPic1::  INCBIN "gfx/player/shrink1.pic"
