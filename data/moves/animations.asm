@@ -164,6 +164,33 @@ AttackAnimationPointers:
 	dw SlashAnim
 	dw SubstituteAnim
 	dw StruggleAnim
+	
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+;Steel
+	dw MetalClawAnim
+	dw BulletPunchAnim
+	dw FlashCannonAnim
+	dw IronStrikeAnim
+	dw MeteorMashAnim
+	dw IronDefenseAnim
+	dw AutotomizeAnim
+;Dark
+	dw CrunchAnim
+	dw DarkPulseAnim
+	dw FeintAttackAnim
+	dw NightSlashAnim
+
+;Fairy
+	dw PlayRoughAnim
+	dw MoonBlastAnim
+	dw DrainingKissAnim
+	dw DisarmingVoiceAnim
+	dw DazzlingGleamAnim
+	dw MoonlightAnim
+	dw BabydollEyesAnim
+	
 	dw ShowPicAnim
 	dw EnemyFlashAnim
 	dw PlayerFlashAnim
@@ -240,6 +267,11 @@ DoubleSlapAnim:
 	battle_anim DOUBLESLAP, SUBANIM_01, 0, 5
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;
+BulletPunchAnim:
+PlayRoughAnim:
 CometPunchAnim:
 	battle_anim COMET_PUNCH, SUBANIM_02, 0, 4
 	battle_anim COMET_PUNCH, SUBANIM_02, 0, 4
@@ -293,6 +325,11 @@ SwordsDanceAnim:
 	battle_anim SWORDS_DANCE, SUBANIM_18, 1, 6
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+IronStrikeAnim:
+NightSlashAnim:
 CutAnim:
 	battle_anim CUT, SE_DARK_SCREEN_FLASH
 	battle_anim NO_MOVE, SUBANIM_16, 0, 4
@@ -446,6 +483,10 @@ LeerAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+CrunchAnim:
 BiteAnim:
 	battle_anim BITE, SUBANIM_02, 0, 8
 	db -1 ; end
@@ -538,6 +579,10 @@ BubbleBeamAnim:
 	battle_anim BUBBLEBEAM, SUBANIM_35, 0, 18
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+FlashCannonAnim:
 AuroraBeamAnim:
 	battle_anim AURORA_BEAM, SUBANIM_2E, 0, 3
 	battle_anim NO_MOVE, SE_DELAY_ANIMATION_10
@@ -580,6 +625,10 @@ CounterAnim:
 	battle_anim NO_MOVE, SE_SHOW_MON_PIC
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+MoonBlastAnim:
 SeismicTossAnim:
 	battle_anim NO_MOVE, SE_BLINK_ENEMY_MON
 	battle_anim BARRAGE, SUBANIM_4E, 1, 1
@@ -593,7 +642,11 @@ SeismicTossAnim:
 	battle_anim NO_MOVE, SE_SHOW_ENEMY_MON_PIC
 	battle_anim NO_MOVE, SE_SHAKE_SCREEN
 	db -1 ; end
-
+	
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;
+MeteorMashAnim:
 StrengthAnim:
 	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
 	battle_anim NO_MOVE, SE_RESET_MON_POSITION
@@ -727,6 +780,10 @@ ConfusionAnim:
 	battle_anim CONFUSION, SE_FLASH_SCREEN_LONG
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+DarkPulseAnim:
 PsychicAnim:
 	battle_anim PSYCHIC_M, SE_FLASH_SCREEN_LONG
 	battle_anim NO_MOVE, SE_WAVY_SCREEN
@@ -743,11 +800,19 @@ MeditateAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;
+AutotomizeAnim:
 AgilityAnim:
 	battle_anim AGILITY, SE_LIGHT_SCREEN_PALETTE
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;
+FeintAttackAnim:
 QuickAttackAnim:
 	battle_anim QUICK_ATTACK, SE_SLIDE_MON_OFF
 	battle_anim NO_MOVE, SUBANIM_04, 1, 6
@@ -773,6 +838,10 @@ MimicAnim:
 	battle_anim MIMIC, SUBANIM_22, 1, 6
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+DisarmingVoiceAnim:
 ScreechAnim:
 	battle_anim SCREECH, SUBANIM_12, 1, 6
 	db -1 ; end
@@ -849,6 +918,10 @@ DefenseCurlAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+IronDefenseAnim:
 BarrierAnim:
 	battle_anim BARRIER, SUBANIM_33, 1, 6
 	battle_anim BARRIER, SUBANIM_33, 1, 6
@@ -874,6 +947,10 @@ ReflectAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+MoonlightAnim:
 FocusEnergyAnim:
 	battle_anim FOCUS_ENERGY, SE_SPIRAL_BALLS_INWARD
 	db -1 ; end
@@ -985,6 +1062,10 @@ HiJumpKickAnim:
 	battle_anim HI_JUMP_KICK, SUBANIM_04, 1, 6
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+BabydollEyesAnim:
 GlareAnim:
 	battle_anim LEECH_SEED, SE_DARK_SCREEN_PALETTE
 	battle_anim GLARE, SE_DARK_SCREEN_FLASH
@@ -1016,6 +1097,10 @@ LeechLifeAnim:
 	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+DrainingKissAnim:
 LovelyKissAnim:
 	battle_anim LOVELY_KISS, SUBANIM_12, 0, 6
 	db -1 ; end
@@ -1049,6 +1134,10 @@ SporeAnim:
 	battle_anim SPORE, SUBANIM_36, 0, 6
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+DazzlingGleamAnim:
 FlashAnim:
 	battle_anim LEECH_SEED, SE_LIGHT_SCREEN_PALETTE
 	battle_anim GLARE, SE_DARK_SCREEN_FLASH
@@ -1127,6 +1216,10 @@ SuperFangAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+MetalClawAnim:
 SlashAnim:
 	battle_anim SLASH, SUBANIM_0F, 0, 6
 	db -1 ; end

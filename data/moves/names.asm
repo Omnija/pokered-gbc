@@ -169,13 +169,24 @@ MoveNames::
 ; New Type Moves
 ;;;;;;;;;;;;;;;;;;	
 ;Steel
+	db "METAL CLAW@"
+	db "BULLET PUNCH@"
 	db "FLASH CANNON@"
 	db "IRON STRIKE@"
 	db "METEOR MASH@"
+	db "IRON DEFENSE@"
+	db "AUTOTOMIZE@"
 ;Dark
+	db "CRUNCH@"
 	db "DARK PULSE@"
+	db "FEINT ATTACK@"
+	db "NIGHT SLASH@"
 
 ;Fairy
+	db "PLAYROUGH@"
 	db "MOONBLAST@"
-	db "DRAININGKISS@"
+	db "DRAINING KISS@"
+	db "DISARMING VOICE@"
+	db "DAZZLING GLEAM@"
 	db "MOONLIGHT@"
+	db "BABYDOLL EYES@"

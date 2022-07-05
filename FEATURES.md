@@ -86,17 +86,28 @@
 			- Hitmonchan [Move - MEGA PUNCH]
 			- Hitmontop  [Move - COUNTER]
 
-[ New Moves ]
-	-Steel
-		-Flash Cannon
+[ New TYPE Moves ]
+	[Steel]
+		-Metal Claw
+		-Bullet Punch
+		-lash Cannon
 		-Iron Strike
 		-Meteor Mash
-	-Dark
+		-Iron Defense
+		-Autotomize
+	[Dark]
+		-Crunch
 		-Dark Pulse
-	-Fairy
+		-Feint Attack
+		-Night Slash
+	[Fairy]
+		-PlayRough
 		-Moonblast
 		-Draining Kiss
-		-Moonlight	
+		-Disarming Voice
+		-Dazzling Gleam
+		-Moonlight
+		-Baby Doll Eyes
 	
 [Yellow Features]
 

@@ -174,20 +174,32 @@
 NUM_ATTACKS EQU const_value - 1
 
 	const STRUGGLE     ; a5
+
 ;;;;;;;;;;;;;;;;;;	
 ; New Type Moves
 ;;;;;;;;;;;;;;;;;;	
 ;Steel
-	const FLASH_CANNON ; a8
-	const IRON_STRIKE    ; a9
-	const METEOR_MASH  ; aa
+	const METAL_CLAW	; Metal Claw
+	const BULLET_PUNCH	; Bullet Punch
+	const FLASH_CANNON	; Flash Cannon
+	const IRON_STRIKE	; Iron Strike
+	const METEOR_MASH	; Meteor Mash
+	const IRON_DEFENSE	; Iron Defense
+	const AUTOTOMIZE	; Autotomize
 ;Dark
-	const DARK_PULSE   ; ac
+	const CRUNCH		; Crunch
+	const DARK_PULSE	; Dark Pulse
+	const FEINT_ATTACK	; Feint Attack
+	const NIGHT_SLASH	; Night Slash
 
 ;Fairy
-	const MOONBLAST    ; af
-	const DRAININGKISS ; b0
-	const MOONLIGHT    ; c7
+	const PLAYROUGH		    ; PlayRough
+	const MOONBLAST			; Moonblast
+	const DRAININGKISS		; Draining Kiss
+	const DISARMING_VOICE	; Disarming Voice
+	const DAZZLING_GLEAM	; Dazzling Gleam
+	const MOONLIGHT		 	; Moonlight
+	const BABYDOLL_EYES		; Baby Doll Eyes
 
 
 	; Moves do double duty as animation identifiers.

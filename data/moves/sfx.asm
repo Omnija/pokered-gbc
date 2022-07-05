@@ -165,4 +165,31 @@ MoveSoundTable:
 	db SFX_NOT_VERY_EFFECTIVE, $01, $ff ; SLASH
 	db SFX_BATTLE_2C,          $d8, $04 ; SUBSTITUTE
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
+	
+;;;;;;;;;;;;;;;;;;	
+; New Type Moves
+;;;;;;;;;;;;;;;;;;	
+;Steel
+	db SFX_NOT_VERY_EFFECTIVE, $01, $ff ; Metal Claw
+	db SFX_BATTLE_0B,          $01, $80 ; Bullet Punch
+	db SFX_BATTLE_28,          $00, $80 ; Flash Cannon
+	db SFX_NOT_VERY_EFFECTIVE, $00, $a0 ; Iron Strike
+	db SFX_BATTLE_2B,          $1f, $60 ; Meteor Mash
+	db SFX_BATTLE_32,          $40, $c0 ; Iron Defense
+	db SFX_FAINT_FALL,         $20, $c0 ; Autotomize
+;Dark
+	db SFX_BATTLE_1E,          $00, $80 ; Crunch
+	db SFX_PSYCHIC_M,          $00, $80 ; Dark Pulse
+	db SFX_BATTLE_25,          $00, $10 ; Feint Attack
+	db SFX_NOT_VERY_EFFECTIVE, $00, $a0 ; Night Slash
+
+;Fairy
+	db SFX_BATTLE_0B,          $01, $80 ; PlayRough
+	db SFX_BATTLE_26,          $01, $60 ; Moonblast
+	db SFX_BATTLE_09,          $88, $10 ; Draining Kiss
+	db SFX_BATTLE_31,          $00, $80 ; Disarming Voice
+	db SFX_BATTLE_13,          $f8, $ff ; Dazzling Gleam
+	db SFX_BATTLE_25,          $00, $80 ; Moonlight
+	db SFX_NOT_VERY_EFFECTIVE, $09, $ff ; Baby Doll Eyes
+	
 	db SFX_BATTLE_0B,          $00, $80

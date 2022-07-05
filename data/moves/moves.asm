@@ -180,13 +180,25 @@ MoveEnd:
 ; New Type Moves
 ;;;;;;;;;;;;;;;;;;	
 ;Steel
-	move AURORA_BEAM,  	  SPECIAL_DOWN_SIDE_EFFECT,    80, STEEL,    100, 10 ; Flash Cannon
-	move TACKLE,          DEFENSE_DOWN_SIDE_EFFECT,   100, STEEL,     75, 15 ; Iron STrike
-	move SWIFT,           ATTACK_UP1_SIDE_EFFECT2,     90, STEEL,     90, 10 ; Meteor Mash
+	move METAL_CLAW,    ATTACK_UP1_SIDE_EFFECT,      50, STEEL,     95, 35 ; Metal Claw
+	move BULLET_PUNCH,  NO_ADDITIONAL_EFFECT,        40, STEEL,    100, 30 ; Bullet Punch
+	move FLASH_CANNON,  SPECIAL_DOWN_SIDE_EFFECT,    80, STEEL,    100, 10 ; Flash Cannon
+	move IRON_STRIKE,   DEFENSE_DOWN_SIDE_EFFECT,   100, STEEL,     75, 15 ; Iron Strike
+	move METEOR_MASH,   ATTACK_UP1_SIDE_EFFECT2,     90, STEEL,     90, 10 ; Meteor Mash
+	move IRON_DEFENSE,  DEFENSE_UP2_EFFECT,           0, STEEL,    100, 15 ; Iron Defense
+	move AUTOTOMIZE,    SPEED_UP2_EFFECT,          	  0, STEEL,    100, 20 ; Autotomize
 ;Dark
-	move PSYCHIC_M,    FLINCH_SIDE_EFFECT1,         80, DARK,     100, 15 ; Dark Pulse
+	move CRUNCH,        DEFENSE_DOWN_SIDE_EFFECT,    80, DARK,     100, 15 ; Crunch
+	move DARK_PULSE,    FLINCH_SIDE_EFFECT1,         80, DARK,     100, 15 ; Dark Pulse
+	move FEINT_ATTACK,  SWIFT_EFFECT,                60, DARK,     100, 20 ; Feint Attack
+	move NIGHT_SLASH,   NO_ADDITIONAL_EFFECT,        70, DARK,     100, 15 ; Night Slash
 
 ;Fairy
-	move SEISMIC_TOSS, SPECIAL_DOWN_SIDE_EFFECT,    95, FAIRY,    100, 15 ; Moonblast
-	move LOVELY_KISS,  DRAIN_HP_EFFECT,             50, FAIRY,    100, 10 ; Draining Kiss
-	move FOCUS_ENERGY, HEAL_EFFECT,                  0, FAIRY,    100, 20 ; Moonlight
+	move PLAYROUGH,  	DEFENSE_DOWN_SIDE_EFFECT,    95, FAIRY,    100, 15 ; PlayRough
+	move MOONBLAST,		SPECIAL_DOWN_SIDE_EFFECT,    95, FAIRY,    100, 15 ; Moonblast
+	move DRAININGKISS,  DRAIN_HP_EFFECT,             50, FAIRY,    100, 10 ; Draining Kiss
+	move DISARMING_VOICE,	SWIFT_EFFECT,            40, FAIRY,    100, 15 ; Disarming Voice
+	move DAZZLING_GLEAM,	NO_ADDITIONAL_EFFECT,    80, FAIRY,    100, 10 ; Dazzling Gleam
+	move MOONLIGHT, 	HEAL_EFFECT,                  0, FAIRY,    100, 20 ; Moonlight
+	move BABYDOLL_EYES,	ATTACK_DOWN1_EFFECT,          0, FAIRY,    100, 30 ; Baby Doll Eyes
+
