@@ -1,6 +1,6 @@
 	db DEX_GROTESQUE ; pokedex id
 
-	db  91, 120,  95,  104, 100
+	db  79,  73, 110,  78,  85
 	;   hp  atk  def  spd  spc
 
 	db WATER, STEEL ; type
@@ -10,8 +10,8 @@
 	INCBIN "gfx/pokemon/front/grotesque.pic", 0, 1 ; sprite dimensions
 	dw GrotesquePicFront, GrotesquePicBack
 
-	db WRAP, LEER, THUNDER_WAVE, AGILITY ; level 1 learnset
-	db GROWTH_SLOW ; growth rate
+	db TACKLE, TAIL_WHIP, BUBBLE, WATER_GUN ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm RAZOR_WIND,   TOXIC,        HORN_DRILL,   BODY_SLAM,    TAKE_DOWN,    \

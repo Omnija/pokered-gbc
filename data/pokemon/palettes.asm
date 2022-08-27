@@ -44,7 +44,7 @@ IF GEN_2_GRAPHICS
 	db PAL_WIGGLYTUFF
 	db PAL_ZUBAT
 	db PAL_GOLBAT
-	db PAL_CROBAT	; New pokemon
+	db PAL_GOLBAT	; New pokemon CROBAT
 	db PAL_ODDISH
 	db PAL_GLOOM
 	db PAL_VILEPLUME
@@ -65,7 +65,7 @@ IF GEN_2_GRAPHICS
 	db PAL_POLIWAG
 	db PAL_POLIWHIRL
 	db PAL_POLIWRATH
-	db PAL_POLITOED		; New pokemon
+	db PAL_ODDISH		; New pokemon POLITOED
 	db PAL_ABRA
 	db PAL_KADABRA
 	db PAL_ALAKAZAM
@@ -84,11 +84,11 @@ IF GEN_2_GRAPHICS
 	db PAL_RAPIDASH
 	db PAL_SLOWPOKE
 	db PAL_SLOWBRO
-	db PAL_SLOWKING		; New pokemon
+	db PAL_SLOWBRO		; New pokemon SLOWKING	
 	db PAL_MAGNEMITE
 	db PAL_MAGNETON
 	db PAL_FARFETCH_D
-	db PAL_SWANDOE		; New pokemon
+	db PAL_PERSIAN		; New pokemon SWANDOE
 	db PAL_DODUO
 	db PAL_DODRIO
 	db PAL_SEEL
@@ -97,12 +97,12 @@ IF GEN_2_GRAPHICS
 	db PAL_MUK
 	db PAL_SHELLDER
 	db PAL_CLOYSTER
-	db PAL_MURMUDER		; New pokemon
+	db PAL_CLOYSTER		; New pokemon MURMUDER
 	db PAL_GASTLY
 	db PAL_HAUNTER
 	db PAL_GENGAR
 	db PAL_ONIX
-	db PAL_STEELIX		; New pokemon
+	db PAL_ONIX		; New pokemon STEELIX
 	db PAL_DROWZEE
 	db PAL_HYPNO
 	db PAL_KRABBY
@@ -113,31 +113,31 @@ IF GEN_2_GRAPHICS
 	db PAL_EXEGGUTOR
 	db PAL_CUBONE
 	db PAL_MAROWAK
-	db PAL_HITMON		; New pokemon
+	db PAL_CUBONE		; New pokemon HITMON
 	db PAL_HITMONLEE
 	db PAL_HITMONCHAN
-	db PAL_HITMONTOP	; New pokemon
+	db PAL_GYARADOS		; New pokemon HITMONTOP
 	db PAL_LICKITUNG
-	db PAL_LICKILONG	; New pokemon
+	db PAL_LICKITUNG	; New pokemon LICKILONG
 	db PAL_KOFFING
 	db PAL_WEEZING
 	db PAL_RHYHORN
 	db PAL_RHYDON
 	db PAL_CHANSEY
-	db PAL_KISSLEY		; New pokemon
+	db PAL_CLEFAIRY		; New pokemon KISSLEY
 	db PAL_TANGELA
-	db PAL_TANGALINE	; New pokemon
+	db PAL_ODDISH		; New pokemon TANGALINE
 	db PAL_KANGASKHAN
 	db PAL_HORSEA
 	db PAL_SEADRA
-	db PAL_KINGDRA		; New pokemon
+	db PAL_SEADRA		; New pokemon KINGDRA
 	db PAL_GOLDEEN
 	db PAL_SEAKING
 	db PAL_STARYU
 	db PAL_STARMIE
 	db PAL_MR_MIME
 	db PAL_SCYTHER
-	db PAL_SCIZOR		; New pokemon
+	db PAL_PARASECT		; New pokemon SCIZOR
 	db PAL_JYNX
 	db PAL_ELECTABUZZ
 	db PAL_MAGMAR
@@ -151,11 +151,11 @@ IF GEN_2_GRAPHICS
 	db PAL_VAPOREON
 	db PAL_JOLTEON
 	db PAL_FLAREON
-	db PAL_LEAFEON		; New pokemon
-	db PAL_ESPEON		; New pokemon
-	db PAL_UMBREON		; New pokemon
-	db PAL_GLACEON		; New pokemon
-	db PAL_SYLVEON		; New pokemon
+	db PAL_ODDISH		; New pokemon LEAFEON
+	db PAL_KOFFING		; New pokemon ESPEON	
+	db PAL_GENGAR		; New pokemon UMBREON	
+	db PAL_ARTICUNO		; New pokemon GLACEON
+	db PAL_PORYGON		; New pokemon SYLVEON
 	db PAL_PORYGON
 	db PAL_OMANYTE
 	db PAL_OMASTAR
@@ -172,9 +172,9 @@ IF GEN_2_GRAPHICS
 	db PAL_MEWTWO
 	db PAL_MEW
 ; New pokemon Lines
-;	db PAL_MANBOO		; New pokemon
-;	db PAL_SANKOR		; New pokemon
-;	db PAL_GROTESQUE	; New pokemon
+	db PAL_DRATINI		; New pokemon MANBOO
+	db PAL_DRAGONAIR	; New pokemon SANKOR
+	db PAL_GENGAR	 	; New pokemon GROTESQUE
 
 TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 ; Trainers begin
@@ -194,7 +194,7 @@ TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Swimmer ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-	db PAL_SWIMMER_F	; Replaced Juggler
+	db PAL_JR_TRAINER_F	; New Trainer Swimmer
 ;	db PAL_JUGGLER	; Unused
 	db PAL_FISHERMAN
 	db PAL_SWIMMER
@@ -234,7 +234,7 @@ TrainerPalettes: ; Gen II trainer sprites are given their own palettes
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Rocket ♀ Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-	db PAL_ROCKET_F
+	db PAL_ROCKET	; New Trainer Rocket F
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -412,9 +412,9 @@ ELSE
 	db PAL_MEWMON    ; MEWTWO
 	db PAL_MEWMON    ; MEW
 ; New pokemon lines
-;	db PAL_GREYMON   ; MANBOO		; New pokemon
-;	db PAL_BLUEMON   ; SANKOR		; New pokemon
-;	db PAL_BROWNMON  ; GROTESQUE	; New pokemon
+	db PAL_GREYMON   ; MANBOO		; New pokemon
+	db PAL_BLUEMON   ; SANKOR		; New pokemon
+	db PAL_BROWNMON  ; GROTESQUE	; New pokemon
 ; Trainers use index 0 of MonsterPalettes
 
 ENDC

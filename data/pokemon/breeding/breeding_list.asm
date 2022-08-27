@@ -118,14 +118,14 @@ BreedingList::
 	db WEEDLE
 	db WEEDLE
 	db WEEDLE
-	db 0 ; MISSINGNO. ; db MANBOO
+	db MANBOO		; db 0 ; MISSINGNO.
 	db DODUO
 	db MANKEY
 	db DIGLETT
 	db VENONAT
 	db SEEL
-	db 0 ; MISSINGNO. ; db MANBOO
-	db 0 ; MISSINGNO. ; db MANBOO
+	db MANBOO		; db 0 ; MISSINGNO.
+	db MANBOO		; db 0 ; MISSINGNO.
 	db CATERPIE
 	db CATERPIE
 	db CATERPIE

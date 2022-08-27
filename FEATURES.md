@@ -85,9 +85,14 @@
 			- Hitmonlee  [Move - MEGA KICK]
 			- Hitmonchan [Move - MEGA PUNCH]
 			- Hitmontop  [Move - COUNTER]
+			
+	- New pokemons
+		- Manboo line [Group 1, 3 & 4] Super Rod
 
 [ New TYPE Moves ]
+
 	[Steel]
+	
 		-Metal Claw
 		-Bullet Punch
 		-lash Cannon
@@ -95,12 +100,16 @@
 		-Meteor Mash
 		-Iron Defense
 		-Autotomize
+		
 	[Dark]
+	
 		-Crunch
 		-Dark Pulse
 		-Feint Attack
 		-Night Slash
+		
 	[Fairy]
+	
 		-PlayRough
 		-Moonblast
 		-Draining Kiss
@@ -121,9 +130,6 @@
 	- Soldier Trainer [Vermillion Gym]
 		- Trainer [New]
 		- Overworld [Replace any UNUSED]
-		
-	- New pokemon (removed)
-		- Manboo line (No palettes due to overflow)
 
 [Removed From Game]
 

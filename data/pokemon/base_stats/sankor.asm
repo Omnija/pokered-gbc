@@ -1,6 +1,6 @@
 	db DEX_SANKOR ; pokedex id
 
-	db  61,  80,  65,  75,  70
+	db  59,  53,  90,  58,  65
 	;   hp  atk  def  spd  spc
 
 	db WATER, STEEL ; type
@@ -10,8 +10,8 @@
 	INCBIN "gfx/pokemon/front/sankor.pic", 0, 1 ; sprite dimensions
 	dw SankorPicFront, SankorPicBack
 
-	db WRAP, LEER, THUNDER_WAVE, NO_MOVE ; level 1 learnset
-	db GROWTH_SLOW ; growth rate
+	db TACKLE, TAIL_WHIP, BUBBLE, NO_MOVE ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        HORN_DRILL,   BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \

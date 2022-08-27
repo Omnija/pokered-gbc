@@ -1,6 +1,6 @@
 	db DEX_MANBOO ; pokedex id
 
-	db  41,  60,  45,  55,  50
+	db  44,  40,  75,  43,  50
 	;   hp  atk  def  spd  spc
 
 	db WATER, WATER ; type
@@ -10,8 +10,8 @@
 	INCBIN "gfx/pokemon/front/manboo.pic", 0, 1 ; sprite dimensions
 	dw ManbooPicFront, ManbooPicBack
 
-	db WRAP, LEER, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_SLOW ; growth rate
+	db TACKLE, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   \

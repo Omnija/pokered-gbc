@@ -116,14 +116,14 @@ EvosMovesPointerTable:
 	dw WeedleEvosMoves
 	dw KakunaEvosMoves
 	dw BeedrillEvosMoves
-	dw MissingNo73EvosMoves	; dw ManbooEvosMoves
+	dw ManbooEvosMoves		; dw MissingNo73EvosMoves
 	dw DodrioEvosMoves
 	dw PrimeapeEvosMoves
 	dw DugtrioEvosMoves
 	dw VenomothEvosMoves
 	dw DewgongEvosMoves
-	dw MissingNo79EvosMoves ; dw SankorEvosMoves
-	dw MissingNo7AEvosMoves ; dw GrotesqueEvosMoves
+	dw SankorEvosMoves		; dw MissingNo79EvosMoves 
+	dw GrotesqueEvosMoves	; dw MissingNo7AEvosMoves
 	dw CaterpieEvosMoves
 	dw MetapodEvosMoves
 	dw ButterfreeEvosMoves
@@ -1647,23 +1647,25 @@ BeedrillEvosMoves:
 	db 35, AGILITY
 	db 0
 
-MissingNo73EvosMoves:
+;MissingNo73EvosMoves:
 ; Evolutions
-	db 0
+;	db 0
 ; Learnset
-	db 0
+;	db 0
 
-;ManbooEvosMoves:
+ManbooEvosMoves:
 ; Evolutions
-;	db EV_LEVEL, 19, SANKOR
-;	db 0
+	db EV_LEVEL, 19, SANKOR
+	db 0
 ; Learnset
-;	db 10, THUNDER_WAVE
-;	db 20, AGILITY
-;	db 30, SLAM
-;	db 40, DRAGON_RAGE
-;	db 50, HYPER_BEAM
-;	db 0
+	db 8, BUBBLE
+	db 15, WATER_GUN
+	db 20, AUTOTOMIZE
+	db 24, BITE
+	db 31, IRON_DEFENSE
+	db 39, IRON_STRIKE
+	db 47, HYDRO_PUMP
+	db 0
 
 DodrioEvosMoves:
 ; Evolutions
@@ -1722,40 +1724,44 @@ DewgongEvosMoves:
 	db 56, ICE_BEAM
 	db 0
 
-MissingNo79EvosMoves:
+;MissingNo79EvosMoves:
 ; Evolutions
-	db 0
-; Learnset
-	db 0
-
-;SankorEvosMoves:
-; Evolutions
-;	db EV_LEVEL, 38	, GROTESQUE
 ;	db 0
 ; Learnset
-;	db 10, THUNDER_WAVE
-;	db 20, AGILITY
-;	db 30, SLAM
-;	db 40, DRAGON_RAGE
-;	db 50, HYPER_BEAM
 ;	db 0
 
-MissingNo7AEvosMoves:
+SankorEvosMoves:
 ; Evolutions
+	db EV_LEVEL, 38	, GROTESQUE
 	db 0
 ; Learnset
+	db 8, BUBBLE
+	db 15, WATER_GUN
+	db 20, AUTOTOMIZE
+	db 24, BITE
+	db 31, IRON_DEFENSE
+	db 39, IRON_STRIKE
+	db 47, HYDRO_PUMP
 	db 0
 
-;GrotesqueEvosMoves:
+;MissingNo7AEvosMoves:
 ; Evolutions
 ;	db 0
 ; Learnset
-;	db 10, THUNDER_WAVE
-;	db 20, AGILITY
-;	db 30, SLAM
-;	db 40, DRAGON_RAGE
-;	db 50, HYPER_BEAM
 ;	db 0
+
+GrotesqueEvosMoves:
+; Evolutions
+	db 0
+; Learnset
+	db 8, BUBBLE
+	db 15, WATER_GUN
+	db 20, AUTOTOMIZE
+	db 24, BITE
+	db 31, IRON_DEFENSE
+	db 39, IRON_STRIKE
+	db 47, HYDRO_PUMP
+	db 0
 
 CaterpieEvosMoves:
 ; Evolutions

@@ -40,9 +40,10 @@ SuperRodData:
 ; number of monsters, followed by level/monster pairs
 
 .Group1:
-	db 2
+	db 3
 	db 15, TENTACOOL
 	db 15, POLIWAG
+	db 15, MANBOO
 
 .Group2:
 	db 2
@@ -50,15 +51,17 @@ SuperRodData:
 	db 15, POLIWAG
 
 .Group3:
-	db 3
+	db 4
 	db 15, PSYDUCK
 	db 15, GOLDEEN
 	db 15, KRABBY
+	db 15, MANBOO
 
 .Group4:
-	db 2
+	db 3
 	db 15, KRABBY
 	db 15, SHELLDER
+	db 15, MANBOO
 
 .Group5:
 	db 2
