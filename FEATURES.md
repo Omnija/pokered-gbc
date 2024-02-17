@@ -16,6 +16,7 @@
 		- Status Screen
 		- Trainer Card
 		- Restored Japanese Town Map
+		- Restored Celadon Hotel invisible PC
 
 	- Skip if move accuracy is 100%	
 	- Crystal Audio Engine
@@ -45,7 +46,7 @@
 	- Rocket ♀ Trainer 
 		- Trainer [NEW]
 		- Overworld Sprite [UNUSED_GUARD]
-	- Shiny pokdex status screen [Sort of glitchy]
+	- Shiny pokedex status screen [Sort of glitchy]
 		- Hold (Select + data) to enable
 		- Hold (Start + data) to disable
 	- RNG state on boot is initialized to a random number

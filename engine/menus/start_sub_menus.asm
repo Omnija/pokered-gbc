@@ -553,9 +553,17 @@ DrawTrainerInfo:
 	; Blank out gym and badge names
 	push bc
 	call TrainerInfo_FarCopyData2
-	ld hl, BlankLeaderNames
-	ld de, vChars2 + $600
-	ld bc, $0170
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+; Remove Leader Blank Names
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	ld hl, BlankLeaderNames
+;	ld de, vChars2 + $600
+;	ld bc, $0170
+    ld hl, CircleTile
+    ld de, vChars2 tile $76
+    ld bc, 1 tiles
+
 	call TrainerInfo_FarCopyData
 	pop bc
 
