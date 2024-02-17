@@ -64,6 +64,7 @@
 		
 	- Female playable character [FR/LF & Green JP]
 	- Traders have individual name [OT Labels]
+	- New Gym Leader Sprites
 	
 	- New Evolutions
 		- Lickilong [Lvl 32]
@@ -137,7 +138,7 @@
 	- Save Delay
 	- Poke Center Healing Delay
 	- Overworld Poison Effects
-	- Unused Codes/Triggers
+	- Unused Codes/Triggers/GFX
 	
 [Authors]
 

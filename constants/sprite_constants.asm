@@ -79,7 +79,7 @@
 ; Adding Squirtle Gift - Yellow
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	const SPRITE_OFFICER_JENNY           ; $3c
-
+	
 ; overworld still sprites	
 FIRST_STILL_SPRITE EQU const_value
 	const SPRITE_POKE_BALL               ; $3d
@@ -108,9 +108,18 @@ FIRST_STILL_SPRITE EQU const_value
 ; Adding Chansey Pokecenters - Yellow
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	const SPRITE_CHANSEY  				 ; $50
+;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Brock to Gym
+;;;;;;;;;;;;;;;;;;;;;;;
+	const SPRITE_BROCK           		 ; $3c
+;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Misty to Gym
+;;;;;;;;;;;;;;;;;;;;;;;
+	const SPRITE_MISTY           		 ; $3c
 
 ; Unused
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Soldier Trainer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	const SPRITE_SOLDIER   				 ; $32
+

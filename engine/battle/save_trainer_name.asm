@@ -1,14 +1,20 @@
 SaveTrainerName::
-	ld hl, TrainerNamePointers
-	ld a, [wTrainerClass]
-	dec a
-	ld c, a
-	ld b, 0
-	add hl, bc
-	add hl, bc
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+; Remove Redundant TrainerNamePointers
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ld hl, wTrainerName 
+;	ld hl, TrainerNamePointers
+;	ld a, [wTrainerClass]
+;	dec a
+;	ld c, a
+;	ld b, 0
+;	add hl, bc
+;	add hl, bc
+;	ld a, [hli]
+;	ld h, [hl]
+;	ld l, a
+
 	ld de, wcd6d
 .CopyCharacter
 	ld a, [hli]
@@ -18,4 +24,7 @@ SaveTrainerName::
 	jr nz, .CopyCharacter
 	ret
 
-INCLUDE "data/trainers/name_pointers.asm"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+; Remove Redundant TrainerNamePointers
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;INCLUDE "data/trainers/name_pointers.asm"
