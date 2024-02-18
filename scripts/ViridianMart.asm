@@ -93,3 +93,10 @@ ViridianMartText2:
 ViridianMartText3:
 	text_far _ViridianMartText3
 	text_end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Freeing home space from mart
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ViridianCashierText:
+   script_mart POKE_BALL, ANTIDOTE, PARLYZ_HEAL, BURN_HEAL
+   

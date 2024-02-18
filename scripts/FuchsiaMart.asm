@@ -13,3 +13,9 @@ FuchsiaMartText2:
 FuchsiaMartText3:
 	text_far _FuchsiaMartText3
 	text_end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Freeing home space from mart
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+FuchsiaCashierText:
+	script_mart ULTRA_BALL, GREAT_BALL, SUPER_POTION, REVIVE, FULL_HEAL, SUPER_REPEL

@@ -28,3 +28,9 @@ PewterMartText3:
 .Text
 	text_far _PewterMartText3
 	text_end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Freeing home space from mart
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+PewterCashierText:
+	script_mart POKE_BALL, POTION, ESCAPE_ROPE, ANTIDOTE, BURN_HEAL, AWAKENING, PARLYZ_HEAL

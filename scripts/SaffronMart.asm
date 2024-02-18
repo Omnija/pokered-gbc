@@ -13,3 +13,9 @@ SaffronMartText2:
 SaffronMartText3:
 	text_far _SaffronMartText3
 	text_end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Freeing home space from mart
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SaffronCashierText:
+	script_mart GREAT_BALL, HYPER_POTION, MAX_REPEL, ESCAPE_ROPE, FULL_HEAL, REVIVE

@@ -22,7 +22,7 @@ SECTION "rst18", ROM0[$0018]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Free some space in the Home BANK
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-_Bankswitch::
+_Bankswitch:: ;just this was added
 	jp Bankswitch
 
 ; memory for rst vectors $20-$38 used by color hack

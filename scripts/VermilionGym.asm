@@ -244,3 +244,9 @@ VermilionGymFanPreBattleText:
 VermilionGymFanPostBattleText:
 	text_far _VermilionGymFanPostBattleText
 	text_end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Freeing home space from mart
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+VermilionCashierText:
+	script_mart POKE_BALL, SUPER_POTION, ICE_HEAL, AWAKENING, PARLYZ_HEAL, REPEL

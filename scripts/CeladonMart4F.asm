@@ -18,3 +18,10 @@ CeladonMart4Text3:
 CeladonMart4Text4:
 	text_far _CeladonMart4Text4
 	text_end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Freeing home space from mart
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+CeladonMart4ClerkText:
+	script_mart POKE_DOLL, FIRE_STONE, THUNDER_STONE, WATER_STONE, LEAF_STONE, MOON_STONE

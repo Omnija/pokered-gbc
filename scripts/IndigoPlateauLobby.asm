@@ -43,3 +43,9 @@ IndigoPokecenterText5:
 	text_asm
 	callfar PokecenterChanseyText
 	jp TextScriptEnd
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Freeing home space from mart
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IndigoCashierText:
+	script_mart ULTRA_BALL, GREAT_BALL, FULL_RESTORE, MAX_POTION, FULL_HEAL, REVIVE, MAX_REPEL
