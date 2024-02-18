@@ -108,14 +108,12 @@ FIRST_STILL_SPRITE EQU const_value
 ; Adding Chansey Pokecenters - Yellow
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	const SPRITE_CHANSEY  				 ; $50
-;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Brock to Gym
-;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Missing Gym Leaders
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	const SPRITE_BROCK           		 ; $3c
-;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Misty to Gym
-;;;;;;;;;;;;;;;;;;;;;;;
 	const SPRITE_MISTY           		 ; $3c
+	const SPRITE_SABRINA           		 ; $3c
 
 ; Unused
 ;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -19,6 +19,10 @@ SECTION "rst10", ROM0[$0010]
 
 ; HAX: rst18 can be used for "Bankswitch"
 SECTION "rst18", ROM0[$0018]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Free some space in the Home BANK
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+_Bankswitch::
 	jp Bankswitch
 
 ; memory for rst vectors $20-$38 used by color hack

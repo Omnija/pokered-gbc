@@ -151,14 +151,12 @@ BulbasaurSprite::        INCBIN "gfx/pokemon/icons/bulbasaur.2bpp"
 ; Adding Chansey - Yellow
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ChanseySprite::          INCBIN "gfx/pokemon/icons/chansey.2bpp"
-;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Brock to Gym
-;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Missing Gym Leaders
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 BrockSprite::    		 INCBIN "gfx/sprites/brock.2bpp"
-;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Misty to Gym
-;;;;;;;;;;;;;;;;;;;;;;;
 MistySprite::    		 INCBIN "gfx/sprites/misty.2bpp"
+SabrinaSprite::    		 INCBIN "gfx/sprites/misty.2bpp"
 
 ; Unused
 

@@ -115,14 +115,12 @@ SpriteSheetPointerTable:
 ; Adding Chansey Pokecenters - Yellow
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	overworld_sprite ChanseySprite, 4    		; SPRITE_CHANSEY
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Brock to Gym
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Missing Gym Leaders
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	overworld_sprite BrockSprite, 4    		; SPRITE_BROCK
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Misty to Gym
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	overworld_sprite MistySprite, 4    		; SPRITE_MISTY
+	overworld_sprite SabrinaSprite, 4    		; SPRITE_MISTY
 
 ; Unused
 

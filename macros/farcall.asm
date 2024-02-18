@@ -1,13 +1,22 @@
 farcall: MACRO
 	ld b, BANK(\1)
 	ld hl, \1
-	call Bankswitch
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Free some space in the Home BANK
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ 	rst _Bankswitch
+;	call Bankswitch
 ENDM
 
 callfar: MACRO
 	ld hl, \1
 	ld b, BANK(\1)
-	call Bankswitch
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Free some space in the Home BANK
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ 	rst _Bankswitch
+;	call Bankswitch
 ENDM
 
 farjp: MACRO

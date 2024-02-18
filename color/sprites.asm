@@ -642,6 +642,17 @@ ELSE
 	db SPR_PAL_BLUE
 ENDC
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Missing Gym Leaders
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	; 0x00: SPRITE_BROCK
+	db SPR_PAL_BROWN
+	; 0x00: SPRITE_MISTY
+	db SPR_PAL_BROWN
+	; 0x00: SPRITE_SABRINA
+	db SPR_PAL_ORANGE
+
+
 
 AnimationTileset1Palettes:
 	INCBIN "color/data/animtileset1palettes.bin"
