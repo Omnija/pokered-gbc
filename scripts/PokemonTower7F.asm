@@ -77,6 +77,12 @@ PokemonTower7Script4:
 	ld [wDestinationWarpID], a
 	ld a, LAVENDER_TOWN
 	ld [wLastMap], a
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix allow to leave immediately
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ 	ld hl, wd736
+ 	set 2, [hl]
+
 	ld hl, wd72d
 	set 3, [hl]
 	ld a, $0

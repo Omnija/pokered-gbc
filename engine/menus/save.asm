@@ -158,11 +158,20 @@ SaveSAV:
 	and a
 	ret nz
 .save
-	call SaveSAVtoSRAM
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix mid saving file corruption
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	call SaveSAVtoSRAM
+
 	hlcoord 1, 13
 	lb bc, 4, 18
 	call ClearScreenArea
 	hlcoord 1, 14
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix mid saving file corruption
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ 	call SaveSAVtoSRAM
+	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Removing Artificial Save Delay	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -230,6 +239,14 @@ SaveSAVtoSRAM0:
 	ld de, sSpriteData
 	ld bc, wSpriteDataEnd - wSpriteDataStart
 	call CopyData
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix mid saving file corruption
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ 	ld hl, wPartyDataStart
+ 	ld de, sPartyData
+ 	ld bc, wPartyDataEnd - wPartyDataStart
+ 	call CopyData
+
 	ld hl, wBoxDataStart
 	ld de, sCurBoxData
 	ld bc, wBoxDataEnd - wBoxDataStart
@@ -291,9 +308,13 @@ SaveSAVtoSRAM2:
 SaveSAVtoSRAM::
 	ld a, $2
 	ld [wSaveFileStatus], a
-	call SaveSAVtoSRAM0
-	call SaveSAVtoSRAM1
-	jp SaveSAVtoSRAM2
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix mid saving file corruption
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jp SaveSAVtoSRAM0
+;	call SaveSAVtoSRAM0
+;	call SaveSAVtoSRAM1
+;	jp SaveSAVtoSRAM2
 
 SAVCheckSum:
 ;Check Sum (result[1 byte] is complemented)

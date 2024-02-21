@@ -27,7 +27,12 @@ Route8GateScript0:
 	ld hl, CoordsData_1e22c
 	call ArePlayerCoordsInArray
 	ret nc
-	ld a, PLAYER_DIR_LEFT
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix player not facing guard
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, PLAYER_DIR_UP
+;	ld a, PLAYER_DIR_LEFT
+
 	ld [wPlayerMovingDirection], a
 	xor a
 	ldh [hJoyHeld], a

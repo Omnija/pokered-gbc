@@ -72,10 +72,15 @@ ReadTrainerHeaderInfo::
 	jr z, .readPointer ; read end battle text
 	cp $a
 	jr nz, .done
-	ld a, [hli]        ; read end battle text (2) but override the result afterwards (XXX why, bug?)
-	ld d, [hl]
-	ld e, a
-	jr .done
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Remove Trainers' end battle text 2
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	ld a, [hli]        ; read end battle text (2) but override the result afterwards (XXX why, bug?)
+;	ld d, [hl]
+;	ld e, a
+;	jr .done
+
 .readPointer
 	ld a, [hli]
 	ld h, [hl]
@@ -368,7 +373,12 @@ PrintEndBattleText::
 	ldh [hLoadedROMBank], a
 	ld [MBC1RomBank], a
 	push hl
-	farcall SaveTrainerName
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Remove Redundant TrainerNamePointers
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	call SaveTrainerName
+;	farcall SaveTrainerName
+
 	ld hl, TrainerEndBattleText
 	call PrintText
 	pop hl
@@ -377,6 +387,20 @@ PrintEndBattleText::
 	ld [MBC1RomBank], a
 	farcall FreezeEnemyTrainerSprite
 	jp WaitForSoundToFinish
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Remove Redundant TrainerNamePointers
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SaveTrainerName::
+	ld hl, wTrainerName
+	ld de, wcd6d
+.CopyCharacter
+	ld a, [hli]
+	ld [de], a
+	inc de
+	cp "@"
+	jr nz, .CopyCharacter
+	ret
 
 GetSavedEndBattleTextPointer::
 	ld a, [wBattleResult]

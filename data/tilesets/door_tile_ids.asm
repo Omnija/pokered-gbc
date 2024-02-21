@@ -12,6 +12,11 @@ DoorTileIDPointers:
 	dbw LAB,         .LabDoorTileIDs
 	dbw FACILITY,    .FacilityDoorTileIDs
 	dbw PLATEAU,     .PlateauDoorTileIDs
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix The Silph Co. elevator
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	dbw INTERIOR,    .InteriorDoorTileIDs
+
 	db -1 ; end
 
 door_tiles: MACRO
@@ -54,3 +59,9 @@ ENDM
 
 .PlateauDoorTileIDs:
 	door_tiles $3b, $1b
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix The Silph Co. elevator
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+.InteriorDoorTileIDs:
+	door_tiles $04, $15

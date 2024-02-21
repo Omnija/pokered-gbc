@@ -3,8 +3,13 @@ SetDefaultNames:
 	push af
 	ld a, [wOptions]
 	push af
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Missing Debug Function
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_DEBUG)
 	ld a, [wd732]
 	push af
+ENDC
 	ld hl, wPlayerName
 	ld bc, wBoxDataEnd - wPlayerName
 	xor a
@@ -13,8 +18,13 @@ SetDefaultNames:
 	ld bc, wSpriteDataEnd - wSpriteDataStart
 	xor a
 	call FillMemory
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Missing Debug Function
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF DEF(_DEBUG)
 	pop af
 	ld [wd732], a
+ENDC
 	pop af
 	ld [wOptions], a
 	pop af

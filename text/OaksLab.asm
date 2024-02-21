@@ -147,9 +147,14 @@ _OaksLabGivePokeballsText2::
 	line "#MON appears,"
 	cont "it's fair game."
 
-	para "Just throw a #"
-	line "BALL at it and try"
-	line "to catch it!"
+	para "Just throw a #"	
+;;;;;;;;;;;;;;;;;;
+; Fix Oak's text
+;;;;;;;;;;;;;;;;;;
+ 	line "BALL at it and"
+	cont "try to catch it!"
+;	line "BALL at it and try"
+;	line "to catch it!"
 
 	para "This won't always"
 	line "work, though."
