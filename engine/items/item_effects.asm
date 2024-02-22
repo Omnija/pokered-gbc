@@ -2953,6 +2953,12 @@ CheckMapForMon:
 	ld a, c
 	ld [de], a
 	inc de
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix Pokedex AREA functionality
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	inc hl
+	ret
+	
 .nextEntry
 	inc hl
 	inc hl

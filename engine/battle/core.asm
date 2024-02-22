@@ -776,7 +776,11 @@ FaintEnemyPokemon:
 ; was congruent to 0 modulo 256.
 	xor a
 	ld [wPlayerBideAccumulatedDamage], a
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix Bide link cable host status
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	ld hl, wEnemyStatsToDouble ; clear enemy statuses
+	
 	ld [hli], a
 	ld [hli], a
 	ld [hli], a
@@ -3656,8 +3660,14 @@ CheckPlayerStatusConditions:
 .MonHurtItselfOrFullyParalysed
 	ld hl, wPlayerBattleStatus1
 	ld a, [hl]
-	; clear bide, thrashing, charging up, and trapping moves such as warp (already cleared for confusion damage)
-	and $ff ^ ((1 << STORING_ENERGY) | (1 << THRASHING_ABOUT) | (1 << CHARGING_UP) | (1 << USING_TRAPPING_MOVE))
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix for Fly/Dig Invulnerable status
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	; clear bide, thrashing, charging up, trapping moves such as wrap (already cleared for confusion damage), and invulnerable moves
+	and ~((1 << STORING_ENERGY) | (1 << THRASHING_ABOUT) | (1 << CHARGING_UP) | (1 << USING_TRAPPING_MOVE) | (1 << INVULNERABLE))
+;	; clear bide, thrashing, charging up, and trapping moves such as warp (already cleared for confusion damage)
+;	and $ff ^ ((1 << STORING_ENERGY) | (1 << THRASHING_ABOUT) | (1 << CHARGING_UP) | (1 << USING_TRAPPING_MOVE))
 	ld [hl], a
 	ld a, [wPlayerMoveEffect]
 	cp FLY_EFFECT
@@ -5502,6 +5512,25 @@ AdjustDamageForMoveType:
 	ld b, a
 	ld a, [hl] ; a = damage multiplier
 	ldh [hMultiplier], a
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix Dual type move effectiveness
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	and a  ; cp NO_EFFECT
+	jr z, .gotMultiplier
+	cp NOT_VERY_EFFECTIVE
+	jr nz, .nothalf
+	ld a, [wDamageMultipliers]
+	and $7f
+	srl a
+	jr .gotMultiplier
+.nothalf
+	cp SUPER_EFFECTIVE
+	jr nz, .gotMultiplier
+	ld a, [wDamageMultipliers]
+	and $7f
+	sla a
+.gotMultiplier
+
 	add b
 	ld [wDamageMultipliers], a
 	xor a
@@ -5606,6 +5635,11 @@ MoveHitTest:
 	jr z, .checkForDigOrFlyStatus
 ; This code is buggy. It's supposed to prevent HP draining moves from working on substitutes.
 ; Since CheckTargetSubstitute overwrites a with either $00 or $01, it never works.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix HP draining moves substitution break/miss
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, [de]
+	
 	cp DRAIN_HP_EFFECT
 	jp z, .moveMissed
 	cp DREAM_EATER_EFFECT

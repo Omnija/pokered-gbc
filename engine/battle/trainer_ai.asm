@@ -387,6 +387,13 @@ KogaAI:
 BlaineAI:
 	cp 25 percent + 1
 	ret nc
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fix Blaine Super Portion 25%
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, 10
+	call AICheckIfHPBelowFraction
+	ret nc
+
 	jp AIUseSuperPotion
 
 SabrinaAI:
