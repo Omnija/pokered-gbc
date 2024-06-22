@@ -42,7 +42,12 @@ ItemNames::
 	db "DOME FOSSIL@"
 	db "HELIX FOSSIL@"
 	db "SECRET KEY@"
-	db "?????@"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Added Link Cable Evolution Item
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;	db "?????@"
+	db "LINK CABLE@"
+	
 	db "BIKE VOUCHER@"
 	db "X ACCURACY@"
 	db "LEAF STONE@"

@@ -42,7 +42,12 @@ ItemPrices::
 	money 0     ; DOME_FOSSIL
 	money 0     ; HELIX_FOSSIL
 	money 0     ; SECRET_KEY
-	money 0     ; XXX
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Added Link Cable Evolution Item
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;	money 0     ; XXX
+	money 2000  ; LINK_CABLE
 	money 0     ; BIKE_VOUCHER
 	money 950   ; X_ACCURACY
 	money 2100  ; LEAF_STONE

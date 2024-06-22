@@ -1,6 +1,11 @@
 ; items which bring up the party menu when used
 UsableItems_PartyMenu:
 	db MOON_STONE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Added Link Cable Evolution Item
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	db LINK_CABLE
+	
 	db ANTIDOTE
 	db BURN_HEAL
 	db ICE_HEAL

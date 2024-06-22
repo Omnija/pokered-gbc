@@ -61,7 +61,7 @@ KeyItemBitfield:
 	TRUE,  \ ; DOME_FOSSIL
 	TRUE,  \ ; HELIX_FOSSIL
 	TRUE,  \ ; SECRET_KEY
-	TRUE,  \ ; UNUSED_ITEM
+	FALSE, \ ; LINK_CABLE - Added Link Cable Evolution Item
 	TRUE,  \ ; BIKE_VOUCHER
 	FALSE, \ ; X_ACCURACY
 	FALSE, \ ; LEAF_STONE
