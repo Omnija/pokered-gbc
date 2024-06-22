@@ -484,7 +484,7 @@ GastlyEvosMoves:
 ScytherEvosMoves:
 ; Evolutions
 	db EV_TRADE, 1, SCIZOR
-	db EV_LEVEL, 34, SCIZOR
+	db EV_ITEM, LINK_CABLE, 1, SCIZOR
 	db 0
 ; Learnset
 	db 17, LEER
@@ -536,7 +536,7 @@ PinsirEvosMoves:
 TangelaEvosMoves:
 ; Evolutions
 	db EV_TRADE, 1, TANGALINE
-	db EV_LEVEL, 32, TANGALINE
+	db EV_ITEM, LINK_CABLE, 1, TANGALINE
 	db 0
 ; Learnset
 	db 29, ABSORB
@@ -601,7 +601,7 @@ GrowlitheEvosMoves:
 OnixEvosMoves:
 ; Evolutions
 	db EV_TRADE, 1, STEELIX
-	db EV_LEVEL, 34, STEELIX
+	db EV_ITEM, LINK_CABLE, 1, STEELIX
 	db 0
 ; Learnset
 	db 15, BIND
@@ -652,7 +652,7 @@ SlowpokeEvosMoves:
 KadabraEvosMoves:
 ; Evolutions
 	db EV_TRADE, 1, ALAKAZAM
-	db EV_LEVEL, 36, ALAKAZAM
+	db EV_ITEM, LINK_CABLE, 1, ALAKAZAM
 	db 0
 ; Learnset
 	db 16, CONFUSION
@@ -666,7 +666,7 @@ KadabraEvosMoves:
 GravelerEvosMoves:
 ; Evolutions
 	db EV_TRADE, 1, GOLEM
-	db EV_LEVEL, 36, GOLEM
+	db EV_ITEM, LINK_CABLE, 1, GOLEM
 	db 0
 ; Learnset
 	db 11, DEFENSE_CURL
@@ -680,7 +680,7 @@ GravelerEvosMoves:
 ChanseyEvosMoves:
 ; Evolutions
 	db EV_TRADE, 1, KISSLEY
-	db EV_LEVEL, 32, KISSLEY
+	db EV_ITEM, LINK_CABLE, 1, KISSLEY
 	db 0
 ; Learnset
 	db 24, SING
@@ -694,7 +694,7 @@ ChanseyEvosMoves:
 MachokeEvosMoves:
 ; Evolutions
 	db EV_TRADE, 1, MACHAMP
-	db EV_LEVEL, 36, MACHAMP
+	db EV_ITEM, LINK_CABLE, 1, MACHAMP
 	db 0
 ; Learnset
 	db 20, LOW_KICK
@@ -1377,7 +1377,7 @@ HorseaEvosMoves:
 SeadraEvosMoves:
 ; Evolutions
 	db EV_TRADE, 1, KINGDRA
-	db EV_LEVEL, 40, KINGDRA
+	db EV_ITEM, LINK_CABLE, 1,  KINGDRA
 	db 0
 ; Learnset
 	db 19, SMOKESCREEN
@@ -1500,6 +1500,7 @@ EeveeEvosMoves:
 	db EV_MAP,SEAFOAM_ISLANDS_B4F, GLACEON		; Map Evolution
 	db EV_MAP, ROUTE_5 ,SYLVEON					; Map Evolution/Fairy MOVE_EVO
 	db EV_TRADE, 1, SYLVEON		; Fairy MOVE_EVO
+	db EV_ITEM, LINK_CABLE, 1, SYLVEON 
 	db 0
 ; Learnset
 	db 27, QUICK_ATTACK
@@ -1601,7 +1602,7 @@ ParasEvosMoves:
 PoliwhirlEvosMoves:
 ; Evolutions
 	db EV_TRADE, 1, POLITOED
-	db EV_LEVEL, 36, POLITOED
+	db EV_ITEM, LINK_CABLE, 1, POLITOED
 	db EV_ITEM, WATER_STONE, 1, POLIWRATH
 	db 0
 ; Learnset
@@ -1991,7 +1992,7 @@ MissingNo92EvosMoves:
 HaunterEvosMoves:
 ; Evolutions
 	db EV_TRADE, 1, GENGAR
-	db EV_LEVEL, 36, GENGAR
+	db EV_ITEM, LINK_CABLE, 1, GENGAR
 	db 0
 ; Learnset
 	db 29, HYPNOSIS

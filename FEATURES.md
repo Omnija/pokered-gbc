@@ -54,13 +54,14 @@
 	- Struggle is now using [Unused Neutral] type [BIRD]
 		- Transform copying move now becomes Struggle
 	- Types - Fairy/Steel/Dark for future uses
-	- Trade evolution can also evolve at [Lvl 36]
+	- Trade evolution can be evolved with Link Cable item
 		- Machamp
 		- Golem
 		- Alakazam
 	
 	- Mart changes
 		- Moon stone [Celedon Mart f4]
+		- Link cable [Celedon Mart f4]
 		
 	- Female playable character [FR/LF & Green JP]
 	- Traders have individual name [OT Labels]
@@ -70,13 +71,13 @@
 		- Lickilong [Lvl 32]
 		- Crobat    [Lvl 36]
 		- Swandoe   [Lvl 32]
-		- Steelix   [Lvl 34 / Trade]
-		- Kingdra   [Lvl 40 / Trade]
-		- Scizor    [Lvl 34 / Trade]
-		- Tangaline [Lvl 32 / Trade]
+		- Steelix   [Trade]
+		- Kingdra   [Trade]
+		- Scizor    [Trade]
+		- Tangaline [Trade
 		- Murmuder  [Lvl 32]
-		- Politoed  [Lvl 36 / Trade]
-		- Kissley 	[Lvl 32 / Trade]
+		- Politoed  [Trade
+		- Kissley 	[Trade]
 		- Eevee Evolutions
 			- Leafeon	[Leaf Stone]
 			- Espeon	[Lvl Route 16/18]
