@@ -64,8 +64,9 @@
 		- Link cable [Celedon Mart f4]
 		
 	- Female playable character [FR/LF & Green JP]
-	- Traders have individual name [OT Labels]
+	- Trainers have individual name [OT Labels]
 	- New Gym Leader Sprites
+	- Experience System & Exp. All Enhancements
 	
 	- New Evolutions
 		- Lickilong [Lvl 32]
@@ -74,9 +75,9 @@
 		- Steelix   [Trade]
 		- Kingdra   [Trade]
 		- Scizor    [Trade]
-		- Tangaline [Trade
+		- Tangaline [Trade]
 		- Murmuder  [Lvl 32]
-		- Politoed  [Trade
+		- Politoed  [Trade]
 		- Kissley 	[Trade]
 		- Eevee Evolutions
 			- Leafeon	[Leaf Stone]

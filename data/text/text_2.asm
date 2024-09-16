@@ -1256,8 +1256,13 @@ _GainedText::
 	text_end
 
 _WithExpAllText::
-	text "with EXP.ALL,"
-	cont "@"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Added Exp. All Single Message
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	text "Your team gained"
+	next "@"
+;	text "with EXP.ALL,"
+;	cont "@"
 	text_end
 
 _BoostedText::
