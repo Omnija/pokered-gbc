@@ -44,7 +44,7 @@ ItemPrices::
 	money 0     ; SECRET_KEY
 	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Added Link Cable Evolution Item
+; Adding Link Cable Evolution Item
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 ;	money 0     ; XXX
 	money 2000  ; LINK_CABLE

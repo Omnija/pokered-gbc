@@ -186,8 +186,8 @@ HoFLoadPlayerPics:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Female Player - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	ld a, [wPlayerGender] ; Added gender check
-	and a      ; Added gender check
+	ld a, [wPlayerGender] ; Adding gender check
+	and a      ; Adding gender check
  	jr z, .AreGirl1
 
 	ld de, RedPicFront
@@ -213,8 +213,8 @@ ld de, GreenPicFront
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Female Player - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
-	ld a, [wPlayerGender] ; Added gender check
-	and a      ; Added gender check
+	ld a, [wPlayerGender] ; Adding gender check
+	and a      ; Adding gender check
  	jr z, .AreGirl2
 	
 	ld de, RedPicBack

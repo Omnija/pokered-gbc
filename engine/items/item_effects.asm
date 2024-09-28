@@ -61,7 +61,7 @@ ItemUsePtrTable:
 	dw UnusableItem      ; HELIX_FOSSIL
 	dw UnusableItem      ; SECRET_KEY
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Added Link Cable Evolution Item
+; Adding Link Cable Evolution Item
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 ;	dw UnusableItem
 	dw ItemUseEvoStone   ; LINK CABLE

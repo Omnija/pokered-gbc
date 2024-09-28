@@ -83,7 +83,7 @@ TypeEffects:
 	db ICE,          DRAGON,       SUPER_EFFECTIVE
 	db DRAGON,       DRAGON,       SUPER_EFFECTIVE
 ;;;;;;;;;;;;;;;;;;
-; Added Types
+; Adding Types
 ;;;;;;;;;;;;;;;;;;
 	db DARK,		FIGHTING,		NOT_VERY_EFFECTIVE
 	db DARK,		GHOST,			SUPER_EFFECTIVE

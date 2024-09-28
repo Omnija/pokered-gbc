@@ -71,7 +71,7 @@ PlaceNextChar::
 	ldh a, [hUILayoutFlags]
 	bit 2, a
 	jr z, .ok
-.line_feed ; Added with <LF>
+.line_feed ; Adding with <LF>
 	ld bc, SCREEN_WIDTH
 .ok
 	pop hl

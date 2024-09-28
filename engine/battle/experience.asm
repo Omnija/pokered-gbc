@@ -3,12 +3,12 @@ GainExperience:
 	cp LINK_STATE_BATTLING
 	ret z ; return if link battle
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Added Exp_All division Issue
+; Adding Exp_All division Issue
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 ;	call DivideExpDataByNumMonsGainingExp
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Added Exp. All Single Message
+; Adding Exp. All Single Message
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	ld a, [wBoostExpByExpAll] ;load in a if the EXP All is being used
 	ld hl, WithExpAllText ; this is preparing the text to show
@@ -163,7 +163,7 @@ GainExperience:
 	call GetPartyMonName
 	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Added Exp. All Single Message
+; Adding Exp. All Single Message
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	ld hl, GainedText
 	ld a, [wBoostExpByExpAll] ; get using ExpAll flag
@@ -174,7 +174,7 @@ GainExperience:
 	call PrintText
 	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Added Exp. All Single Message
+; Adding Exp. All Single Message
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 .skipExpText
 	
@@ -360,7 +360,7 @@ ENDC
 	predef_jump FlagActionPredef ; set the fought current enemy flag for the mon that is currently out
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Added Exp_All division Issue
+; Adding Exp_All division Issue
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 ; divide enemy base stats, catch rate, and base exp by the number of mons gaining exp
 ;DivideExpDataByNumMonsGainingExp:

@@ -50,8 +50,8 @@ ChoosePlayerName:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Female Player - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	ld a, [wPlayerGender] ; Added gender check
-	and a      ; Added gender check
+	ld a, [wPlayerGender] ; Adding gender check
+	and a      ; Adding gender check
  	jr z, .AreBoy3
    	ld de, GreenPicFront
     ld b, BANK(GreenPicFront)

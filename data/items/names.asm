@@ -43,7 +43,7 @@ ItemNames::
 	db "HELIX FOSSIL@"
 	db "SECRET KEY@"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Added Link Cable Evolution Item
+; Adding Link Cable Evolution Item
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 ;	db "?????@"
 	db "LINK CABLE@"

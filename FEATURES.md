@@ -27,6 +27,7 @@
 	- Trainer Rematches
 	- Deleter/Relearner/Tutor [Psychics house]
 	- Info Menu
+	- Item Bag Sort (Start)
 	- Automatic Repel [Pop up]
 	- Experience on Capture + EXP_ALL
 	- Independent Party Menu Icons [Pre-Evolutions]

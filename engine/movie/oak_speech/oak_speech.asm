@@ -79,9 +79,9 @@ ENDC
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Female Player - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	ld hl,BoyGirlText  ; added to the same file as the other oak text
+	ld hl,BoyGirlText  ; Adding to the same file as the other oak text
   	call PrintText     ; show this text
-  	call BoyGirlChoice ; added routine at the end of this file
+  	call BoyGirlChoice ; Adding routine at the end of this file
    	ld a, [wCurrentMenuItem]
    	ld [wPlayerGender], a ; store player's gender. 00 for boy, 01 for girl
    	call ClearScreen ; clear the screen before resuming normal intro

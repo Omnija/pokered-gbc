@@ -2,7 +2,7 @@
 UsableItems_PartyMenu:
 	db MOON_STONE
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Added Link Cable Evolution Item
+; Adding Link Cable Evolution Item
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 	db LINK_CABLE
 	

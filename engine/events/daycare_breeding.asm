@@ -271,7 +271,7 @@ MovementReset::
 	; assumption: Step Counter immediately follows Breeding Flags
  	ld [hli],a               
 	ld [hl],a
-	; Added part to mark there being a baby at the Day Care
+	; Adding part to mark there being a baby at the Day Care
 	ld a, [wDayCareInUse]
 	and a ; does the Day Care Lady have someone?
 	ret z

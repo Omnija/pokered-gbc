@@ -7,8 +7,8 @@ LoadWalkingPlayerSpriteGraphicsCall::
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Female Player - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-	ld a, [wPlayerGender] ; Added gender check
-	and a      ; Added gender check
+	ld a, [wPlayerGender] ; Adding gender check
+	and a      ; Adding gender check
  	jr z, .AreBoy1
 	ld de, GreenSprite
 .AreBoy1
@@ -24,8 +24,8 @@ LoadSurfingPlayerSpriteGraphicsCall::
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Female Player - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-	ld a, [wPlayerGender] ; Added gender check
-	and a      ; Added gender check
+	ld a, [wPlayerGender] ; Adding gender check
+	and a      ; Adding gender check
  	jr z, .AreBoy2
 	ld de, SurfingFSprite
 .AreBoy2
@@ -37,8 +37,8 @@ LoadBikePlayerSpriteGraphicsCall::
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Female Player - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
-	ld a, [wPlayerGender] ; Added gender check
-	and a      ; Added gender check
+	ld a, [wPlayerGender] ; Adding gender check
+	and a      ; Adding gender check
  	jr z, .AreBoy3
 	ld de, GreenBikeSprite
 .AreBoy3

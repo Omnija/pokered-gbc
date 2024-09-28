@@ -1257,7 +1257,7 @@ _GainedText::
 
 _WithExpAllText::
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Added Exp. All Single Message
+; Adding Exp. All Single Message
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	text "Your team gained"
 	next "@"

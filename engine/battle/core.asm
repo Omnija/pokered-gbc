@@ -3086,12 +3086,20 @@ PrintMenuItem:
 ; print TYPE/<type> and <curPP>/<maxPP>
 ;	hlcoord 1, 9	
 ;	ld de, TypeText
-	call PlaceString
+;	call PlaceString
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Physical/Special Split - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
 .RestOfTheRoutineThing
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding PP to Move Select
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	hlcoord 1, 11
+	ld a, "P"
+	ld [hli], a
+	ld [hl], "P"	
 	
 	hlcoord 7, 11
 	ld [hl], "/"
@@ -3122,10 +3130,10 @@ DisabledText:
 SupportText:
 	db "STATUS@"
 
-PhysicalText: ; Added for PS Split
+PhysicalText: ; Adding for PS Split
 	db "PHYSICAL@"
 
-SpecialText: ; added for PS Split
+SpecialText: ; Adding for PS Split
 	db "SPECIAL@"
 
 ;TypeText:

@@ -319,6 +319,12 @@ StartMenu_Item::
 	ld a, [wBagSavedMenuItem]
 	ld [wCurrentMenuItem], a
 	call DisplayListMenuID
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jp nz, .sortItems
+	
 	ld a, [wCurrentMenuItem]
 	ld [wBagSavedMenuItem], a
 	jr nc, .choseItem
@@ -464,6 +470,13 @@ StartMenu_Item::
 	ld b, Bank(DisplayItemDescription)
 	call Bankswitch
 	jp ItemMenuLoop
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+.sortItems
+	callfar SortItems
+	jp ItemMenuLoop
 
 CannotUseItemsHereText:
 	text_far _CannotUseItemsHereText
@@ -509,8 +522,8 @@ DrawTrainerInfo:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Female Player - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
-	ld a, [wPlayerGender] ; Added gender check
-	and a      ; Added gender check
+	ld a, [wPlayerGender] ; Adding gender check
+	and a      ; Adding gender check
  	jr z, .AreBoy
    	ld de, GreenPicFront
     ld b, BANK(GreenPicFront)

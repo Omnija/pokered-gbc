@@ -53,7 +53,7 @@ SAFARI_ROCK           EQU $16 ; overload
 	const HELIX_FOSSIL  ; $2A
 	const SECRET_KEY    ; $2B
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Added Link Cable Evolution Item
+; Adding Link Cable Evolution Item
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
 ;	const UNUSED_ITEM   ; $2C "?????"
 	const LINK_CABLE    ; $2C "?????"

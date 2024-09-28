@@ -13,8 +13,8 @@ FishingAnim:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Female Player - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
- 	ld a, [wPlayerGender] ; added gender check
-  	and a      ; added gender check
+ 	ld a, [wPlayerGender] ; Adding gender check
+  	and a      ; Adding gender check
     jr z, .BoySpriteLoad
     ld de, GreenSprite
   	ld hl, vNPCSprites
@@ -36,8 +36,8 @@ FishingAnim:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Female Player - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
-   	ld a, [wPlayerGender] ; added gender check
-   	and a      ; added gender check
+   	ld a, [wPlayerGender] ; Adding gender check
+   	and a      ; Adding gender check
    	jr z, .BoyTiles ; skip loading Green's stuff if you're Red
     ld a, $4
     ld hl, GreenFishingTiles
