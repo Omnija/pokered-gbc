@@ -72,6 +72,14 @@ ExitPlayerPC:
 	call WaitForSoundToFinish
 .next
 	ld hl, wFlags_0xcd60
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag + PC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	res 2,[hl]
+	res 4,[hl]
+
+	
 	res 5, [hl]
 	call LoadScreenTilesFromBuffer2
 	xor a
@@ -94,6 +102,15 @@ PlayerPCDeposit:
 	call PrintText
 	jp PlayerPCMenu
 .loop
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag + PC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld hl, wFlags_0xcd60
+	set 2,[hl]
+	res 4,[hl]
+
+
 	ld hl, WhatToDepositText
 	call PrintText
 	ld hl, wNumBagItems
@@ -106,6 +123,12 @@ PlayerPCDeposit:
 	ld a, ITEMLISTMENU
 	ld [wListMenuID], a
 	call DisplayListMenuID
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag + PC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jp nz, .sortItems
+	
 	jp c, PlayerPCMenu
 	call IsKeyItem
 	ld a, 1
@@ -120,12 +143,28 @@ PlayerPCDeposit:
 	cp $ff
 	jp z, .loop
 .next
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag + PC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld hl, wFlags_0xcd60
+	res 2,[hl]
+	res 4,[hl]
+
 	ld hl, wNumBoxItems
 	call AddItemToInventory
 	jr c, .roomAvailable
 	ld hl, NoRoomToStoreText
 	call PrintText
 	jp .loop
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag + PC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+.sortItems
+	callfar SortItems
+	jp .loop
+	
 .roomAvailable
 	ld hl, wNumBagItems
 	call RemoveItemFromInventory
@@ -148,6 +187,14 @@ PlayerPCWithdraw:
 	call PrintText
 	jp PlayerPCMenu
 .loop
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag + PC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld hl, wFlags_0xcd60
+	set 2,[hl]
+	set 4,[hl]
+
 	ld hl, WhatToWithdrawText
 	call PrintText
 	ld hl, wNumBoxItems
@@ -160,6 +207,12 @@ PlayerPCWithdraw:
 	ld a, ITEMLISTMENU
 	ld [wListMenuID], a
 	call DisplayListMenuID
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag + PC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jp nz, .sortItems
+	
 	jp c, PlayerPCMenu
 	call IsKeyItem
 	ld a, 1
@@ -174,12 +227,30 @@ PlayerPCWithdraw:
 	cp $ff
 	jp z, .loop
 .next
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag + PC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld hl, wFlags_0xcd60
+	res 2,[hl]
+	res 4,[hl]
+
+
 	ld hl, wNumBagItems
 	call AddItemToInventory
 	jr c, .roomAvailable
 	ld hl, CantCarryMoreText
 	call PrintText
 	jp .loop
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag + PC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+.sortItems
+	callfar SortItems
+	jp .loop
+
+	
 .roomAvailable
 	ld hl, wNumBoxItems
 	call RemoveItemFromInventory
@@ -202,6 +273,14 @@ PlayerPCToss:
 	call PrintText
 	jp PlayerPCMenu
 .loop
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag + PC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld hl, wFlags_0xcd60
+	set 2,[hl]
+	set 4,[hl]
+
 	ld hl, WhatToTossText
 	call PrintText
 	ld hl, wNumBoxItems
@@ -216,6 +295,12 @@ PlayerPCToss:
 	push hl
 	call DisplayListMenuID
 	pop hl
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag + PC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jp nz, .sortItems
+	
 	jp c, PlayerPCMenu
 	push hl
 	call IsKeyItem
@@ -237,7 +322,21 @@ PlayerPCToss:
 	cp $ff
 	jp z, .loop
 .next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag + PC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld hl, wFlags_0xcd60
+	res 2,[hl]
+	res 4,[hl]
+
 	call TossItem ; disallows tossing key items
+	jp .loop
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding item Sorting In Bag + PC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+.sortItems
+	callfar SortItems
 	jp .loop
 
 PlayersPCMenuEntries:
