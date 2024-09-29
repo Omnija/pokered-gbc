@@ -140,6 +140,17 @@ Evolution_PartyMonLoop: ; loop over party mons
 	ld [wCurEnemyLVL], a
 	ld a, 1
 	ld [wEvolutionOccurred], a
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding multi lvl skip move evo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, [wTempCoins1]
+	cp b
+	jp nc, .evoLevelRequirementSatisfied
+	ld a, b
+	ld [wTempCoins1], a
+.evoLevelRequirementSatisfied	
+	
 	push hl
 	ld a, [hl]
 	ld [wEvoNewSpecies], a
@@ -239,7 +250,38 @@ Evolution_PartyMonLoop: ; loop over party mons
 	ld [wd11e], a
 	xor a
 	ld [wMonDataLocation], a
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding multi lvl skip move evo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	ld a, [wIsInBattle]
+	and a
+	jr z, .notinbattle
+	push bc
+	
+	ld a, [wCurEnemyLVL]	; load the final level into a.
+	ld c, a	; load the final level to over to c
+	ld a, [wTempCoins1]	; load the evolution level into a
+	ld b, a	; load the evolution level over to b
+	dec b
+.inc_level	; marker for looping back 
+	inc b	;increment 	the current evolution level
+	ld a, b	;put the evolution level in a
+	ld [wCurEnemyLVL], a	;and reset the final level to the evolution level
+	push bc	;save b & c on the stack as they hold the currently tracked evolution level a true final level
 	call LearnMoveFromLevelUp
+	pop bc	;get the current evolution and final level values back from the stack
+	ld a, b	;load the current evolution level into a
+	cp c	;compare it with the final level
+	jr nz, .inc_level	;loop back again if final level has not been reached
+	
+	pop bc
+	jr .skipfix_end
+.notinbattle
+	call LearnMoveFromLevelUp
+.skipfix_end	
+;	call LearnMoveFromLevelUp
+	
 	pop hl
 	predef SetPartyMonTypes
 	ld a, [wIsInBattle]
@@ -350,20 +392,15 @@ Evolution_ReloadTilesetTilePatterns:
 	jp ReloadTilesetTilePatterns
 
 LearnMoveFromLevelUp:
-;	ld hl, EvosMovesPointerTable
+	ld hl, EvosMovesPointerTable
 	ld a, [wd11e] ; species
 	ld [wcf91], a
 	dec a
-;	ld bc, 0
-;	ld hl, EvosMovesPointerTable
+	ld bc, 0
+	ld hl, EvosMovesPointerTable
 	add a
-;	rl b
-	ld b, 0 ; Adding Skipping move-learn on level-up - Mateo
-	
+	rl b
 	ld c, a
-	
-	ld hl, EvosMovesPointerTable	; Adding Skipping move-learn on level-up - Mateo
-	
 	add hl, bc
 	ld a, [hli]
 	ld h, [hl]
@@ -382,12 +419,15 @@ LearnMoveFromLevelUp:
 	ld a, [hli] ; move ID
 	jr nz, .learnSetLoop
 	
-	push hl	; Adding Skipping move-learn on level-up - Mateo
-	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding learn multi moves on lvl
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	push hl
+
 	ld d, a ; ID of move to learn
-;	ld a, [wMonDataLocation]
-;	and a
-;	jr nz, .next
+	ld a, [wMonDataLocation]
+	and a
+	jr nz, .next
 ; If [wMonDataLocation] is 0 (PLAYER_PARTY_DATA), get the address of the mon's
 ; current moves in party data. Every call to this function sets
 ; [wMonDataLocation] to 0 because other data locations are not supported.
@@ -396,18 +436,18 @@ LearnMoveFromLevelUp:
 	ld a, [wWhichPokemon]
 	ld bc, wPartyMon2 - wPartyMon1
 	call AddNTimes
-;.next ; Adding Skipping move-learn on level-up - Mateo
+.next
 	ld b, NUM_MOVES
 .checkCurrentMovesLoop ; check if the move to learn is already known
 	ld a, [hli]
 	cp d
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Skipping move-learn on level-up - Mateo
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding learn multi moves on lvl
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	jr z, .hasMove ; if already known, jump
 ;	jr z, .done ; if already known, jump
-
+	
 	dec b
 	jr nz, .checkCurrentMovesLoop
 	ld a, d
@@ -417,14 +457,13 @@ LearnMoveFromLevelUp:
 	call CopyStringToCF4B
 	predef LearnMove
 	
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Adding Skipping move-learn on level-up - Mateo
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding learn multi moves on lvl
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 .hasMove
 	pop hl
-	jr .learnSetLoop
+	jr .learnSetLoop	
 
-	
 .done
 	ld a, [wcf91]
 	ld [wd11e], a

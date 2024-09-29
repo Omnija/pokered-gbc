@@ -34,7 +34,8 @@
 	- Pokemon Genders
 	- Pokemon Shiny [Palettes Needs Work or better code]
 	- Individual Trainer [DV's/ Names/ Levels/ Movesets]
-	- Skipping move-learn on level-up
+	- Skipping move-learn on multi level-up
+	- Learn multiple moves on same level
 	- Daycare Breeding System + Step Counter
 	- Bicycle Shortcut (A + Select)
 	- Extra Stats Menu

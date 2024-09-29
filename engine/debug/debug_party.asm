@@ -23,7 +23,7 @@ SetIshiharaTeam:
 IshiharaTeam:
 	db EXEGGUTOR, 90
 IF DEF(_DEBUG)
-	db METAPOD, 11
+	db METAPOD, 9
 ELSE
 	db MEW, 20
 ENDC
