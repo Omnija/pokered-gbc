@@ -25,21 +25,31 @@ TryDoWildEncounter:
 .next
 ; determine if wild pokemon can appear in the half-block we're standing in
 ; is the bottom right tile (9,9) of the half-block we're standing in a grass/water tile?
-	hlcoord 9, 9
-	ld c, [hl]
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Fix star grass has no encounters
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	call TestGrassTile
-;	ld a, [wGrassTile]
-;	cp c
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding stargrass + missingno shore fix
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	hlcoord 8, 9
+;	hlcoord 9, 9
+
+	ld c, [hl]
+	ld a, [wGrassTile]
+	cp c
 	ld a, [wGrassRate]
 	jr z, .CanEncounter
 	ld a, $14 ; in all tilesets with a water tile, this is its id
 	cp c
 	ld a, [wWaterRate]
 	jr z, .CanEncounter
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding stargrass + missingno shore fix
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, $32 ; left shore id
+	cp c
+	ld a, [wWaterRate]
+	jr z, .CanEncounter ; left shore can spawn pokémon
+	
 ; even if not in grass/water, standing anywhere we can encounter pokemon
 ; so long as the map is "indoor" and has wild pokemon defined.
 ; ...as long as it's not Viridian Forest or Safari Zone.
@@ -71,7 +81,16 @@ TryDoWildEncounter:
 	ld hl, wGrassMons
 	lda_coord 8, 9
 	cp $14 ; is the bottom left tile (8,9) of the half-block we're standing in a water tile?
-	jr nz, .gotWildEncounterType ; else, it's treated as a grass tile by default
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding stargrass + missingno shore fix
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	jr z, .water
+	cp $32
+	jr nz, .gotWildEncounterType
+.water
+;	jr nz, .gotWildEncounterType ; else, it's treated as a grass tile by default
+	
 	ld hl, wWaterMons
 ; since the bottom right tile of a "left shore" half-block is $14 but the bottom left tile is not,
 ; "left shore" half-blocks (such as the one in the east coast of Cinnabar) load grass encounters.
@@ -105,20 +124,6 @@ TryDoWildEncounter:
 .willEncounter
 	xor a
 	ret
-	
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Fix star grass has no encounters
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-TestGrassTile:
-	ld a, [wGrassTile]
-	cp c
-	jr z, .return
-	ld a, [wCurMapTileset]
-	cp FOREST
-	jr nz, .return
-	ld a, $34	; check for the extra grass tile in the forest tileset
-	cp c
-.return
-	ret
+
 
 INCLUDE "data/wild/probabilities.asm"

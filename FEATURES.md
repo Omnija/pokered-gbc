@@ -70,6 +70,8 @@
 	- New Gym Leader Sprites
 	- Experience System & Exp. All Enhancements
 	- Start menu descriptions (gsc)
+	- Attack when woken up & sleep last max 6 turns
+	- Left Shore can spawn Pokémon - missingno fix
 	
 	- New Evolutions
 		- Lickilong [Lvl 32]
