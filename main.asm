@@ -492,3 +492,9 @@ INCLUDE "engine/overworld/player_flying_animations.asm" ; engine/overworld/playe
 ; Relocating from "HOME" overworld
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 INCLUDE "home/overflow.asm" ; home/overworld.asm
+
+SECTION "Moved Codes", ROMX
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding overworld anim to gfx engine
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+INCLUDE "engine/gfx/load_animated_tiles.asm"

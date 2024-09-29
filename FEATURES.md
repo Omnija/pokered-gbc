@@ -69,6 +69,7 @@
 	- Trainers have individual name [OT Labels]
 	- New Gym Leader Sprites
 	- Experience System & Exp. All Enhancements
+	- Start menu descriptions (gsc)
 	
 	- New Evolutions
 		- Lickilong [Lvl 32]

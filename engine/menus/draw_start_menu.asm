@@ -66,7 +66,8 @@ StartMenuPokemonText:
 	db "POKéMON@"
 
 StartMenuItemText:
-	db "ITEM@"
+	db "BAG@"
+;	db "ITEM@"
 
 StartMenuSaveText:
 	db "SAVE@"
@@ -87,3 +88,51 @@ PrintStartMenuItem:
 	ld de, SCREEN_WIDTH * 2
 	add hl, de
 	ret
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Start menu descriptions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; prints a short blurb about the
+; current selection, just like in GSC
+DrawMenuDescription::
+; prepare the background
+	hlcoord 0, 11
+	lb bc, 5, 10
+	call ClearScreenArea
+	
+	call UpdateSprites ; stops sprites from appearing on description
+
+; determine which table to use
+	ld hl, wd72e
+	res 6, [hl]
+; use the table replacing "SAVE" with "RESET"
+	ld de, StartMenuDescriptionTable.LinkTable
+	jr nz, .check_pokedex
+; use regular table if we're not in link mode
+	ld de, StartMenuDescriptionTable
+
+.check_pokedex
+	CheckEvent EVENT_GOT_POKEDEX
+	ld a, [wCurrentMenuItem]
+	jr nz, .got_table
+; shift one index forwards to reflect the fact that
+; we haven't gotten a dex yet
+	inc a
+
+.got_table
+; select the correct pointer to the entry, and then load
+; the entry into the DE register for use as a parameter for PlaceString
+	add a
+	ld l, a
+	ld h, 0
+	add hl, de
+	ld e, [hl]
+	inc hl
+	ld d, [hl]
+
+; finally, display the string.
+	hlcoord 1, 12
+	jp PlaceString
+
+INCLUDE "data/start_menu_descriptions.asm"

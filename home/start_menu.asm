@@ -12,6 +12,12 @@ RedisplayStartMenu::
 	farcall PrintSafariZoneSteps ; print Safari Zone info, if in Safari Zone
 	call UpdateSprites
 .loop
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Start menu descriptions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	farcall DrawMenuDescription
+
 	call HandleMenuInput
 	ld b, a
 .checkIfUpPressed
