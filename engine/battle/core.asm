@@ -329,7 +329,13 @@ MainInBattleLoop:
 	and a
 	ret nz ; return if pokedoll was used to escape from battle
 	ld a, [wBattleMonStatus]
-	and (1 << FRZ) | SLP ; is mon frozen or asleep?
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding attack when waking from sleep
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    and (1 << FRZ)
+;	and (1 << FRZ) | SLP ; is mon frozen or asleep?
+	
 	jr nz, .selectEnemyMove ; if so, jump
 	ld a, [wPlayerBattleStatus1]
 	and (1 << STORING_ENERGY) | (1 << USING_TRAPPING_MOVE) ; check player is using Bide or using a multi-turn attack like wrap
@@ -3081,12 +3087,12 @@ PrintMenuItem:
 	jr .RestOfTheRoutineThing
 .SupportTextShow
 	coord hl, 1,9
-	ld de,SupportText
+	ld de, SupportText
 	
 ; print TYPE/<type> and <curPP>/<maxPP>
 ;	hlcoord 1, 9	
 ;	ld de, TypeText
-;	call PlaceString
+	call PlaceString
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adding Physical/Special Split - Mateo
@@ -3128,7 +3134,7 @@ DisabledText:
 ; Adding Physical/Special Split - Mateo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
 SupportText:
-	db "STATUS@"
+	db "SUPPORT@"
 
 PhysicalText: ; Adding for PS Split
 	db "PHYSICAL@"
@@ -3555,6 +3561,11 @@ CheckPlayerStatusConditions:
 .WakeUp
 	ld hl, WokeUpText
 	call PrintText
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding attack when waking from sleep
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    jr .FrozenCheck
+	   
 .sleepDone
 	xor a
 	ld [wPlayerUsedMove], a
@@ -6096,6 +6107,11 @@ CheckEnemyStatusConditions:
 .wokeUp
 	ld hl, WokeUpText
 	call PrintText
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding attack when waking from sleep
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    jr .checkIfFrozen
+	
 .sleepDone
 	xor a
 	ld [wEnemyUsedMove], a
