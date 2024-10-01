@@ -641,6 +641,18 @@ LoadTownMapEntry:
 	ld l, a
 	ret
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Map legend in save infobox
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+GetMapName::
+	ld a, e
+	call LoadTownMapEntry
+	ld de, wcd6d
+	ld bc, $14
+	call CopyData
+	ret
+	
+
 INCLUDE "data/maps/town_map_entries.asm"
 
 INCLUDE "data/maps/names.asm"

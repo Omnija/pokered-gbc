@@ -346,21 +346,56 @@ CableClubOptionsText:
 DisplayContinueGameInfo:
 	xor a
 	ldh [hAutoBGTransferEnabled], a
-	hlcoord 4, 7
-	ld b, 8
-	ld c, 14
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Map legend in save infobox
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+	hlcoord 2, 6  ;making space
+	ld b, 10
+	ld c, 16
+;	hlcoord 4, 7
+;	ld b, 8
+;	ld c, 14
 	call TextBoxBorder
-	hlcoord 5, 9
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Map legend in save infobox
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; show map legend
+	ld a, [wCurMap]
+	ld e, a
+	farcall GetMapName
+	hlcoord 3, 8
+	ld de, wcd6d
+	call PlaceString
+
+; show normal info
+	
+	hlcoord 3, 10
+;	hlcoord 5, 9
+
 	ld de, SaveScreenInfoText
 	call PlaceString
-	hlcoord 12, 9
+
+	hlcoord 12, 10
+;	hlcoord 12, 9
+
 	ld de, wPlayerName
 	call PlaceString
-	hlcoord 17, 11
+
+	hlcoord 17, 12
+;	hlcoord 17, 11
+	
 	call PrintNumBadges
-	hlcoord 16, 13
+
+	hlcoord 16, 14
+;	hlcoord 16, 13
+	
 	call PrintNumOwnedMons
-	hlcoord 13, 15
+	
+	hlcoord 13, 16
+;	hlcoord 13, 15
+	
 	call PrintPlayTime
 	ld a, 1
 	ldh [hAutoBGTransferEnabled], a
@@ -370,23 +405,58 @@ DisplayContinueGameInfo:
 PrintSaveScreenText:
 	xor a
 	ldh [hAutoBGTransferEnabled], a
-	hlcoord 4, 0
-	ld b, $8
-	ld c, $e
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Map legend in save infobox
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	hlcoord 2, 0 ;making space
+	ld b, 10
+	ld c, 16
+;	hlcoord 4, 0
+;	ld b, $8
+;	ld c, $e
+
 	call TextBoxBorder
 	call LoadTextBoxTilePatterns
 	call UpdateSprites
-	hlcoord 5, 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding Map legend in save infobox
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; show map legend
+	ld a, [wCurMap]
+	ld e, a
+	farcall GetMapName
+	hlcoord 3, 2
+	ld de, wcd6d
+	call PlaceString
+
+; show normal info
+	hlcoord 3, 4
+;	hlcoord 5, 2
+	
 	ld de, SaveScreenInfoText
 	call PlaceString
-	hlcoord 12, 2
+
+	hlcoord 12, 4	
+;	hlcoord 12, 2
+	
 	ld de, wPlayerName
 	call PlaceString
-	hlcoord 17, 4
+
+	hlcoord 17, 6	
+;	hlcoord 17, 4
+	
 	call PrintNumBadges
-	hlcoord 16, 6
+	
+	hlcoord 16, 8
+;	hlcoord 16, 6
+	
 	call PrintNumOwnedMons
-	hlcoord 13, 8
+	
+	hlcoord 13, 10
+;	hlcoord 13, 8
+	
 	call PrintPlayTime
 	ld a, $1
 	ldh [hAutoBGTransferEnabled], a

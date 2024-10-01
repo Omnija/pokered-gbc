@@ -72,6 +72,7 @@
 	- Start menu descriptions (gsc)
 	- Attack when woken up & sleep last max 6 turns
 	- Left Shore can spawn Pokémon - missingno fix
+	- Map location on continue info
 	
 	- New Evolutions
 		- Lickilong [Lvl 32]
