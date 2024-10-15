@@ -37,6 +37,13 @@ VermilionDock_Script:
 	ret
 
 VermilionDock_1db9b:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Adding SS Anne returns after
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	ld a, [wObtainedBadges]
+	bit BIT_SOULBADGE, a ; after obtaining 5 badges the ship returns
+	ret nz
+
 	SetEventForceReuseHL EVENT_SS_ANNE_LEFT
 	ld a, SFX_STOP_ALL_MUSIC
 	ld [wJoyIgnore], a

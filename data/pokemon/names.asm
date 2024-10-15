@@ -62,7 +62,7 @@ MonsterNames::
 	db "DIGLETT@@@"
 	db "TAUROS@@@@"
 	db "SCIZOR@@@@" ;	db "MISSINGNO."
-	db "TANGALINE@" ;	db "MISSINGNO."
+	db "TANGALIND@" ;	db "MISSINGNO."
 	db "SLOWKING@@" ;	db "MISSINGNO."
 	db "FARFETCH'D"
 	db "VENONAT@@@"

@@ -2,6 +2,11 @@
 
 ; Control characters (see home/text.asm)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Restoring Japanese Town Map
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	charmap "<LF>",		 $1f ; "line feed", used on town map names
+
 	charmap "<NULL>",    $00
 	charmap "<PAGE>",    $49
 	charmap "<PKMN>",    $4a ; "<PK><MN>"
@@ -157,10 +162,6 @@
 	charmap "'t",        $be
 	charmap "'v",        $bf
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Restoring Japanese Town Map
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	charmap "<LF>", 	 $DE
 ;;;;;;;;;;;;;;;;
 ; Adding Shiny
 ;;;;;;;;;;;;;;;;
